@@ -117,22 +117,19 @@ header ul.posts {
   border-radius:5px;
   border:1px solid #d2d2d2;
   box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
+  width:300px;
 }
 
 header ul.posts li {
   border-right:1px solid #d2d2d2;
-  height:40px;
 }
 
 header ul.posts a {
   line-height:1;
   font-size:11px;
-  color:#333;
+  color:#003399;
   display:block;
-  text-align:right;
-  padding-top:6px;
-  height:40px;
+  padding-bottom:1em;
 }
 
 strong {
