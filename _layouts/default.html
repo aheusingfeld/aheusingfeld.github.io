@@ -25,7 +25,7 @@
 <h2>Blog Posts</h2>
   <ul class="posts">
     {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}#post">{{ post.title }}</a></li>
     {% endfor %}
   </ul>
 
@@ -35,7 +35,7 @@
 {{ content }}
       </section>
       <footer>
-        <p><small>Hosted on <a href="http://pages.github.com/">GitHub Pages</a></small></p>
+        <p><small>&copy; 2012 by A. Heusingfeld - Hosted on <a href="http://pages.github.com/">GitHub Pages</a></small></p>
       </footer>
     </div>
     <script src="/javascripts/scale.fix.js"></script>
