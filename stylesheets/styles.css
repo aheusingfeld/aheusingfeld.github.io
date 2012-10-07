@@ -151,6 +151,7 @@ section {
 }
 section div#post { padding-top:1em;}
 section p.issues { padding-top:1em;}
+div#post h2 { margin-top:2em; }
 
 small {
   font-size:11px;
