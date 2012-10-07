@@ -15,23 +15,24 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>goldstift - my 2 cent</h1>
-<ul>
-<li><a href="/">About me</a></li>
-<li><a href="http://twitter.com/goldstift">@twitter</a></li>
-<li><a href="https://github.com/aheusingfeld">@GitHub</a></li>
-<li><a href="http://www.xing.com/profile/Alexander_Heusingfeld">Xing</a></li>
-</ul>
-<h2>Blog Posts</h2>
-  <ul class="posts">
-    {% for post in site.posts %}
-      <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}#post">{{ post.title }}</a></li>
-    {% endfor %}
-  </ul>
-
+        <h2>goldstift - my 2 cent</h2>
+		<ul>
+			<li><a href="/">About me</a></li>
+			<li><a href="http://twitter.com/goldstift">@twitter</a></li>
+			<li><a href="https://github.com/aheusingfeld">@GitHub</a></li>
+			<li><a href="http://www.xing.com/profile/Alexander_Heusingfeld">Xing</a></li>
+		</ul>
+		<h2>Blog Posts</h2>
+			<div id="nav">
+			<ul id="innernav">
+{% for post in site.posts limit:6 %}
+				<li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}#content">&raquo; {{ post.title }}</a></li>
+{% endfor %}
+  </ul></div>
         <p class="view"><strong>Please feel free to ask questions or comment via <a href="https://github.com/aheusingfeld/aheusingfeld.github.com/issues/new?title=Comment on '{{ page.title }}'&labels={{page.label}}">Github issues</a>!</strong></p>
       </header>
-      <section>
+      <section id="content">
+		<h1>{{ page.title }}</h1>
 {{ content }}
       </section>
       <footer>
