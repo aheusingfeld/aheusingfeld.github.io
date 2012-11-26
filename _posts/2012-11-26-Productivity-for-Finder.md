@@ -65,11 +65,11 @@ But as I also wanted to be able to drag & drop a folder on the icon I enhanced t
     	display dialog "Unable to copy a path to the clipboard. Make sure Finder is referencing a directory/folder within the file system." buttons {"Ok"} with icon caution with title "Error"
     end finderErrorMsg
     
-Then I saved it as an application so you can now download it at https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/copy_path.app.zip
+Then I saved it as an application so you can now download it at [https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/copy_path.app.zip](https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/copy_path.app.zip)
 
 
 ## Open in TextWrangler
-TextWrangler by Bare Bones Software is currently my editor of choice as IMHO it's much better than TextEdit, has many features of its big brother, BBEdit, but still comes for free. You can get Textedit via the Mac AppStore.
+[TextWrangler by Bare Bones Software](http://www.barebones.com/products/textwrangler/index.html) is currently my editor of choice as IMHO it's much better than TextEdit, has many features of its big brother, BBEdit, but still comes for free. You can get Textedit via the Mac AppStore.
 
 As I got the above script working, the adjustment for TextWrangler was a quick win:
     -- When clicking on the icon
@@ -110,10 +110,10 @@ As I got the above script working, the adjustment for TextWrangler was a quick w
     	display dialog "Unable to copy a path to the clipboard. Make sure Finder is referencing a directory/folder within the file system." buttons {"Ok"} with icon caution with title "Error"
     end finderErrorMsg
 
-**Download:** https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/open-in-TextWrangler.app.zip
+**Download:** [https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/open-in-TextWrangler.app.zip](https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/open-in-TextWrangler.app.zip)
 
 ## Open in iTerm2
-As I might have mentioned before Terminal.app is not my preferred terminal as iTerm2 (http://www.iterm2.com/) comes with a load of benefits. If you don't use it, yet, you should seriously give it a try!
+As I might have mentioned before Terminal.app is not my preferred terminal as [iTerm2](http://www.iterm2.com/) comes with a load of benefits. If you don't use it, yet, you should seriously give it a try!
 
 The script for iTerm2 is actually derived from a script I found in the comments of an [article at macosxhints.com](http://www.macosxhints.com/article.php?story=20050924210643297):
     -- cd to the current finder window folder in iTerm. Or drag a folder onto this script to cd to that folder in iTerm.
@@ -190,7 +190,7 @@ The script for iTerm2 is actually derived from a script I found in the comments 
     	end tell
     end CD_to
 
-**Download:** https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/iterm-folder.app.zip
+**Download:** [https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/iterm-folder.app.zip](https://github.com/aheusingfeld/Snippets/raw/master/mac-os-x/iterm-folder.app.zip)
 
 
 ## Adding to the Finder
@@ -198,6 +198,6 @@ Finally you should unzip the apps and move them somewhere like "~/Applications/"
 ![Icons in your Finder.app](/gfx/applescript-icons-in-finder.png)
 
 Now (assuming you have iTerm and TextWrangler installed) you can simply select any file in your finder and click on the icons to open the file in the specific application.
-You can find all three AppleScripts and apps in my Github Snippets repository at https://github.com/aheusingfeld/Snippets/tree/master/mac-os-x
+You can find all three AppleScripts and apps in my Github Snippets repository at [https://github.com/aheusingfeld/Snippets/tree/master/mac-os-x](https://github.com/aheusingfeld/Snippets/tree/master/mac-os-x)
 
 Please leave error reports and your comments via Github issues or the Discuss plugin. Thanks.
