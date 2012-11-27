@@ -1,0 +1,11 @@
+---
+layout: default
+title: All blog posts
+label: all-blog-posts
+---
+			<div id="post">
+			<ul id="posts">
+{% for post in site.posts %}
+				<li><span class="date">{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}#content">{{ post.title }}</a></li>
+{% endfor %}
+  </ul></div>

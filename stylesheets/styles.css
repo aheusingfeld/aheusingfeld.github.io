@@ -3,7 +3,7 @@
 body {
   padding:50px;
   font:15px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#444;
+  color:#333;
   font-weight:normal;
 }
 
@@ -41,7 +41,6 @@ a {
 a:hover { color:#39c; text-decoration:underline; }
 
 a small {
-  font-size:11px;
   color:#777;
   margin-top:-0.6em;
   display:block;
@@ -93,9 +92,7 @@ th {
   color:#444;
 }
 
-img {
-  max-width:100%;
-}
+img { max-width:100%; }
 
 header {
   width:270px;
@@ -114,9 +111,9 @@ header div#nav {
   
   border-radius:5px;
   border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:300px;
-  padding:5px;
+  box-shadow: inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
+  width: 300px;
+  padding: 5px;
   margin-bottom:1em;
 }
 header div#nav ul {
@@ -124,25 +121,22 @@ header div#nav ul {
   padding:0;
   margin:0;
 }
-header div#nav a {
+header div#nav li { padding-bottom:1em; }
+header div#nav li a {
   line-height:1;
-  font-size:12px;
+  font-size:0.9em;
   color:#003399;
   display:block;
-  padding-bottom:1em;
 }
-
-strong {
-  color:#222;
-  font-weight:700;
-}
-
 
 header ul a strong {
   font-size:14px;
   display:block;
   color:#222;
 }
+header div#allpostslink { text-align:center; padding:0.5em 0;}
+
+
 
 section {
   width:500px;
@@ -153,10 +147,8 @@ section div#post { padding-top:1em;}
 section p.issues { padding-top:1em;}
 div#post h2 { margin-top:2em; }
 
-small {
-  font-size:11px;
-}
-
+strong { color:#222; font-weight:700; }
+small { font-size:0.8em; }
 hr {
   border:0;
   background:#e5e5e5;
@@ -164,10 +156,7 @@ hr {
   margin:0 0 20px;
 }
 
-footer {
-  clear:both;
-  float:right;
-}
+footer { clear:both; float:right; }
 
 @media print, screen and (max-width: 960px) {
   
