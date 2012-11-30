@@ -123,6 +123,7 @@ or if you're already one step further this one
 
 
 I'm totally new to the embedded business so please spare me, but as far as I found out, the above mentioned java version goes well with ARM softfp shared libraries for armhf. So we need to install a special version of libc6 for java on our Nvidia Tegra ([ARM Cortex-A9](http://www.arm.com/products/processors/cortex-a/cortex-a9.php)) and also the according "gcc1" version:
+
 	$ sudo apt-get install libc6-armel libsfgcc1
 
 After this you should be able to run the "java" command successfully:	
