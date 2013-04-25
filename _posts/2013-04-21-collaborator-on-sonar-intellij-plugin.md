@@ -4,7 +4,6 @@ title: Collaborator on Sonar IntelliJ Plugin
 label: collaborator-on-sonar-intellij-plugin
 date: 2013-04-25
 comments: false
-tags: [intellij],[plugin],[sonar],[java],[github]
 ---
 
 Due to my efforts on the Sonar Plugin for [IntelliJ IDEA](http://www.jetbrains.com/idea/) at Github, I was just awarded the "Collaborator" status on the according repository ([https://github.com/gshakhn/sonar-intellij-plugin/](https://github.com/gshakhn/sonar-intellij-plugin/)).
