@@ -6,7 +6,7 @@ date: 2013-04-25
 comments: false
 ---
 
-Due to my efforts on the Sonar Plugin for [IntelliJ IDEA](http://www.jetbrains.com/idea/) at Github, I was just awarded the "Collaborator" status on the according repository ([https://github.com/gshakhn/sonar-intellij-plugin/](https://github.com/gshakhn/sonar-intellij-plugin/)).
+Lately I was granted the "Collaborator" status on the Sonar Plugin for [IntelliJ IDEA](http://www.jetbrains.com/idea/) at Github  ([https://github.com/gshakhn/sonar-intellij-plugin/](https://github.com/gshakhn/sonar-intellij-plugin/)) and I'd like to share with you the benefits of this project.
 
 For those who aren't familiar with the benefits of [Sonar](http://www.sonarsource.org/)'s source code analysis, yet, you should really take a look. Sonar not only performs [CheckStyle](http://checkstyle.sourceforge.net/), [PMD](http://pmd.sourceforge.net/) and [FindBugs](http://findbugs.sourceforge.net/) analysis of your code and highlights the validations on the specific lines of code. But by leveraging the power of [JaCoCo Code coverage](http://www.eclemma.org/jacoco/) it is also able to determine the line- and [branch-coverage](http://www.eclemma.org/jacoco/trunk/doc/counters.html) of your JUnit-Tests.
 
