@@ -124,3 +124,6 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
 
 ## Setup your (TimeMachine) Backup
 At least backup your home directory, expecially your ~/Library (yes, it's a hidden folder)
+
+
+If you liked this post, you might also be interested in "[Enhancements for Mac OS X Finder](http://aheusingfeld.github.io/2012/11/26/Productivity-for-Finder.html)" I posted some time ago.
