@@ -26,14 +26,14 @@
 			<li><a href="http://lanyrd.com/profile/goldstift/">@Lanyrd</a></li>
 		</ul>
 		<h2>Blog Posts</h2>
-			<div id="nav">
+			<nav>
 			<ul id="innernav">
 {% for post in site.posts limit:5 %}
 				<li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}#content">&raquo; {{ post.title }}</a></li>
 {% endfor %}
+	  		<li id="allpostslink"><a href="/allposts.html">All blog posts</a></li>
   </ul>
-  		<div id="allpostslink"><a href="/allposts.html">All blog posts</a></div>
-  		</div>
+  		</nav>
         <p class="view"><strong>Please feel free to ask questions or comment via <a href="https://github.com/aheusingfeld/aheusingfeld.github.com/issues/new?title=Comment on '{{ page.title }}'&labels={{page.label}}">Github issues</a>!</strong></p>
       </header>
       <section id="content">
