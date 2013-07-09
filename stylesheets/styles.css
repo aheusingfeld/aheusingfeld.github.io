@@ -102,12 +102,12 @@ header {
 
 header nav {
   background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
+  background: -moz-linear-gradient(top, #f9f9f9 0%, #e6e6ee 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#e6e6ee));
+  background: -webkit-linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
+  background: -o-linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
+  background: -ms-linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
+  background: linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
   
   border-radius:8px;
   border:1px solid #d2d2d2;
@@ -125,7 +125,6 @@ header nav li { padding-bottom:1em; }
 header nav li a {
   line-height:1;
   font-size:0.9em;
-  color:#003399;
   display:block;
 }
 
@@ -299,9 +298,8 @@ footer { clear:both; float:right; }
     display: table;
 }
 .icons {
-    border-bottom: 1px solid #D0D2D4;
-    margin: 0 -3px;
-    padding: 1.5em 0;
+    margin: 0;
+    padding: 0;
 }
 .icons li {
     display: inline-block;
