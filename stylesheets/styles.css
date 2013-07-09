@@ -221,4 +221,99 @@ footer { clear:both; float:right; }
     font-size:12pt;
     color:#444;
   }
+
+}
+
+
+
+.si-about {
+    background-color: #00405D;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/aboutme/aboutme-24.png");
+}
+.si-twitter {
+    background-color: #00ACED;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/twitter/twitter-24.png");
+}
+.si-googleplus {
+    background-color: #D14836;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/googleplus/googleplus-24.png");
+}
+.si-xing {
+    background-color: #006567;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/xing/xing-24.png");
+}
+.si-linkedin {
+    background-color: #007FB1;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/linkedin/linkedin-24.png");
+}
+.si-github {
+    background-color: #4183C4;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/github/github-24.png");
+}
+.si-bitbucket {
+    background-color: #205081;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/bitbucket/bitbucket-24.png");
+}
+.si-gittip {
+    background-color: rgb(97, 75, 62);
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/gittip/gittip-24.png");
+}
+.si-coderwall {
+    background-color: #3E8DCC;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/coderwall/coderwall-24.png");
+}
+.si-flickr {
+    background-color: #0063DB;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/flickr/flickr-24.png");
+}
+.si-disqus {
+    background-color: #2E9FFF;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/disqus/disqus-24.png");
+}
+.si-speakerdeck {
+    background-color: #3AB278;
+    background-image: url("https://si0.twimg.com/profile_images/3122323024/697e565049d54c6c42ee50918e317ef0_normal.png");
+    background-size: 50%;
+}
+.si-stackoverflow {
+    background-color: #F47920;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/stackoverflow/stackoverflow-24.png");
+}
+.si-lanyrd {
+    background: #4183C4;
+    background-image: url("https://si0.twimg.com/profile_images/3314581702/5ef9c00f35096a0951b2dad3f0ab7df2_normal.png");
+    background-size: 50%;
+}
+.si-lastfm {
+    background-color: #D51007;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/lastfm/lastfm-24.png");
+}
+.si-rss {
+    background-color: #FF8300;
+    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/rss/rss-24.png");
+}
+
+.icons:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+.icons {
+    border-bottom: 1px solid #D0D2D4;
+    margin: 0 -3px;
+    padding: 1.5em 0;
+}
+.icons li {
+    display: inline-block;
+    float: left;
+}
+.icons li a {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    display: inline-block;
+    height: 24px;
+    margin: 3px;
+    text-indent: -9999em;
+    width: 24px;
 }
