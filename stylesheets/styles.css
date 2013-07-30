@@ -17,7 +17,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html {
      font-size: 18px;
-     line-height: 1.77;
+     line-height: 1.67;
 }
 
 body {
@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size:3.388em;
+  font-size:3.188em;
   line-height:1.1;
   margin-bottom:0.38em;
 }
@@ -50,6 +50,12 @@ h2 {
   font-size:2.277em;
   line-height:1.2;
   margin-bottom:0.27em;
+}
+
+h3 {
+    font-size:1.566em;
+    line-height:1.2;
+    margin-bottom:0.27em;
 }
 
 a {
@@ -122,9 +128,10 @@ section {
     margin:0 auto;
     padding-bottom:50px;
 }
+section p { font-weight:300;}
 
 article { padding-top:1em; text-align:justify;}
-section p.issues { padding-top:1em;}
+aside#related li { padding-top:1em; line-height: 1.5;}
 div#post h2 { margin-top:2em; }
 
 strong { color:#222; font-weight:700; }
@@ -170,6 +177,14 @@ footer { clear:both; float:right; }
         display: none;
     }
 
+}
+@media (max-width:28em){
+    article { text-align:left;}
+}
+@media (max-width:22em){
+    html {
+        font-size: 16px;
+    }
 }
 
 
