@@ -1,4 +1,4 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
      -moz-font-feature-settings: inherit;
      -moz-font-language-override: inherit;
      border: 0px none;
@@ -16,7 +16,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 html {
-     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
      font-size: 18px;
      line-height: 1.77;
 }
@@ -24,13 +23,14 @@ html {
 body {
      border: 0px none;
      color: #333;
+    text-shadow: 0 1px 0 #FFFFFF;
      margin: 0px;
      padding: 50px;
      vertical-align: baseline;
 }
 
 p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
+    margin:0 0 20px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -109,61 +109,20 @@ th {
 img { max-width:100%; }
 
 
-.wrapper {
-  width:48em;
-  margin:0 auto;
-padding:0;
-}
+/**                    **\
+    STRUCTURAL ELEMENTS
+\**                    **/
 
-header {
-  width:12em;
-  float:left;
-}
-
-header nav {
-  background: #eee;
-  background: -moz-linear-gradient(top, #f9f9f9 0%, #e6e6ee 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f9f9), color-stop(100%,#e6e6ee));
-  background: -webkit-linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
-  background: -o-linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
-  background: -ms-linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
-  background: linear-gradient(top, #f9f9f9 0%,#e6e6ee 100%);
-  
-  border-radius:8px;
-  border:1px solid #d2d2d2;
-  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.4);
-  padding: 5px;
-  margin-bottom: 1em;
-  word-wrap: normal;
-}
-header nav ul, ul#posts {
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-header nav li { padding-bottom:1em; }
-header nav li a {
-  line-height:1;
-  font-size:0.9em;
-  display:block;
-}
-
-header nav ul a strong {
-  font-size:0.5em;
-  display:block;
-  color:#222;
-}
-header div#allpostslink { text-align:center; padding:0.5em 0;}
-
-
+/* overwrite font-family 'helvetica' of jquery ui */
+header, #nav-menu-panel h3, #nav-menu-panel li, section, section li, footer { font-family: "Open Sans",sans-serif !important;}
 
 section {
-  display:block;
-  width:33em;
-  float:right;
-  padding-bottom:50px;
- 
+    display:block;
+    max-width:33em;
+    margin:0 auto;
+    padding-bottom:50px;
 }
+
 article { padding-top:1em; text-align:justify;}
 section p.issues { padding-top:1em;}
 div#post h2 { margin-top:2em; }
@@ -179,62 +138,42 @@ hr {
 
 footer { clear:both; float:right; }
 
-@media print, screen and (max-width: 960px) {
-  
-  div.wrapper {
-    width:auto;
-    margin:0;
-  }
-  
-  header, section, footer {
-    float:none;
-    position:relative;
-    width:auto;
-  }
-  
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-  
-  header a small {
-    display:inline;
-  }
-  
-  header ul, header ul#nav {
-    background:none;
-  	border:0;
-  }
-  header ul#nav li { width:auto; border:0}
+
+/** show nav-menu-panel if there's enough screensize **/
+@media (min-width:60em){
+
+    /* wrap on wide viewports once open */
+
+    .ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-left,
+    .ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-left,
+    .ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-left,
+    .ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-left {
+        margin-right: 17em;
+    }
+    .ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push.ui-panel-content-fixed-toolbar-position-right,
+    .ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal.ui-panel-content-fixed-toolbar-position-right,
+    .ui-page-panel-open .ui-panel-content-wrap-display-push.ui-panel-content-wrap-position-right,
+    .ui-page-panel-open .ui-panel-content-wrap-display-reveal.ui-panel-content-wrap-position-right {
+        margin-left: 17em;
+    }
+    .ui-page-panel-open .ui-panel-content-fixed-toolbar-display-push,
+    .ui-page-panel-open .ui-panel-content-fixed-toolbar-display-reveal {
+        width: auto;
+    }
+
+    /* disable "dismiss" on wide viewports */
+    .ui-panel-dismiss {
+        display: none;
+    }
+    /* same as the above but for panels with display mode "push" only */
+    .ui-panel-dismiss-display-push {
+        display: none;
+    }
+
 }
 
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-  
-  header {
-    padding:0;
-  }
-  
-  header ul, header p.view {
-    position:static;
-  }
-  
-  header ul#nav a { display:inline; width:auto;}
-  pre, code {
-    word-wrap:normal;
-  }
-}
 
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
-  }
-  
-}
+
 
 @media print {
   body {
@@ -246,94 +185,3 @@ footer { clear:both; float:right; }
 }
 
 
-
-.si-about {
-    background-color: #00405D;
-    background-image: url("https://raw.github.com/danleech/simple-icons/master/icons/aboutme/aboutme-24.png");
-}
-.si-twitter {
-    background-color: #00ACED;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/twitter/twitter-24.png");
-}
-.si-googleplus {
-    background-color: #D14836;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/googleplus/googleplus-24.png");
-}
-.si-xing {
-    background-color: #006567;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/xing/xing-24.png");
-}
-.si-linkedin {
-    background-color: #007FB1;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/linkedin/linkedin-24.png");
-}
-.si-github {
-    background-color: #4183C4;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/github/github-24.png");
-}
-.si-bitbucket {
-    background-color: #205081;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/bitbucket/bitbucket-24.png");
-}
-.si-gittip {
-    background-color: rgb(97, 75, 62);
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/gittip/gittip-24.png");
-}
-.si-coderwall {
-    background-color: #3E8DCC;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/coderwall/coderwall-24.png");
-}
-.si-flickr {
-    background-color: #0063DB;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/flickr/flickr-24.png");
-}
-.si-disqus {
-    background-color: #2E9FFF;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/disqus/disqus-24.png");
-}
-.si-speakerdeck {
-    background-color: #3AB278;
-    background-image: url("http://si0.twimg.com/profile_images/3122323024/697e565049d54c6c42ee50918e317ef0_normal.png");
-    background-size: 50%;
-}
-.si-stackoverflow {
-    background-color: #F47920;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/stackoverflow/stackoverflow-24.png");
-}
-.si-lanyrd {
-    background: #4183C4;
-    background-image: url("http://si0.twimg.com/profile_images/3314581702/5ef9c00f35096a0951b2dad3f0ab7df2_normal.png");
-    background-size: 50%;
-}
-.si-lastfm {
-    background-color: #D51007;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/lastfm/lastfm-24.png");
-}
-.si-rss {
-    background-color: #FF8300;
-    background-image: url("http://raw.github.com/danleech/simple-icons/master/icons/rss/rss-24.png");
-}
-
-.icons:after {
-    clear: both;
-    content: "";
-    display: table;
-}
-.icons {
-    margin: 0;
-    padding: 0;
-}
-.icons li {
-    display: inline-block;
-    float: left;
-}
-.icons li a {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 24px 24px;
-    display: inline-block;
-    height: 24px;
-    margin: 3px;
-    text-indent: -9999em;
-    width: 24px;
-}

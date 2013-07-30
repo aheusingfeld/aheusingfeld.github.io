@@ -1,58 +1,54 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>{{ page.title }} - goldstift's blog</title>
 
+    <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.3.2.min.css"/>
     <link rel="stylesheet" href="/stylesheets/styles.css">
-    <link rel="stylesheet" href="/stylesheets/pygment_trac.css">
     <link rel="alternate" type="application/atom+xml" title="goldstift's blog" href="{{ site.url }}/atom.xml">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <style style="display:none">
+        @font-face{font-family:'Open Sans';font-style:normal;font-weight:300;src:local('Open Sans Light'),local('OpenSans-Light'),url(http://themes.googleusercontent.com/static/fonts/opensans/v6/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');}
+        @font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans'),local('OpenSans'),url(http://themes.googleusercontent.com/static/fonts/opensans/v6/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');}
+        @font-face{font-family:'Open Sans';font-style:normal;font-weight:700;src:local('Open Sans Bold'),local('OpenSans-Bold'),url(http://themes.googleusercontent.com/static/fonts/opensans/v6/k3k702ZOKiLJc3WVjuplzKRDOzjiPcYnFooOUGCOsRk.woff) format('woff');}
+    </style>
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/jquery.mobile-1.3.2.min.js"></script>
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h2>goldstift - my 2 cent</h2>
-		<ul class="icons">
-			<li><a href="/" class="si-about">About me</a></li>
-			<li><a href="http://twitter.com/goldstift" class="si-twitter" title="@goldstift at twitter">@twitter</a></li>
-            <li><a href="https://plus.google.com/100634441145424297831" class="si-googleplus" title="Google+">Google+</a></li>
-            <li><a href="http://www.xing.com/profile/Alexander_Heusingfeld" class="si-xing" title="Alexander Heusingfeld at Xing">@Xing</a></li>
-            <li><a href="http://www.linkedin.com/pub/alexander-heusingfeld/62/89/820" class="si-linkedin" title="Alexander Heusingfeld at LinkedIn">@LinkedIn</a></li>
-            <li><a href="http://lanyrd.com/profile/goldstift/" class="si-lanyrd" title="aheusingfeld at Lanyrd">@Lanyrd</a></li>
-            <li><a href="http://speakerdeck.com/u/aheusingfeld" class="si-speakerdeck" title="aheusingfeld at SpeakerDeck">@SpeakerDeck</a></li>
-			<li><a href="https://github.com/aheusingfeld" class="si-github" title="aheusingfeld at Github">@GitHub</a></li>
-            <li><a href="https://bitbucket.org/aheusingfeld" class="si-bitbucket" title="aheusingfeld at Github">@GitHub</a></li>
-            <li><a href="https://coderwall.com/goldstift" class="si-coderwall" title="goldstift at coderwall">@Coderwall</a></li>
-            <li><a href="https://www.gittip.com/goldstift/" class="si-gittip" title="aheusingfeld at Gittip">@Gittip</a></li>
-            <li><a href="http://stackoverflow.com/users/2538910" class="si-stackoverflow" title="aheusingfeld at stackoverflow">@Stackoverflow</a></li>
-            <li><a href="http://www.flickr.com/photos/aheusingfeld/" class="si-flickr" title="goldstift at flickr">@Flickr</a></li>
-            <li><a href="{{ site.url }}/atom.xml" class="si-rss" title="Atom feed of this blog">Atom feed for your feed reader</a></li>
-		</ul>
-		<h2>Blog Posts</h2>
-			<nav>
-                <ul id="innernav">
-                    <li id="allpostslink"><a href="/allposts.html">All blog posts</a></li>
-                    {% for post in site.posts limit:5 %}
-                    <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}#content">&raquo; {{ post.title }}</a></li>
-                    {% endfor %}
-                </ul>
-            </nav>
-        <p class="view"><strong>Please feel free to ask questions or comment via <a href="https://github.com/aheusingfeld/aheusingfeld.github.com/issues/new?title=Comment on '{{ page.title }}'&amp;labels={{page.label}}">Github issues</a>!</strong></p>
-      </header>
-      <section id="content">
-		<h1>{{ page.title }}</h1>
-{{ content }}
-      </section>
-      <footer>
-        <p><small>&copy; 2013 by A. Heusingfeld - Hosted on <a href="http://pages.github.com/">GitHub Pages</a></small></p>
-      </footer>
+</head>
+<body>
+<div id="wrapper" data-role="page" data-theme="d">
+    <header data-role="header" data-position="fixed" data-theme="d">
+        <h2>goldstift's 2 cent on technology and software development</h2>
+        <a href="#nav-menu-panel" class="jqm-navmenu-link" data-icon="bars" data-iconpos="notext">Navigation</a>
+    </header>
+    <section id="content" data-role="content">
+        <h1>{{ page.title }}</h1>
+        {{ content }}
+    </section>
+    <footer>
+        <p>
+            <small>&copy; 2013 by A. Heusingfeld - Hosted on <a href="http://pages.github.com/">GitHub Pages</a></small>
+        </p>
+    </footer>
+    <div id="nav-menu-panel" data-role="panel" data-position="left" data-display="reveal" data-theme="c">
+        <h3>Blog Posts</h3>
+        <nav>
+            <ul id="innernav" data-role="listview" data-inset="true">
+                <li><a href="/">Home</a></li>
+                <li id="allpostslink"><a href="/allposts.html">All blog posts</a></li>
+                {% for post in site.posts limit:10 %}
+                <li><span>{{ post.date | date_to_string }}</span> <a href="{{ post.url }}">&raquo; {{ post.title }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
     </div>
-    <script src="/javascripts/scale.fix.js"></script>
-    
-  </body>
+</div>
+<script src="/javascripts/scale.fix.js"></script>
+
+</body>
 </html>
