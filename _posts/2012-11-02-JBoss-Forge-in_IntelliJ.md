@@ -10,13 +10,13 @@ At this year's JavaOne I attended a [talk](https://oracleus.activeevents.com/con
 
 [JBoss Forge](http://forge.jboss.org/) is a shell for rapid-application development at a command-line level. It supports developers setting up Java applications by reducing the need to write boilerplate code. In case you ever have to start a project from scratch you should really take a glance at JBoss Forge as it makes life easier!
 
-## Daily usage
+### Daily usage
 As I'm using Forge on a regular basis, I often see myself switching between the IDE and the command line which seems quite inefficient. There is a neat integration for Eclipse but unfortunately there isn't any integration into IDEs like Netbeans or my favourite IntelliJ IDEA.
 Nevertheless as Forge operates at command-line level it can easily be integrated into any IDE supporting input via a console window.
 
 In IntelliJ IDEA (I'm using the [IntelliJ IDEA 12 EAP](http://confluence.jetbrains.net/display/IDEADEV/IDEA+12+EAP)) this is done via an "External Tools" configuration. Therefore open IntelliJ's "Settings" dialog and navigate to "External Tools". Then click on the "+"-Button to create a new "External Tool" configuration.
 
-## Configuration for Mac OS X
+### Configuration for Mac OS X
 
 On Mac OS X I entered the following:
 - Name: forge

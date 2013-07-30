@@ -7,7 +7,7 @@ comments: false
 ---
 The following post is actually a note2self as I stumbled over this problem and wanted to create a reminder for myself and others with similar issues.
 
-## Scenario
+### Scenario
 "**master**" is the host machine for multiple virtual machines (in my case they are run and managed via "libvirt").
 One of these virtual machines is "**mail-host**" which holds a postfix mailserver. All of the machines are using an externally managed DNS server.
 The virtual machines are only available to the outside world via NAT. They don't have public IP addresses and therefore aren't known to the external DNS server.
@@ -16,7 +16,7 @@ The last point is actually the reason for this post:
 
 **How do I configure postfix to forward mails for "example.org" to another server if DNS states that localhost is "example.org"?**
 
-## The Requirement 
+### The Requirement 
 
 We're running things like "rkhunter", "fail2ban" or "unattended-upgrades" on the 
 master which all would like to inform root via mail about certain things going on. 
@@ -48,7 +48,7 @@ we will see something like the following in your /var/log/mail.log
 The DNS server tells "master" that he himself is "example.org" and therefore we have an endless loop for mail delivery. Postfix states this via the "status=bounced" error.
 
 
-## Configure local domain resolution
+### Configure local domain resolution
 
 In the next step we need to tell the postfix on "master" that it should not query DNS for domain resolution of "example.org" 
 but instead rely on /etc/hosts so we can resolve the IP of our virtual machine correctly.

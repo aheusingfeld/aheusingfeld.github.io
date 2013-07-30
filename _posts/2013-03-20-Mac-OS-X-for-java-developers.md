@@ -8,15 +8,15 @@ comments: false
 
 With this is post I want to share with you my experience when re-setting up my MacBook and which tools and applications I use on a regular basis and thus I can recommend to you. :)
 
-## Connect to iCloud
+### Connect to iCloud
 I've had too many bad experiences with iTunes to use it for syncing my data between different devices. That's why I chose to synchronize my calendars, contacts and notes via iCloud. Therefore connecting my iCloud account/ AppleID to my MacBook is pretty much the first thing to do. For syncing all other kinds of files I use my Dropbox account.
 
 For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http://ecamm.com/mac/phoneview/) for more than 2 years now. It never let me down - which I cannot say about iTunes at all! Maybe you'd like to check it out.
 
 
-## Install applications
+### Install applications
 
-### Manual Installations
+#### Manual Installations
 
 * Firefox
 * LibreOffice
@@ -57,7 +57,7 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
 * Skype (if you can't avoid it)
 
 
-### Recommended AppStore Applications
+#### Recommended AppStore Applications
 
 * Pixelmator
 * TextWrangler
@@ -74,7 +74,7 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
 * Skim
 
 
-## Configure accounts
+### Configure accounts
 
 * Yahoo
 * Google
@@ -84,7 +84,7 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
 * Twitter
 * Facebook
 
-## Specialties
+### Specialties
 
 * Quicktime Codecs
  * Flip4Mac [http://www.telestream.net/flip4mac/overview.htm](http://www.telestream.net/flip4mac/overview.htm)
@@ -106,7 +106,7 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
  * CSV -> [http://code.google.com/p/quicklook-csv/](http://code.google.com/p/quicklook-csv/)
  * Further more -> [http://www.quicklookplugins.com/](http://www.quicklookplugins.com/)
   
-## Glitches of the Finder
+### Glitches of the Finder
 
 * hides system files
 * overwrites folders of the same name
@@ -122,7 +122,7 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
   * it's free
  
 
-## Setup your (TimeMachine) Backup
+### Setup your (TimeMachine) Backup
 At least backup your home directory, expecially your ~/Library (yes, it's a hidden folder)
 
 

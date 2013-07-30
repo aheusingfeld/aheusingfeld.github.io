@@ -10,7 +10,7 @@ As you might have read in [my previous blog post](http://aheusingfeld.github.com
 
 Thankfully there is a team at [Ubuntu](http://www.ubuntu.org/) which dedicates its work to bringing a desktop linux to the tablet which supports the well-known standardized Java Runtime Environments out there.
 
-# Installation
+### Installation
 	
 Unfortunately the installer doesn't install glassfish correctly so I tried the ZIP distribution which worked like a charm
 
@@ -25,14 +25,14 @@ In order to exec the GlassFish Admin Gui from a remote system via browser you ha
 	$ bin/asadmin enable-secure-admin
 	$ bin/asadmin restart-domain
 
-# Findings
+### Findings
 
 Surprising to me, the [unix gui installer](http://dlc.sun.com.edgesuite.net/glassfish/4.0/promoted/glassfish-4.0-web-b66-unix.sh) works on the nexus 7 if the "DISPLAY" variable is correctly set to ":0". You can do this by typing:
 	$ export DISPLAY=":0"
 
 Now you can checkout the GlassFish Admin Gui via the installed Firefox at http://localhost:4848/ and you can even deploy simple web applications.
 
-# Conclusion
+### Conclusion
 
 The Nvidia Tegra chip inside the Nexus7 isn't the fastest, therefore I'd not recommend opening Firefox while you have an application deployed to the running GlassFish. Simply give him a little more RAM to swim in. 
 As accessing the Glassfish Admin Gui from a remote system is just a matter of enabling secure admin (see above) and finding out your Nexus' IP which works with
@@ -50,14 +50,14 @@ At least in my case there were only about 86MB free RAM (see screenshot) but a s
 Have fun.
 
 
-## To be continued...
+### To be continued...
 
 I'll continue the Proof-Of-Concepts with findings on JavaFX in a follow-up post. In the meantime you can [follow me on Twitter](http://twitter.com/goldstift) to stay up to date.
 
 Any comments, optimization requests and suggestions are very warm welcome!
 
 
-## Links of further interest:
+### Links of further interest:
 * [GlassFish 4.0 Promoted Builds (Developer Preview)](http://dlc.sun.com.edgesuite.net/glassfish/4.0/promoted/)
 * [Known Issues Ubuntu-Nexus7](https://wiki.ubuntu.com/Nexus7/KnownIssues)
 * [Bugtracker for Ubuntu-Nexus7](https://bugs.launchpad.net/ubuntu-nexus7)

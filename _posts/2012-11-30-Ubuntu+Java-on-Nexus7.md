@@ -9,17 +9,18 @@ comments: false
 In this blog post I describe how to setup [Ubuntu Linux](http://www.ubuntu.org/) and [Oracle Java](http://java.oracle.net/) on my [newly acquired Google Nexus7 device](https://play.google.com/store/devices/details?id=nexus_7_16gb). This shall be the foundation to checkout the things you can do with [JavaFX](http://www.oracle.com/technetwork/java/javafx/overview/index.html) on a Tablet computer.
 My environment is a Macbook Pro (MBP) running on OS X 10.8 (Mountain Lion). The Nexus 7 (in my case the 16gb version) is attached to the MBP via its USB cable.
 
-## Download images for your Nexus
+### Download images for your Nexus
 Visit the following URL and download *boot.img* and *rootfs.img* appropriate to your device's hardware setup
 [http://hwe.ubuntu.com/uds-r/nexus7/](http://hwe.ubuntu.com/uds-r/nexus7/)
 
-## Download Android Development Tools
+### Download Android Development Tools
 To install the Ubuntu image on your Nexus 7 we need the "fastboot" command line utility from the Android Developer Tools. You can either choose to download the Android Developer Tools from the Android website or use a customized download of "fastboot" from github:
+
 * Android Developer Tools (ADT) [http://developer.android.com/sdk/index.html#mac-bundle](http://developer.android.com/sdk/index.html#mac-bundle)
 * ADT direct download [http://dl.google.com/android/android-sdk_r21-macosx.zip](http://dl.google.com/android/android-sdk_r21-macosx.zip)
 * Alternative version for Linux and Mac [https://github.com/teamblueridge/adb-fastboot-install](https://github.com/teamblueridge/adb-fastboot-install)
 
-## Installation of the Ubuntu image
+### Installation of the Ubuntu image
 Now you need to shutdown your Nexus. When it's shut down connect it via USB to your Mac or PC and bring up the Bootloader (a.k.a. "fastboot") by holding down the "Vol -" button and then pressing the power button.
 The [Ubuntu Nexus7 Wiki](https://wiki.ubuntu.com/Nexus7/Installation) has a [nice screenshot](https://wiki.ubuntu.com/Nexus7/Installation?action=AttachFile&do=get&target=bootloader.png) of the screen that should be visible
 
@@ -55,7 +56,7 @@ it means that your USB connection timed out. In this case you need plug out and 
 Your device should then boot into Ubuntu. *NOTE:* The first boot takes about 2-4 minutes as the bootloader has to prepare the system.
 
 
-## System stabilization
+### System stabilization
 Once booted and logged in we have to open a terminal window by clicking on the Ubuntu Dash icon (upper left corner) and typing "Terminal" into the search field. In case you cannot type because the onboard keyboard doesn't appear, you can manually trigger it by clicking on the little icon with the 4 squares in the upper menubar and choosing the "Show Onboard" option. 
 
 The first step in the Terminal is to update all your system packages:
@@ -63,7 +64,7 @@ The first step in the Terminal is to update all your system packages:
 	$ sudo apt-get update
 	$ sudo apt-get upgrade
 
-### Install bluetooth keyboard
+#### Install bluetooth keyboard
 You can read the details on this step here: [https://wiki.ubuntu.com/Nexus7/UsingTheDevice](https://wiki.ubuntu.com/Nexus7/UsingTheDevice)
 
 Install the alternative bluetooth daemon
@@ -85,7 +86,7 @@ The following link has a longer description on how to add a bluetooth keyboard a
 )
 
 
-### Install OpenSSH as recovery console
+#### Install OpenSSH as recovery console
 To be able to interact with the device when the X11-Server crashes (or you chose an unusable Desktop environment - like me I wanted to try "Openbox") your first step should be the installation of the OpenSSH server.
 
 	$ sudo apt-get install openssh-server
@@ -93,7 +94,7 @@ To be able to interact with the device when the X11-Server crashes (or you chose
 Via "ipconfig" you get the ip of your device and can login from a remote machine (username: ubuntu; password: ubuntu).
 	
 	
-### Decrease memory consumption
+#### Decrease memory consumption
 On of the [Known Issues](https://wiki.ubuntu.com/Nexus7/KnownIssues) is a quiet large memory consumption of the unity desktop. To compress memory and decrease memory consumption you can install the following
 
 	$ sudo apt-get install zram-config 
@@ -101,7 +102,7 @@ On of the [Known Issues](https://wiki.ubuntu.com/Nexus7/KnownIssues) is a quiet 
 Another way would be to install a more lightweight desktop environment like LXDE
 	$ sudo apt-get install lxde
 
-## Installing Oracle Java
+### Installing Oracle Java
 For my installation I used Oracle JDK 7 (1.7.10 Developer Preview available here: [http://jdk7.java.net/fxarmpreview/](http://jdk7.java.net/fxarmpreview/))
 
 	$ sudo mkdir -p /opt/java
@@ -133,14 +134,14 @@ After this you should be able to run the "java" command successfully:
 	  Java(TM) SE Runtime Environment (build 1.7.0_10-ea-b08)
 	  Java HotSpot(TM) Client VM (build 23.6-b03, mixed mode)
 
-## To be continued...
+### To be continued...
 
 As this post is already rather long, I'll continue the findings on JavaFX in a follow-up post. In the meantime you can [follow me on Twitter](http://twitter.com/goldstift) to stay up to date.
 
 Any comments, optimization requests and suggestions are very warm welcome!
 
 
-## Links of further interest:
+### Links of further interest:
 * [Known Issues](https://wiki.ubuntu.com/Nexus7/KnownIssues)
 * [Bugtracker for ubuntu-Nexus7](https://bugs.launchpad.net/ubuntu-nexus7)
 * [Ubuntu uses Ginn for Multitouch](https://wiki.ubuntu.com/Multitouch/Ginn)
