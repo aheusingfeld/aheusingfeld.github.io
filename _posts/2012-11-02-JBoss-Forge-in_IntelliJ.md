@@ -28,12 +28,12 @@ On Mac OS X I entered the following:
 
 ![Screenshot of "External Tools" configuration for JBoss Forge](/gfx/idea-external-tool-jboss-forge.png)
 
-My .bash_profile contains the following lines:
+My "~/.profile" contains the following lines:
 
 	export FORGE_HOME=/Users/ahe/dev/tools/forge-distribution-1.1.1.Final
 	export PATH=/opt/local/bin:/opt/local/sbin:$FORGE_HOME/bin:$PATH
 
-# Other operating systems
+### Other operating systems
 
 In case you ain't working on Mac OS X, you will have to adjust the above mentioned paths accordingly. 
 For Windows users I can recommend the bash packaged with [Git For Windows](https://code.google.com/p/msysgit/).

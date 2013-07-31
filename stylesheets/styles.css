@@ -127,7 +127,7 @@ img { max-width:100%; }
 \**                    **/
 
 /* overwrite font-family 'helvetica' of jquery ui */
-header, #nav-menu-panel h3, #nav-menu-panel li, section, section li, footer { font-family: "Open Sans",sans-serif !important;}
+header, div#nav-menu-panel > h3, ul#innernav li, section#content, section#content li, footer { font-family: "Open Sans",sans-serif !important;}
 
 section {
     display:block;

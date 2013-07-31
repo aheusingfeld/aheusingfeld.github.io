@@ -16,22 +16,30 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
 
 ### Install applications
 
-#### Manual Installations
+#### Must-Have apps
 
-* Firefox
-* LibreOffice
-* IntelliJ IDEA 
-* iTerm2 [http://code.google.com/p/iterm2/](http://code.google.com/p/iterm2/)
-* Little Snitch [http://www.obdev.at/products/littlesnitch/index-de.html](http://www.obdev.at/products/littlesnitch/index-de.html)
+* [iTerm2](http://code.google.com/p/iterm2/)
+* [Little Snitch](http://www.obdev.at/products/littlesnitch/index-de.html)
  * Personal Firewall which enables you to see and disallow whenever anything tries to connect to the internet
  * MUST-HAVE, do not want to go without it anymore
+* Secrets.prefPane [http://code.google.com/p/blacktree-secrets/](http://code.google.com/p/blacktree-secrets/)
+ * Visual interface to edit preferences which are only changeable via command-line
+* Portecle [http://portecle.sourceforge.net/](http://portecle.sourceforge.net/)
+ * Utility for convenient management of Java keystores
+
+
+#### Manual Installations
+
+* [Firefox](http://www.getfirefox.com)
+* LibreOffice
+* [IntelliJ IDEA (Early Access Preview)](http://confluence.jetbrains.net/display/IDEADEV/EAP)
+* Burn [http://burn-osx.sourceforge.net/](http://burn-osx.sourceforge.net/)
+ * free DVD authoring software
 * Cyberduck [http://cyberduck.ch/](http://cyberduck.ch/)
  * Great visual SCP, FTP, SFTP client
 * Zipeg [http://www.zipeg.com/](http://www.zipeg.com/)
  * view and extract contents of Archives like ZIP, RAR, JAR, WAR, tar.gz and others
  * in contrast to most other tools, Zipeg lets you look into an archive before uncompressing it to some folder
-* Secrets.prefPane [http://code.google.com/p/blacktree-secrets/](http://code.google.com/p/blacktree-secrets/)
- * Visual interface to edit preferences which are only changeable via command-line
 * TinkerTool [http://www.bresink.com/osx/TinkerTool.html](http://www.bresink.com/osx/TinkerTool.html)
 * TotalFinder [http://totalfinder.binaryage.com/](http://totalfinder.binaryage.com/)
  * -> 18$ and worth every Cent!
@@ -39,11 +47,7 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
  * Torrent download utility
 * yEd Graph Editor [http://www.yworks.com/en/products_yed_about.html](http://www.yworks.com/en/products_yed_about.html)
  * Best for Quick Diagramms; Java-based, available for Linux + Win
-* Portecle [http://portecle.sourceforge.net/](http://portecle.sourceforge.net/)
- * Utility for convenient management of Java keystores
 * Dropbox
-* Burn [http://burn-osx.sourceforge.net/](http://burn-osx.sourceforge.net/)
- * free DVD authoring software
 * RCDefaultApp [http://www.rubicode.com/Software/RCDefaultApp/](http://www.rubicode.com/Software/RCDefaultApp/)
  * Manage default application associations for specific file-types
 * Sequel Pro [http://sequelpro.com/](http://sequelpro.com/)
@@ -54,7 +58,6 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
  * Nice2have configurable system monitor app for the status bar
 * Glims [http://www.machangout.com/](http://www.machangout.com/)
  * Safari-Extension
-* Skype (if you can't avoid it)
 
 
 #### Recommended AppStore Applications
@@ -62,7 +65,9 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
 * Pixelmator
 * TextWrangler
 * SourceTree
+ * Version Control client for Git and Mercurial
 * Pocket
+ * formerly known as "ReadItLater"
 * Outbank
 * iPhoto
 * Keynote
@@ -70,7 +75,8 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
  * Display Menu
 * Sitesucker
 * XCode
-* Screeny * Screen recording utility
+* Screeny
+ * Screen recording utility
 * Skim
 
 
@@ -86,16 +92,6 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
 
 ### Specialties
 
-* Quicktime Codecs
- * Flip4Mac [http://www.telestream.net/flip4mac/overview.htm](http://www.telestream.net/flip4mac/overview.htm)
-  * WMA and WMV codec for Quicktime
- * XVid [http://www.xvid.org/Software.83.0.html](http://www.xvid.org/Software.83.0.html)
- * DivX
- * MPEG2 -> Apple-QuickTimeMPEG2-Codec (unsupported since OS X Lion)
-* Terminal
- * use iTerm2 [http://iterm2.com/](http://iterm2.com/)
- * modify your .profile
- * Checkout the awesome dotfiles by Mathias Bynens [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
 * Install Homebrew [http://mxcl.github.com/homebrew/](http://mxcl.github.com/homebrew/)
 * Relink Java preference pane
  * /Library/PreferencePanes/JavaControlPanel.prefPane
@@ -105,9 +101,23 @@ For local backup of my iPhone, iPad and iPod I rely on [ECamm's PhoneView](http:
  * ZIP, rar, jar -> %http://macitbetter.com/BetterZip-Quick-Look-Generator/](http://macitbetter.com/BetterZip-Quick-Look-Generator/)
  * CSV -> [http://code.google.com/p/quicklook-csv/](http://code.google.com/p/quicklook-csv/)
  * Further more -> [http://www.quicklookplugins.com/](http://www.quicklookplugins.com/)
-  
+* Terminal
+ * use iTerm2 [http://iterm2.com/](http://iterm2.com/)
+ * modify your .profile
+ * Checkout the awesome dotfiles by Mathias Bynens [https://github.com/mathiasbynens/dotfiles](https://github.com/mathiasbynens/dotfiles)
+* Quicktime Codecs
+ * Flip4Mac [http://www.telestream.net/flip4mac/overview.htm](http://www.telestream.net/flip4mac/overview.htm)
+  * WMA and WMV codec for Quicktime
+ * XVid [http://www.xvid.org/Software.83.0.html](http://www.xvid.org/Software.83.0.html)
+ * DivX
+ * MPEG2 -> Apple-QuickTimeMPEG2-Codec (unsupported since OS X Lion)
+
+
 ### Glitches of the Finder
 
+* Desktop folder behaves *different*
+ * files in the Desktop folder will always be previewed in their icon
+ * movie files on the desktop do always consume CPU time for preview
 * hides system files
 * overwrites folders of the same name
  * use TotalFinder from [http://totalfinder.binaryage.com/](http://totalfinder.binaryage.com/)
