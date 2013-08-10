@@ -9,6 +9,7 @@ comments: false
 Today I'd like to share three AppleScripts with you which really enhanced my general usage of the Finder.app in Mac OS X. If you are not a Mac OS X user, you can stop reading here.
 
 In general Finder.app lacks some features I really wanted to have, among these were
+
 * copy the POSIX path of the selected file/ folder 
 * open the selected folder/ file's folder in iTerm2
 * open the selected folder/ file's folder in TextWrangler
@@ -16,6 +17,7 @@ In general Finder.app lacks some features I really wanted to have, among these w
 Fortunately OS X comes along with a good editor for AppleScripts (not to mention Automator) which can be used to enhance the operating system's abilities.
 
 ### Copy the POSIX path
+
 To copy the POSIX path of the selected file or folder, you could simply use the following script:
 
     -- When clicking on the icon
