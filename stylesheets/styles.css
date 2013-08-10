@@ -193,11 +193,14 @@ footer { clear:both; float:right; }
     }
 
     h2 {
-        font-size:1.666em;
+        font-size:1.8em;
     }
 
     h3 {
-        font-size:1.333em;
+        font-size:1.5em;
+    }
+    h4 {
+        font-size:1.2em;
     }
 }
 @media (max-width:640px){
