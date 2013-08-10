@@ -1,0 +1,44 @@
+title: goldstift's 2 cent
+author: Alexander Heusingfeld
+# FIXME timezone will need to be specified per post for a global team
+local_tz: Europe/Berlin
+interpolate: false
+description: An open source implementation of AsciiDoc in Ruby
+#blog_path: /news
+disqus: goldstift
+disqus_generate_id: true
+disqus_developer: true
+haml:
+  :ugly: true
+asciidoctor:
+  :compact: true
+  :eruby: erubis
+  :attributes:
+    idprefix: ''
+    idseparator: '-'
+    icons: 'font'
+    sectanchors: ''
+    linkattrs: ''
+    source-highlighter: highlight.js
+scss:
+  :line_numbers: true
+  :style: :expanded
+# if no profile is specified, the first with a deploy config is selected
+profiles:
+  development:
+    minify: false
+    disqus_developer: true
+    dev: true
+    deploy:
+      dummy:
+  staging:
+  production:
+    base_url: http://aheusingfeld.github.io
+    disqus_developer: false
+#    google_analytics: UA-38215684-1
+    compass_output_style: :compressed
+    # TODO enable minify once we verify it's working as expected
+    #minify: true
+    deploy:
+      host: github_pages
+      branch: master
