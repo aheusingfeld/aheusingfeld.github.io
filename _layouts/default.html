@@ -14,7 +14,26 @@
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<style  type="text/css">
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(/fonts/OpenSans-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(/fonts/OpenSans-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(/fonts/OpenSans-Italic.woff) format('woff');
+}
+	</style>
 </head>
 <body>
 <div id="wrapper" data-role="page" data-theme="d">
@@ -26,11 +45,6 @@
         <h1>{{ page.title }}</h1>
         {{ content }}
     </section>
-    <footer>
-        <p>
-            <small>&copy; 2013 by A. Heusingfeld - Hosted on <a href="https://github.com/aheusingfeld/aheusingfeld.github.com/">GitHub Pages</a></small>
-        </p>
-    </footer>
     <div id="nav-menu-panel" data-role="panel" data-position="left" data-display="reveal" data-theme="c">
         <h3>Blog Posts</h3>
         <nav>
@@ -43,6 +57,11 @@
             </ul>
         </nav>
     </div>
+    <footer>
+        <p>
+            <small>&copy; 2013 by A. Heusingfeld - Hosted on <a href="https://github.com/aheusingfeld/aheusingfeld.github.com/">GitHub Pages</a></small>
+        </p>
+    </footer>
 </div>
 <script src="/javascripts/scale.fix.js"></script>
 
