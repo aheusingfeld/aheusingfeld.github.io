@@ -129,7 +129,7 @@ img { max-width:100%; }
 /* overwrite font-family 'helvetica' of jquery ui */
 header, div#nav-menu-panel > h3, ul#innernav li, section#content, section#content li, footer { font-family: "Open Sans",sans-serif !important;}
 
-section {
+section, footer {
     display:block;
     max-width:700px;
     margin:0 auto;
@@ -151,7 +151,7 @@ hr {
   margin:0 0 20px;
 }
 
-footer { clear:both; float:right; }
+footer { clear:both; text-align: right; }
 
 
 /** show nav-menu-panel if there's enough screensize **/
