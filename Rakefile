@@ -138,7 +138,7 @@ task :travis do
   # CREDENTIALS assigned by a Travis CI Secure Environment Variable
   # see http://about.travis-ci.org/docs/user/build-configuration/#Secure-environment-variables for details
   File.open('.git/credentials', 'w') {|f| f.write("https://#{ENV['GH_TOKEN']}:@github.com") }
-  system 'git branch master origin/master'
+  system 'git checkout -b master origin/master'
   run_awestruct '-P production -g --force', :spawn => false
   run_awestruct '-P production --deploy', :spawn => false
   File.delete '.git/credentials'
