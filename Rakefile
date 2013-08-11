@@ -129,8 +129,9 @@ task :travis do
 
   # TODO use the Git library for these commands rather than system
   repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:')
+  deploy_branch = 'gh-pages'
   system "git remote set-url --push origin #{repo}"
-  system 'git remote set-branches --add origin master'
+  system 'git remote set-branches --add origin #{deploy_branch}'
   system 'git fetch -q'
   system "git config user.name '#{ENV['GIT_NAME']}'"
   system "git config user.email '#{ENV['GIT_EMAIL']}'"
@@ -138,7 +139,7 @@ task :travis do
   # CREDENTIALS assigned by a Travis CI Secure Environment Variable
   # see http://about.travis-ci.org/docs/user/build-configuration/#Secure-environment-variables for details
   File.open('.git/credentials', 'w') {|f| f.write("https://#{ENV['GH_TOKEN']}:@github.com") }
-  system 'git checkout -b master origin/master'
+  system 'git checkout -b #{deploy_branch} origin/#{deploy_branch}'
   run_awestruct '-P production -g --force', :spawn => false
   run_awestruct '-P production --deploy', :spawn => false
   File.delete '.git/credentials'
