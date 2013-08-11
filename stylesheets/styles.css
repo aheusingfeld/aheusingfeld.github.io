@@ -96,9 +96,9 @@ code, pre {
 
 pre {
   padding:8px 15px;
-  background: #f8f8f8;  
+  background: #eef;  
   border-radius:5px;
-  border:1px solid #e5e5e5;
+  border:1px solid #ccc;
   overflow-x: auto;
 }
 
@@ -150,7 +150,7 @@ article {
 	padding-top:1em;
     padding-bottom:50px;
 }
-header { 
+header, section#comments { 
 	margin:2em 0; 
 	border-bottom: 0.1em solid #e5e5e5
 }
