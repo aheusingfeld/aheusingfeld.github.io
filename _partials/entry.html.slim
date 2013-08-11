@@ -12,9 +12,10 @@ article.post itemscope='' itemtype='http://schema.org/BlogPosting' role='article
       time.pubdate datetime=(page.post.revdate ? page.post.revdate : page.post.date).strftime('%FT%T%:z') itemprop='datePublished' =(page.post.revdate ? page.post.revdate : page.post.date).strftime "%d. %B %Y"
   section itemprop='articleBody'
     - if page.listing
-      = truncate(page.post.content, page.post.title, page.post.url)
+      = truncate(page.post.content)
+      | <p><a href="#{page.post.url}" class="continue">...continue reading "#{page.post.title}"</a></p>
     - else
-      = filter(page.post.content, page.post.title, page.post.url)
+      = filter(page.post.content)
   - if page.post.tags
     section.tags role='menu' aria-label='List of linked tags' itemprop='keywords'
         i.label.icon-tags
