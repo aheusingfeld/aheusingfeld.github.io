@@ -175,6 +175,12 @@ a.icon-permalink {
 span.linktext {
 	font-size: 0;
 }
+article.post a.continue {
+	display: block;
+	text-align: right;
+	font-weight: normal;
+	font-size: 0.9em;
+}
 section.tags {
 	border-top: 0.1em solid #e5e5e5;
     font-size: 0.8em;

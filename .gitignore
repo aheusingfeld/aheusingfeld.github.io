@@ -3,6 +3,7 @@
 /.rbx/
 /_site/
 /_tmp/
+/_posts/
 Gemfile.lock
 TODO
 .DS_Store
