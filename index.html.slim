@@ -1,0 +1,11 @@
+---
+layout: base
+title: #{site.title}
+body-class: home
+---
+=partial('pagination.html.slim', :posts => page.posts)
+div style="clear: both"
+- page.posts.each do |post|
+  =partial('entry.html.slim', :post => post, :listing => true)
+=partial('pagination.html.slim', :posts => page.posts)
+

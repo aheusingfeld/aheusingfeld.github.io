@@ -124,37 +124,74 @@ th {
 
 img { max-width:100%; }
 
+strong { color:#222; font-weight:700; }
+small { font-size:0.8em; }
+hr {
+  max-width:700px;
+  border:0;
+  background:#ccc;
+  box-shadow: 0 0 5px #e5e5e5;
+  height:1px;
+  margin:0 auto;
+}
+
 
 /**                    **\
     STRUCTURAL ELEMENTS
 \**                    **/
 
 /* overwrite font-family 'helvetica' of jquery ui */
-header, div#nav-menu-panel > h3, ul#innernav li, section#content, section#content li, footer { font-family: "Open Sans",sans-serif !important;}
+#top-panel, div#nav-menu-panel > h3, ul#innernav li, #content, #content li, footer { font-family: "Open Sans",sans-serif !important;}
 
-section, footer {
+article {
     display:block;
     max-width:700px;
-    margin:0 auto;
+    margin:1em auto;
+	padding-top:1em;
     padding-bottom:50px;
 }
+header { 
+	margin:2em 0; 
+	border-bottom: 0.1em solid #e5e5e5
+}
+.meta {
+	color: #888;
+	text-transform: uppercase;
+	font-size: 0.8em;
+}
+span.author, time.pubdate { 
+  margin-left: 10px;
+}
+a.icon-permalink {
+	background-image: url(/stylesheets/images/glyphicons-halflings.png);
+    background-repeat: no-repeat;
+    background-position: -72px -48px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+}
+span.linktext {
+	font-size: 0;
+}
+section.tags {
+	border-top: 0.1em solid #e5e5e5;
+    font-size: 0.8em;
+}
+section.tags a { 
+  font-weight:normal;
+  font-style:normal;
+}
+
 section p, section pre, section ul { margin-bottom:1.6em; }
 section p { font-weight:400; text-align:justify;}
 
-article { padding-top:1em; }
-aside#related li { padding-top:1em; line-height: 1.5;}
-div#post h2 { margin-top:2em; }
-
-strong { color:#222; font-weight:700; }
-small { font-size:0.8em; }
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
+footer { 
+	clear:both; 
+	margin-top: 0.5em;
+	text-align: right; 
 }
-
-footer { clear:both; text-align: right; }
 
 
 /** show nav-menu-panel if there's enough screensize **/

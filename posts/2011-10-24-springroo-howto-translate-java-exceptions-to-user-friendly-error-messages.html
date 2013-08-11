@@ -1,0 +1,63 @@
+---
+layout: post
+title: SpringRoo - Howto translate Java exceptions to user-friendly error messages
+label: springroo-user-friendly-exceptions
+date: 2011-10-24
+revdate: 2011-10-24 23:00:00 +0200
+tags: [java, spring, roo, aspectj, exceptions, tips]
+---
+
+<h3>Introduction</h3>
+<p>This blog post belongs to a tutorial series on <a href="http://www.springsource.org/roo/why">SpringRoo</a> 1.2.0 which uses the sample application "<a href="https://github.com/aheusingfeld/photooapp/">photooapp</a>" to provide practical examples.<br />Within this blog post I will try to explain how you can configure your SpringRoo application to translate well-known exceptions to user-friendly error messages.<br />By default SpringRoo's exception handling is very basic meaning the technical exception message is directly presented to the user. Our aim is to provide the user with human-readable error messages he (most probably) can understand and react upon.  <br /></p>
+<h3>Basics: Translations in Spring MVC</h3>
+<p>First of all we need to make ourselves familiar with the translation process in Spring MVC. To translate any given String to the currently set browser locale, Spring MVC uses so called "message codes". These codes are defined in property files which are located in "src/main/webapp/WEB-INF/i18n/application.properties". For each supported locale there will be a separate application.properties file, e.g. application_de.properties for german translations of the message codes. The "application.properties" file must always be used as the fallback reference.<br /></p>
+
+
+
+pass::[more]
+
+
+<h3>Adding a sample Translation</h3>
+<p>So let's say, we wanted to translate a "org.hibernate.exception.ConstraintViolationException" which is thrown whenever the user tries to create a "duplicate entry".<br />Therefore we would add the following line to the application.properties file:<br /><pre style="background-color: #f3f3f3; font-family: &quot;Courier New&quot;,Courier,monospace;">    exceptions.db.duplicateentry=The record could not be saved as there is already a record in the database having the same unique identifier\!<br /></pre>
+</p>
+<h3>Customize exception JSP</h3>
+<p>Next we prepare the "uncaughtException.jspx" which is the default JSP for exception handling in Spring MVC. To keep it simple, we'll remove the lines with the "-" and add the ones with "+": <br /><script src="https://gist.github.com/1314197.js?file=uncaughtException.jspx"></script> With the help of the little snipped '<i>&lt;spring:message code="${exception.message}" /&gt;</i>' Spring searches for a property with the name of the Exception's message in the above named property file. Therefore we "only" need to find a way to set "exceptions.db.duplicateentry" as the Exception's message.  
+</p>
+<h3>Spring MVC ExceptionResolver</h3>
+<p>The ExceptionResolver in Spring MVC is used to determine which JSP fits best whenever any Exception is thrown. In my opinion this is the perfect place to perform our little magic. To accomplish this and be able to handle any kind of Exception in the most flexible way I added the following three classes (links lead you to github): <br /><ul><li><a href="https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/I18nMappingExceptionResolver.java" target="_blank">I18nMappingExceptionResolver</a></li><li><a href="https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/AnalyzedApplicationException.java" target="_blank">AnalyzedApplicationException</a></li><li><a href="https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/MessageMatchCriteria.java" target="_blank">MessageMatchCriteria</a></li></ul>The <i>I18nMappingExceptionResolver</i> is configured via a number of <i>MessageMatchCriteria</i> and wraps the original exception inside an <i>AnalyzedApplicationException</i>. The ladder will then have the translatable property as "message". The <i>I18nMappingExceptionResolver</i> has to be set as the default exception resolver which is done by changing the following in <i>webmvc.xml</i>: <br /><script src="https://gist.github.com/1314197.js?file=webmvc.xml"></script> The relevant change is the property "messageMapping" which contains a map of the a fore mentioned <i>MessageMatchCriteria</i> which are mapped to translatable properties. The "classNamePart" can hold a simple or fully qualified class name or just a part of it. The same applies to the "messagePart" attribute - as you can see in the sample above, the term "Duplicate entry" is part of the original exception message and if found will return a different property name than a normal ConstraintViolationException. I should mention that the classPart and the messagePart are searched in the complete stacktrace of the original exception. <br />Another thing to note is that the <i>AnalyzedApplicationException</i> makes it easy to access the originals root cause e.g. in the JSP as it's accessible via the attribute "rootCause". Therefore the variable "${exception.rootCause.message}" will resolve to the root cause's exception message.</p>
+
+<h3>Resume</h3>
+<p>All the changes have already been done to photooapp so you can review all the changes by taking a look at the following commit statement: <a href="https://github.com/aheusingfeld/photooapp/commit/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136" target="_blank">https://github.com/aheusingfeld/photooapp/commit/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136</a><br />Please leave a comment if you have any questions or good advice for improving the blog post series. Thanks in advance. </p>
+<h3>Further links</h3>
+<ul><li>Photooapp sourcecode at Github: <a href="https://github.com/aheusingfeld/photooapp">https://github.com/aheusingfeld/photooapp</a></li><li>SpringRoo Website: <a href="http://www.springsource.org/roo">www.springsource.org/roo</a></li><li>SpringRoo Downloads at Github: <a href="https://github.com/SpringSource/spring-roo/archives/master">https://github.com/SpringSource/spring-roo/archives/master</a></li><li>Spring Reference Documentation: <a href="http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html#mvc-exceptionhandlers">Spring MVC - ExceptionResolver</a></li></ul>
+
+<h3>Other blog posts of this series</h3>
+<ul>
+<li><a href="http://goldstifts.blogspot.com/2011/09/starting-photooapp-springroo-tutorial.html">Starting PhotooApp - A SpringRoo tutorial application (German)</a> </li>
+<li><a href="http://goldstifts.blogspot.com/2011/09/springroo-entity-klassen-und-jpa.html">SpringRoo: Entity-Klassen und JPA-Repositories mit SpringRoo erstellen (German)</a></li>
+<li><a href="http://goldstifts.blogspot.com/2011/10/springroo-howto-translate-java.html">SpringRoo: Howto translate Java exceptions to user-friendly error messages (English)</a></li>
+<li>SpringRoo: Spring JS/ Dojo durch jQuery ersetzen</li>
+<li>SpringRoo: Standard-Auswahllisten in Textfelder mit dynamischen Vorschlagswerten umbauen</li>
+<li>SpringRoo: Excel-Download für alle Listen-Seiten mit minimalem Aufwand </li>
+<li>SpringRoo: Dynamische Finder mit Hilfe der JPA Criteria API</li>
+<li>SpringRoo: Standardwebseiten auf smartphone-kompatibles HTML5 aktualisieren</li>
+</ul>
+<script type="text/javascript">var dzone_url = 'http://goldstifts.blogspot.com/2011/10/springroo-howto-translate-java.html'; </script>
+<script type="text/javascript">var dzone_style = '2'; </script><script language="javascript" src="http://widgets.dzone.com/links/widgets/zoneit.js"></script>
+
+<!--
+<div id='comments'>
+<h2>Comments</h2>
+<div class='comments'>
+<div class='comment'>
+<div class='author'>Macluq</div>
+<div class='content'>
+Thanks for sharing in English. Keep doing it please, my German is a little bit rusty. Tschüss.</div>
+</div>
+<div class='comment'>
+<div class='author'>stefanglase</div>
+<div class='content'>
+Thank you for posting this article! Even I have not much experience with Spring Roo yet because my last projects just used Spring directly or indirectly through Grails but the solution for a Spring Web MVC or Grails powered application looks nearly identical. <br /><br />While reading first I thought that mapping typical Spring exception classes to internationalized messages would not always lead to exactly one possible cause but you addressed this issue as you allow to find the correct message based on the exception class and a part of the original exception message.<br /><br />Thank you for sharing!<br />Stefan</div>
+</div>
+</div>
+-->

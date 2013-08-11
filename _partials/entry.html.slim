@@ -1,0 +1,33 @@
+article.post itemscope='' itemtype='http://schema.org/BlogPosting' role='article'
+  header
+    - if page.listing
+      h2 itemprop='headline' =page.post.title
+    - else
+      h1 itemprop='headline' =(page.post.title)
+    .meta aria-role='status' aria-label='Meta information on the current blog post.'
+      span.permalink
+        a.icon-permalink href=page.post.url itemprop='url' aria-label='Permalink for blog post "#{page.post.title}"'
+          span.linktext "Permalink for blog post '#{page.post.title}'"
+      span.author itemprop='author' ='(page.post.author && (page.post.author != site.author) ? page.post.author : site.author)
+      time.pubdate datetime=(page.post.revdate ? page.post.revdate : page.post.date).strftime('%FT%T%:z') itemprop='datePublished' =(page.post.revdate ? page.post.revdate : page.post.date).strftime "%d. %B %Y"
+  section itemprop='articleBody'
+    - if page.listing
+      = truncate(page.post.content, page.post.title, page.post.url)
+    - else
+      = filter(page.post.content, page.post.title, page.post.url)
+  - if page.post.tags
+    section.tags role='menu' aria-label='List of linked tags' itemprop='keywords'
+        i.label.icon-tags
+          | tags: 
+        - for tag in page.post.tags
+          a href="/posts/tags/#{tag}" role='menuitem'
+            - if (tag != page.post.tags.last)
+              ="#{tag}, "
+            - else
+              ="#{tag} "
+    - if !page.listing && site.disqus && !site.disqus_developer
+      section#comments
+      =page.post.disqus_comments
+  footer
+    - if not page.listing
+      =partial('pager.html.slim', :post => page)

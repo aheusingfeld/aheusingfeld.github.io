@@ -1,3 +1,9 @@
-_site
-.awestruct
+/.awestruct/
+/.sass-cache/
+/.rbx/
+/_site/
+/_tmp/
+Gemfile.lock
+TODO
+.DS_Store
 *.iml
