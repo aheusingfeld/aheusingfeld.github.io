@@ -10,7 +10,7 @@ Awestruct::Extensions::Pipeline.new do
   extension Awestruct::Extensions::Disqus.new
 
   extension Awestruct::Extensions::Indexifier.new
-  extension Awestruct::Extensions::Atomizer.new( :posts, '/feed.atom', :feed_title=>'Steeplesoft' )
+  extension Awestruct::Extensions::Atomizer.new( :posts, '/atom.xml', :feed_title=>'goldstift\'s blog' )
 
   helper Awestruct::Extensions::Partial
   helper Awestruct::Extensions::ReadMore
