@@ -131,8 +131,8 @@ task :travis do
   repo = %x(git config remote.origin.url).gsub(/^git:/, 'https:')
   deploy_branch = 'gh-pages'
   system "git remote set-url --push origin #{repo}"
-  system 'git remote set-branches --add origin #{deploy_branch}'
-  system 'git fetch -q'
+  system "git remote set-branches --add origin #{deploy_branch}"
+  system 'git fetch'
   system "git config user.name '#{ENV['GIT_NAME']}'"
   system "git config user.email '#{ENV['GIT_EMAIL']}'"
   system 'git config credential.helper "store --file=.git/credentials"'
