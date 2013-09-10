@@ -1,0 +1,152 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>Probleme beim Login ins Elster ePortal mit Mac OS X - goldstift's blog</title>
+
+    <link rel="alternate" type="application/atom+xml" title="goldstift's blog" href="http://aheusingfeld.github.io/atom.xml">
+    <link rel="stylesheet" href="/stylesheets/jquery.mobile-1.3.2.min.css"/>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="/javascripts/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/jquery.mobile-1.3.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+	<style  type="text/css">
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(/fonts/OpenSans-Regular.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(/fonts/OpenSans-Bold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(/fonts/OpenSans-Italic.woff) format('woff');
+}
+	</style>
+</head>
+<body>
+<div id="wrapper" data-role="page" data-theme="d">
+    <header data-role="header" data-position="fixed" data-theme="d">
+        <h2>goldstift's 2 cent on technology and software development</h2>
+        <a href="#nav-menu-panel" class="jqm-navmenu-link" data-icon="bars" data-iconpos="notext">Navigation</a>
+    </header>
+    <section id="content" data-role="content">
+        <h1>Probleme beim Login ins Elster ePortal mit Mac OS X</h1>
+        <article id="post">
+<p>Ich hatte bis vor Kurzem einige Probleme, mich im Elster ePortal anzumelden. Im Folgenden will ich kurz den Fehler und die für mich funktionierende Lösung zeigen.<br /></p>
+<h3>FEHLERBESCHREIBUNG</h3>
+<p>Wenn man auf der <a href="https://www.elsteronline.de/eportal/">Startseite</a> im linken Bereich den Punkt "Login &gt; Software-Zertifikat" wählt und dann auf "Login" klickt, wird das Java Applet geladen und der grüne, sich drehende Kreis angezeigt. Es erscheint kein Popup, die Java-Konsole oder ähnliches!<br />Wirft man während dieser Wartezeit einen Blick in die sog. Fehlerkonsole des Browsers, so findet man die folgende Fehlermeldung:
+<pre>
+Failed to load resource: https://www.elsteronline.de/eportal/
+de.elster.portal.applet.ElsterAppletAnalyze.class the server&nbsp;
+responded with a status of 404 (Not Found)
+</pre></p>
+
+<p>Ich vermutete zunächst, dass hier ein Problem mit der Codebase des Applets vorliegt. Die Kollegen verwenden interessanter Weise das veraltete &lt;object&gt;-Tag, anstatt das wesentlich angenehmere JavaScript (<a href="view-source:http://www.java.com/js/deployJava.js">deployJava.js</a>)* von Oracle/ Sun  zu verwenden.<br /><br />* Es gibt eine überarbeitete Version des <a href="http://jira.atlassian.com/includes/deployJava.js">JavaScript von Atlassian</a>, die auch unter Opera läuft!<br /><br />SYSTEMUMGEBUNG<br />Betriebssystem: Mac OS X 10.6.5<br />Java: 1.6.0_22<br />Browser: Safari 5.0.3 (6533.19.4)<br />Browser2: Firefox 4.0b7<br /><br />RANDBEMERKUNG<br />Nach einer gewissen Zeit kommt anscheinend ein Timeout woraufhin eine neue Seite geöffnet und folgende Fehlermeldungen angezeigt werden:</p>
+<blockquote>
+<h3>Konfigurations-Assistent</h3>
+<p>Die Überprüfung der Konfiguration Ihres Computers wurde soeben durchgeführt.</p>
+<h3>Fehlende Voraussetzung</h3><br />
+<h4>Java Sicherheitseinstellungen</h4>
+<p>Ihr System erfüllt nicht die grundlegenden Voraussetzungen zur Nutzung des ElsterOnline-Portals. Voraussetzung für die Nutzung von ElsterOnline ist die Einstellung AllPermissions in den Java-Sicherheitseinstellungen für signierte Applets.</p>
+<h4>Kein kompatibles Java-Plugin installiert</h4>
+<p>Ihr System erfüllt nicht die grundlegenden Voraussetzungen zur Nutzung des ElsterOnline-Portals. Wir empfehlen Ihnen, falls ElsterOnline dies für Ihr Betriebssystem unterstützt (siehe Anforderungen), das aktuelle Java Runtime Environment (JRE) zu installieren. Zum Download der neuesten Version der Java-Software rufen Sie bitte die Java-Homepage (http://www.java.com/de/) auf. Diese Seiten enthalten detaillierte Anweisungen zum Download und zur Installation der Java-Software (JRE).<br /><br /><br /><h4>Warnhinweis Nicht erkanntes Betriebssystem</h4><br />Ihr Betriebssystem wurde nicht erkannt und wird möglicherweise von ElsterOnline nicht unterstützt. Eine Liste der von ElsterOnline unterstützten Betriebssysteme finden Sie unter Anforderungen. Die problemlose Nutzung von ElsterOnline kann mit Ihrem Betriebssystem möglich sein, selbst wenn es nicht in der Anforderungsliste aufgeführt ist. Dies wird jedoch nicht garantiert. Falls ein Problem auftritt, kann Sie die Hotline nur dann bei der Behebung unterstützen, falls Ihr Betriebssystem in der Anforderungsliste enthalten ist.</blockquote><br /><br />Randbemerkung:<br />Auf dem System war die aktuellste Java Version (siehe Versionsangabe oben) installiert  und in den <a href="https://www.elsteronline.de/eportal/Anforderungen.tax">Anforderungen für Elster</a> ist Mac OS X 10.6.5 mit JRE6+Safari5 als unterstützte Umgebung freigegeben.<br /><br />
+</p>
+<h3>Lösung: Neuinstallation</h3>
+<ul><li>Java for Mac OS X 10.6 Update 3 herunterladen (<a href="http://support.apple.com/kb/DL972">http://support.apple.com/kb/DL972</a>)</li>
+<li>alle Anwendungen, die Java verwenden (z.B. auch Safari und Firefox) beenden</li>
+<li>das Java-Update installieren</li>
+<li>Safari neustarten und auf <a href="https://www.elsteronline.de/eportal/">https://www.elsteronline.de/eportal/</a> leiten</li>
+</ul>
+
+
+<aside id="related">
+  <h2>Related Posts</h2>
+  <nav>
+  <ul class="posts">
+    
+      <li><span>10 Feb 2011</span> &raquo; <a href="/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo.html">Umlaute und Sonderzeichen in Spring Roo?</a></li>
+    
+      <li><span>23 Sep 2011</span> &raquo; <a href="/2011/09/23/starting-photooapp-a-springroo-tutorial-application.html">Starting PhotooApp - A SpringRoo tutorial application</a></li>
+    
+      <li><span>25 Sep 2011</span> &raquo; <a href="/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen.html">SpringRoo - Entity-Klassen und JPA-Repositories mit SpringRoo erstellen</a></li>
+    
+      <li><span>05 Jun 2011</span> &raquo; <a href="/2011/06/05/praxistipps-zu-ftplicity.html">Praxistipps zu ftplicity</a></li>
+    
+      <li><span>01 Oct 2011</span> &raquo; <a href="/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen.html">iPhone - Wartezeit für Rufumleitung bei Abwesenheit setzen</a></li>
+    
+  </ul>
+  </nav>
+</aside>
+<div id="disqus">
+<h2>Comments</h2>
+ <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'goldstift';
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+</div>
+</article>
+
+    </section>
+    <div id="nav-menu-panel" data-role="panel" data-position="left" data-display="reveal" data-theme="c">
+        <h3>Blog Posts</h3>
+        <nav>
+            <ul id="innernav" data-role="listview" data-inset="true">
+                <li><a href="/">Home</a></li>
+                <li id="allpostslink"><a href="/allposts.html">All blog posts</a></li>
+                
+                <li><span>08 Aug 2013</span> <a href="/2013/08/08/speaking-at-DOAG-SIG-Middleware.html">&raquo; Speaking At Doag Sig Middleware</a></li>
+                
+                <li><span>06 Aug 2013</span> <a href="/2013/08/06/getting-started-with-clojure.html">&raquo; Getting started with Clojure</a></li>
+                
+                <li><span>13 Jul 2013</span> <a href="/2013/07/13/speaking-at-javaone2013.html">&raquo; Speaking at JavaOne 2013</a></li>
+                
+                <li><span>27 Jun 2013</span> <a href="/2013/06/27/postfix-and-etc-hosts.html">&raquo; Postfix and /etc/hosts</a></li>
+                
+                <li><span>25 Apr 2013</span> <a href="/2013/04/25/collaborator-on-sonar-intellij-plugin.html">&raquo; Collaborator on Sonar IntelliJ Plugin</a></li>
+                
+                <li><span>21 Apr 2013</span> <a href="/2013/04/21/speaking-at-javaforum-stuttgart.html">&raquo; I'm speaking at Java Forum Stuttgart 2013</a></li>
+                
+                <li><span>20 Mar 2013</span> <a href="/2013/03/20/Mac-OS-X-for-java-developers.html">&raquo; Mac OS X setup tips & tricks</a></li>
+                
+                <li><span>27 Jan 2013</span> <a href="/2013/01/27/multiboot-ubuntu-and-android-on-Nexus7.html">&raquo; Multiboot Ubuntu and Android on Nexus7</a></li>
+                
+                <li><span>13 Jan 2013</span> <a href="/2013/01/13/Contribute-to-an-IntelliJ-plugin.html">&raquo; Howto contribute to an IntelliJ IDEA plugin</a></li>
+                
+                <li><span>13 Dec 2012</span> <a href="/2012/12/13/Glassfish4-on-Nexus7.html">&raquo; Glassfish 4 on Nexus7</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+    <footer>
+        <p>
+            <small>&copy; 2013 by A. Heusingfeld - Hosted on <a href="https://github.com/aheusingfeld/aheusingfeld.github.com/">GitHub Pages</a></small>
+        </p>
+    </footer>
+</div>
+<script src="/javascripts/scale.fix.js"></script>
+
+</body>
+</html>
