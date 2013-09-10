@@ -8,3 +8,4 @@ Gemfile.lock
 TODO
 .DS_Store
 *.iml
+*.sublime*
