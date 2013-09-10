@@ -33,8 +33,8 @@ gem 'rake', '~> 10.0.3', :group => :test
 gem 'rdoc', '~> 4.0.0', :group => :test
 gem 'tomdoc', '~> 0.2.5', :group => :test
 gem 'tzinfo', '~> 0.3.35', :group => :test
-gem 'coffee-script', '>= 2.2.0'                         # If using coffee-script or to remove the warning
-gem 'therubyracer', '0.11.4', :platforms => :ruby       # Javascript runtime on mri (needed for LESS and coffee-script)
+#gem 'coffee-script', '>= 2.2.0'                         # If using coffee-script or to remove the warning
+#gem 'therubyracer', '0.11.4', :platforms => :ruby       # Javascript runtime on mri (needed for LESS and coffee-script)
 # gem 'therubyrhino', '~> 2.0.2', :platforms => :jruby    # Javascript runtime on jruby (needed for LESS and coffee-script)
 # gem 'org-ruby', '>= 0.8'                                # If using Org-Mode
 # gem 'RedCloth', '>= 4.2.9'                              # If using Textile
@@ -45,8 +45,6 @@ gem 'htmlcompressor', '>= 0.0.3'                        # If using the minify tr
 
 
 # copied from asciidoctor.org GEMFILE
-#gem 'awestruct', :github => 'awestruct'
-#gem 'asciidoctor', :github => 'asciidoctor'
 gem 'tilt', '~> 1.4.1'
 #gem 'zurb-foundation', '~> 4.3.1'
 #gem 'rb-inotify', '~> 0.9.0', :platforms => [:ruby, :jruby]
