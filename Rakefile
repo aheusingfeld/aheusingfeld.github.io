@@ -140,7 +140,7 @@ task :travis do
   # see http://about.travis-ci.org/docs/user/build-configuration/#Secure-environment-variables for details
   File.open('.git/credentials', 'w') {|f| f.write("https://#{ENV['GH_TOKEN']}:@github.com") }
   #set_pub_dates 'master'
-  system 'git branch master origin/master'
+  system 'git branch gh-pages origin/gh-pages'
   run_awestruct '-P production -g --force', :spawn => false
   #gen_rdoc
   run_awestruct '-P production --deploy', :spawn => false
