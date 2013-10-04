@@ -14,7 +14,7 @@ head
     meta name='twitter:title' content=page.title
     meta name='twitter:description' content=summarize(html_to_text(page.content).strip.gsub(/^[:space:]*\r\n/, ''), 25)
   link rel='alternate' type="application/atom+xml" title='goldstift\s blog' href='#{site.base_url}/atom.xml'
-  link rel='shortcut icon' href='http://goldstift.de/favicon.ico' type='image/x-icon'
+  link rel='shortcut icon' href='http://goldstift.de/favicon.ico?#{page.url}' type='image/x-icon'
   link rel='stylesheet' href='/stylesheets/jquery.mobile-1.3.2.min.css'
   link rel='stylesheet' href='/stylesheets/styles.css'
   script src='/javascripts/vendor/custom.modernizr.js'
