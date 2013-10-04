@@ -19,13 +19,13 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 }
 
 html {
-     font-size: 18px;
+     font-size: 16px;
      line-height: 1.67;
 }
 
 body {
      border: 0px none;
-     color: #333;
+     color: #444;
     text-shadow: 0 1px 0 #FFFFFF;
      margin: 0px;
      padding: 50px;
@@ -34,6 +34,10 @@ body {
 
 p, ul, ol, table, pre, dl {
     margin:0 0 20px;
+}
+
+li > p {
+  margin:0; padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -73,7 +77,9 @@ a {
   font-weight:400;
   text-decoration:none;
 }
-a:hover { color:#39c; text-decoration:underline; }
+a:hover { 
+  color:#39c; text-decoration:underline; 
+}
 
 a small {
   color:#777;
@@ -89,17 +95,27 @@ blockquote {
 }
 
 code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  color:#333;
-  font-size:0.9em;
+  font-family:Consolas, Courier, monospace;
+  color:#222;
+  background-color: #F2F2F2;
 }
 
 pre {
-  padding:8px 15px;
-  background: #eef;  
-  border-radius:5px;
-  border:1px solid #ccc;
+  font-size:0.9em;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  padding: 3px 5px 0;
+  text-shadow: none;
   overflow-x: auto;
+}
+
+:not(pre) > code {
+    font-size:0.9em;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 1px 3px 0;
+    text-shadow: none;
+    white-space: nowrap;
 }
 
 table {
@@ -124,8 +140,12 @@ th {
 
 img { max-width:100%; }
 
-strong { color:#222; font-weight:700; }
-small { font-size:0.8em; }
+strong { 
+  color:#222; font-weight:700; 
+}
+small { 
+  font-size:0.8em; 
+}
 hr {
   max-width:700px;
   border:0;
@@ -190,8 +210,8 @@ section.tags a {
   font-style:normal;
 }
 
-section p, section pre, section ul { margin-bottom:1.6em; }
-section p { font-weight:400; text-align:justify;}
+section .paragraph, section pre, section ul { margin-bottom:1.6em; }
+section .paragraph { font-weight:400; text-align:justify;}
 
 footer { 
 	clear:both; 
@@ -250,11 +270,11 @@ footer {
     }
 }
 @media (max-width:640px){
-    section p { text-align:left;}
+    section .paragraph { text-align:left;}
 }
 @media (max-width:480px){
     html {
-        font-size: 16px;
+        font-size: 15px;
     }
 }
 
