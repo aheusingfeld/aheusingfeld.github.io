@@ -25,7 +25,7 @@
 source 'https://rubygems.org'                             # This tells Bundler where to look for gems
 
 gem 'awestruct', '>= 0.5.3'                               # Goes without saying
-gem 'asciidoctor', '~> 0.1.4'
+gem 'asciidoctor', '~> 0.1.3'
 gem 'erubis', '~> 2.7.0'
 gem 'haml', '~> 4.0.0'
 gem 'git', '~> 1.2.5', :group => :test
