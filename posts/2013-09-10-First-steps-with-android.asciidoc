@@ -12,6 +12,10 @@ Further information on the new structure and the new build system are available 
 
 I decided to go with the new Gradle-based structure as I thought it was more future proof. I have to admit that I regret this badly! As I'm not too familiar with Gradle, yet, I had a pretty bad time trying to understand the customizations brought in by the gradle-android plugin. Additionally most of the information available on the net is specific to Eclipse/ Ant based projects and therefore slightly different for the new structure.
 
+
+pass::[more]
+
+
 ### Environment Setup
 
 * download Android SDK
