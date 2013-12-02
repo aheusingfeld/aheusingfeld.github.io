@@ -7,7 +7,7 @@ revdate: 2013-03-20 23:00:00 +0200
 tags: [os x, apple, setup, apps, tips]
 ---
 
-With this is post I want to share with you my experience when re-setting up my MacBook and which tools and applications I use on a regular basis and thus I can recommend to you. :)
+This post is kind of a reminder for myself when re-setting up my MacBook on which tools and applications I found to be useful for daily business. Feel free to comment, make suggestions or even send in pull-requests if you have different recommendations. :)
 
 
 ### Applications
