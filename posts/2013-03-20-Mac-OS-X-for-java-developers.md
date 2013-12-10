@@ -21,10 +21,12 @@ pass::[more]
  * Personal Firewall which enables you to see and disallow whenever anything tries to connect to the internet
  * MUST-HAVE, do not want to go without it anymore
 * [iTerm2](http://code.google.com/p/iterm2/)
-* **Homebrew** from [http://mxcl.github.com/homebrew/](http://mxcl.github.com/homebrew/)
+* **Homebrew** from [http://brew.sh](http://brew.sh) or install via `ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"`
+  * [Homebrew Cask](https://github.com/phinze/homebrew-cask) - homebrew-style CLI workflow for the administration of Mac applications distributed as binaries
+* Install "[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)" via `curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh`
+ * install the "[agnoster](https://gist.github.com/agnoster/3712874)" theme with the specific [fonts](https://github.com/Lokaltog/powerline-fonts) and [Solarized Dark iTerm2 colorscheme](https://raw.github.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors)
 * **[CodeWeavers' CrossOver](http://www.codeweavers.com/products/crossover-mac/)** to run Windows Applications - worth every cent!!!
-* iStatMenus [http://bjango.com/mac/istatmenus/](http://bjango.com/mac/istatmenus/)
- * Nice2have configurable system monitor app for the status bar
+* iStatMenus [http://bjango.com/mac/istatmenus/](http://bjango.com/mac/istatmenus/) - (Nice2have) configurable system monitor app for the status bar
 * [AppCleaner](http://www.freemacsoft.net/appcleaner/) to completely remove apps with all related files e.g. settings, cache and "`~/Library/Application Support`"
 * [Apple Mastered for iTunes - Audio Mastering Tools](https://www.apple.com/itunes/mastered-for-itunes/)
  * drag-and-drop tool to create iTunes Plus audio files
@@ -37,8 +39,9 @@ pass::[more]
  * Manage default application associations for specific file-types
 * Relink Java preference pane
  * /Library/PreferencePanes/JavaControlPanel.prefPane
-* Enhance Quicklook
- * ZIP, rar, jar -> %http://macitbetter.com/BetterZip-Quick-Look-Generator/](http://macitbetter.com/BetterZip-Quick-Look-Generator/)
+* Add Quicklook plugins
+ * a collection for developers [https://github.com/sindresorhus/quick-look-plugins](https://github.com/sindresorhus/quick-look-plugins)
+ * ZIP, rar, jar -> [http://macitbetter.com/BetterZip-Quick-Look-Generator/](http://macitbetter.com/BetterZip-Quick-Look-Generator/)
  * CSV -> [http://code.google.com/p/quicklook-csv/](http://code.google.com/p/quicklook-csv/)
  * Further more -> [http://www.quicklookplugins.com/](http://www.quicklookplugins.com/)
 * Quicktime Codecs
