@@ -5,13 +5,67 @@
 <author>
 <name>Alexander Heusingfeld</name>
 </author>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <link href="http://aheusingfeld.github.io/atom.xml" rel="self" type="application/atom+xml" />
 <link href="http://aheusingfeld.github.io/" rel="alternate" type="text/html" />
 <entry>
+<id>http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/</id>
+<title>Personal Reset</title>
+<updated>2014-09-06T21:19:07+00:00</updated>
+<published>2014-09-06T00:00:00+00:00</published>
+<link href="http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/" rel="alternate" type="text/html" />
+<author>
+<name>Alexander Heusingfeld</name>
+</author>
+<category term="java"></category>
+<category term="MicroServices"></category>
+<category term="asciidoc"></category>
+<category term="dayone"></category>
+<summary>
+
+
+
+Lately I noticed a growing dissatisfaction with my daily workflow. And this was not only because my last blog post has been almost a year ago. No, it&#8217;s related to a noticable drop in productivity. I figured this was due to my curiosity dragging me onto way more interesting topics than either my time frame or my toolset could master. Unfortunately trying to keep up-to-date on those topics created loads of distractions which almost resulted in an inability to focus on a single task for a longer amount of time
+
+
+Lucky me, I&#8217;m surrounded by a bunch of awesome people whom...
+</summary>
+<content type="html">
+&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Lately I noticed a growing dissatisfaction with my daily workflow. And this was not only because my last blog post has been almost a year ago. No, it’s related to a noticable drop in productivity. I figured this was due to my curiosity dragging me onto way more interesting topics than either my time frame or my toolset could master. Unfortunately trying to keep up-to-date on those topics created loads of distractions which almost resulted in an inability to focus on a single task for a longer amount of time&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Lucky me, I’m surrounded by a bunch of awesome people whom I could talk to about this and my pending decisions.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect2&quot;&gt;
+&lt;h3 id=&quot;so-what-does-it-mean&quot;&gt;So, what does it mean?&lt;/h3&gt;
+&lt;div class=&quot;olist arabic&quot;&gt;
+&lt;ol class=&quot;arabic&quot;&gt;
+&lt;li&gt;
+&lt;p&gt;First of all I’ll try to get over that &quot;writer’s block&quot; and write small posts like this one about things on my mind.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Second of all I will have to reduce the quantity of my output on Twitter and skip some of my projects to achieve a level of quality that is finally satisfactory for me personally.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Regarding the toolset I decided to give &lt;a href=&quot;http://dayoneapp.com/&quot;&gt;DayOne&lt;/a&gt; another try. It’s a journal/ diary app that supports MarkDown (yes, I’d favor Asciidoc), syncs via iCloud, reminds me of stuff and has a few other nice features. The only downsides are it’s Apple-only and it doesn’t support WebDAV-sync which would allow automatic publishing to my blog.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;That’s it for my plans. My next post will hopefully be quite soon as I’m currently preparing my &lt;a href=&quot;https://www.innoq.com/en/talks/2014/10/micro-services-on-the-jvm-javaone/&quot;&gt;JavaOne talk (CON4952)&lt;/a&gt; with my dear colleague, &lt;a href=&quot;https://twitter.com/eigenbrodtm&quot;&gt;Martin Eigenbrodt&lt;/a&gt;, which touches some interesting aspects of #MicroServices and distributed systems. Let’s see how it will work out.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+</entry>
+<entry>
 <id>http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/</id>
 <title>First Steps with Android</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-09-10T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/" rel="alternate" type="text/html" />
 <author>
@@ -190,7 +244,7 @@ Yes, there is a &lt;a href=&quot;http://tbeernot.wordpress.com/2012/12/09/layout
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/</id>
 <title>Speaking at DOAG SIG Middleware 2013</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-08-08T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/" rel="alternate" type="text/html" />
 <author>
@@ -230,7 +284,7 @@ This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of th
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/</id>
 <title>Getting started with Clojure</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-08-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/" rel="alternate" type="text/html" />
 <category term="clojure"></category>
@@ -347,7 +401,7 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/</id>
 <title>Speaking at JavaOne 2013</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-07-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -381,7 +435,7 @@ will join me on the trip. He and his friend &lt;a href=&quot;http://twitter.com/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/</id>
 <title>Postfix and /etc/hosts</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-06-27T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -477,7 +531,7 @@ $ echo Hi there, how are you? | mail -s &quot;test mail&quot; root
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/</id>
 <title>Collaborator on Sonar IntelliJ Plugin</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-04-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/" rel="alternate" type="text/html" />
 <category term="intellij"></category>
@@ -514,7 +568,7 @@ The Sonar plugin for IntelliJ is a basic...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/</id>
 <title>I'm speaking at Java Forum Stuttgart 2013</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-04-21T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -541,7 +595,7 @@ You can see the &lt;a href=&quot;http://www.java-forum-stuttgart.de/de/Programm.
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/</id>
 <title>Mac OS X setup tips &amp; tricks</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2013-03-20T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -551,166 +605,194 @@ You can see the &lt;a href=&quot;http://www.java-forum-stuttgart.de/de/Programm.
 <category term="tips"></category>
 <summary>
 
-With this is post I want to share with you my experience when re-setting up my MacBook and which tools and applications I use on a regular basis and thus I can recommend to you. :)
+This post is kind of a reminder for myself when re-setting up my MacBook on which tools and applications I found to be useful for daily business. Feel free to comment, make suggestions or even send in pull-requests if you have different recommendations. :)
 
 Applications
 
-Must-Have apps
-
-
-  iTerm2
-  Little Snitch
-** Personal Firewall which enables you to see and disallow whenever anything tries to connect to the internet
-** MUST-HAVE, do not want to go without it anymore
-  Secrets.prefPane http://code.google.com/p/blacktree-secrets/
-** Visual interface to edit preferences which are only changeable via command-line
-  Portecle http://portecle.sourceforge.net/
-** Utility for convenient management of Java keystores
-
-
 pass::[more]
 
-Manual Installations
+System
 
 
-  Firefox
-  LibreOffice
-  IntelliJ IDEA...
+  Little Snitch
+  Personal Firewall which enables you to see and disallow whenever anything tries to connect to the internet
+  MUST-HAVE, do not want to go without it anymore
+  iTerm2
+  Homebrew from http://brew.sh or install via ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)"
+    
+      Homebrew Cask...
 </summary>
 <content type="html">
 
-&lt;p&gt;With this is post I want to share with you my experience when re-setting up my MacBook and which tools and applications I use on a regular basis and thus I can recommend to you. :)&lt;/p&gt;
+&lt;p&gt;This post is kind of a reminder for myself when re-setting up my MacBook on which tools and applications I found to be useful for daily business. Feel free to comment, make suggestions or even send in pull-requests if you have different recommendations. :)&lt;/p&gt;
 
 &lt;h3 id=&quot;applications&quot;&gt;Applications&lt;/h3&gt;
 
-&lt;h4 id=&quot;must-have-apps&quot;&gt;Must-Have apps&lt;/h4&gt;
+&lt;p&gt;pass::[more]&lt;/p&gt;
+
+&lt;h4 id=&quot;system&quot;&gt;System&lt;/h4&gt;
 
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://code.google.com/p/iterm2/&quot;&gt;iTerm2&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.obdev.at/products/littlesnitch/index-de.html&quot;&gt;Little Snitch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Personal Firewall which enables you to see and disallow whenever anything tries to connect to the internet&lt;/li&gt;
+  &lt;li&gt;MUST-HAVE, do not want to go without it anymore&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://code.google.com/p/iterm2/&quot;&gt;iTerm2&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
-&lt;a href=&quot;http://www.obdev.at/products/littlesnitch/index-de.html&quot;&gt;Little Snitch&lt;/a&gt;
-** Personal Firewall which enables you to see and disallow whenever anything tries to connect to the internet
-** MUST-HAVE, do not want to go without it anymore&lt;/li&gt;
-  &lt;li&gt;Secrets.prefPane &lt;a href=&quot;http://code.google.com/p/blacktree-secrets/&quot;&gt;http://code.google.com/p/blacktree-secrets/&lt;/a&gt;
-** Visual interface to edit preferences which are only changeable via command-line&lt;/li&gt;
-  &lt;li&gt;Portecle &lt;a href=&quot;http://portecle.sourceforge.net/&quot;&gt;http://portecle.sourceforge.net/&lt;/a&gt;
-** Utility for convenient management of Java keystores&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;pass::[more]&lt;/p&gt;
-
-&lt;h4 id=&quot;manual-installations&quot;&gt;Manual Installations&lt;/h4&gt;
-
+&lt;strong&gt;Homebrew&lt;/strong&gt; from &lt;a href=&quot;http://brew.sh&quot;&gt;http://brew.sh&lt;/a&gt; or install via &lt;code&gt;ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)&quot;&lt;/code&gt;
+    &lt;ul&gt;
+&lt;li&gt;
+&lt;a href=&quot;https://github.com/phinze/homebrew-cask&quot;&gt;Homebrew Cask&lt;/a&gt; - homebrew-style CLI workflow for the administration of Mac applications distributed as binaries&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;
+  &lt;li&gt;Install &quot;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh&lt;/a&gt;&quot; via &lt;code&gt;curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh&lt;/code&gt;
+&lt;/li&gt;
+  &lt;li&gt;install the &quot;&lt;a href=&quot;https://gist.github.com/agnoster/3712874&quot;&gt;agnoster&lt;/a&gt;&quot; theme with the specific &lt;a href=&quot;https://github.com/Lokaltog/powerline-fonts&quot;&gt;fonts&lt;/a&gt; and &lt;a href=&quot;https://raw.github.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors&quot;&gt;Solarized Dark iTerm2 colorscheme&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;
+&lt;strong&gt;&lt;a href=&quot;http://www.codeweavers.com/products/crossover-mac/&quot;&gt;CodeWeavers' CrossOver&lt;/a&gt;&lt;/strong&gt; to run Windows Applications - worth every cent!!!&lt;/li&gt;
+  &lt;li&gt;iStatMenus &lt;a href=&quot;http://bjango.com/mac/istatmenus/&quot;&gt;http://bjango.com/mac/istatmenus/&lt;/a&gt; - (Nice2have) configurable system monitor app for the status bar&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://www.freemacsoft.net/appcleaner/&quot;&gt;AppCleaner&lt;/a&gt; to completely remove apps with all related files e.g. settings, cache and &quot;&lt;code&gt;~/Library/Application Support&lt;/code&gt;&quot;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.apple.com/itunes/mastered-for-itunes/&quot;&gt;Apple Mastered for iTunes - Audio Mastering Tools&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;drag-and-drop tool to create iTunes Plus audio files&lt;/li&gt;
+&lt;/ul&gt;&lt;h4 id=&quot;preference-panes-settings&quot;&gt;Preference Panes/ Settings&lt;/h4&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;LibreOffice&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://confluence.jetbrains.net/display/IDEADEV/EAP&quot;&gt;IntelliJ IDEA (Early Access Preview)&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Burn &lt;a href=&quot;http://burn-osx.sourceforge.net/&quot;&gt;http://burn-osx.sourceforge.net/&lt;/a&gt;
-** free DVD authoring software&lt;/li&gt;
-  &lt;li&gt;Cyberduck &lt;a href=&quot;http://cyberduck.ch/&quot;&gt;http://cyberduck.ch/&lt;/a&gt;
-** Great visual SCP, FTP, SFTP client&lt;/li&gt;
-  &lt;li&gt;Zipeg &lt;a href=&quot;http://www.zipeg.com/&quot;&gt;http://www.zipeg.com/&lt;/a&gt;
-** view and extract contents of Archives like ZIP, RAR, JAR, WAR, tar.gz and others
-** in contrast to most other tools, Zipeg lets you look into an archive before uncompressing it to some folder&lt;/li&gt;
+&lt;li&gt;Secrets.prefPane &lt;a href=&quot;http://code.google.com/p/blacktree-secrets/&quot;&gt;http://code.google.com/p/blacktree-secrets/&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;Visual interface to display and edit all preferences which are only changeable via command-line&lt;/li&gt;
   &lt;li&gt;TinkerTool &lt;a href=&quot;http://www.bresink.com/osx/TinkerTool.html&quot;&gt;http://www.bresink.com/osx/TinkerTool.html&lt;/a&gt;
 &lt;/li&gt;
-  &lt;li&gt;TotalFinder &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt;
-** -&amp;gt; 18$ and worth every Cent!&lt;/li&gt;
-  &lt;li&gt;Transmission &lt;a href=&quot;http://www.transmissionbt.com/&quot;&gt;http://www.transmissionbt.com/&lt;/a&gt;
-** Torrent download utility&lt;/li&gt;
-  &lt;li&gt;yEd Graph Editor &lt;a href=&quot;http://www.yworks.com/en/products_yed_about.html&quot;&gt;http://www.yworks.com/en/products_yed_about.html&lt;/a&gt;
-** Best for Quick Diagramms; Java-based, available for Linux + Win&lt;/li&gt;
-  &lt;li&gt;Dropbox&lt;/li&gt;
   &lt;li&gt;RCDefaultApp &lt;a href=&quot;http://www.rubicode.com/Software/RCDefaultApp/&quot;&gt;http://www.rubicode.com/Software/RCDefaultApp/&lt;/a&gt;
-** Manage default application associations for specific file-types&lt;/li&gt;
-  &lt;li&gt;Sequel Pro &lt;a href=&quot;http://sequelpro.com/&quot;&gt;http://sequelpro.com/&lt;/a&gt;
-** Great MySQL Client for OS X&lt;/li&gt;
-  &lt;li&gt;Audacity &lt;a href=&quot;http://audacity.sourceforge.net/&quot;&gt;http://audacity.sourceforge.net/&lt;/a&gt;
-** multi format audio file editor&lt;/li&gt;
-  &lt;li&gt;iStatMenus &lt;a href=&quot;http://bjango.com/mac/istatmenus/&quot;&gt;http://bjango.com/mac/istatmenus/&lt;/a&gt;
-** Nice2have configurable system monitor app for the status bar&lt;/li&gt;
-  &lt;li&gt;Glims &lt;a href=&quot;http://www.machangout.com/&quot;&gt;http://www.machangout.com/&lt;/a&gt;
-** Safari-Extension&lt;/li&gt;
-&lt;/ul&gt;&lt;h4 id=&quot;recommended-appstore-applications&quot;&gt;Recommended AppStore Applications&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Pixelmator&lt;/li&gt;
-  &lt;li&gt;TextWrangler&lt;/li&gt;
-  &lt;li&gt;SourceTree
-** Version Control client for Git and Mercurial&lt;/li&gt;
-  &lt;li&gt;Pocket
-** formerly known as &quot;ReadItLater&quot;&lt;/li&gt;
-  &lt;li&gt;Outbank&lt;/li&gt;
-  &lt;li&gt;iPhoto&lt;/li&gt;
-  &lt;li&gt;Keynote
-** Caffeine
-** Display Menu&lt;/li&gt;
-  &lt;li&gt;Sitesucker&lt;/li&gt;
-  &lt;li&gt;XCode&lt;/li&gt;
-  &lt;li&gt;Screeny
-** Screen recording utility&lt;/li&gt;
-  &lt;li&gt;Skim&lt;/li&gt;
-&lt;/ul&gt;&lt;h3 id=&quot;configure-accounts&quot;&gt;Configure accounts&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Yahoo&lt;/li&gt;
-  &lt;li&gt;Google&lt;/li&gt;
-  &lt;li&gt;Flickr&lt;/li&gt;
-  &lt;li&gt;iCloud&lt;/li&gt;
-  &lt;li&gt;Jabber&lt;/li&gt;
-  &lt;li&gt;Twitter&lt;/li&gt;
-  &lt;li&gt;Facebook&lt;/li&gt;
-&lt;/ul&gt;&lt;h3 id=&quot;connect-to-icloud&quot;&gt;Connect to iCloud&lt;/h3&gt;
-
-&lt;p&gt;I've had too many bad experiences with iTunes to use it for syncing my data between different devices. That's why I chose to synchronize my calendars, contacts and notes via iCloud. Therefore connecting my iCloud account/ AppleID to my MacBook is pretty much the first thing to do. For syncing all other kinds of files I use my Dropbox account.&lt;/p&gt;
-
-&lt;p&gt;For local backup of my iPhone, iPad and iPod I rely on &lt;a href=&quot;http://ecamm.com/mac/phoneview/&quot;&gt;ECamm's PhoneView&lt;/a&gt; for more than 2 years now. It never let me down - which I cannot say about iTunes at all! Maybe you'd like to check it out.&lt;/p&gt;
-
-&lt;h3 id=&quot;specialties&quot;&gt;Specialties&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Install Homebrew &lt;a href=&quot;http://mxcl.github.com/homebrew/&quot;&gt;http://mxcl.github.com/homebrew/&lt;/a&gt;
 &lt;/li&gt;
-  &lt;li&gt;Relink Java preference pane
-** /Library/PreferencePanes/JavaControlPanel.prefPane&lt;/li&gt;
+  &lt;li&gt;Manage default application associations for specific file-types&lt;/li&gt;
+  &lt;li&gt;Relink Java preference pane&lt;/li&gt;
+  &lt;li&gt;/Library/PreferencePanes/JavaControlPanel.prefPane&lt;/li&gt;
+  &lt;li&gt;Add Quicklook plugins&lt;/li&gt;
+  &lt;li&gt;a collection for developers &lt;a href=&quot;https://github.com/sindresorhus/quick-look-plugins&quot;&gt;https://github.com/sindresorhus/quick-look-plugins&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;ZIP, rar, jar -&amp;gt; &lt;a href=&quot;http://macitbetter.com/BetterZip-Quick-Look-Generator/&quot;&gt;http://macitbetter.com/BetterZip-Quick-Look-Generator/&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;CSV -&amp;gt; &lt;a href=&quot;http://code.google.com/p/quicklook-csv/&quot;&gt;http://code.google.com/p/quicklook-csv/&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;Further more -&amp;gt; &lt;a href=&quot;http://www.quicklookplugins.com/&quot;&gt;http://www.quicklookplugins.com/&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;Quicktime Codecs&lt;/li&gt;
+  &lt;li&gt;Flip4Mac &lt;a href=&quot;http://www.telestream.net/flip4mac/overview.htm&quot;&gt;http://www.telestream.net/flip4mac/overview.htm&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;WMA and WMV codec for Quicktime&lt;/li&gt;
+  &lt;li&gt;XVid &lt;a href=&quot;http://www.xvid.org/Software.83.0.html&quot;&gt;http://www.xvid.org/Software.83.0.html&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;DivX&lt;/li&gt;
+  &lt;li&gt;MPEG2 -&amp;gt; Apple-QuickTimeMPEG2-Codec (unsupported since OS X Lion)&lt;/li&gt;
+&lt;/ul&gt;&lt;h4 id=&quot;general&quot;&gt;General&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;
-&lt;a href=&quot;https://www.apple.com/itunes/mastered-for-itunes/&quot;&gt;Apple Mastered for iTunes - Audio Mastering Tools&lt;/a&gt;
-** drag-and-drop tool to create iTunes Plus audio files&lt;/li&gt;
-  &lt;li&gt;Enhance Quicklook
-** ZIP, rar, jar -&amp;gt; %http://macitbetter.com/BetterZip-Quick-Look-Generator/](http://macitbetter.com/BetterZip-Quick-Look-Generator/)
-** CSV -&amp;gt; &lt;a href=&quot;http://code.google.com/p/quicklook-csv/&quot;&gt;http://code.google.com/p/quicklook-csv/&lt;/a&gt;
-** Further more -&amp;gt; &lt;a href=&quot;http://www.quicklookplugins.com/&quot;&gt;http://www.quicklookplugins.com/&lt;/a&gt;
+&lt;a href=&quot;http://mstarke.github.io/MacPass/&quot;&gt;MacPass&lt;/a&gt; OpenSource OS X implementation of the &lt;em&gt;*KeePass&lt;/em&gt; password manager&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://libreoffice.org/&quot;&gt;LibreOffice&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Burn &lt;a href=&quot;http://burn-osx.sourceforge.net/&quot;&gt;http://burn-osx.sourceforge.net/&lt;/a&gt;
 &lt;/li&gt;
-  &lt;li&gt;Terminal
-** use iTerm2 &lt;a href=&quot;http://iterm2.com/&quot;&gt;http://iterm2.com/&lt;/a&gt;
-** modify your .profile
-** Checkout the awesome dotfiles by Mathias Bynens &lt;a href=&quot;https://github.com/mathiasbynens/dotfiles&quot;&gt;https://github.com/mathiasbynens/dotfiles&lt;/a&gt;
+  &lt;li&gt;free DVD authoring software&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://cyberduck.ch/&quot;&gt;Cyberduck&lt;/a&gt; - Great visual SCP, FTP, SFTP client&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.zipeg.com/&quot;&gt;Zipeg&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;view and extract contents of Archives like ZIP, RAR, JAR, WAR, tar.gz and others&lt;/li&gt;
+  &lt;li&gt;in contrast to most other tools, Zipeg lets you look into an archive before uncompressing it to some folder&lt;/li&gt;
+  &lt;li&gt;-TotalFinder &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt; - 18$ and worth every Cent!-&lt;/li&gt;
+  &lt;li&gt;Transmission &lt;a href=&quot;http://www.transmissionbt.com/&quot;&gt;http://www.transmissionbt.com/&lt;/a&gt; - Torrent client&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;https://adium.im/&quot;&gt;Adium&lt;/a&gt; messaging client for XMPP, Jabber, ICQ, AIM, MSN, Yahoo, and more&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://www.yworks.com/en/products_yed_about.html&quot;&gt;yEd Graph Editor&lt;/a&gt; - Best for quick diagramms; Java-based, also available for Linux + Win&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://audacity.sourceforge.net/&quot;&gt;Audacity&lt;/a&gt; - multi format audio file editor&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.machangout.com/&quot;&gt;Glims Safari-Extension&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Pixelmator - the best graphics editor around (App Store)&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://www.sublimetext.com/3&quot;&gt;Sublime Text&lt;/a&gt; (and the companying 'subl' command line util) - great text editor&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://getpocket.com/&quot;&gt;Pocket&lt;/a&gt; (App Store) - formerly known as &quot;ReadItLater&quot;&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://www.stoeger-it.de/&quot;&gt;Outbank&lt;/a&gt; (App Store) - online banking&lt;/li&gt;
+  &lt;li&gt;Keynote - for presentations (App Store)&lt;/li&gt;
+  &lt;li&gt;Caffeine (App Store) - to block the screen dimming down&lt;/li&gt;
+  &lt;li&gt;Display Menu (App Store) - to easily change to the screen resolution a beamer supports&lt;/li&gt;
+  &lt;li&gt;Skim (App Store) - PDF viewer&lt;/li&gt;
+  &lt;li&gt;Skitch (App Store) - Screenshot tool with support for annotations&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://ecamm.com/mac/phoneview/&quot;&gt;ECamm's PhoneView&lt;/a&gt; for local backup of my iDevices&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://www.android.com/filetransfer/&quot;&gt;Android File Transfer&lt;/a&gt; &lt;/li&gt;
+&lt;/ul&gt;&lt;h3 id=&quot;development&quot;&gt;Development&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://confluence.jetbrains.net/display/IDEADEV/EAP&quot;&gt;IntelliJ IDEA (Early Access Preview)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;XCode (App Store)&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://portecle.sourceforge.net/&quot;&gt;Portecle&lt;/a&gt; - Utility for convenient management of Java keystores&lt;/li&gt;
+  &lt;li&gt;Database Clients
+    &lt;ul&gt;
+&lt;li&gt;MongoDB 2.4 -&amp;gt; &lt;a href=&quot;http://www.robomongo.org/&quot;&gt;RoboMongo&lt;/a&gt;
 &lt;/li&gt;
-  &lt;li&gt;Quicktime Codecs
-** Flip4Mac &lt;a href=&quot;http://www.telestream.net/flip4mac/overview.htm&quot;&gt;http://www.telestream.net/flip4mac/overview.htm&lt;/a&gt;
- ** WMA and WMV codec for Quicktime
-** XVid &lt;a href=&quot;http://www.xvid.org/Software.83.0.html&quot;&gt;http://www.xvid.org/Software.83.0.html&lt;/a&gt;
-** DivX
-** MPEG2 -&amp;gt; Apple-QuickTimeMPEG2-Codec (unsupported since OS X Lion)&lt;/li&gt;
-&lt;/ul&gt;&lt;h3 id=&quot;glitches-of-the-finder&quot;&gt;Glitches of the Finder&lt;/h3&gt;
+      &lt;li&gt;MySQL -&amp;gt; &lt;a href=&quot;http://sequelpro.com/&quot;&gt;Sequel Pro&lt;/a&gt;
+&lt;/li&gt;
+      &lt;li&gt;SQLite -&amp;gt; &lt;a href=&quot;http://sqlitebrowser.sourceforge.net/&quot;&gt;SQLite Database Browser&lt;/a&gt;
+&lt;/li&gt;
+      &lt;li&gt;Oracle DB -&amp;gt; &lt;a href=&quot;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&quot;&gt;Oracle SQL Developer&lt;/a&gt;
+&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/li&gt;
+  &lt;li&gt;SourceTree - Version Control client for Git and Mercurial&lt;/li&gt;
+  &lt;li&gt;Screeny - Screen recording utility (App Store)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;
+&lt;a href=&quot;http://rbenv.org/&quot;&gt;rbenv&lt;/a&gt; for managing your ruby versions&lt;/li&gt;
+&lt;/ul&gt;&lt;p&gt;&lt;strong&gt;Don't forget to pimp your ~/.profile&lt;/strong&gt;
+```shell
+export MAVEN_HOME=$HOME/dev/tools/apache-maven-3.1.0
+export MAVEN_OPTS=&quot;-Xmx1024m -XX:MaxPermSize=512m&quot;
+export JAVA_TOOL_OPTIONS=&quot;-Dfile.encoding=UTF8&quot;
+export PATH=$HOME/.rbenv/bin:/usr/local/bin:$PATH&lt;/p&gt;
+
+&lt;p&gt;if [ -f /opt/local/etc/bash_completion ]; then
+      . /opt/local/etc/bash_completion
+  fi&lt;/p&gt;
+
+&lt;p&gt;grepcode() {
+        find ~/dev/repos -type d -name .git | parallel &quot;cd {.} &amp;amp;&amp;amp; git grep –color -I –full-name -i '$@' | sed 's@^(.*):@{.}\1: @'&quot;;
+}&lt;/p&gt;
+
+&lt;p&gt;source ~/.aliases
+source ~/.travis/travis.sh
+source ~/.bash_dont_think.sh&lt;/p&gt;
+
+&lt;p&gt;eval &quot;$(rbenv init -)&quot;
+```&lt;/p&gt;
+
+&lt;p&gt;Also checkout the awesome dotfiles (including useful aliases) by Mathias Bynens &lt;a href=&quot;https://github.com/mathiasbynens/dotfiles&quot;&gt;https://github.com/mathiasbynens/dotfiles&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;glitches-of-the-finder&quot;&gt;Glitches of the Finder&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Desktop folder behaves&lt;em&gt;*different&lt;/em&gt;
-** files in the Desktop folder will always be previewed in their icon
-** movie files on the desktop do always consume CPU time for preview&lt;/li&gt;
-  &lt;li&gt;hides system files&lt;/li&gt;
-  &lt;li&gt;overwrites folders of the same name
-** use TotalFinder from &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt;
 &lt;/li&gt;
-  &lt;li&gt;Spotlight vs. Alfred
-** Pro Spotlight
-&lt;em&gt;** built in
-** Pro Alfred &lt;a href=&quot;http://alfredapp.com/&quot;&gt;http://alfredapp.com/&lt;/a&gt;
-**&lt;/em&gt; builds on Spotlight index but add's specific configuration
-&lt;em&gt;** on the fly calculations
-**&lt;/em&gt; directed searches
-&lt;em&gt;** easily customizable
-**&lt;/em&gt; it's free&lt;/li&gt;
+  &lt;li&gt;files in the Desktop folder will always be previewed in their icon&lt;/li&gt;
+  &lt;li&gt;movie files on the desktop do always consume CPU time for preview&lt;/li&gt;
+  &lt;li&gt;hides system files&lt;/li&gt;
+  &lt;li&gt;overwrites folders of the same name&lt;/li&gt;
+  &lt;li&gt;use TotalFinder from &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;Spotlight vs. Alfred&lt;/li&gt;
+  &lt;li&gt;Pro Spotlight&lt;/li&gt;
+  &lt;li&gt;built in&lt;/li&gt;
+  &lt;li&gt;Pro Alfred &lt;a href=&quot;http://alfredapp.com/&quot;&gt;http://alfredapp.com/&lt;/a&gt;
+&lt;/li&gt;
+  &lt;li&gt;builds on Spotlight index but add's specific configuration&lt;/li&gt;
+  &lt;li&gt;on the fly calculations&lt;/li&gt;
+  &lt;li&gt;directed searches&lt;/li&gt;
+  &lt;li&gt;easily customizable&lt;/li&gt;
+  &lt;li&gt;it's free&lt;/li&gt;
 &lt;/ul&gt;&lt;h3 id=&quot;setup-your-timemachine-backup&quot;&gt;Setup your (TimeMachine) Backup&lt;/h3&gt;
-&lt;p&gt;At least backup your home directory, expecially your ~/Library (yes, it's a hidden folder)&lt;/p&gt;
+&lt;p&gt;At least backup your home directory, especially your &lt;code&gt;~/Library&lt;/code&gt; (yes, it's a hidden folder)&lt;/p&gt;
 
 &lt;p&gt;If you liked this post, you might also be interested in &quot;&lt;a href=&quot;http://aheusingfeld.github.io/2012/11/26/Productivity-for-Finder.html&quot;&gt;Enhancements for Mac OS X Finder&lt;/a&gt;&quot; I posted some time ago.&lt;/p&gt;
 </content>
@@ -718,7 +800,7 @@ Manual Installations
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/</id>
 <title>Glassfish 4 on Nexus7</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2012-12-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="glassfish"></category>
@@ -812,7 +894,7 @@ As accessing the Glassfish Admin Gui from a remote system is just a matter of en
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/</id>
 <title>Ubuntu and Java on Nexus7</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2012-11-30T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -999,7 +1081,7 @@ $ echo export PATH=\$JAVA_HOME/bin:\$PATH &amp;gt;&amp;gt; ~/.bashrc
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/</id>
 <title>Enhancements for Mac OS X Finder.app</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2012-11-26T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -1229,7 +1311,7 @@ You can find all three AppleScripts and apps in my Github Snippets repository at
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/</id>
 <title>JBoss Forge in IntelliJ IDEA</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2012-11-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1291,7 +1373,7 @@ For Windows users I can recommend the bash packaged with &lt;a href=&quot;https:
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/</id>
 <title>JavaOne 2012 Session material is now available</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2012-10-09T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1356,7 +1438,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/</id>
 <title>Getting ready for JavaOne 2012</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2012-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1416,7 +1498,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/</id>
 <title>Alternative zu Google? Vielleicht DuckDuckGo</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2012-03-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/" rel="alternate" type="text/html" />
 <category term="google"></category>
@@ -1487,7 +1569,7 @@ nutze, die Firefox seit Version 2.0 bietet.&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/</id>
 <title>SpringRoo - Howto translate Java exceptions to user-friendly error messages</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-10-24T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1572,7 +1654,7 @@ Thank you for posting this article! Even I have not much experience with Spring 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/</id>
 <title>iPhone - Wartezeit für Rufumleitung bei Abwesenheit setzen</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-10-01T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/" rel="alternate" type="text/html" />
 <category term="iphone"></category>
@@ -1624,7 +1706,7 @@ aber vorher durch die Eingabe von &quot;*#61#&quot; die aktuelle Einstellung abf
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/</id>
 <title>SpringRoo - Entity-Klassen und JPA-Repositories mit SpringRoo erstellen</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1681,7 +1763,7 @@ Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/</id>
 <title>Starting PhotooApp - A SpringRoo tutorial application</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-09-23T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1766,7 +1848,7 @@ Ich finde das Beispiel supergut,&lt;br&gt;&lt;br&gt;meine Frage wäre jetzt eher
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/</id>
 <title>Praxistipps zu ftplicity</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-06-05T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -1804,7 +1886,7 @@ Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br&gt;&lt;/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/</id>
 <title>How to Set Default Comment Security Level in Atlassian JIRA</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-06-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/" rel="alternate" type="text/html" />
 <category term="jira"></category>
@@ -1871,7 +1953,7 @@ Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br&gt;But when att
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/</id>
 <title>Broken special chars in Spring Roo?</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-02-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1944,7 +2026,7 @@ pass::[more]
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/</id>
 <title>Umlaute und Sonderzeichen in Spring Roo?</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-02-10T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/" rel="alternate" type="text/html" />
 <summary>
@@ -2009,7 +2091,7 @@ super, hat mir sehr geholfen.&lt;br&gt;GRüsse Stefan&lt;/div&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/</id>
 <title>Probleme beim Login ins Elster ePortal mit Mac OS X</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2011-01-19T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/" rel="alternate" type="text/html" />
 <summary>
@@ -2057,7 +2139,7 @@ responded with a status of 404 (Not Found)&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/</id>
 <title>...letztlich doch hier</title>
-<updated>2013-10-20T00:23:02+00:00</updated>
+<updated>2014-09-06T21:19:07+00:00</updated>
 <published>2009-04-22T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/" rel="alternate" type="text/html" />
 <summary>
