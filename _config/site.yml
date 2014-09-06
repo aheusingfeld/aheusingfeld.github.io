@@ -13,11 +13,13 @@ haml:
   :ugly: true
 
 asciidoctor:
+  :safe: unsafe
+  :base_dir: null
   :compact: true
-  :eruby: erubis
   :attributes:
     idprefix: ''
     idseparator: '-'
+    icons: font
 
 profiles:
   development:
@@ -30,7 +32,10 @@ profiles:
   production:
     base_url: http://aheusingfeld.github.io
     disqus_developer: false
-    compass_output_style: :compressed
+    scss:
+      :line_numbers: false
+      :style: :compressed
+    #compass_output_style: :compressed
     minify: true
     deploy:
       host: github_pages
