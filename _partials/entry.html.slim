@@ -13,7 +13,7 @@ article.post itemscope='' itemtype='http://schema.org/BlogPosting' role='article
   section itemprop='articleBody'
     - if page.listing
       = truncate(page.post.content)
-      | <p><a href="#{page.post.url}" class="continue">...continue reading "#{page.post.title}"</a></p>
+      | <p><a href="#{page.post.url}" class="continue" title="#{page.post.title}">Go to "#{page.post.title}"</a></p>
     - else
       = filter(page.post.content)
   - if page.post.tags
