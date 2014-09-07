@@ -41,7 +41,7 @@
 # Now you're Awestruct with rake!
 
 $use_bundle_exec = true
-$install_gems = ['awestruct -v "~> 0.5.0"', 'rb-inotify -v "~> 0.9.0"']
+$install_gems = ['awestruct -v "0.5.5"', 'rb-inotify -v "~> 0.9.0"']
 $awestruct_cmd = nil
 task :default => :preview
 
@@ -87,10 +87,11 @@ task :update => :init do
   exit 0
 end
 
-desc 'Build and preview the site locally in development mode'
-task :preview => :check do
-  #run_awestruct '-d'
-  run_awestruct '-P development -g -s'
+desc 'Generate and preview the site locally using the specified profile (default: development)'
+task :preview, [:profile] => :check do |task, args|
+  profile = args[:profile] || 'development'
+  profile = 'production' if profile == 'prod'
+  run_awestruct %(-P #{profile} -g -s)
 end
 
 # provide a serve task for those used to Jekyll commands
@@ -101,7 +102,7 @@ desc 'Generate the site using the specified profile (default: development)'
 task :gen, [:profile] => :check do |task, args|
   profile = args[:profile] || 'development'
   profile = 'production' if profile == 'prod'
-  run_awestruct "-P #{profile} -g --force"
+  run_awestruct %(-P #{profile} -g --force)
 end
 
 desc 'Push local commits to origin/develop'
@@ -112,12 +113,14 @@ end
 desc 'Generate the site and deploy to production'
 task :deploy => [:push, :check] do
   run_awestruct '-P production -g --force'
-  gen_rdoc
+  #gen_rdoc
   run_awestruct '-P production --deploy'
 end
 
 desc 'Generate site from Travis CI and, if not a pull request, publish site to production (GitHub Pages)'
 task :travis do
+  # force use of bundle exec in Travis environment
+  $use_bundle_exec = true
   # if this is a pull request, do a simple build of the site and stop
   if ENV['TRAVIS_PULL_REQUEST'].to_s.to_i > 0
     msg 'Pull request detected. Executing build only.'
@@ -140,10 +143,11 @@ task :travis do
   # see http://about.travis-ci.org/docs/user/build-configuration/#Secure-environment-variables for details
   File.open('.git/credentials', 'w') {|f| f.write("https://#{ENV['GH_TOKEN']}:@github.com") }
   system 'git branch master origin/master'
-  run_awestruct '-P production -g --force', :spawn => false
+  run_awestruct '-P production -g --force -q', :spawn => false
   #gen_rdoc
   run_awestruct '-P production --deploy', :spawn => false
   File.delete '.git/credentials'
+  system 'git status'
 end
 
 desc 'Clean out generated site and temporary files'
@@ -169,7 +173,7 @@ end
 
 desc 'Check to ensure the environment is properly configured'
 task :check => :init do
-  if !File.exist? 'Gemfile'
+  unless File.exist? 'Gemfile'
     if which('awestruct').nil?
       msg 'Could not find awestruct.', :warn
       msg 'Run `rake setup` or `rake setup[local]` to install from RubyGems.'
@@ -290,6 +294,7 @@ def gen_rdoc
   FileUtils.mv "#{asciidoctor_dir}/rdoc", '_site/rdoc'
 end
 
+# FIXME don't assign pub dates to post if it's a draft!!
 def set_pub_dates(branch)
   require 'tzinfo'
   require 'git'
