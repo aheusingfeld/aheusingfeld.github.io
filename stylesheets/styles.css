@@ -273,12 +273,13 @@ footer {
 }
 @media (max-width:640px){
     section .paragraph { text-align:left;}
+    main { margin: 0 0.5em;}
 }
 @media (max-width:480px){
     html {
         font-size: 15px;
-    }
-    main { margin: 0 1em;}
+    }    
+    article {padding:0.5em 0.5em 0em;}
 }
 
 
