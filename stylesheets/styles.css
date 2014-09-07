@@ -278,6 +278,7 @@ footer {
     html {
         font-size: 15px;
     }
+    main { margin: 0 1em;}
 }
 
 
@@ -289,4 +290,3 @@ footer {
   }
 
 }
-
