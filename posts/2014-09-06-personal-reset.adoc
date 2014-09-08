@@ -8,7 +8,7 @@ Lucky me, I'm surrounded by a bunch of awesome people whom I could talk to about
 
 === So, what does it mean? 
 
-1. First of all I'll try to get over that "http://sethgodin.typepad.com/seths_blog/2011/09/talkers-block.html[writer's block]" and write small posts like this one about things on my mind. 
+1. First of all I'll try to get over that http://sethgodin.typepad.com/seths_blog/2011/09/talkers-block.html["writer's block"] and write small posts like this one about things on my mind. 
 2. Second of all I will have to reduce the quantity of my output on Twitter and skip some of my projects to achieve a level of quality that is finally satisfactory for me personally. 
 3. Regarding the toolset I decided to give http://dayoneapp.com/[DayOne] another try. It's a journal/ diary app that supports MarkDown (yes, I'd favor Asciidoc), syncs via iCloud, reminds me of stuff and has a few other nice features. The only downsides are it's Apple-only and it doesn't support WebDAV-sync which would allow automatic publishing to my blog.
 
