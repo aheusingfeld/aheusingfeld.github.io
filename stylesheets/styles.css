@@ -172,6 +172,15 @@ article {
   border: 1px solid #E4E4E4;
   background: #fff;
 }
+ol.lanyrd-listing li.vevent { 
+  display:block;
+  margin:2.5em auto !important;
+  padding:0.5em 1em 0em !important;
+  border: 1px solid #E4E4E4;
+  background: #fff;
+}
+.lanyrd-splat {clear:both;}
+
 header, section#comments { 
 	margin-bottom:2em; 
 	border-bottom: 0.1em solid #e5e5e5
