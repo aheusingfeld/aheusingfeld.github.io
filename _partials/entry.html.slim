@@ -10,6 +10,7 @@ article.post itemscope='' itemtype='http://schema.org/BlogPosting' role='article
           span.linktext "Permalink for blog post '#{page.post.title}'"
       span.author itemprop='author' ='(page.post.author && (page.post.author != site.author) ? page.post.author : site.author)
       time.pubdate datetime=(page.post.revdate ? page.post.revdate : page.post.date).strftime('%FT%T%:z') itemprop='datePublished' =(page.post.revdate ? page.post.revdate : page.post.date).strftime "%d. %B %Y"
+  |<div class="addthis_sharing_toolbox"></div>
   section itemprop='articleBody'
     - if page.listing
       = truncate(page.post.content)
