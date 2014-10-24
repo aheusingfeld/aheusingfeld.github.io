@@ -6,9 +6,9 @@ blog_path: /posts
 base_url: ''
 local_tz: Europe/Berlin
 interpolate: false
-disqus: goldstift
-disqus_generate_id: false
-disqus_developer: true
+#disqus: goldstift
+#disqus_generate_id: false
+#disqus_developer: true
 haml:
   :ugly: true
 
