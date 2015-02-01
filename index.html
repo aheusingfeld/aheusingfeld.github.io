@@ -19,7 +19,7 @@
 </div>
 </div>
 <div class="paragraph">
-<p>the command also ended in this error message.</p>
+<p>the command also ended in this error message:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -94,19 +94,19 @@ files:scan [--all] [user_id1] ... [user_idN]</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>This is actually a PostgreSQL error, so I searched the owncloud forum for other people&#8217;s experience with owncloud + PostgreSQL. It seems that owncloud doesn&#8217;t play to nicely together with postgresql. :(</p>
+<p>As this is a PostgreSQL error, I searched the owncloud forums for other people&#8217;s experience with owncloud + PostgreSQL. Unfortunately it seems that owncloud doesn&#8217;t play too nicely with PostgreSQL. :(</p>
 </div>
 <div class="paragraph">
-<p>As I had used MySQL with owncloud before and never had a single issue with it, I decided to check how to migrate my owncloud data from PostgreSQL to MySQL and stumbled upon this great little command in the owncloud console: <code>db:convert-type</code></p>
+<p>Looking back I had an owncloud setup with MySQL before and cannot remember having had any issues with it. So I decided to take the easy way and find out how to migrate my owncloud data from PostgreSQL to MySQL. This was when I stumbled upon this great little command in the owncloud console.php: <code>db:convert-type</code></p>
 </div>
 <div class="paragraph">
-<p>This little gem did the trick for me so that after executing the following command my data had automatically been migrated over to MySQL. As it&#8217;s been so nice to me I thought, I leave it here for others running into the same issues:</p>
+<p>This little gem did the trick for me so that after executing the following command, my data had automatically been migrated over to MySQL and the owncloud configuration changed accordingly. As it&#8217;s been so nice to me I thought, I leave it here for others coming up with the same question:</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code>sudo -u www-data /usr/bin/php5 /var/www/owncloud/console.php db:convert-type --all-apps mysql owncloud localhost owncloud</code></pre>
 </div>
-</div><p><a href="/posts/2015/01/31/migrate-owncloud/" class="continue" title="Migrate Owncloud from PostgreSQL to MySQL">Go to "Migrate Owncloud from PostgreSQL to MySQL"</a></p></section><section class="tags" role="menu" aria-label="List of linked tags" itemprop="keywords"><i class="label icon-tags">tags: </i><a href="/posts/tags/owncloud" role="menuitem">owncloud, </a><a href="/posts/tags/adminstration" role="menuitem">adminstration </a></section><footer></footer></article><article class="post" itemscope="" itemtype="http://schema.org/BlogPosting" role="article"><header><h2 itemprop="headline">Article on company culture at innoQ</h2><div class="meta" aria-role="status" aria-label="Meta information on the current blog post."><span class="permalink"><a class="icon-permalink" href="/posts/2014/10/08/innoq-company-culture/" itemprop="url" aria-label="Permalink for blog post Article on company culture at innoQ" title="Permalink for blog post Article on company culture at innoQ"><span class="linktext">"Permalink for blog post 'Article on company culture at innoQ'"</span></a></span><span class="author" itemprop="author">Alexander Heusingfeld</span> <time class="pubdate" datetime="2014-10-08T00:00:00+00:00" itemprop="datePublished">08. October 2014</time></div></header><div class="addthis_sharing_toolbox"></div><section itemprop="articleBody"><div class="paragraph">
+</div><p><a href="/posts/2015/01/31/migrate-owncloud/" class="continue" title="Migrate Owncloud from PostgreSQL to MySQL">Go to "Migrate Owncloud from PostgreSQL to MySQL"</a></p></section><section class="tags" role="menu" aria-label="List of linked tags" itemprop="keywords"><i class="label icon-tags">tags: </i><a href="/posts/tags/owncloud" role="menuitem">owncloud, </a><a href="/posts/tags/mysql" role="menuitem">mysql, </a><a href="/posts/tags/postgresql" role="menuitem">postgresql </a></section><footer></footer></article><article class="post" itemscope="" itemtype="http://schema.org/BlogPosting" role="article"><header><h2 itemprop="headline">Article on company culture at innoQ</h2><div class="meta" aria-role="status" aria-label="Meta information on the current blog post."><span class="permalink"><a class="icon-permalink" href="/posts/2014/10/08/innoq-company-culture/" itemprop="url" aria-label="Permalink for blog post Article on company culture at innoQ" title="Permalink for blog post Article on company culture at innoQ"><span class="linktext">"Permalink for blog post 'Article on company culture at innoQ'"</span></a></span><span class="author" itemprop="author">Alexander Heusingfeld</span> <time class="pubdate" datetime="2014-10-08T00:00:00+00:00" itemprop="datePublished">08. October 2014</time></div></header><div class="addthis_sharing_toolbox"></div><section itemprop="articleBody"><div class="paragraph">
 <p>I just wanted to hint my German speaking readers to an article I wrote about the company culture at innoQ.
 The article is on our company website and I&#8217;d really appreciate your feedback e.g. on writing style or content.</p>
 </div>

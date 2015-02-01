@@ -5,20 +5,21 @@
 <author>
 <name>Alexander Heusingfeld</name>
 </author>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <link href="http://aheusingfeld.github.io/atom.xml" rel="self" type="application/atom+xml" />
 <link href="http://aheusingfeld.github.io/" rel="alternate" type="text/html" />
 <entry>
 <id>http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/</id>
 <title>Migrate Owncloud from PostgreSQL to MySQL</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2015-01-31T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/" rel="alternate" type="text/html" />
 <author>
 <name>Alexander Heusingfeld</name>
 </author>
 <category term="owncloud"></category>
-<category term="adminstration"></category>
+<category term="mysql"></category>
+<category term="postgresql"></category>
 <summary>
 
 I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.
@@ -52,7 +53,7 @@ Quite often I noticed the following error in my owncloud.log file:
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;the command also ended in this error message.&lt;/p&gt;
+&lt;p&gt;the command also ended in this error message:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
@@ -127,13 +128,13 @@ files:scan [--all] [user_id1] ... [user_idN]&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This is actually a PostgreSQL error, so I searched the owncloud forum for other people’s experience with owncloud + PostgreSQL. It seems that owncloud doesn’t play to nicely together with postgresql. :(&lt;/p&gt;
+&lt;p&gt;As this is a PostgreSQL error, I searched the owncloud forums for other people’s experience with owncloud + PostgreSQL. Unfortunately it seems that owncloud doesn’t play too nicely with PostgreSQL. :(&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;As I had used MySQL with owncloud before and never had a single issue with it, I decided to check how to migrate my owncloud data from PostgreSQL to MySQL and stumbled upon this great little command in the owncloud console: &lt;code&gt;db:convert-type&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Looking back I had an owncloud setup with MySQL before and cannot remember having had any issues with it. So I decided to take the easy way and find out how to migrate my owncloud data from PostgreSQL to MySQL. This was when I stumbled upon this great little command in the owncloud console.php: &lt;code&gt;db:convert-type&lt;/code&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;This little gem did the trick for me so that after executing the following command my data had automatically been migrated over to MySQL. As it’s been so nice to me I thought, I leave it here for others running into the same issues:&lt;/p&gt;
+&lt;p&gt;This little gem did the trick for me so that after executing the following command, my data had automatically been migrated over to MySQL and the owncloud configuration changed accordingly. As it’s been so nice to me I thought, I leave it here for others coming up with the same question:&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
@@ -145,7 +146,7 @@ files:scan [--all] [user_id1] ... [user_idN]&lt;/code&gt;&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/</id>
 <title>Article on company culture at innoQ</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2014-10-08T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/" rel="alternate" type="text/html" />
 <author>
@@ -177,7 +178,7 @@ The article is on our company website and I’d really appreciate your feedback 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/</id>
 <title>Personal Reset</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2014-09-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/" rel="alternate" type="text/html" />
 <author>
@@ -231,7 +232,7 @@ Lucky me, I&#8217;m surrounded by a bunch of awesome people whom...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/</id>
 <title>First Steps with Android</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-09-10T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/" rel="alternate" type="text/html" />
 <author>
@@ -410,7 +411,7 @@ Yes, there is a &lt;a href=&quot;http://tbeernot.wordpress.com/2012/12/09/layout
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/</id>
 <title>Speaking at DOAG SIG Middleware 2013</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-08-08T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/" rel="alternate" type="text/html" />
 <author>
@@ -442,7 +443,7 @@ This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of th
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/</id>
 <title>Getting started with Clojure</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-08-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/" rel="alternate" type="text/html" />
 <category term="clojure"></category>
@@ -559,7 +560,7 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/</id>
 <title>Speaking at JavaOne 2013</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-07-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -593,7 +594,7 @@ will join me on the trip. He and his friend &lt;a href=&quot;http://twitter.com/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/</id>
 <title>Postfix and /etc/hosts</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-06-27T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -689,7 +690,7 @@ $ echo Hi there, how are you? | mail -s &quot;test mail&quot; root
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/</id>
 <title>Collaborator on Sonar IntelliJ Plugin</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-04-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/" rel="alternate" type="text/html" />
 <category term="intellij"></category>
@@ -726,7 +727,7 @@ The Sonar plugin for IntelliJ is a basic...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/</id>
 <title>I'm speaking at Java Forum Stuttgart 2013</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-04-21T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -753,7 +754,7 @@ You can see the &lt;a href=&quot;http://www.java-forum-stuttgart.de/de/Programm.
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/</id>
 <title>Mac OS X setup tips &amp; tricks</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2013-03-20T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -958,7 +959,7 @@ source ~/.bash_dont_think.sh&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/</id>
 <title>Glassfish 4 on Nexus7</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2012-12-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="glassfish"></category>
@@ -1052,7 +1053,7 @@ As accessing the Glassfish Admin Gui from a remote system is just a matter of en
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/</id>
 <title>Ubuntu and Java on Nexus7</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2012-11-30T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1239,7 +1240,7 @@ $ echo export PATH=\$JAVA_HOME/bin:\$PATH &amp;gt;&amp;gt; ~/.bashrc
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/</id>
 <title>Enhancements for Mac OS X Finder.app</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2012-11-26T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -1469,7 +1470,7 @@ You can find all three AppleScripts and apps in my Github Snippets repository at
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/</id>
 <title>JBoss Forge in IntelliJ IDEA</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2012-11-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1531,7 +1532,7 @@ For Windows users I can recommend the bash packaged with &lt;a href=&quot;https:
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/</id>
 <title>JavaOne 2012 Session material is now available</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2012-10-09T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1596,7 +1597,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/</id>
 <title>Getting ready for JavaOne 2012</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2012-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1656,7 +1657,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/</id>
 <title>Alternative zu Google? Vielleicht DuckDuckGo</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2012-03-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/" rel="alternate" type="text/html" />
 <category term="google"></category>
@@ -1727,7 +1728,7 @@ nutze, die Firefox seit Version 2.0 bietet.&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/</id>
 <title>SpringRoo - Howto translate Java exceptions to user-friendly error messages</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-10-24T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1812,7 +1813,7 @@ Thank you for posting this article! Even I have not much experience with Spring 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/</id>
 <title>iPhone - Wartezeit für Rufumleitung bei Abwesenheit setzen</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-10-01T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/" rel="alternate" type="text/html" />
 <category term="iphone"></category>
@@ -1864,7 +1865,7 @@ aber vorher durch die Eingabe von &quot;*#61#&quot; die aktuelle Einstellung abf
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/</id>
 <title>SpringRoo - Entity-Klassen und JPA-Repositories mit SpringRoo erstellen</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1921,7 +1922,7 @@ Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/</id>
 <title>Starting PhotooApp - A SpringRoo tutorial application</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-09-23T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2006,7 +2007,7 @@ Ich finde das Beispiel supergut,&lt;br&gt;&lt;br&gt;meine Frage wäre jetzt eher
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/</id>
 <title>Praxistipps zu ftplicity</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-06-05T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -2044,7 +2045,7 @@ Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br&gt;&lt;/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/</id>
 <title>How to Set Default Comment Security Level in Atlassian JIRA</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-06-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/" rel="alternate" type="text/html" />
 <category term="jira"></category>
@@ -2111,7 +2112,7 @@ Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br&gt;But when att
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/</id>
 <title>Broken special chars in Spring Roo?</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-02-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2184,7 +2185,7 @@ pass::[more]
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/</id>
 <title>Umlaute und Sonderzeichen in Spring Roo?</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-02-10T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/" rel="alternate" type="text/html" />
 <summary>
@@ -2249,7 +2250,7 @@ super, hat mir sehr geholfen.&lt;br&gt;GRüsse Stefan&lt;/div&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/</id>
 <title>Probleme beim Login ins Elster ePortal mit Mac OS X</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2011-01-19T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/" rel="alternate" type="text/html" />
 <summary>
@@ -2297,7 +2298,7 @@ responded with a status of 404 (Not Found)&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/</id>
 <title>...letztlich doch hier</title>
-<updated>2015-02-01T18:07:00+00:00</updated>
+<updated>2015-02-01T22:08:21+00:00</updated>
 <published>2009-04-22T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/" rel="alternate" type="text/html" />
 <summary>
