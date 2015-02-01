@@ -1,6 +1,6 @@
 = Migrate Owncloud from PostgreSQL to MySQL
 Alexander Heusingfeld
-:awestruct-tags: [owncloud, adminstration]
+:awestruct-tags: [owncloud, mysql, postgresql]
 
 I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.
 
@@ -14,7 +14,7 @@ Later on I found out that it occurred when owncloud tried to scan and index the 
 ```
 sudo -u www-data /usr/bin/php5 /var/www/owncloud/occ files:scan ahe -v
 ```
-the command also ended in this error message.
+the command also ended in this error message:
 
 
 ```
@@ -89,11 +89,11 @@ Exception trace:
 files:scan [--all] [user_id1] ... [user_idN]
 ```
 
-This is actually a PostgreSQL error, so I searched the owncloud forum for other people's experience with owncloud + PostgreSQL. It seems that owncloud doesn't play to nicely together with postgresql. :(
+As this is a PostgreSQL error, I searched the owncloud forums for other people's experience with owncloud + PostgreSQL. Unfortunately it seems that owncloud doesn't play too nicely with PostgreSQL. :(
 
-As I had used MySQL with owncloud before and never had a single issue with it, I decided to check how to migrate my owncloud data from PostgreSQL to MySQL and stumbled upon this great little command in the owncloud console: `db:convert-type`
+Looking back I had an owncloud setup with MySQL before and cannot remember having had any issues with it. So I decided to take the easy way and find out how to migrate my owncloud data from PostgreSQL to MySQL. This was when I stumbled upon this great little command in the owncloud console.php: `db:convert-type`
 
-This little gem did the trick for me so that after executing the following command my data had automatically been migrated over to MySQL. As it's been so nice to me I thought, I leave it here for others running into the same issues:
+This little gem did the trick for me so that after executing the following command, my data had automatically been migrated over to MySQL and the owncloud configuration changed accordingly. As it's been so nice to me I thought, I leave it here for others coming up with the same question:
 
 ```
 sudo -u www-data /usr/bin/php5 /var/www/owncloud/console.php db:convert-type --all-apps mysql owncloud localhost owncloud
