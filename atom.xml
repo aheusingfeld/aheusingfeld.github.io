@@ -5,13 +5,147 @@
 <author>
 <name>Alexander Heusingfeld</name>
 </author>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <link href="http://aheusingfeld.github.io/atom.xml" rel="self" type="application/atom+xml" />
 <link href="http://aheusingfeld.github.io/" rel="alternate" type="text/html" />
 <entry>
+<id>http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/</id>
+<title>Migrate Owncloud from PostgreSQL to MySQL</title>
+<updated>2015-02-01T18:07:00+00:00</updated>
+<published>2015-01-31T00:00:00+00:00</published>
+<link href="http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/" rel="alternate" type="text/html" />
+<author>
+<name>Alexander Heusingfeld</name>
+</author>
+<category term="owncloud"></category>
+<category term="adminstration"></category>
+<summary>
+
+I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.
+
+
+Quite often I noticed the following error in my owncloud.log file:
+
+
+
+{"app":"index","message":"Doctrine\\DBAL\\DBALException: An exception occurred while executing 'SELECT \"fileid\", \"storage\", \"path\", \"parent\", \"name\", \"mimetype\", \"mimepart\", \"size\", \"mtime\",\n\t\t\t\t\t   \"storage_mtime\", \"encrypted\", \"unencrypted_size\", \"etag\", \"permissions\"\n\t\t\t\tFROM \"oc_filecache\" WHERE \"storage\" = ? AND \"path_hash\" = ?':\n\nSQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until...
+</summary>
+<content type="html">
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Quite often I noticed the following error in my &lt;code&gt;owncloud.log&lt;/code&gt; file:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{&quot;app&quot;:&quot;index&quot;,&quot;message&quot;:&quot;Doctrine\\DBAL\\DBALException: An exception occurred while executing 'SELECT \&quot;fileid\&quot;, \&quot;storage\&quot;, \&quot;path\&quot;, \&quot;parent\&quot;, \&quot;name\&quot;, \&quot;mimetype\&quot;, \&quot;mimepart\&quot;, \&quot;size\&quot;, \&quot;mtime\&quot;,\n\t\t\t\t\t   \&quot;storage_mtime\&quot;, \&quot;encrypted\&quot;, \&quot;unencrypted_size\&quot;, \&quot;etag\&quot;, \&quot;permissions\&quot;\n\t\t\t\tFROM \&quot;oc_filecache\&quot; WHERE \&quot;storage\&quot; = ? AND \&quot;path_hash\&quot; = ?':\n\nSQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block&quot;,&quot;level&quot;:4,&quot;time&quot;:&quot;2014-11-26T15:28:16+00:00&quot;}
+{&quot;app&quot;:&quot;PHP&quot;,&quot;message&quot;:&quot;Cannot modify header information - headers already sent at \/var\/www\/owncloud\/lib\/private\/response.php#83&quot;,&quot;level&quot;:3,&quot;time&quot;:&quot;2014-11-26T15:28:16+00:00&quot;}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Later on I found out that it occurred when owncloud tried to scan and index the files in the data folder. The way I got to know this is, I noticed that some of the files I uploaded were not displayed in owncloud but were present on the filesystem. So when I ran&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -u www-data /usr/bin/php5 /var/www/owncloud/occ files:scan ahe -v&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;the command also ended in this error message.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  [Doctrine\DBAL\DBALException]
+  An exception occurred while executing 'SELECT &quot;fileid&quot;, &quot;storage&quot;, &quot;path&quot;, &quot;parent&quot;, &quot;name&quot;, &quot;mimetype&quot;, &quot;mimepart&quot;, &quot;size&quot;, &quot;mtime&quot;,
+  					   &quot;storage_mtime&quot;, &quot;encrypted&quot;, &quot;unencrypted_size&quot;, &quot;etag&quot;, &quot;permissions&quot;
+  				FROM &quot;oc_filecache&quot; WHERE &quot;storage&quot; = ? AND &quot;path_hash&quot; = ?':
+
+  SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+
+
+
+Exception trace:
+ () at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:47
+ Doctrine\DBAL\DBALException::driverExceptionDuringQuery() at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:140
+ Doctrine\DBAL\Statement-&amp;gt;execute() at /var/www/owncloud/lib/private/db/statementwrapper.php:63
+ OC_DB_StatementWrapper-&amp;gt;execute() at /var/www/owncloud/lib/private/db.php:235
+ OC_DB::executeAudited() at /var/www/owncloud/lib/private/files/cache/cache.php:128
+ OC\Files\Cache\Cache-&amp;gt;get() at /var/www/owncloud/lib/private/files/cache/homecache.php:62
+ OC\Files\Cache\HomeCache-&amp;gt;get() at /var/www/owncloud/lib/private/files/cache/cache.php:367
+ OC\Files\Cache\Cache-&amp;gt;remove() at /var/www/owncloud/lib/private/files/cache/scanner.php:163
+ OC\Files\Cache\Scanner-&amp;gt;removeFromCache() at /var/www/owncloud/lib/private/files/cache/scanner.php:272
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:207
+ OC\Files\Cache\Scanner-&amp;gt;scan() at /var/www/owncloud/lib/private/files/utils/scanner.php:125
+ OC\Files\Utils\Scanner-&amp;gt;scan() at /var/www/owncloud/apps/files/command/scan.php:57
+ OCA\Files\Command\Scan-&amp;gt;scanFiles() at /var/www/owncloud/apps/files/command/scan.php:81
+ OCA\Files\Command\Scan-&amp;gt;execute() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Command/Command.php:244
+ Symfony\Component\Console\Command\Command-&amp;gt;run() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:897
+ Symfony\Component\Console\Application-&amp;gt;doRunCommand() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:191
+ Symfony\Component\Console\Application-&amp;gt;doRun() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:121
+ Symfony\Component\Console\Application-&amp;gt;run() at /var/www/owncloud/console.php:43
+ require_once() at /var/www/owncloud/occ:11
+
+
+
+
+
+  [PDOException]
+  SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+
+
+
+Exception trace:
+ () at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:138
+ PDOStatement-&amp;gt;execute() at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:138
+ Doctrine\DBAL\Statement-&amp;gt;execute() at /var/www/owncloud/lib/private/db/statementwrapper.php:63
+ OC_DB_StatementWrapper-&amp;gt;execute() at /var/www/owncloud/lib/private/db.php:235
+ OC_DB::executeAudited() at /var/www/owncloud/lib/private/files/cache/cache.php:128
+ OC\Files\Cache\Cache-&amp;gt;get() at /var/www/owncloud/lib/private/files/cache/homecache.php:62
+ OC\Files\Cache\HomeCache-&amp;gt;get() at /var/www/owncloud/lib/private/files/cache/cache.php:367
+ OC\Files\Cache\Cache-&amp;gt;remove() at /var/www/owncloud/lib/private/files/cache/scanner.php:163
+ OC\Files\Cache\Scanner-&amp;gt;removeFromCache() at /var/www/owncloud/lib/private/files/cache/scanner.php:272
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&amp;gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:207
+ OC\Files\Cache\Scanner-&amp;gt;scan() at /var/www/owncloud/lib/private/files/utils/scanner.php:125
+ OC\Files\Utils\Scanner-&amp;gt;scan() at /var/www/owncloud/apps/files/command/scan.php:57
+ OCA\Files\Command\Scan-&amp;gt;scanFiles() at /var/www/owncloud/apps/files/command/scan.php:81
+ OCA\Files\Command\Scan-&amp;gt;execute() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Command/Command.php:244
+ Symfony\Component\Console\Command\Command-&amp;gt;run() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:897
+ Symfony\Component\Console\Application-&amp;gt;doRunCommand() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:191
+ Symfony\Component\Console\Application-&amp;gt;doRun() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:121
+ Symfony\Component\Console\Application-&amp;gt;run() at /var/www/owncloud/console.php:43
+ require_once() at /var/www/owncloud/occ:11
+
+
+files:scan [--all] [user_id1] ... [user_idN]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This is actually a PostgreSQL error, so I searched the owncloud forum for other people’s experience with owncloud + PostgreSQL. It seems that owncloud doesn’t play to nicely together with postgresql. :(&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;As I had used MySQL with owncloud before and never had a single issue with it, I decided to check how to migrate my owncloud data from PostgreSQL to MySQL and stumbled upon this great little command in the owncloud console: &lt;code&gt;db:convert-type&lt;/code&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;This little gem did the trick for me so that after executing the following command my data had automatically been migrated over to MySQL. As it’s been so nice to me I thought, I leave it here for others running into the same issues:&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo -u www-data /usr/bin/php5 /var/www/owncloud/console.php db:convert-type --all-apps mysql owncloud localhost owncloud&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</content>
+</entry>
+<entry>
 <id>http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/</id>
 <title>Article on company culture at innoQ</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2014-10-08T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/" rel="alternate" type="text/html" />
 <author>
@@ -43,7 +177,7 @@ The article is on our company website and I’d really appreciate your feedback 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/</id>
 <title>Personal Reset</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2014-09-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/" rel="alternate" type="text/html" />
 <author>
@@ -97,7 +231,7 @@ Lucky me, I&#8217;m surrounded by a bunch of awesome people whom...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/</id>
 <title>First Steps with Android</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-09-10T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/" rel="alternate" type="text/html" />
 <author>
@@ -276,7 +410,7 @@ Yes, there is a &lt;a href=&quot;http://tbeernot.wordpress.com/2012/12/09/layout
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/</id>
 <title>Speaking at DOAG SIG Middleware 2013</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-08-08T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/" rel="alternate" type="text/html" />
 <author>
@@ -308,7 +442,7 @@ This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of th
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/</id>
 <title>Getting started with Clojure</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-08-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/" rel="alternate" type="text/html" />
 <category term="clojure"></category>
@@ -425,7 +559,7 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/</id>
 <title>Speaking at JavaOne 2013</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-07-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -459,7 +593,7 @@ will join me on the trip. He and his friend &lt;a href=&quot;http://twitter.com/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/</id>
 <title>Postfix and /etc/hosts</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-06-27T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -555,7 +689,7 @@ $ echo Hi there, how are you? | mail -s &quot;test mail&quot; root
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/</id>
 <title>Collaborator on Sonar IntelliJ Plugin</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-04-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/" rel="alternate" type="text/html" />
 <category term="intellij"></category>
@@ -592,7 +726,7 @@ The Sonar plugin for IntelliJ is a basic...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/</id>
 <title>I'm speaking at Java Forum Stuttgart 2013</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-04-21T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -619,7 +753,7 @@ You can see the &lt;a href=&quot;http://www.java-forum-stuttgart.de/de/Programm.
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/</id>
 <title>Mac OS X setup tips &amp; tricks</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2013-03-20T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -824,7 +958,7 @@ source ~/.bash_dont_think.sh&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/</id>
 <title>Glassfish 4 on Nexus7</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2012-12-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="glassfish"></category>
@@ -918,7 +1052,7 @@ As accessing the Glassfish Admin Gui from a remote system is just a matter of en
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/</id>
 <title>Ubuntu and Java on Nexus7</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2012-11-30T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1105,7 +1239,7 @@ $ echo export PATH=\$JAVA_HOME/bin:\$PATH &amp;gt;&amp;gt; ~/.bashrc
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/</id>
 <title>Enhancements for Mac OS X Finder.app</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2012-11-26T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -1335,7 +1469,7 @@ You can find all three AppleScripts and apps in my Github Snippets repository at
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/</id>
 <title>JBoss Forge in IntelliJ IDEA</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2012-11-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1397,7 +1531,7 @@ For Windows users I can recommend the bash packaged with &lt;a href=&quot;https:
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/</id>
 <title>JavaOne 2012 Session material is now available</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2012-10-09T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1462,7 +1596,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/</id>
 <title>Getting ready for JavaOne 2012</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2012-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1522,7 +1656,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/</id>
 <title>Alternative zu Google? Vielleicht DuckDuckGo</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2012-03-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/" rel="alternate" type="text/html" />
 <category term="google"></category>
@@ -1593,7 +1727,7 @@ nutze, die Firefox seit Version 2.0 bietet.&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/</id>
 <title>SpringRoo - Howto translate Java exceptions to user-friendly error messages</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-10-24T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1678,7 +1812,7 @@ Thank you for posting this article! Even I have not much experience with Spring 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/</id>
 <title>iPhone - Wartezeit für Rufumleitung bei Abwesenheit setzen</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-10-01T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/" rel="alternate" type="text/html" />
 <category term="iphone"></category>
@@ -1730,7 +1864,7 @@ aber vorher durch die Eingabe von &quot;*#61#&quot; die aktuelle Einstellung abf
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/</id>
 <title>SpringRoo - Entity-Klassen und JPA-Repositories mit SpringRoo erstellen</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1787,7 +1921,7 @@ Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/</id>
 <title>Starting PhotooApp - A SpringRoo tutorial application</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-09-23T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1872,7 +2006,7 @@ Ich finde das Beispiel supergut,&lt;br&gt;&lt;br&gt;meine Frage wäre jetzt eher
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/</id>
 <title>Praxistipps zu ftplicity</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-06-05T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -1910,7 +2044,7 @@ Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br&gt;&lt;/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/</id>
 <title>How to Set Default Comment Security Level in Atlassian JIRA</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-06-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/" rel="alternate" type="text/html" />
 <category term="jira"></category>
@@ -1977,7 +2111,7 @@ Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br&gt;But when att
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/</id>
 <title>Broken special chars in Spring Roo?</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-02-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2050,7 +2184,7 @@ pass::[more]
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/</id>
 <title>Umlaute und Sonderzeichen in Spring Roo?</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-02-10T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/" rel="alternate" type="text/html" />
 <summary>
@@ -2115,7 +2249,7 @@ super, hat mir sehr geholfen.&lt;br&gt;GRüsse Stefan&lt;/div&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/</id>
 <title>Probleme beim Login ins Elster ePortal mit Mac OS X</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2011-01-19T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/" rel="alternate" type="text/html" />
 <summary>
@@ -2163,7 +2297,7 @@ responded with a status of 404 (Not Found)&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/</id>
 <title>...letztlich doch hier</title>
-<updated>2014-10-24T21:43:04+00:00</updated>
+<updated>2015-02-01T18:07:00+00:00</updated>
 <published>2009-04-22T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/" rel="alternate" type="text/html" />
 <summary>
