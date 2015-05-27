@@ -5,13 +5,36 @@
 <author>
 <name>Alexander Heusingfeld</name>
 </author>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <link href="http://aheusingfeld.github.io/atom.xml" rel="self" type="application/atom+xml" />
 <link href="http://aheusingfeld.github.io/" rel="alternate" type="text/html" />
 <entry>
+<id>http://aheusingfeld.github.io/posts/2015/05/08/per-request-debugging-with-log4j2/</id>
+<title>Per request debugging with Log4j 2 filters</title>
+<updated>2015-05-27T08:01:45+00:00</updated>
+<published>2015-05-08T00:00:00+00:00</published>
+<link href="http://aheusingfeld.github.io/posts/2015/05/08/per-request-debugging-with-log4j2/" rel="alternate" type="text/html" />
+<author>
+<name>Alexander Heusingfeld</name>
+</author>
+<category term="java"></category>
+<category term="log4j"></category>
+<category term="innoq"></category>
+<summary>
+
+I wrote a post on the innoQ blog about "https://www.innoq.com/en/blog/per-request-debugging-with-log4j2/[Per request debugging with Log4j 2 filters]".
+...
+</summary>
+<content type="html">
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I wrote a post on the innoQ blog about &quot;https://www.innoq.com/en/blog/per-request-debugging-with-log4j2/[Per request debugging with Log4j 2 filters]&quot;.&lt;/p&gt;
+&lt;/div&gt;
+</content>
+</entry>
+<entry>
 <id>http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/</id>
 <title>Migrate Owncloud from PostgreSQL to MySQL</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2015-01-31T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/" rel="alternate" type="text/html" />
 <author>
@@ -146,7 +169,7 @@ files:scan [--all] [user_id1] ... [user_idN]&lt;/code&gt;&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/</id>
 <title>Article on company culture at innoQ</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2014-10-08T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/" rel="alternate" type="text/html" />
 <author>
@@ -178,7 +201,7 @@ The article is on our company website and I’d really appreciate your feedback 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/</id>
 <title>Personal Reset</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2014-09-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/" rel="alternate" type="text/html" />
 <author>
@@ -232,7 +255,7 @@ Lucky me, I&#8217;m surrounded by a bunch of awesome people whom...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/</id>
 <title>First Steps with Android</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-09-10T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/" rel="alternate" type="text/html" />
 <author>
@@ -411,7 +434,7 @@ Yes, there is a &lt;a href=&quot;http://tbeernot.wordpress.com/2012/12/09/layout
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/</id>
 <title>Speaking at DOAG SIG Middleware 2013</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-08-08T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/" rel="alternate" type="text/html" />
 <author>
@@ -443,7 +466,7 @@ This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of th
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/</id>
 <title>Getting started with Clojure</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-08-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/" rel="alternate" type="text/html" />
 <category term="clojure"></category>
@@ -560,7 +583,7 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/</id>
 <title>Speaking at JavaOne 2013</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-07-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -594,7 +617,7 @@ will join me on the trip. He and his friend &lt;a href=&quot;http://twitter.com/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/</id>
 <title>Postfix and /etc/hosts</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-06-27T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -627,7 +650,7 @@ The virtual machines are only available to the outside world via NAT. They don't
 &lt;h3 id=&quot;the-requirement&quot;&gt;The Requirement&lt;/h3&gt;
 
 &lt;p&gt;We're running things like &quot;rkhunter&quot;, &quot;fail2ban&quot; or &quot;unattended-upgrades&quot; on the 
-master which all would like to inform root via mail about certain things going on. &lt;/p&gt;
+master which all would like to inform root via mail about certain things going on.&lt;/p&gt;
 
 &lt;p&gt;BTW: If /usr/bin/mail isn't installed, yet, you can do so via&lt;/p&gt;
 
@@ -669,7 +692,7 @@ but instead rely on /etc/hosts so we can resolve the IP of our virtual machine c
 ...
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;and additionally &lt;/p&gt;
+&lt;p&gt;and additionally&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ vi /etc/postfix/main.cf
 ---
@@ -690,7 +713,7 @@ $ echo Hi there, how are you? | mail -s &quot;test mail&quot; root
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/</id>
 <title>Collaborator on Sonar IntelliJ Plugin</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-04-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/" rel="alternate" type="text/html" />
 <category term="intellij"></category>
@@ -719,15 +742,15 @@ The Sonar plugin for IntelliJ is a basic...
 
 &lt;p&gt;The Sonar plugin for IntelliJ is a basic implementation of the &lt;a href=&quot;http://docs.codehaus.org/display/SONAR/Using+Sonar+in+Eclipse&quot;&gt;Sonar Plugin for Eclipse&lt;/a&gt; (which is maintained by SonarSource themselves). It aids you in connecting your project modules to a project in a specific Sonar instance and apply the analyzed violation report onto your local files. See the &lt;a href=&quot;https://github.com/gshakhn/sonar-intellij-plugin#using-the-plugin&quot;&gt;Readme for details&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;Over time we plan to implement almost all of the features which are known to the Eclipse plugin. This started with &quot;&lt;a href=&quot;https://github.com/gshakhn/sonar-intellij-plugin/issues/11&quot;&gt;Feature Request: Add Web View context menu entry&lt;/a&gt;&quot; and continues with our current work on &quot;&lt;a href=&quot;https://github.com/gshakhn/sonar-intellij-plugin/issues/10&quot;&gt;Feature Request: Run local analysis &lt;/a&gt;&quot;. &lt;/p&gt;
+&lt;p&gt;Over time we plan to implement almost all of the features which are known to the Eclipse plugin. This started with &quot;&lt;a href=&quot;https://github.com/gshakhn/sonar-intellij-plugin/issues/11&quot;&gt;Feature Request: Add Web View context menu entry&lt;/a&gt;&quot; and continues with our current work on &quot;&lt;a href=&quot;https://github.com/gshakhn/sonar-intellij-plugin/issues/10&quot;&gt;Feature Request: Run local analysis &lt;/a&gt;&quot;.&lt;/p&gt;
 
-&lt;p&gt;We'd be glad if you checked the plugin out and provide us feedback on your findings. Any constructive feedback, suggestions for improvement and feature requests are very welcome! Please feel free to file a bug in the &lt;a href=&quot;https://github.com/gshakhn/sonar-intellij-plugin/issues&quot;&gt;Github Issue tracker&lt;/a&gt; or ping us &lt;a href=&quot;http://twitter.com/goldstift&quot;&gt;via Twitter&lt;/a&gt; if you experience any problems. &lt;/p&gt;
+&lt;p&gt;We'd be glad if you checked the plugin out and provide us feedback on your findings. Any constructive feedback, suggestions for improvement and feature requests are very welcome! Please feel free to file a bug in the &lt;a href=&quot;https://github.com/gshakhn/sonar-intellij-plugin/issues&quot;&gt;Github Issue tracker&lt;/a&gt; or ping us &lt;a href=&quot;http://twitter.com/goldstift&quot;&gt;via Twitter&lt;/a&gt; if you experience any problems.&lt;/p&gt;
 </content>
 </entry>
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/</id>
 <title>I'm speaking at Java Forum Stuttgart 2013</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-04-21T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -754,7 +777,7 @@ You can see the &lt;a href=&quot;http://www.java-forum-stuttgart.de/de/Programm.
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/</id>
 <title>Mac OS X setup tips &amp; tricks</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2013-03-20T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -880,8 +903,7 @@ System
   &lt;li&gt;Skitch (App Store) - Screenshot tool with support for annotations&lt;/li&gt;
   &lt;li&gt;
 &lt;a href=&quot;http://ecamm.com/mac/phoneview/&quot;&gt;ECamm's PhoneView&lt;/a&gt; for local backup of my iDevices&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://www.android.com/filetransfer/&quot;&gt;Android File Transfer&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.android.com/filetransfer/&quot;&gt;Android File Transfer&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;h3 id=&quot;development&quot;&gt;Development&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;http://confluence.jetbrains.net/display/IDEADEV/EAP&quot;&gt;IntelliJ IDEA (Early Access Preview)&lt;/a&gt;&lt;/li&gt;
@@ -959,7 +981,7 @@ source ~/.bash_dont_think.sh&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/</id>
 <title>Glassfish 4 on Nexus7</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2012-12-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="glassfish"></category>
@@ -1053,7 +1075,7 @@ As accessing the Glassfish Admin Gui from a remote system is just a matter of en
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/</id>
 <title>Ubuntu and Java on Nexus7</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2012-11-30T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1138,7 +1160,7 @@ it means that your USB connection timed out. In this case you need plug out and 
 &lt;p&gt;Your device should then boot into Ubuntu. &lt;em&gt;NOTE:&lt;/em&gt; The first boot takes about 2-4 minutes as the bootloader has to prepare the system.&lt;/p&gt;
 
 &lt;h3 id=&quot;system-stabilization&quot;&gt;System stabilization&lt;/h3&gt;
-&lt;p&gt;Once booted and logged in we have to open a terminal window by clicking on the Ubuntu Dash icon (upper left corner) and typing &quot;Terminal&quot; into the search field. In case you cannot type because the onboard keyboard doesn't appear, you can manually trigger it by clicking on the little icon with the 4 squares in the upper menubar and choosing the &quot;Show Onboard&quot; option. &lt;/p&gt;
+&lt;p&gt;Once booted and logged in we have to open a terminal window by clicking on the Ubuntu Dash icon (upper left corner) and typing &quot;Terminal&quot; into the search field. In case you cannot type because the onboard keyboard doesn't appear, you can manually trigger it by clicking on the little icon with the 4 squares in the upper menubar and choosing the &quot;Show Onboard&quot; option.&lt;/p&gt;
 
 &lt;p&gt;The first step in the Terminal is to update all your system packages:&lt;/p&gt;
 
@@ -1215,7 +1237,7 @@ $ echo export PATH=\$JAVA_HOME/bin:\$PATH &amp;gt;&amp;gt; ~/.bashrc
 &lt;pre&gt;&lt;code&gt;$ sudo apt-get install libc6-armel libsfgcc1
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;After this you should be able to run the &quot;java&quot; command successfully:	&lt;/p&gt;
+&lt;p&gt;After this you should be able to run the &quot;java&quot; command successfully:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ /opt/java/jdk1.7.0_10/bin/java -version
   java version &quot;1.7.0_10-ea&quot;
@@ -1240,7 +1262,7 @@ $ echo export PATH=\$JAVA_HOME/bin:\$PATH &amp;gt;&amp;gt; ~/.bashrc
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/</id>
 <title>Enhancements for Mac OS X Finder.app</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2012-11-26T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -1255,12 +1277,12 @@ Today I'd like to share three AppleScripts with you which really enhanced my gen
 In general Finder.app lacks some features I really wanted to have, among these were
 
 
-  copy the POSIX path of the selected file/ folder 
+  copy the POSIX path of the selected file/ folder
   open the selected folder/ file's folder in iTerm2
   open the selected folder/ file's folder in TextWrangler
 
 
-Fortunately OS X comes along with a good editor for AppleScripts (not to mention Automator) which can be used to enhance the operating...
+Fortunately OS X comes along with a good editor for AppleScripts (not to mention Automator) which can be used to enhance the operating system's...
 </summary>
 <content type="html">
 
@@ -1269,7 +1291,7 @@ Fortunately OS X comes along with a good editor for AppleScripts (not to mention
 &lt;p&gt;In general Finder.app lacks some features I really wanted to have, among these were&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;copy the POSIX path of the selected file/ folder &lt;/li&gt;
+&lt;li&gt;copy the POSIX path of the selected file/ folder&lt;/li&gt;
   &lt;li&gt;open the selected folder/ file's folder in iTerm2&lt;/li&gt;
   &lt;li&gt;open the selected folder/ file's folder in TextWrangler&lt;/li&gt;
 &lt;/ul&gt;&lt;p&gt;Fortunately OS X comes along with a good editor for AppleScripts (not to mention Automator) which can be used to enhance the operating system's abilities.&lt;/p&gt;
@@ -1470,7 +1492,7 @@ You can find all three AppleScripts and apps in my Github Snippets repository at
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/</id>
 <title>JBoss Forge in IntelliJ IDEA</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2012-11-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1532,7 +1554,7 @@ For Windows users I can recommend the bash packaged with &lt;a href=&quot;https:
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/</id>
 <title>JavaOne 2012 Session material is now available</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2012-10-09T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1597,7 +1619,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/</id>
 <title>Getting ready for JavaOne 2012</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2012-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1657,7 +1679,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/</id>
 <title>Alternative zu Google? Vielleicht DuckDuckGo</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2012-03-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/" rel="alternate" type="text/html" />
 <category term="google"></category>
@@ -1728,7 +1750,7 @@ nutze, die Firefox seit Version 2.0 bietet.&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/</id>
 <title>SpringRoo - Howto translate Java exceptions to user-friendly error messages</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-10-24T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1813,7 +1835,7 @@ Thank you for posting this article! Even I have not much experience with Spring 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/</id>
 <title>iPhone - Wartezeit für Rufumleitung bei Abwesenheit setzen</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-10-01T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/" rel="alternate" type="text/html" />
 <category term="iphone"></category>
@@ -1865,7 +1887,7 @@ aber vorher durch die Eingabe von &quot;*#61#&quot; die aktuelle Einstellung abf
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/</id>
 <title>SpringRoo - Entity-Klassen und JPA-Repositories mit SpringRoo erstellen</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1922,7 +1944,7 @@ Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/</id>
 <title>Starting PhotooApp - A SpringRoo tutorial application</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-09-23T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2007,7 +2029,7 @@ Ich finde das Beispiel supergut,&lt;br&gt;&lt;br&gt;meine Frage wäre jetzt eher
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/</id>
 <title>Praxistipps zu ftplicity</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-06-05T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -2045,7 +2067,7 @@ Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br&gt;&lt;/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/</id>
 <title>How to Set Default Comment Security Level in Atlassian JIRA</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-06-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/" rel="alternate" type="text/html" />
 <category term="jira"></category>
@@ -2112,7 +2134,7 @@ Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br&gt;But when att
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/</id>
 <title>Broken special chars in Spring Roo?</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-02-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2185,7 +2207,7 @@ pass::[more]
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/</id>
 <title>Umlaute und Sonderzeichen in Spring Roo?</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-02-10T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/" rel="alternate" type="text/html" />
 <summary>
@@ -2250,7 +2272,7 @@ super, hat mir sehr geholfen.&lt;br&gt;GRüsse Stefan&lt;/div&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/</id>
 <title>Probleme beim Login ins Elster ePortal mit Mac OS X</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2011-01-19T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/" rel="alternate" type="text/html" />
 <summary>
@@ -2298,7 +2320,7 @@ responded with a status of 404 (Not Found)&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/</id>
 <title>...letztlich doch hier</title>
-<updated>2015-02-07T20:32:35+00:00</updated>
+<updated>2015-05-27T08:01:45+00:00</updated>
 <published>2009-04-22T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/" rel="alternate" type="text/html" />
 <summary>
