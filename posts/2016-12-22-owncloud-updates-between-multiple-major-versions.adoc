@@ -52,4 +52,6 @@ $ sudo -u www-data /var/www/owncloud/occ upgrade
 
 It took a while but worked pretty well. So in the end I'd like to thank John Orion for sharing his idea about `owncloud-files` and the owncloud team for providing this option - even though you don't mention it on the pages where people are seeking for help. I hope this is helpful for others, struggling with upgrades.
 
+Now I'm on to fix the remaining issues: *Currently I'm facing a situation where all requests with `index.php` are returned with a HTTP302 redirect without `index.php` - which of course fails* (e.g. `/cloud/index.php/login` is redirected to `/cloud/login`). NOTE: I'm running owncloud behind nginx with a contextroot other than `/owncloud` - as if I was asking for trouble, right? I'll update this blog, in case I stumble upon something.
+
 If you find anything to comment, optimize or fix about this, please leave me a github issue. Always think "If I have this issue, someone else might sooner or later have it, too" - and you can help that someone. Thanks a lot!
