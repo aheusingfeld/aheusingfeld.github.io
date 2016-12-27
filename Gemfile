@@ -24,8 +24,8 @@
 
 source 'https://rubygems.org'                             # This tells Bundler where to look for gems
 
-gem 'awestruct', '0.5.5'                               # Goes without saying
-gem 'asciidoctor', '1.5.0'
+gem 'awestruct', '0.5.7'                               # Goes without saying
+gem 'asciidoctor', '1.5.2'
 gem 'erubis', '~> 2.7.0'
 gem 'coderay', '1.1.0'
 gem 'haml', '~> 4.0.0'
@@ -35,23 +35,23 @@ gem 'rake', '~> 10.0.3', :group => :test
 gem 'rdoc', '~> 4.0.0', :group => :test
 gem 'tomdoc', '~> 0.2.5', :group => :test
 #gem 'coffee-script', '>= 2.2.0'                         # If using coffee-script or to remove the warning
-#gem 'therubyracer', '0.11.4', :platforms => :ruby       # Javascript runtime on mri (needed for LESS and coffee-script)
-# gem 'therubyrhino', '~> 2.0.2', :platforms => :jruby    # Javascript runtime on jruby (needed for LESS and coffee-script)
-# gem 'org-ruby', '>= 0.8'                                # If using Org-Mode
+#gem 'therubyracer', '0.12.1', :platforms => :ruby       # Javascript runtime on mri (needed for LESS and coffee-script)
+# gem 'therubyrhino', '~> 2.0.3', :platforms => :jruby    # Javascript runtime on jruby (needed for LESS and coffee-script)
+# gem 'org-ruby', '>= 0.9.3'                                # If using Org-Mode
 # gem 'RedCloth', '>= 4.2.9'                              # If using Textile
-gem 'kramdown', '>= 0.14.2'                             # If using Markdown
-#gem 'uglifier', '>= 1.3.0'                              # If using the minify transformer
-gem 'htmlcompressor', '>= 0.0.3'                        # If using the minify transformer
+gem 'kramdown', '>= 1.3.3'                             # If using Markdown
+#gem 'uglifier', '>= 2.5.0'                              # If using the minify transformer
+gem 'htmlcompressor', '>= 0.0.7'                        # If using the minify transformer
 
 
 # copied from asciidoctor.org GEMFILE
-gem 'tilt', '~> 2.0.0'
-gem 'slim', '~> 2.0.0'                                  # If using slim instead of haml
+gem 'tilt', '~> 2.0.1'
+gem 'slim', '~> 3.0'                                  # If using slim instead of haml
 #gem 'zurb-foundation', '~> 4.3.1'
-#gem 'rb-inotify', '~> 0.9.0', :platforms => [:ruby, :jruby]
+#gem 'rb-inotify', '~> 0.9.3', :platforms => [:ruby, :jruby]
 
 # required to use the minify extension
-#gem 'uglifier', '~> 1.3.0'
+#gem 'uglifier', '~> 2.5.0'
 # set EXECJS_RUNTIME=SpiderMonkey as alternative to theruby(racer|rhino)
 #gem 'therubyracer', '~> 0.11.4', :platforms => [:ruby]
 #gem 'therubyrhino', '~> 2.0.2', :platforms => [:jruby]
