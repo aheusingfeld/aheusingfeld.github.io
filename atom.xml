@@ -5,13 +5,13 @@
 <author>
 <name>Alexander Heusingfeld</name>
 </author>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <link href="http://aheusingfeld.github.io/atom.xml" rel="self" type="application/atom+xml" />
 <link href="http://aheusingfeld.github.io/" rel="alternate" type="text/html" />
 <entry>
 <id>http://aheusingfeld.github.io/posts/2016/12/22/owncloud-updates-between-multiple-major-versions/</id>
 <title>Owncloud Updates between multiple Major Versions</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2016-12-22T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2016/12/22/owncloud-updates-between-multiple-major-versions/" rel="alternate" type="text/html" />
 <author>
@@ -22,7 +22,6 @@
 <category term="updates"></category>
 <category term="help"></category>
 <summary>
-
 In case you also come into this great situation "I upgraded my Ubuntu to 16.04 LTS and suddenly my owncloud installation is a mess", don&#8217;t panic. I&#8217;m about to share my mess with you so you can pick the perils.
 
 
@@ -108,7 +107,7 @@ $ sudo -u www-data /var/www/owncloud/occ upgrade
 <entry>
 <id>http://aheusingfeld.github.io/posts/2016/12/12/innovation-tokens-jaxenter/</id>
 <title>Article on Innovation Tokens at jaxenter</title>
-<updated>2016-12-27T17:11:31+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2016-12-12T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2016/12/12/innovation-tokens-jaxenter/" rel="alternate" type="text/html" />
 <author>
@@ -119,9 +118,7 @@ $ sudo -u www-data /var/www/owncloud/occ upgrade
 <category term="article"></category>
 <category term="innoq"></category>
 <summary>
-
-The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik und Technologie-Überflutung" which was published in the German Business Technology magazine, has just been republished on jaxenter.de! You can find it at https://jaxenter.de/innovation-tokens-50334 in German language.
-...
+The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik und Technologie-Überflutung" which was published in the German Business Technology magazine, has just been republished on jaxenter.de! You can find it at https://jaxenter.de/innovation-tokens-50334 in German language....
 </summary>
 <content type="html">
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -132,7 +129,7 @@ The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2015/05/08/per-request-debugging-with-log4j2/</id>
 <title>Per request debugging with Log4j 2 filters</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2015-05-08T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2015/05/08/per-request-debugging-with-log4j2/" rel="alternate" type="text/html" />
 <author>
@@ -142,9 +139,7 @@ The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik 
 <category term="log4j"></category>
 <category term="innoq"></category>
 <summary>
-
-I wrote a post on the innoQ blog about "Per request debugging with Log4j 2 filters".
-...
+I wrote a post on the innoQ blog about "Per request debugging with Log4j 2 filters"....
 </summary>
 <content type="html">
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -155,7 +150,7 @@ I wrote a post on the innoQ blog about "Per request debugging with Log4j 2 filte
 <entry>
 <id>http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/</id>
 <title>Migrate Owncloud from PostgreSQL to MySQL</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2015-01-31T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2015/01/31/migrate-owncloud/" rel="alternate" type="text/html" />
 <author>
@@ -165,7 +160,6 @@ I wrote a post on the innoQ blog about "Per request debugging with Log4j 2 filte
 <category term="mysql"></category>
 <category term="postgresql"></category>
 <summary>
-
 I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.
 
 
@@ -290,7 +284,7 @@ files:scan [--all] [user_id1] ... [user_idN]&lt;/code&gt;&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/</id>
 <title>Article on company culture at innoQ</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2014-10-08T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/10/08/innoq-company-culture/" rel="alternate" type="text/html" />
 <author>
@@ -301,13 +295,11 @@ files:scan [--all] [user_id1] ... [user_idN]&lt;/code&gt;&lt;/pre&gt;
 <category term="external"></category>
 <category term="writing"></category>
 <summary>
-
 I just wanted to hint my German speaking readers to an article I wrote about the company culture at innoQ.
 The article is on our company website and I&#8217;d really appreciate your feedback e.g. on writing style or content.
 
 
-https://www.innoq.com/de/articles/2014/10/ein-jahr-nach-dem-kulturschock/
-...
+https://www.innoq.com/de/articles/2014/10/ein-jahr-nach-dem-kulturschock/...
 </summary>
 <content type="html">
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -322,7 +314,7 @@ The article is on our company website and I’d really appreciate your feedback 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/</id>
 <title>Personal Reset</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2014-09-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2014/09/06/personal-reset/" rel="alternate" type="text/html" />
 <author>
@@ -333,9 +325,6 @@ The article is on our company website and I’d really appreciate your feedback 
 <category term="asciidoc"></category>
 <category term="dayone"></category>
 <summary>
-
-
-
 Lately I noticed a growing dissatisfaction with my daily workflow. And this was not only because my last blog post has been almost a year ago. No, it&#8217;s related to a noticable drop in productivity. I figured this was due to my curiosity dragging me onto way more interesting topics than either my time frame or my toolset could master. Unfortunately trying to keep up-to-date on those topics created loads of distractions which almost resulted in an inability to focus on a single task for a longer amount of time
 
 
@@ -376,7 +365,7 @@ Lucky me, I&#8217;m surrounded by a bunch of awesome people whom...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/</id>
 <title>First Steps with Android</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-09-10T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/09/10/First-steps-with-android/" rel="alternate" type="text/html" />
 <author>
@@ -387,7 +376,6 @@ Lucky me, I&#8217;m surrounded by a bunch of awesome people whom...
 <category term="mobile"></category>
 <category term="intellij"></category>
 <summary>
-
 The Stumble Stones
 
 
@@ -555,7 +543,7 @@ Yes, there is a &lt;a href=&quot;http://tbeernot.wordpress.com/2012/12/09/layout
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/</id>
 <title>Speaking at DOAG SIG Middleware 2013</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-08-08T20:47:32+02:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/08/speaking-at-DOAG-SIG-Middleware/" rel="alternate" type="text/html" />
 <author>
@@ -568,12 +556,10 @@ Yes, there is a &lt;a href=&quot;http://tbeernot.wordpress.com/2012/12/09/layout
 <category term="java"></category>
 <category term="glassfish"></category>
 <summary>
-
 I have been invited by the DOAG to give a talk on "Enterprise Integration with GlassFish" at their SIG Middleware event.
 
 
-This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of the German Oracle customers using Oracle middleware products. The event will feature a number of great talks around GlassFish 4.0.
-...
+This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of the German Oracle customers using Oracle middleware products. The event will feature a number of great talks around GlassFish 4.0....
 </summary>
 <content type="html">
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -587,7 +573,7 @@ This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of th
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/</id>
 <title>Getting started with Clojure</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-08-06T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/08/06/getting-started-with-clojure/" rel="alternate" type="text/html" />
 <category term="clojure"></category>
@@ -596,7 +582,6 @@ This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of th
 <category term="programming"></category>
 <category term="innoq"></category>
 <summary>
-
 Why Clojure?
 
 As I apparently love to use many braces in my blog posts, Clojure is just a natural match! ;)
@@ -644,8 +629,7 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 &lt;h4 id=&quot;downloads&quot;&gt;Downloads&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Download the Leiningen script from  &lt;a href=&quot;https://raw.github.com/technomancy/leiningen/stable/bin/lein&quot;&gt;https://raw.github.com/technomancy/leiningen/stable/bin/lein&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;Download the Leiningen script from  &lt;a href=&quot;https://raw.github.com/technomancy/leiningen/stable/bin/lein&quot;&gt;https://raw.github.com/technomancy/leiningen/stable/bin/lein&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;place it on your &lt;code&gt;$PATH&lt;/code&gt; e.g. in &lt;code&gt;/usr/local/bin&lt;/code&gt; and make it executable&lt;/li&gt;
   &lt;li&gt;run &lt;code&gt;lein version&lt;/code&gt; on the command line&lt;/li&gt;
 &lt;/ul&gt;
@@ -702,10 +686,8 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 &lt;h3 id=&quot;further-links&quot;&gt;Further Links&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;German Podcast introducing Clojure I can highly recommend &lt;a href=&quot;http://www.innoq.com/de/podcast/004-clojure&quot;&gt;http://www.innoq.com/de/podcast/004-clojure&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;Leiningen - Clojure project automation &lt;a href=&quot;http://leiningen.org/&quot;&gt;http://leiningen.org/&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;German Podcast introducing Clojure I can highly recommend &lt;a href=&quot;http://www.innoq.com/de/podcast/004-clojure&quot;&gt;http://www.innoq.com/de/podcast/004-clojure&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Leiningen - Clojure project automation &lt;a href=&quot;http://leiningen.org/&quot;&gt;http://leiningen.org/&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 
@@ -714,7 +696,7 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/</id>
 <title>Speaking at JavaOne 2013</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-07-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/07/13/speaking-at-javaone2013/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -724,7 +706,6 @@ Just kidding. I wanted to dig into Clojure for about a year now, but couldn't fi
 <category term="openhab"></category>
 <category term="san francisco"></category>
 <summary>
-
 I'm very happy to announce that one of my proposals for JavaOne 2013 has been accepted. This year's JavaOne takes place
 from Sep 22 until Sep 27 in San Francisco and will be another great chance catch up with the latest and greatest in java development and of course to meet with many old and new friends.
 
@@ -749,7 +730,7 @@ will join me on the trip. He and his friend &lt;a href=&quot;http://twitter.com/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/</id>
 <title>Postfix and /etc/hosts</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-06-27T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/06/27/postfix-and-etc-hosts/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -846,7 +827,7 @@ $ echo Hi there, how are you? | mail -s &quot;test mail&quot; root
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/</id>
 <title>Collaborator on Sonar IntelliJ Plugin</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-04-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/25/collaborator-on-sonar-intellij-plugin/" rel="alternate" type="text/html" />
 <category term="intellij"></category>
@@ -856,7 +837,6 @@ $ echo Hi there, how are you? | mail -s &quot;test mail&quot; root
 <category term="java"></category>
 <category term="open source"></category>
 <summary>
-
 Lately I was granted the "Collaborator" status on the Sonar Plugin for IntelliJ IDEA at Github  (https://github.com/gshakhn/sonar-intellij-plugin/) and I'd like to share with you the benefits of this project.
 
 For those who aren't familiar with the benefits of Sonar's source code analysis, yet, you should really take a look. Sonar not only performs CheckStyle, PMD and FindBugs analysis of your code and highlights the validations on the specific lines of code. But by leveraging the power of JaCoCo Code coverage it is also able to determine the line- and branch-coverage of your JUnit-Tests.
@@ -884,7 +864,7 @@ The Sonar plugin for IntelliJ is a basic...
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/</id>
 <title>I'm speaking at Java Forum Stuttgart 2013</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-04-21T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/04/21/speaking-at-javaforum-stuttgart/" rel="alternate" type="text/html" />
 <category term="talk"></category>
@@ -893,12 +873,10 @@ The Sonar plugin for IntelliJ is a basic...
 <category term="eai"></category>
 <category term="stuttgart"></category>
 <summary>
-
 I have been invited to talk at Java Forum Stuttgart on July 4th 2013. Java Forum is a single day event fully packed with good talks on various topics.
 You can see the complete schedule here. If you like to attend the event, you can register here.
 
-My talk on "Enterprise Integration Patterns - Best Practices for application integration" will be in slot D7 from 16.40 - 17.25.
-...
+My talk on "Enterprise Integration Patterns - Best Practices for application integration" will be in slot D7 from 16.40 - 17.25....
 </summary>
 <content type="html">
 
@@ -912,7 +890,7 @@ You can see the &lt;a href=&quot;http://www.java-forum-stuttgart.de/de/Programm.
 <entry>
 <id>http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/</id>
 <title>Mac OS X setup tips &amp; tricks</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2013-03-20T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2013/03/20/Mac-OS-X-for-java-developers/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -921,7 +899,6 @@ You can see the &lt;a href=&quot;http://www.java-forum-stuttgart.de/de/Programm.
 <category term="apps"></category>
 <category term="tips"></category>
 <summary>
-
 This post is kind of a reminder for myself when re-setting up my MacBook on which tools and applications I found to be useful for daily business. Feel free to comment, make suggestions or even send in pull-requests if you have different recommendations. :)
 
 Applications
@@ -954,53 +931,38 @@ System
   &lt;li&gt;Personal Firewall which enables you to see and disallow whenever anything tries to connect to the internet&lt;/li&gt;
   &lt;li&gt;MUST-HAVE, do not want to go without it anymore&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://code.google.com/p/iterm2/&quot;&gt;iTerm2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-&lt;strong&gt;Homebrew&lt;/strong&gt; from &lt;a href=&quot;http://brew.sh&quot;&gt;http://brew.sh&lt;/a&gt; or install via &lt;code&gt;ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)&quot;&lt;/code&gt;
+  &lt;li&gt;&lt;strong&gt;Homebrew&lt;/strong&gt; from &lt;a href=&quot;http://brew.sh&quot;&gt;http://brew.sh&lt;/a&gt; or install via &lt;code&gt;ruby -e &quot;$(curl -fsSL https://raw.github.com/mxcl/homebrew/go/install)&quot;&lt;/code&gt;
     &lt;ul&gt;
-      &lt;li&gt;
-&lt;a href=&quot;https://github.com/phinze/homebrew-cask&quot;&gt;Homebrew Cask&lt;/a&gt; - homebrew-style CLI workflow for the administration of Mac applications distributed as binaries&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;https://github.com/phinze/homebrew-cask&quot;&gt;Homebrew Cask&lt;/a&gt; - homebrew-style CLI workflow for the administration of Mac applications distributed as binaries&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;Install &quot;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh&lt;/a&gt;&quot; via &lt;code&gt;curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh&lt;/code&gt;
-&lt;/li&gt;
-  &lt;li&gt;install the &quot;&lt;a href=&quot;https://gist.github.com/agnoster/3712874&quot;&gt;agnoster&lt;/a&gt;&quot; theme with the specific &lt;a href=&quot;https://github.com/Lokaltog/powerline-fonts&quot;&gt;fonts&lt;/a&gt; and &lt;a href=&quot;https://raw.github.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors&quot;&gt;Solarized Dark iTerm2 colorscheme&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;
-&lt;strong&gt;&lt;a href=&quot;http://www.codeweavers.com/products/crossover-mac/&quot;&gt;CodeWeavers' CrossOver&lt;/a&gt;&lt;/strong&gt; to run Windows Applications - worth every cent!!!&lt;/li&gt;
+  &lt;li&gt;Install &quot;&lt;a href=&quot;https://github.com/robbyrussell/oh-my-zsh&quot;&gt;oh-my-zsh&lt;/a&gt;&quot; via &lt;code&gt;curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;install the &quot;&lt;a href=&quot;https://gist.github.com/agnoster/3712874&quot;&gt;agnoster&lt;/a&gt;&quot; theme with the specific &lt;a href=&quot;https://github.com/Lokaltog/powerline-fonts&quot;&gt;fonts&lt;/a&gt; and &lt;a href=&quot;https://raw.github.com/altercation/solarized/master/iterm2-colors-solarized/Solarized%20Dark.itermcolors&quot;&gt;Solarized Dark iTerm2 colorscheme&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;http://www.codeweavers.com/products/crossover-mac/&quot;&gt;CodeWeavers' CrossOver&lt;/a&gt;&lt;/strong&gt; to run Windows Applications - worth every cent!!!&lt;/li&gt;
   &lt;li&gt;iStatMenus &lt;a href=&quot;http://bjango.com/mac/istatmenus/&quot;&gt;http://bjango.com/mac/istatmenus/&lt;/a&gt; - (Nice2have) configurable system monitor app for the status bar&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://www.freemacsoft.net/appcleaner/&quot;&gt;AppCleaner&lt;/a&gt; to completely remove apps with all related files e.g. settings, cache and &quot;&lt;code&gt;~/Library/Application Support&lt;/code&gt;&quot;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.freemacsoft.net/appcleaner/&quot;&gt;AppCleaner&lt;/a&gt; to completely remove apps with all related files e.g. settings, cache and &quot;&lt;code&gt;~/Library/Application Support&lt;/code&gt;&quot;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.apple.com/itunes/mastered-for-itunes/&quot;&gt;Apple Mastered for iTunes - Audio Mastering Tools&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;drag-and-drop tool to create iTunes Plus audio files&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;preference-panes-settings&quot;&gt;Preference Panes/ Settings&lt;/h4&gt;
 &lt;ul&gt;
-  &lt;li&gt;Secrets.prefPane &lt;a href=&quot;http://code.google.com/p/blacktree-secrets/&quot;&gt;http://code.google.com/p/blacktree-secrets/&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;Secrets.prefPane &lt;a href=&quot;http://code.google.com/p/blacktree-secrets/&quot;&gt;http://code.google.com/p/blacktree-secrets/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Visual interface to display and edit all preferences which are only changeable via command-line&lt;/li&gt;
-  &lt;li&gt;TinkerTool &lt;a href=&quot;http://www.bresink.com/osx/TinkerTool.html&quot;&gt;http://www.bresink.com/osx/TinkerTool.html&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;RCDefaultApp &lt;a href=&quot;http://www.rubicode.com/Software/RCDefaultApp/&quot;&gt;http://www.rubicode.com/Software/RCDefaultApp/&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;TinkerTool &lt;a href=&quot;http://www.bresink.com/osx/TinkerTool.html&quot;&gt;http://www.bresink.com/osx/TinkerTool.html&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;RCDefaultApp &lt;a href=&quot;http://www.rubicode.com/Software/RCDefaultApp/&quot;&gt;http://www.rubicode.com/Software/RCDefaultApp/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Manage default application associations for specific file-types&lt;/li&gt;
   &lt;li&gt;Relink Java preference pane&lt;/li&gt;
   &lt;li&gt;/Library/PreferencePanes/JavaControlPanel.prefPane&lt;/li&gt;
   &lt;li&gt;Add Quicklook plugins&lt;/li&gt;
-  &lt;li&gt;a collection for developers &lt;a href=&quot;https://github.com/sindresorhus/quick-look-plugins&quot;&gt;https://github.com/sindresorhus/quick-look-plugins&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;ZIP, rar, jar -&amp;gt; &lt;a href=&quot;http://macitbetter.com/BetterZip-Quick-Look-Generator/&quot;&gt;http://macitbetter.com/BetterZip-Quick-Look-Generator/&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;CSV -&amp;gt; &lt;a href=&quot;http://code.google.com/p/quicklook-csv/&quot;&gt;http://code.google.com/p/quicklook-csv/&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;Further more -&amp;gt; &lt;a href=&quot;http://www.quicklookplugins.com/&quot;&gt;http://www.quicklookplugins.com/&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;a collection for developers &lt;a href=&quot;https://github.com/sindresorhus/quick-look-plugins&quot;&gt;https://github.com/sindresorhus/quick-look-plugins&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ZIP, rar, jar -&amp;gt; &lt;a href=&quot;http://macitbetter.com/BetterZip-Quick-Look-Generator/&quot;&gt;http://macitbetter.com/BetterZip-Quick-Look-Generator/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;CSV -&amp;gt; &lt;a href=&quot;http://code.google.com/p/quicklook-csv/&quot;&gt;http://code.google.com/p/quicklook-csv/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Further more -&amp;gt; &lt;a href=&quot;http://www.quicklookplugins.com/&quot;&gt;http://www.quicklookplugins.com/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Quicktime Codecs&lt;/li&gt;
-  &lt;li&gt;Flip4Mac &lt;a href=&quot;http://www.telestream.net/flip4mac/overview.htm&quot;&gt;http://www.telestream.net/flip4mac/overview.htm&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;Flip4Mac &lt;a href=&quot;http://www.telestream.net/flip4mac/overview.htm&quot;&gt;http://www.telestream.net/flip4mac/overview.htm&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;WMA and WMV codec for Quicktime&lt;/li&gt;
-  &lt;li&gt;XVid &lt;a href=&quot;http://www.xvid.org/Software.83.0.html&quot;&gt;http://www.xvid.org/Software.83.0.html&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;XVid &lt;a href=&quot;http://www.xvid.org/Software.83.0.html&quot;&gt;http://www.xvid.org/Software.83.0.html&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;DivX&lt;/li&gt;
   &lt;li&gt;MPEG2 -&amp;gt; Apple-QuickTimeMPEG2-Codec (unsupported since OS X Lion)&lt;/li&gt;
 &lt;/ul&gt;
@@ -1008,67 +970,50 @@ System
 &lt;h4 id=&quot;general&quot;&gt;General&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.getfirefox.com&quot;&gt;Firefox&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://mstarke.github.io/MacPass/&quot;&gt;MacPass&lt;/a&gt; OpenSource OS X implementation of the &lt;em&gt;*KeePass&lt;/em&gt; password manager&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://mstarke.github.io/MacPass/&quot;&gt;MacPass&lt;/a&gt; OpenSource OS X implementation of the &lt;em&gt;*KeePass&lt;/em&gt; password manager&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://libreoffice.org/&quot;&gt;LibreOffice&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Burn &lt;a href=&quot;http://burn-osx.sourceforge.net/&quot;&gt;http://burn-osx.sourceforge.net/&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;Burn &lt;a href=&quot;http://burn-osx.sourceforge.net/&quot;&gt;http://burn-osx.sourceforge.net/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;free DVD authoring software&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://cyberduck.ch/&quot;&gt;Cyberduck&lt;/a&gt; - Great visual SCP, FTP, SFTP client&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://cyberduck.ch/&quot;&gt;Cyberduck&lt;/a&gt; - Great visual SCP, FTP, SFTP client&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.zipeg.com/&quot;&gt;Zipeg&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;view and extract contents of Archives like ZIP, RAR, JAR, WAR, tar.gz and others&lt;/li&gt;
   &lt;li&gt;in contrast to most other tools, Zipeg lets you look into an archive before uncompressing it to some folder&lt;/li&gt;
   &lt;li&gt;-TotalFinder &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt; - 18$ and worth every Cent!-&lt;/li&gt;
   &lt;li&gt;Transmission &lt;a href=&quot;http://www.transmissionbt.com/&quot;&gt;http://www.transmissionbt.com/&lt;/a&gt; - Torrent client&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;https://adium.im/&quot;&gt;Adium&lt;/a&gt; messaging client for XMPP, Jabber, ICQ, AIM, MSN, Yahoo, and more&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://www.yworks.com/en/products_yed_about.html&quot;&gt;yEd Graph Editor&lt;/a&gt; - Best for quick diagramms; Java-based, also available for Linux + Win&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://audacity.sourceforge.net/&quot;&gt;Audacity&lt;/a&gt; - multi format audio file editor&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://adium.im/&quot;&gt;Adium&lt;/a&gt; messaging client for XMPP, Jabber, ICQ, AIM, MSN, Yahoo, and more&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.yworks.com/en/products_yed_about.html&quot;&gt;yEd Graph Editor&lt;/a&gt; - Best for quick diagramms; Java-based, also available for Linux + Win&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://audacity.sourceforge.net/&quot;&gt;Audacity&lt;/a&gt; - multi format audio file editor&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.machangout.com/&quot;&gt;Glims Safari-Extension&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Pixelmator - the best graphics editor around (App Store)&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://www.sublimetext.com/3&quot;&gt;Sublime Text&lt;/a&gt; (and the companying 'subl' command line util) - great text editor&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://getpocket.com/&quot;&gt;Pocket&lt;/a&gt; (App Store) - formerly known as &quot;ReadItLater&quot;&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://www.stoeger-it.de/&quot;&gt;Outbank&lt;/a&gt; (App Store) - online banking&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.sublimetext.com/3&quot;&gt;Sublime Text&lt;/a&gt; (and the companying 'subl' command line util) - great text editor&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://getpocket.com/&quot;&gt;Pocket&lt;/a&gt; (App Store) - formerly known as &quot;ReadItLater&quot;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.stoeger-it.de/&quot;&gt;Outbank&lt;/a&gt; (App Store) - online banking&lt;/li&gt;
   &lt;li&gt;Keynote - for presentations (App Store)&lt;/li&gt;
   &lt;li&gt;Caffeine (App Store) - to block the screen dimming down&lt;/li&gt;
   &lt;li&gt;Display Menu (App Store) - to easily change to the screen resolution a beamer supports&lt;/li&gt;
   &lt;li&gt;Skim (App Store) - PDF viewer&lt;/li&gt;
   &lt;li&gt;Skitch (App Store) - Screenshot tool with support for annotations&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://ecamm.com/mac/phoneview/&quot;&gt;ECamm's PhoneView&lt;/a&gt; for local backup of my iDevices&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://www.android.com/filetransfer/&quot;&gt;Android File Transfer&lt;/a&gt; &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://ecamm.com/mac/phoneview/&quot;&gt;ECamm's PhoneView&lt;/a&gt; for local backup of my iDevices&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.android.com/filetransfer/&quot;&gt;Android File Transfer&lt;/a&gt; &lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;development&quot;&gt;Development&lt;/h3&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://confluence.jetbrains.net/display/IDEADEV/EAP&quot;&gt;IntelliJ IDEA (Early Access Preview)&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;XCode (App Store)&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://portecle.sourceforge.net/&quot;&gt;Portecle&lt;/a&gt; - Utility for convenient management of Java keystores&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://portecle.sourceforge.net/&quot;&gt;Portecle&lt;/a&gt; - Utility for convenient management of Java keystores&lt;/li&gt;
   &lt;li&gt;Database Clients
     &lt;ul&gt;
-      &lt;li&gt;MongoDB 2.4 -&amp;gt; &lt;a href=&quot;http://www.robomongo.org/&quot;&gt;RoboMongo&lt;/a&gt;
-&lt;/li&gt;
-      &lt;li&gt;MySQL -&amp;gt; &lt;a href=&quot;http://sequelpro.com/&quot;&gt;Sequel Pro&lt;/a&gt;
-&lt;/li&gt;
-      &lt;li&gt;SQLite -&amp;gt; &lt;a href=&quot;http://sqlitebrowser.sourceforge.net/&quot;&gt;SQLite Database Browser&lt;/a&gt;
-&lt;/li&gt;
-      &lt;li&gt;Oracle DB -&amp;gt; &lt;a href=&quot;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&quot;&gt;Oracle SQL Developer&lt;/a&gt;
-&lt;/li&gt;
+      &lt;li&gt;MongoDB 2.4 -&amp;gt; &lt;a href=&quot;http://www.robomongo.org/&quot;&gt;RoboMongo&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;MySQL -&amp;gt; &lt;a href=&quot;http://sequelpro.com/&quot;&gt;Sequel Pro&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;SQLite -&amp;gt; &lt;a href=&quot;http://sqlitebrowser.sourceforge.net/&quot;&gt;SQLite Database Browser&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Oracle DB -&amp;gt; &lt;a href=&quot;http://www.oracle.com/technetwork/developer-tools/sql-developer/overview/index.html&quot;&gt;Oracle SQL Developer&lt;/a&gt;&lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;SourceTree - Version Control client for Git and Mercurial&lt;/li&gt;
   &lt;li&gt;Screeny - Screen recording utility (App Store)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.vagrantup.com/&quot;&gt;Vagrant&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;
-&lt;a href=&quot;http://rbenv.org/&quot;&gt;rbenv&lt;/a&gt; for managing your ruby versions&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://rbenv.org/&quot;&gt;rbenv&lt;/a&gt; for managing your ruby versions&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;&lt;strong&gt;Don't forget to pimp your ~/.profile&lt;/strong&gt;
@@ -1098,19 +1043,16 @@ source ~/.bash_dont_think.sh&lt;/p&gt;
 &lt;h3 id=&quot;glitches-of-the-finder&quot;&gt;Glitches of the Finder&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Desktop folder behaves&lt;em&gt;*different&lt;/em&gt;
-&lt;/li&gt;
+  &lt;li&gt;Desktop folder behaves&lt;em&gt;*different&lt;/em&gt;&lt;/li&gt;
   &lt;li&gt;files in the Desktop folder will always be previewed in their icon&lt;/li&gt;
   &lt;li&gt;movie files on the desktop do always consume CPU time for preview&lt;/li&gt;
   &lt;li&gt;hides system files&lt;/li&gt;
   &lt;li&gt;overwrites folders of the same name&lt;/li&gt;
-  &lt;li&gt;use TotalFinder from &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;use TotalFinder from &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;Spotlight vs. Alfred&lt;/li&gt;
   &lt;li&gt;Pro Spotlight&lt;/li&gt;
   &lt;li&gt;built in&lt;/li&gt;
-  &lt;li&gt;Pro Alfred &lt;a href=&quot;http://alfredapp.com/&quot;&gt;http://alfredapp.com/&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;Pro Alfred &lt;a href=&quot;http://alfredapp.com/&quot;&gt;http://alfredapp.com/&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;builds on Spotlight index but add's specific configuration&lt;/li&gt;
   &lt;li&gt;on the fly calculations&lt;/li&gt;
   &lt;li&gt;directed searches&lt;/li&gt;
@@ -1128,7 +1070,7 @@ source ~/.bash_dont_think.sh&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/</id>
 <title>Glassfish 4 on Nexus7</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2012-12-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/12/13/Glassfish4-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="glassfish"></category>
@@ -1138,7 +1080,6 @@ source ~/.bash_dont_think.sh&lt;/p&gt;
 <category term="embedded"></category>
 <category term="linux"></category>
 <summary>
-
 As you might have read in my previous blog post I'm currently doing Proof-Of-Concepts on what is possible with Java on a tablet like the Google Nexus7 device meaning a Nvidia Tegra chip which itself is an ARMv7 processor.
 
 Thankfully there is a team at Ubuntu which dedicates its work to bringing a desktop linux to the tablet which supports the well-known standardized Java Runtime Environments out there.
@@ -1199,7 +1140,7 @@ As accessing the Glassfish Admin Gui from a remote system is just a matter of en
 
 &lt;p&gt;Then you can simply type http://192.168.1.101:4848/ into your remote system's browser and play around with your GlassFish.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://aheusingfeld.github.io/gfx/glassfish-nexus-admconsole-screenshot.png&quot; alt=&quot;Screenshot of GlassFish admin console called from Firefox on my Mac and output of top command on the Nexus7&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://aheusingfeld.github.io/gfx/glassfish-nexus-admconsole-screenshot.png&quot; alt=&quot;Screenshot of GlassFish admin console called from Firefox on my Mac and output of top command on the Nexus7&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;At least in my case there were only about 86MB free RAM (see screenshot) but a small HTML5 game with WebSocket support could be deployed and run without a problem.&lt;/p&gt;
 
@@ -1223,7 +1164,7 @@ As accessing the Glassfish Admin Gui from a remote system is just a matter of en
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/</id>
 <title>Ubuntu and Java on Nexus7</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2012-11-30T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/30/Ubuntu+Java-on-Nexus7/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1233,7 +1174,6 @@ As accessing the Glassfish Admin Gui from a remote system is just a matter of en
 <category term="linux"></category>
 <category term="android"></category>
 <summary>
-
 In this blog post I describe how to setup Ubuntu Linux and Oracle Java on my newly acquired Google Nexus7 device. This shall be the foundation to checkout the things you can do with JavaFX on a Tablet computer.
 
 My environment is a Macbook Pro (MBP) running on OS X 10.8 (Mountain Lion). The Nexus 7 (in my case the 16gb version) is attached to the MBP via its USB cable.
@@ -1263,12 +1203,9 @@ To install the Ubuntu image on your Nexus 7 we...
 &lt;p&gt;To install the Ubuntu image on your Nexus 7 we need the &quot;fastboot&quot; command line utility from the Android Developer Tools. You can either choose to download the Android Developer Tools from the Android website or use a customized download of &quot;fastboot&quot; from github:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Android Developer Tools (ADT) &lt;a href=&quot;http://developer.android.com/sdk/index.html#mac-bundle&quot;&gt;http://developer.android.com/sdk/index.html#mac-bundle&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;ADT direct download &lt;a href=&quot;http://dl.google.com/android/android-sdk_r21-macosx.zip&quot;&gt;http://dl.google.com/android/android-sdk_r21-macosx.zip&lt;/a&gt;
-&lt;/li&gt;
-  &lt;li&gt;Alternative version for Linux and Mac &lt;a href=&quot;https://github.com/teamblueridge/adb-fastboot-install&quot;&gt;https://github.com/teamblueridge/adb-fastboot-install&lt;/a&gt;
-&lt;/li&gt;
+  &lt;li&gt;Android Developer Tools (ADT) &lt;a href=&quot;http://developer.android.com/sdk/index.html#mac-bundle&quot;&gt;http://developer.android.com/sdk/index.html#mac-bundle&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;ADT direct download &lt;a href=&quot;http://dl.google.com/android/android-sdk_r21-macosx.zip&quot;&gt;http://dl.google.com/android/android-sdk_r21-macosx.zip&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Alternative version for Linux and Mac &lt;a href=&quot;https://github.com/teamblueridge/adb-fastboot-install&quot;&gt;https://github.com/teamblueridge/adb-fastboot-install&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;installation-of-the-ubuntu-image&quot;&gt;Installation of the Ubuntu image&lt;/h3&gt;
@@ -1413,7 +1350,7 @@ $ echo export PATH=\$JAVA_HOME/bin:\$PATH &amp;gt;&amp;gt; ~/.bashrc
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/</id>
 <title>Enhancements for Mac OS X Finder.app</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2012-11-26T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/26/Productivity-for-Finder/" rel="alternate" type="text/html" />
 <category term="os x"></category>
@@ -1422,7 +1359,6 @@ $ echo export PATH=\$JAVA_HOME/bin:\$PATH &amp;gt;&amp;gt; ~/.bashrc
 <category term="tips"></category>
 <category term="applescript"></category>
 <summary>
-
 Today I'd like to share three AppleScripts with you which really enhanced my general usage of the Finder.app in Mac OS X. If you are not a Mac OS X user, you can stop reading here.
 
 In general Finder.app lacks some features I really wanted to have, among these were
@@ -1634,7 +1570,7 @@ end CD_to
 
 &lt;h3 id=&quot;adding-to-the-finder&quot;&gt;Adding to the Finder&lt;/h3&gt;
 &lt;p&gt;Finally you should unzip the apps and move them somewhere like &quot;~/Applications/&quot;. From this location you can then drag &amp;amp; drop them to your Finder's icon bar. This should look like the following:
-&lt;img src=&quot;http://aheusingfeld.github.io/gfx/applescript-icons-in-finder.png&quot; alt=&quot;Icons in your Finder.app&quot;&gt;&lt;/p&gt;
+&lt;img src=&quot;http://aheusingfeld.github.io/gfx/applescript-icons-in-finder.png&quot; alt=&quot;Icons in your Finder.app&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Now (assuming you have iTerm and TextWrangler installed) you can simply select any file in your finder and click on the icons to open the file in the specific application.
 You can find all three AppleScripts and apps in my Github Snippets repository at &lt;a href=&quot;https://github.com/aheusingfeld/Snippets/tree/master/mac-os-x&quot;&gt;https://github.com/aheusingfeld/Snippets/tree/master/mac-os-x&lt;/a&gt;&lt;/p&gt;
@@ -1646,7 +1582,7 @@ You can find all three AppleScripts and apps in my Github Snippets repository at
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/</id>
 <title>JBoss Forge in IntelliJ IDEA</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2012-11-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/11/03/JBoss-Forge-in_IntelliJ/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1657,7 +1593,6 @@ You can find all three AppleScripts and apps in my Github Snippets repository at
 <category term="tool"></category>
 <category term="java ee"></category>
 <summary>
-
 At this year's JavaOne I attended a talk by Marius Bogoevici (@mariusbogoevici) and was once again pointed at the JBoss Forge project. Last time I took a look at Forge it was still called Seam Forge which was about a year ago. It seriously matured since then.
 
 JBoss Forge is a shell for rapid-application development at a command-line level. It supports developers setting up Java applications by reducing the need to write boilerplate code. In case you ever have to start a project from scratch you should really take a glance at JBoss Forge as it makes life easier!
@@ -1691,7 +1626,7 @@ Nevertheless as Forge operates at command-line level it can easily be integrated
 - Parameter: –init-file /Users/USERNAME/.bash_profile -i -c $FORGE_HOME/bin/forge
 - Working Directory: $ProjectFileDir$&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://aheusingfeld.github.io/gfx/idea-external-tool-jboss-forge.png&quot; alt='Screenshot of &quot;External Tools&quot; configuration for JBoss Forge'&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://aheusingfeld.github.io/gfx/idea-external-tool-jboss-forge.png&quot; alt=&quot;Screenshot of &amp;quot;External Tools&amp;quot; configuration for JBoss Forge&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;My &quot;~/.profile&quot; contains the following lines:&lt;/p&gt;
 
@@ -1710,7 +1645,7 @@ For Windows users I can recommend the bash packaged with &lt;a href=&quot;https:
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/</id>
 <title>JavaOne 2012 Session material is now available</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2012-10-09T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/10/09/JavaOne_Session-material-online/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1721,8 +1656,6 @@ For Windows users I can recommend the bash packaged with &lt;a href=&quot;https:
 <category term="slides"></category>
 <category term="video"></category>
 <summary>
-
-
 Oracle just published screen & audio recordings of all sessions at JavaOne 2012. 
 The files for our session "Enterprise Application Integration patterns for Java EE cloud applications (CON6960)"
 and all others are available in the Oracle JavaOne Content Catalog.
@@ -1776,7 +1709,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/</id>
 <title>Getting ready for JavaOne 2012</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2012-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/09/25/JavaOne/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1786,8 +1719,6 @@ so question and answer are publicly available for everyone interested. Thanks in
 <category term="eai"></category>
 <category term="san francisco"></category>
 <summary>
-
-
 At the time of writing this blog post everything is prepared and I'm already really excited about my very first flight to the States and therefore my very first Oracle JavaOne. 
 As my talk proposal for JavaOne has been accepted by the conference committee - thanks again -, I'm even going to be a speaker at JavaOne 2012.
 
@@ -1816,10 +1747,8 @@ pass::[more]
 &lt;p&gt;
 The talk I'm going to give together with &lt;a href=&quot;http://www.reucon.com&quot;&gt;Stefan Reuter&lt;/a&gt; is titled &quot;&lt;a href=&quot;https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=6960&quot;&gt;Enterprise Application Integration patterns for Java EE cloud applications (CON6960)&lt;/a&gt;&quot; and will focus on the following objectives:
 &lt;/p&gt;&lt;ol&gt;
-&lt;li&gt; Provide basic knowledge of EAI and &lt;a href=&quot;http://eaipatterns.com&quot;&gt;EAI patterns&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt; Show possible implementations of common EAI patterns with &lt;a href=&quot;http://www.springsource.org/spring-integration/&quot;&gt;Spring Integration&lt;/a&gt;
-&lt;/li&gt;
+&lt;li&gt; Provide basic knowledge of EAI and &lt;a href=&quot;http://eaipatterns.com&quot;&gt;EAI patterns&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt; Show possible implementations of common EAI patterns with &lt;a href=&quot;http://www.springsource.org/spring-integration/&quot;&gt;Spring Integration&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt; Present benefits and shortcomings of cloud-based EAI applications&lt;/li&gt;
 &lt;/ol&gt;
 
@@ -1839,7 +1768,7 @@ so question and answer are publicly available for everyone interested. Thanks in
 <entry>
 <id>http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/</id>
 <title>Alternative zu Google? Vielleicht DuckDuckGo</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2012-03-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2012/03/13/alternative-zu-google-vielleicht-duckduckgo/" rel="alternate" type="text/html" />
 <category term="google"></category>
@@ -1848,8 +1777,6 @@ so question and answer are publicly available for everyone interested. Thanks in
 <category term="privacy"></category>
 <category term="tracking"></category>
 <summary>
-
-
 Nachdem Google das Tracking in den Suchergebnissen noch stärker ausgeweitet hat, so dass 
 man mittlerweile noch nicht mal die angezeigten Links kopieren kann, habe ich mich nach 
 einer Alternative umgesehen.
@@ -1877,7 +1804,7 @@ Adressleiste -> "about:config" -> keyword.url...
 &lt;p&gt;
 Nachdem Google das Tracking in den Suchergebnissen noch stärker ausgeweitet hat, so dass 
 man mittlerweile noch nicht mal die angezeigten Links kopieren kann, habe ich mich nach 
-einer Alternative umgesehen.&lt;br&gt;&lt;br&gt;
+einer Alternative umgesehen.&lt;br /&gt;&lt;br /&gt;
 DuckDuckGo (&lt;a href=&quot;https://duckduckgo.com/&quot;&gt;https://duckduckgo.com/&lt;/a&gt;) scheint eine 
 solche vernünftige Alternative zu sein. Die Grundsätze &quot;don't track&quot; 
 (&lt;a href=&quot;http://donttrack.us/&quot;&gt;http://donttrack.us/&lt;/a&gt;) und &quot;don't bubble&quot; 
@@ -1885,7 +1812,7 @@ solche vernünftige Alternative zu sein. Die Grundsätze &quot;don't track&quot;
 Wer sich für die &quot;Technik dahinter&quot; interessiert, sollte einen Blick auf diese Hilfe-Seite 
 werfen: 
 &lt;a href=&quot;http://help.duckduckgo.com/customer/portal/articles/216392-architecture&quot;&gt;http://help.duckduckgo.com/customer/portal/articles/216392-architecture&lt;/a&gt;
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
 
 
 pass::[more]
@@ -1893,13 +1820,13 @@ pass::[more]
 
 DuckDuckGo kann man auch relativ einfach als Standardsuche in Firefox einrichten, so 
 dass durch Eingabe von &quot;?Such begriffe&quot; in der Adressleiste von Firefox direkt eine 
-Suche in DuckDuckGo gestartet wird. &lt;br&gt;
-Kurz: &lt;br&gt;
+Suche in DuckDuckGo gestartet wird. &lt;br /&gt;
+Kurz: &lt;br /&gt;
 Adressleiste -&amp;gt; &quot;about:config&quot; -&amp;gt; keyword.url = &quot;https://duckduckgo.com/?q=&quot;
-&lt;br&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br /&gt;
 Eine ausführliche Anleitung gibt's hier: 
 &lt;a href=&quot;http://help.duckduckgo.com/customer/portal/articles/216441&quot;&gt;http://help.duckduckgo.com/customer/portal/articles/216441&lt;/a&gt;
-&lt;br&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br /&gt;
 Ich finde die Ideen teilweise ganz interessant, auch wenn ich statt der &quot;!bangs&quot; 
 (&lt;a href=&quot;https://duckduckgo.com/bang.html&quot;&gt;https://duckduckgo.com/bang.html&lt;/a&gt;) 
 lieber meine eigenen &quot;Smart Keywords&quot; 
@@ -1911,7 +1838,7 @@ nutze, die Firefox seit Version 2.0 bietet.&lt;/p&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/</id>
 <title>SpringRoo - Howto translate Java exceptions to user-friendly error messages</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-10-24T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/24/springroo-howto-translate-java-exceptions-to-user-friendly-error-messages/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -1921,7 +1848,6 @@ nutze, die Firefox seit Version 2.0 bietet.&lt;/p&gt;
 <category term="exceptions"></category>
 <category term="tips"></category>
 <summary>
-
 Introduction
 This blog post belongs to a tutorial series on SpringRoo 1.2.0 which uses the sample application "photooapp" to provide practical examples.Within this blog post I will try to explain how you can configure your SpringRoo application to translate well-known exceptions to user-friendly error messages.By default SpringRoo's exception handling is very basic meaning the technical exception message is directly presented to the user. Our aim is to provide the user with human-readable error messages he (most probably) can understand and react upon.  
 Basics: Translations in Spring MVC
@@ -1930,9 +1856,9 @@ First of all we need to make ourselves familiar with the translation process in.
 <content type="html">
 
 &lt;h3&gt;Introduction&lt;/h3&gt;
-&lt;p&gt;This blog post belongs to a tutorial series on &lt;a href=&quot;http://www.springsource.org/roo/why&quot;&gt;SpringRoo&lt;/a&gt; 1.2.0 which uses the sample application &quot;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/&quot;&gt;photooapp&lt;/a&gt;&quot; to provide practical examples.&lt;br&gt;Within this blog post I will try to explain how you can configure your SpringRoo application to translate well-known exceptions to user-friendly error messages.&lt;br&gt;By default SpringRoo's exception handling is very basic meaning the technical exception message is directly presented to the user. Our aim is to provide the user with human-readable error messages he (most probably) can understand and react upon.  &lt;br&gt;&lt;/p&gt;
+&lt;p&gt;This blog post belongs to a tutorial series on &lt;a href=&quot;http://www.springsource.org/roo/why&quot;&gt;SpringRoo&lt;/a&gt; 1.2.0 which uses the sample application &quot;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/&quot;&gt;photooapp&lt;/a&gt;&quot; to provide practical examples.&lt;br /&gt;Within this blog post I will try to explain how you can configure your SpringRoo application to translate well-known exceptions to user-friendly error messages.&lt;br /&gt;By default SpringRoo's exception handling is very basic meaning the technical exception message is directly presented to the user. Our aim is to provide the user with human-readable error messages he (most probably) can understand and react upon.  &lt;br /&gt;&lt;/p&gt;
 &lt;h3&gt;Basics: Translations in Spring MVC&lt;/h3&gt;
-&lt;p&gt;First of all we need to make ourselves familiar with the translation process in Spring MVC. To translate any given String to the currently set browser locale, Spring MVC uses so called &quot;message codes&quot;. These codes are defined in property files which are located in &quot;src/main/webapp/WEB-INF/i18n/application.properties&quot;. For each supported locale there will be a separate application.properties file, e.g. application_de.properties for german translations of the message codes. The &quot;application.properties&quot; file must always be used as the fallback reference.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;First of all we need to make ourselves familiar with the translation process in Spring MVC. To translate any given String to the currently set browser locale, Spring MVC uses so called &quot;message codes&quot;. These codes are defined in property files which are located in &quot;src/main/webapp/WEB-INF/i18n/application.properties&quot;. For each supported locale there will be a separate application.properties file, e.g. application_de.properties for german translations of the message codes. The &quot;application.properties&quot; file must always be used as the fallback reference.&lt;br /&gt;&lt;/p&gt;
 
 
 
@@ -1940,36 +1866,22 @@ pass::[more]
 
 
 &lt;h3&gt;Adding a sample Translation&lt;/h3&gt;
-&lt;p&gt;So let's say, we wanted to translate a &quot;org.hibernate.exception.ConstraintViolationException&quot; which is thrown whenever the user tries to create a &quot;duplicate entry&quot;.&lt;br&gt;Therefore we would add the following line to the application.properties file:&lt;br&gt;&lt;/p&gt;&lt;pre style='background-color: #f3f3f3; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;    exceptions.db.duplicateentry=The record could not be saved as there is already a record in the database having the same unique identifier\!&lt;br&gt;&lt;/pre&gt;
+&lt;p&gt;So let's say, we wanted to translate a &quot;org.hibernate.exception.ConstraintViolationException&quot; which is thrown whenever the user tries to create a &quot;duplicate entry&quot;.&lt;br /&gt;Therefore we would add the following line to the application.properties file:&lt;br /&gt;&lt;/p&gt;&lt;pre style=&quot;background-color: #f3f3f3; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;    exceptions.db.duplicateentry=The record could not be saved as there is already a record in the database having the same unique identifier\!&lt;br /&gt;&lt;/pre&gt;
 
 &lt;h3&gt;Customize exception JSP&lt;/h3&gt;
-&lt;p&gt;Next we prepare the &quot;uncaughtException.jspx&quot; which is the default JSP for exception handling in Spring MVC. To keep it simple, we'll remove the lines with the &quot;-&quot; and add the ones with &quot;+&quot;: &lt;br&gt;&lt;script src=&quot;https://gist.github.com/1314197.js?file=uncaughtException.jspx&quot;&gt;&lt;/script&gt; With the help of the little snipped '&lt;i&gt;&amp;lt;spring:message code=&quot;${exception.message}&quot; /&amp;gt;&lt;/i&gt;' Spring searches for a property with the name of the Exception's message in the above named property file. Therefore we &quot;only&quot; need to find a way to set &quot;exceptions.db.duplicateentry&quot; as the Exception's message.  
+&lt;p&gt;Next we prepare the &quot;uncaughtException.jspx&quot; which is the default JSP for exception handling in Spring MVC. To keep it simple, we'll remove the lines with the &quot;-&quot; and add the ones with &quot;+&quot;: &lt;br /&gt;&lt;script src=&quot;https://gist.github.com/1314197.js?file=uncaughtException.jspx&quot;&gt;&lt;/script&gt; With the help of the little snipped '&lt;i&gt;&amp;lt;spring:message code=&quot;${exception.message}&quot; /&amp;gt;&lt;/i&gt;' Spring searches for a property with the name of the Exception's message in the above named property file. Therefore we &quot;only&quot; need to find a way to set &quot;exceptions.db.duplicateentry&quot; as the Exception's message.  
 &lt;/p&gt;
 &lt;h3&gt;Spring MVC ExceptionResolver&lt;/h3&gt;
-&lt;p&gt;The ExceptionResolver in Spring MVC is used to determine which JSP fits best whenever any Exception is thrown. In my opinion this is the perfect place to perform our little magic. To accomplish this and be able to handle any kind of Exception in the most flexible way I added the following three classes (links lead you to github): &lt;br&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/I18nMappingExceptionResolver.java&quot; target=&quot;_blank&quot;&gt;I18nMappingExceptionResolver&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/AnalyzedApplicationException.java&quot; target=&quot;_blank&quot;&gt;AnalyzedApplicationException&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/MessageMatchCriteria.java&quot; target=&quot;_blank&quot;&gt;MessageMatchCriteria&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;The &lt;i&gt;I18nMappingExceptionResolver&lt;/i&gt; is configured via a number of &lt;i&gt;MessageMatchCriteria&lt;/i&gt; and wraps the original exception inside an &lt;i&gt;AnalyzedApplicationException&lt;/i&gt;. The ladder will then have the translatable property as &quot;message&quot;. The &lt;i&gt;I18nMappingExceptionResolver&lt;/i&gt; has to be set as the default exception resolver which is done by changing the following in &lt;i&gt;webmvc.xml&lt;/i&gt;: &lt;br&gt;&lt;script src=&quot;https://gist.github.com/1314197.js?file=webmvc.xml&quot;&gt;&lt;/script&gt; The relevant change is the property &quot;messageMapping&quot; which contains a map of the a fore mentioned &lt;i&gt;MessageMatchCriteria&lt;/i&gt; which are mapped to translatable properties. The &quot;classNamePart&quot; can hold a simple or fully qualified class name or just a part of it. The same applies to the &quot;messagePart&quot; attribute - as you can see in the sample above, the term &quot;Duplicate entry&quot; is part of the original exception message and if found will return a different property name than a normal ConstraintViolationException. I should mention that the classPart and the messagePart are searched in the complete stacktrace of the original exception. &lt;br&gt;Another thing to note is that the &lt;i&gt;AnalyzedApplicationException&lt;/i&gt; makes it easy to access the originals root cause e.g. in the JSP as it's accessible via the attribute &quot;rootCause&quot;. Therefore the variable &quot;${exception.rootCause.message}&quot; will resolve to the root cause's exception message.
+&lt;p&gt;The ExceptionResolver in Spring MVC is used to determine which JSP fits best whenever any Exception is thrown. In my opinion this is the perfect place to perform our little magic. To accomplish this and be able to handle any kind of Exception in the most flexible way I added the following three classes (links lead you to github): &lt;br /&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/I18nMappingExceptionResolver.java&quot; target=&quot;_blank&quot;&gt;I18nMappingExceptionResolver&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/AnalyzedApplicationException.java&quot; target=&quot;_blank&quot;&gt;AnalyzedApplicationException&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136/src/main/java/de/goldstift/photoo/web/exceptions/MessageMatchCriteria.java&quot; target=&quot;_blank&quot;&gt;MessageMatchCriteria&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;The &lt;i&gt;I18nMappingExceptionResolver&lt;/i&gt; is configured via a number of &lt;i&gt;MessageMatchCriteria&lt;/i&gt; and wraps the original exception inside an &lt;i&gt;AnalyzedApplicationException&lt;/i&gt;. The ladder will then have the translatable property as &quot;message&quot;. The &lt;i&gt;I18nMappingExceptionResolver&lt;/i&gt; has to be set as the default exception resolver which is done by changing the following in &lt;i&gt;webmvc.xml&lt;/i&gt;: &lt;br /&gt;&lt;script src=&quot;https://gist.github.com/1314197.js?file=webmvc.xml&quot;&gt;&lt;/script&gt; The relevant change is the property &quot;messageMapping&quot; which contains a map of the a fore mentioned &lt;i&gt;MessageMatchCriteria&lt;/i&gt; which are mapped to translatable properties. The &quot;classNamePart&quot; can hold a simple or fully qualified class name or just a part of it. The same applies to the &quot;messagePart&quot; attribute - as you can see in the sample above, the term &quot;Duplicate entry&quot; is part of the original exception message and if found will return a different property name than a normal ConstraintViolationException. I should mention that the classPart and the messagePart are searched in the complete stacktrace of the original exception. &lt;br /&gt;Another thing to note is that the &lt;i&gt;AnalyzedApplicationException&lt;/i&gt; makes it easy to access the originals root cause e.g. in the JSP as it's accessible via the attribute &quot;rootCause&quot;. Therefore the variable &quot;${exception.rootCause.message}&quot; will resolve to the root cause's exception message.
 
 &lt;h3&gt;Resume&lt;/h3&gt;
-&lt;p&gt;All the changes have already been done to photooapp so you can review all the changes by taking a look at the following commit statement: &lt;a href=&quot;https://github.com/aheusingfeld/photooapp/commit/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136&quot; target=&quot;_blank&quot;&gt;https://github.com/aheusingfeld/photooapp/commit/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136&lt;/a&gt;&lt;br&gt;Please leave a comment if you have any questions or good advice for improving the blog post series. Thanks in advance. &lt;/p&gt;
+&lt;p&gt;All the changes have already been done to photooapp so you can review all the changes by taking a look at the following commit statement: &lt;a href=&quot;https://github.com/aheusingfeld/photooapp/commit/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136&quot; target=&quot;_blank&quot;&gt;https://github.com/aheusingfeld/photooapp/commit/eb9fb0d8b46c50c27a8fdb1e2c01a498fed4b136&lt;/a&gt;&lt;br /&gt;Please leave a comment if you have any questions or good advice for improving the blog post series. Thanks in advance. &lt;/p&gt;
 &lt;h3&gt;Further links&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Photooapp sourcecode at Github: &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;SpringRoo Website: &lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;www.springsource.org/roo&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;SpringRoo Downloads at Github: &lt;a href=&quot;https://github.com/SpringSource/spring-roo/archives/master&quot;&gt;https://github.com/SpringSource/spring-roo/archives/master&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;Spring Reference Documentation: &lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html#mvc-exceptionhandlers&quot;&gt;Spring MVC - ExceptionResolver&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
+&lt;ul&gt;&lt;li&gt;Photooapp sourcecode at Github: &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt;&lt;/li&gt;&lt;li&gt;SpringRoo Website: &lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;www.springsource.org/roo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;SpringRoo Downloads at Github: &lt;a href=&quot;https://github.com/SpringSource/spring-roo/archives/master&quot;&gt;https://github.com/SpringSource/spring-roo/archives/master&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Spring Reference Documentation: &lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/spring-framework-reference/html/mvc.html#mvc-exceptionhandlers&quot;&gt;Spring MVC - ExceptionResolver&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
 
 &lt;h3&gt;Other blog posts of this series&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/starting-photooapp-springroo-tutorial.html&quot;&gt;Starting PhotooApp - A SpringRoo tutorial application (German)&lt;/a&gt; &lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/starting-photooapp-springroo-tutorial.html&quot;&gt;Starting PhotooApp - A SpringRoo tutorial application (German)&lt;/a&gt; &lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/springroo-entity-klassen-und-jpa.html&quot;&gt;SpringRoo: Entity-Klassen und JPA-Repositories mit SpringRoo erstellen (German)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/10/springroo-howto-translate-java.html&quot;&gt;SpringRoo: Howto translate Java exceptions to user-friendly error messages (English)&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;SpringRoo: Spring JS/ Dojo durch jQuery ersetzen&lt;/li&gt;
@@ -2002,7 +1914,7 @@ Thank you for posting this article! Even I have not much experience with Spring 
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/</id>
 <title>iPhone - Wartezeit für Rufumleitung bei Abwesenheit setzen</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-10-01T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/10/01/iphone-wartezeit-f-r-rufumleitung-bei-abwesenheit-setzen/" rel="alternate" type="text/html" />
 <category term="iphone"></category>
@@ -2010,7 +1922,6 @@ Thank you for posting this article! Even I have not much experience with Spring 
 <category term="settings"></category>
 <category term="tips"></category>
 <summary>
-
 Frage: Wie kann man eigentlich am iPhone die Zeit oder die Anzahl der Klingelzeichen 
 einstellen, die das Telefon wartet, bis ein nicht angenommener Anruf bspw. an die Mailbox 
 weitergeleitet wird?Antwort:Diese Weiterleitung nennt man 
@@ -2029,24 +1940,24 @@ Diese Nummernfolge muss direkt in den Ziffernblock der "Telefon"-App...
 
 &lt;h2&gt;Frage: Wie kann man eigentlich am iPhone die Zeit oder die Anzahl der Klingelzeichen 
 einstellen, die das Telefon wartet, bis ein nicht angenommener Anruf bspw. an die Mailbox 
-weitergeleitet wird?&lt;/h2&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Antwort:&lt;/b&gt;&lt;br&gt;Diese Weiterleitung nennt man 
-auch &quot;Rufumleitung wenn keine Rufannahme&quot;&lt;br&gt;&lt;br&gt;Da dies nicht Telefon-spezifisch 
+weitergeleitet wird?&lt;/h2&gt;&lt;br /&gt;&lt;br /&gt;&lt;b&gt;Antwort:&lt;/b&gt;&lt;br /&gt;Diese Weiterleitung nennt man 
+auch &quot;Rufumleitung wenn keine Rufannahme&quot;&lt;br /&gt;&lt;br /&gt;Da dies nicht Telefon-spezifisch 
 sondern eine Einstellung in den Systemen des Netzbetreibers ist, gibt es hierfür nicht 
 in jedem Telefon einen Menüpunkt oder eine Einstellungsmöglichkeit. So auch nicht beim 
-Apple iPhone.&lt;br&gt;&lt;br&gt;Es gibt aber dennoch die Möglichkeit, diese Einstellung über 
+Apple iPhone.&lt;br /&gt;&lt;br /&gt;Es gibt aber dennoch die Möglichkeit, diese Einstellung über 
 einen sog. GSM-Code zu ändern. Eine Übersicht der meisten Codes gibt es unter 
 &lt;a href=&quot;http://www.gsmcodes-online.de/&quot;&gt;http://www.gsmcodes-online.de/&lt;/a&gt;
-&lt;br&gt;
+&lt;br /&gt;
 Zur Rufumleitung: &lt;a href=&quot;http://www.gsmcodes-online.de/Rufumleitungen/rufumleitungen.html&quot;&gt;http://www.gsmcodes-online.de/Rufumleitungen/rufumleitungen.html&lt;/a&gt;
-&lt;br&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br /&gt;
 Diese Nummernfolge muss direkt in den Ziffernblock der &quot;Telefon&quot;-App eingetippt werden. 
-&lt;br&gt;&lt;br&gt;
-Beispiel &quot;Sprachanrufe nach 30 Sekunden auf die Mailbox umleiten&quot;: &lt;br&gt;
-&lt;code&gt;&lt;br&gt;**61*MAILBOXNUMMER*11*30#&lt;br&gt;&lt;/code&gt;
-&lt;br&gt;&lt;br&gt;
+&lt;br /&gt;&lt;br /&gt;
+Beispiel &quot;Sprachanrufe nach 30 Sekunden auf die Mailbox umleiten&quot;: &lt;br /&gt;
+&lt;code&gt;&lt;br /&gt;**61*MAILBOXNUMMER*11*30#&lt;br /&gt;&lt;/code&gt;
+&lt;br /&gt;&lt;br /&gt;
 Meine MAILBOXNUMMER im Telekom-Netz ist z.B. +49151 13 12345678 dementsprechend lautet 
-die ganze Zeichenkette dann&lt;br&gt;&lt;em&gt;&lt;br&gt;**61*+491511312345678*11*30#&lt;/em&gt;
-&lt;br&gt;&lt;br&gt;
+die ganze Zeichenkette dann&lt;br /&gt;&lt;em&gt;&lt;br /&gt;**61*+491511312345678*11*30#&lt;/em&gt;
+&lt;br /&gt;&lt;br /&gt;
 Wie die MailboxNummer bei anderen Providern ist, kann ich leider nicht sagen, man kann 
 aber vorher durch die Eingabe von &quot;*#61#&quot; die aktuelle Einstellung abfragen.
 
@@ -2055,7 +1966,7 @@ aber vorher durch die Eingabe von &quot;*#61#&quot; die aktuelle Einstellung abf
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/</id>
 <title>SpringRoo - Entity-Klassen und JPA-Repositories mit SpringRoo erstellen</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-09-25T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/25/springroo-entity-klassen-und-jpa-repositories-mit-springroo-erstellen/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2065,48 +1976,18 @@ aber vorher durch die Eingabe von &quot;*#61#&quot; die aktuelle Einstellung abf
 <category term="exceptions"></category>
 <category term="jpa"></category>
 <summary>
-
-
 Dies ist der zweite Artikel in meiner Tutorial-Reihe zu SpringRoo 1.2.0 in der die Beispiel-Anwendung "photooapp" entwickelt wird.Vorbedingungen In diesem Beitrag geht es um die initiale Erstellung der Roo-Anwendung. Hierfür müssen folgende Vorbedingungen erfüllt sein:Java Development Kit (JDK) 6 oder höher ist installiert und im "PATH"  SpringRoo 1.2.0.M1 wurde heruntergeladen und installiertApache Maven wurde heruntergeladen und installiert lokaler MySQL 5.1 Server wurde installiert und gestartetInitiales Setup-Skript für MySQL-Datenbank und -Benutzer wurde ausgeführtLokalen Datenbankserver installieren (falls notwendig)Wir gehen davon aus, dass die Anwendung später mit einer MySQL 5.1-Datenbank betrieben werden soll, die auf dem gleichen Server läuft wie die Anwendung.Um...
 </summary>
 <content type="html">
 
 &lt;p&gt;
-Dies ist der zweite Artikel in meiner Tutorial-Reihe zu &lt;a href=&quot;http://www.springsource.org/roo/why&quot;&gt;SpringRoo&lt;/a&gt; 1.2.0 in der die Beispiel-Anwendung &quot;photooapp&quot; entwickelt wird.&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Vorbedingungen &lt;/span&gt;&lt;br&gt;&lt;br&gt;In diesem Beitrag geht es um die initiale Erstellung der Roo-Anwendung. Hierfür müssen folgende Vorbedingungen erfüllt sein:&lt;br&gt;&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u27-download-440405.html&quot;&gt;Java Development Kit (JDK) 6 oder höher ist installiert&lt;/a&gt; und im &quot;PATH&quot;  &lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://github.com/SpringSource/spring-roo/archives/master&quot;&gt;SpringRoo 1.2.0.M1 wurde heruntergeladen&lt;/a&gt; und installiert&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://maven.apache.org/download.html&quot;&gt;Apache Maven wurde heruntergeladen&lt;/a&gt; und installiert &lt;/li&gt;
-&lt;li&gt;lokaler MySQL 5.1 Server wurde installiert und gestartet&lt;/li&gt;
-&lt;li&gt;Initiales Setup-Skript für MySQL-Datenbank und -Benutzer wurde ausgeführt&lt;/li&gt;
-&lt;/ul&gt;&lt;br&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Lokalen Datenbankserver installieren (falls notwendig)&lt;/span&gt;&lt;br&gt;&lt;br&gt;Wir gehen davon aus, dass die Anwendung später mit einer MySQL 5.1-Datenbank betrieben werden soll, die auf dem gleichen Server läuft wie die Anwendung.&lt;br&gt;Um eine ähnliche Umgebung für die Entwicklung zu verwenden, benötigen wir eine lokale MySQL-Installation. Für diejenigen ohne eine lokale Installation ist die wohl einfachste und schnellste Art dies zu erreichen wahrscheinlich das XAMPP-Paket von &lt;a href=&quot;http://www.apachefriends.org/de/index.html&quot;&gt;Apachefriends&lt;/a&gt;. Es kann über die URL http://www.apachefriends.org/de/xampp.html heruntergeladen werden.&lt;br&gt;&lt;br&gt;
+Dies ist der zweite Artikel in meiner Tutorial-Reihe zu &lt;a href=&quot;http://www.springsource.org/roo/why&quot;&gt;SpringRoo&lt;/a&gt; 1.2.0 in der die Beispiel-Anwendung &quot;photooapp&quot; entwickelt wird.&lt;br /&gt;&lt;br /&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Vorbedingungen &lt;/span&gt;&lt;br /&gt;&lt;br /&gt;In diesem Beitrag geht es um die initiale Erstellung der Roo-Anwendung. Hierfür müssen folgende Vorbedingungen erfüllt sein:&lt;br /&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://www.oracle.com/technetwork/java/javase/downloads/jdk-6u27-download-440405.html&quot;&gt;Java Development Kit (JDK) 6 oder höher ist installiert&lt;/a&gt; und im &quot;PATH&quot;  &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://github.com/SpringSource/spring-roo/archives/master&quot;&gt;SpringRoo 1.2.0.M1 wurde heruntergeladen&lt;/a&gt; und installiert&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://maven.apache.org/download.html&quot;&gt;Apache Maven wurde heruntergeladen&lt;/a&gt; und installiert &lt;/li&gt;&lt;li&gt;lokaler MySQL 5.1 Server wurde installiert und gestartet&lt;/li&gt;&lt;li&gt;Initiales Setup-Skript für MySQL-Datenbank und -Benutzer wurde ausgeführt&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Lokalen Datenbankserver installieren (falls notwendig)&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Wir gehen davon aus, dass die Anwendung später mit einer MySQL 5.1-Datenbank betrieben werden soll, die auf dem gleichen Server läuft wie die Anwendung.&lt;br /&gt;Um eine ähnliche Umgebung für die Entwicklung zu verwenden, benötigen wir eine lokale MySQL-Installation. Für diejenigen ohne eine lokale Installation ist die wohl einfachste und schnellste Art dies zu erreichen wahrscheinlich das XAMPP-Paket von &lt;a href=&quot;http://www.apachefriends.org/de/index.html&quot;&gt;Apachefriends&lt;/a&gt;. Es kann über die URL http://www.apachefriends.org/de/xampp.html heruntergeladen werden.&lt;br /&gt;&lt;br /&gt;
 
 
 pass::[more]
 
 
-Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mit den folgenden beiden Befehlen die Datenbank und der zugehörige Benutzer erstellt werden. Diese Befehle sind auch im &lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/master/doc/photooapp-mysql-setup.sql&quot;&gt;MySQL-Setup-Skript&lt;/a&gt; enthalten:&lt;br&gt;&lt;br&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;$ /Applications/XAMPP/xamppfiles/bin/mysql -u root -p&lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;Enter password: &lt;br&gt;Welcome to the MySQL monitor.  Commands end with ; or \g.&lt;br&gt;Your MySQL connection id is 8&lt;br&gt;Server version: 5.1.44 Source distribution&lt;br&gt;&lt;br&gt;Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.&lt;br&gt;&lt;br&gt;mysql&amp;gt; CREATE DATABASE photooapp DEFAULT CHARSET=utf8;&lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;mysql&amp;gt; GRANT ALL ON photooapp.* TO photooapp@localhost IDENTIFIED BY 'pho!00App';&lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;mysql&amp;gt; exit&lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;Bye &lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;$ &lt;/div&gt;&lt;br&gt;Nun sollten alle notwendigen Vorbedingungen erfüllt sein und wir können in der SpringRoo shell weitermachen.&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Datenmodell-Klassen in SpringRoo erstellen&lt;/span&gt;&lt;br&gt;&lt;br&gt;Für die Demo-Anwendung &quot;Photooapp&quot; wurde folgendes (vorläufiges) Datenmodell erstellt, das wir nun in SpringRoo umsetzen wollen:&lt;br&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/raw/master/doc/class-overview.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;571&quot; src=&quot;https://github.com/aheusingfeld/photooapp/raw/master/doc/class-overview.png&quot; width=&quot;640&quot;&gt;&lt;/a&gt;&lt;/div&gt;&lt;br&gt;Hierzu öffnen wir die SpringRoo Shell:&lt;br&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;ahe:(git)photooapp[master]/$ ~/dev/tools/spring-roo-1.2.0.M1/bin/roo.sh &lt;br&gt;____  ____  ____  &lt;br&gt;/ __ \/ __ \/ __ \ &lt;br&gt;/ /_/ / / / / / / / &lt;br&gt;/ _, _/ /_/ / /_/ /  &lt;br&gt;/_/ |_|\____/\____/    1.2.0.M1 [rev 1fa252f]&lt;br&gt;&lt;br&gt;&lt;br&gt;Welcome to Spring Roo. For assistance press TAB or type &quot;hint&quot; then hit ENTER.&lt;br&gt;...&lt;br&gt;roo&amp;gt; script --file log.roo --lineNumbers true&lt;/div&gt;&lt;br&gt;Nun gibt es zwei Möglichkeiten:&lt;br&gt;&lt;br&gt;a) Man tippt die folgenden Befehle auf der Roo-Shell ein:&lt;br&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;project de.goldstift.photoo&lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;jpa setup --provider HIBERNATE --database MYSQL --databaseName photooapp --userName photooapp --hostName 127.0.0.1 --password pho!00App&lt;br&gt;&lt;br&gt;entity --class ~.domain.Tag --activeRecord false --testAutomatically&lt;br&gt;field string --fieldName name --notNull --sizeMin 2&lt;br&gt;field string --fieldName lowerCaseName --notNull --sizeMin 2&lt;br&gt;&lt;br&gt;entity --class ~.domain.Person --activeRecord false --testAutomatically&lt;br&gt;field string --fieldName lastname --notNull --sizeMin 2&lt;br&gt;field string --fieldName firstname&lt;br&gt;field string --fieldName nickname --notNull&lt;br&gt;&lt;br&gt;entity --class ~.domain.Event --activeRecord false --testAutomatically &lt;br&gt;field string --fieldName name --notNull --sizeMin 2&lt;br&gt;field date --fieldName fromDate --type java.util.Date --dateTimeFormatPattern &quot;yyyy-MM-dd HH:mm:ss&quot;&lt;br&gt;field date --fieldName toDate --type java.util.Date --dateTimeFormatPattern &quot;yyyy-MM-dd HH:mm:ss&quot;&lt;br&gt;&lt;br&gt;entity --class ~.domain.Folder --activeRecord false --testAutomatically &lt;br&gt;field string --fieldName title&lt;br&gt;field date --fieldName createDate --type java.util.Date --dateTimeFormatPattern &quot;yyyy-MM-dd HH:mm:ss&quot;&lt;br&gt;field string --fieldName systemPath --notNull --sizeMin 1&lt;br&gt;field string --fieldName urlPath --notNull --sizeMin 1&lt;br&gt;field boolean --fieldName writable --primitive false&lt;br&gt;&lt;br&gt;entity --class ~.domain.PhotoFile --activeRecord false --testAutomatically &lt;br&gt;field reference --fieldName folder --type ~.domain.Folder --cardinality MANY_TO_ONE --fetch EAGER&lt;br&gt;field string --fieldName filename --notNull&lt;br&gt;field number --fieldName width --notNull --type java.lang.Short&lt;br&gt;field number --fieldName height --notNull --type java.lang.Short&lt;br&gt;&lt;br&gt;entity --class ~.domain.Photo --activeRecord false --testAutomatically &lt;br&gt;field string --fieldName title&lt;br&gt;field string --fieldName description&lt;br&gt;field string --fieldName thumbnail --notNull&lt;br&gt;field reference --fieldName thumbnailFile --type ~.domain.PhotoFile --cardinality MANY_TO_ONE --fetch EAGER&lt;br&gt;field reference --fieldName previewFile --type ~.domain.PhotoFile --cardinality MANY_TO_ONE --fetch EAGER&lt;br&gt;field reference --fieldName originalFile --type ~.domain.PhotoFile --cardinality MANY_TO_ONE --fetch EAGER&lt;br&gt;field date --fieldName importDate --type java.util.Date --dateTimeFormatPattern &quot;MS&quot;&lt;br&gt;field date --fieldName shotDate --type java.util.Date --dateTimeFormatPattern &quot;MS&quot;&lt;br&gt;field set --fieldName tags --type ~.domain.Tag --cardinality MANY_TO_MANY --fetch EAGER &lt;br&gt;field set --fieldName persons --type ~.domain.Person --cardinality MANY_TO_MANY --fetch EAGER &lt;br&gt;field set --fieldName events --type ~.domain.Event --cardinality MANY_TO_MANY --fetch EAGER &lt;br&gt;&lt;br&gt;repository jpa --interface ~.repository.TagRepository --entity ~.domain.Tag&lt;br&gt;repository jpa --interface ~.repository.EventRepository --entity ~.domain.Event&lt;br&gt;repository jpa --interface ~.repository.PersonRepository --entity ~.domain.Person&lt;br&gt;repository jpa --interface ~.repository.PhotoRepository --entity ~.domain.Photo&lt;br&gt;service --interface ~.service.TagService --entity ~.domain.Tag&lt;br&gt;service --interface ~.service.EventService --entity ~.domain.Event&lt;br&gt;service --interface ~.service.PersonService --entity ~.domain.Person&lt;br&gt;service --interface ~.service.PhotoService --entity ~.domain.Photo&lt;br&gt;&lt;br&gt;json all&lt;br&gt;web mvc setup&lt;br&gt;web mvc all --package ~.web&lt;/div&gt;&lt;br&gt;oder&lt;br&gt;&lt;br&gt;b) man importiert die Befehle als Roo-Skript (speichern als &quot;log.roo&quot;) mit Hilfe des folgenden Befehls:&lt;br&gt;&lt;br&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;roo&amp;gt; script --file log.roo --lineNumbers true&lt;/div&gt;&lt;br&gt;Anschließend kann die Anwendung über die folgenden Maven Befehle gebaut und gestartet werden:&lt;br&gt;&lt;br&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;ahe:(git)photooapp[master]/$ mvn clean package&lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;(...) &lt;/div&gt;&lt;div style='background-color: #cccccc; font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;ahe:(git)photooapp[master]/$ mvn jetty:run&lt;/div&gt;&lt;br&gt;Durch letzteren Befehl wird die Anwendung in einem &lt;a href=&quot;http://www.eclipse.org/jetty/about.php&quot;&gt;Jetty ApplicationServer&lt;/a&gt; gestartet, wodurch sie unter &lt;a href=&quot;http://localhost:8080/photooapp&quot;&gt;http://localhost:8080/photooapp&lt;/a&gt; verfügbar sein sollte.&lt;br&gt;&lt;br&gt;Die komplette Anwendung ist bei github verfügbar unter &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Weiterführende Links&lt;/span&gt;&lt;br&gt;&lt;ul&gt;
-&lt;li&gt;Photooapp Quellcode bei github: &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;SpringRoo Webseite: &lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;www.springsource.org/roo&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;SpringRoo Downloads bei Github: &lt;a href=&quot;https://github.com/SpringSource/spring-roo/archives/master&quot;&gt;https://github.com/SpringSource/spring-roo/archives/master&lt;/a&gt;
-&lt;/li&gt;
-&lt;li&gt;Apache Maven downloads: &lt;a href=&quot;http://maven.apache.org/download.html&quot;&gt;http://maven.apache.org/download.html&lt;/a&gt;
-&lt;/li&gt;
-&lt;/ul&gt;&lt;br&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Weitere Artikel der Reihe&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/starting-photooapp-springroo-tutorial.html&quot;&gt;Starting PhotooApp - A SpringRoo tutorial application&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/springroo-entity-klassen-und-jpa.html&quot;&gt;SpringRoo: Entity-Klassen und JPA-Repositories mit SpringRoo erstellen&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/10/springroo-howto-translate-java.html&quot;&gt;SpringRoo: Howto translate Java exceptions to user-friendly error messages (English)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;SpringRoo: Spring JS/ Dojo durch jQuery ersetzen&lt;/li&gt;
-&lt;li&gt;SpringRoo: Standard-Auswahllisten in Textfelder mit dynamischen Vorschlagswerten umbauen&lt;/li&gt;
-&lt;li&gt;SpringRoo: Excel-Download für alle Listen-Seiten mit minimalem Aufwand &lt;/li&gt;
-&lt;li&gt;SpringRoo: Dynamische Finder mit Hilfe der JPA Criteria API&lt;/li&gt;
-&lt;li&gt;SpringRoo: Standardwebseiten auf smartphone-kompatibles HTML5 aktualisieren&lt;/li&gt;
-&lt;/ul&gt;
+Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mit den folgenden beiden Befehlen die Datenbank und der zugehörige Benutzer erstellt werden. Diese Befehle sind auch im &lt;a href=&quot;https://github.com/aheusingfeld/photooapp/blob/master/doc/photooapp-mysql-setup.sql&quot;&gt;MySQL-Setup-Skript&lt;/a&gt; enthalten:&lt;br /&gt;&lt;br /&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;$ /Applications/XAMPP/xamppfiles/bin/mysql -u root -p&lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;Enter password: &lt;br /&gt;Welcome to the MySQL monitor.  Commands end with ; or \g.&lt;br /&gt;Your MySQL connection id is 8&lt;br /&gt;Server version: 5.1.44 Source distribution&lt;br /&gt;&lt;br /&gt;Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.&lt;br /&gt;&lt;br /&gt;mysql&amp;gt; CREATE DATABASE photooapp DEFAULT CHARSET=utf8;&lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;mysql&amp;gt; GRANT ALL ON photooapp.* TO photooapp@localhost IDENTIFIED BY 'pho!00App';&lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;mysql&amp;gt; exit&lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;Bye &lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;$ &lt;/div&gt;&lt;br /&gt;Nun sollten alle notwendigen Vorbedingungen erfüllt sein und wir können in der SpringRoo shell weitermachen.&lt;br /&gt;&lt;br /&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Datenmodell-Klassen in SpringRoo erstellen&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Für die Demo-Anwendung &quot;Photooapp&quot; wurde folgendes (vorläufiges) Datenmodell erstellt, das wir nun in SpringRoo umsetzen wollen:&lt;br /&gt;&lt;div class=&quot;separator&quot; style=&quot;clear: both; text-align: center;&quot;&gt;&lt;a href=&quot;https://github.com/aheusingfeld/photooapp/raw/master/doc/class-overview.png&quot; imageanchor=&quot;1&quot; style=&quot;margin-left: 1em; margin-right: 1em;&quot;&gt;&lt;img border=&quot;0&quot; height=&quot;571&quot; src=&quot;https://github.com/aheusingfeld/photooapp/raw/master/doc/class-overview.png&quot; width=&quot;640&quot; /&gt;&lt;/a&gt;&lt;/div&gt;&lt;br /&gt;Hierzu öffnen wir die SpringRoo Shell:&lt;br /&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;ahe:(git)photooapp[master]/$ ~/dev/tools/spring-roo-1.2.0.M1/bin/roo.sh &lt;br /&gt;____  ____  ____  &lt;br /&gt;/ __ \/ __ \/ __ \ &lt;br /&gt;/ /_/ / / / / / / / &lt;br /&gt;/ _, _/ /_/ / /_/ /  &lt;br /&gt;/_/ |_|\____/\____/    1.2.0.M1 [rev 1fa252f]&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;Welcome to Spring Roo. For assistance press TAB or type &quot;hint&quot; then hit ENTER.&lt;br /&gt;...&lt;br /&gt;roo&amp;gt; script --file log.roo --lineNumbers true&lt;/div&gt;&lt;br /&gt;Nun gibt es zwei Möglichkeiten:&lt;br /&gt;&lt;br /&gt;a) Man tippt die folgenden Befehle auf der Roo-Shell ein:&lt;br /&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;project de.goldstift.photoo&lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;jpa setup --provider HIBERNATE --database MYSQL --databaseName photooapp --userName photooapp --hostName 127.0.0.1 --password pho!00App&lt;br /&gt;&lt;br /&gt;entity --class ~.domain.Tag --activeRecord false --testAutomatically&lt;br /&gt;field string --fieldName name --notNull --sizeMin 2&lt;br /&gt;field string --fieldName lowerCaseName --notNull --sizeMin 2&lt;br /&gt;&lt;br /&gt;entity --class ~.domain.Person --activeRecord false --testAutomatically&lt;br /&gt;field string --fieldName lastname --notNull --sizeMin 2&lt;br /&gt;field string --fieldName firstname&lt;br /&gt;field string --fieldName nickname --notNull&lt;br /&gt;&lt;br /&gt;entity --class ~.domain.Event --activeRecord false --testAutomatically &lt;br /&gt;field string --fieldName name --notNull --sizeMin 2&lt;br /&gt;field date --fieldName fromDate --type java.util.Date --dateTimeFormatPattern &quot;yyyy-MM-dd HH:mm:ss&quot;&lt;br /&gt;field date --fieldName toDate --type java.util.Date --dateTimeFormatPattern &quot;yyyy-MM-dd HH:mm:ss&quot;&lt;br /&gt;&lt;br /&gt;entity --class ~.domain.Folder --activeRecord false --testAutomatically &lt;br /&gt;field string --fieldName title&lt;br /&gt;field date --fieldName createDate --type java.util.Date --dateTimeFormatPattern &quot;yyyy-MM-dd HH:mm:ss&quot;&lt;br /&gt;field string --fieldName systemPath --notNull --sizeMin 1&lt;br /&gt;field string --fieldName urlPath --notNull --sizeMin 1&lt;br /&gt;field boolean --fieldName writable --primitive false&lt;br /&gt;&lt;br /&gt;entity --class ~.domain.PhotoFile --activeRecord false --testAutomatically &lt;br /&gt;field reference --fieldName folder --type ~.domain.Folder --cardinality MANY_TO_ONE --fetch EAGER&lt;br /&gt;field string --fieldName filename --notNull&lt;br /&gt;field number --fieldName width --notNull --type java.lang.Short&lt;br /&gt;field number --fieldName height --notNull --type java.lang.Short&lt;br /&gt;&lt;br /&gt;entity --class ~.domain.Photo --activeRecord false --testAutomatically &lt;br /&gt;field string --fieldName title&lt;br /&gt;field string --fieldName description&lt;br /&gt;field string --fieldName thumbnail --notNull&lt;br /&gt;field reference --fieldName thumbnailFile --type ~.domain.PhotoFile --cardinality MANY_TO_ONE --fetch EAGER&lt;br /&gt;field reference --fieldName previewFile --type ~.domain.PhotoFile --cardinality MANY_TO_ONE --fetch EAGER&lt;br /&gt;field reference --fieldName originalFile --type ~.domain.PhotoFile --cardinality MANY_TO_ONE --fetch EAGER&lt;br /&gt;field date --fieldName importDate --type java.util.Date --dateTimeFormatPattern &quot;MS&quot;&lt;br /&gt;field date --fieldName shotDate --type java.util.Date --dateTimeFormatPattern &quot;MS&quot;&lt;br /&gt;field set --fieldName tags --type ~.domain.Tag --cardinality MANY_TO_MANY --fetch EAGER &lt;br /&gt;field set --fieldName persons --type ~.domain.Person --cardinality MANY_TO_MANY --fetch EAGER &lt;br /&gt;field set --fieldName events --type ~.domain.Event --cardinality MANY_TO_MANY --fetch EAGER &lt;br /&gt;&lt;br /&gt;repository jpa --interface ~.repository.TagRepository --entity ~.domain.Tag&lt;br /&gt;repository jpa --interface ~.repository.EventRepository --entity ~.domain.Event&lt;br /&gt;repository jpa --interface ~.repository.PersonRepository --entity ~.domain.Person&lt;br /&gt;repository jpa --interface ~.repository.PhotoRepository --entity ~.domain.Photo&lt;br /&gt;service --interface ~.service.TagService --entity ~.domain.Tag&lt;br /&gt;service --interface ~.service.EventService --entity ~.domain.Event&lt;br /&gt;service --interface ~.service.PersonService --entity ~.domain.Person&lt;br /&gt;service --interface ~.service.PhotoService --entity ~.domain.Photo&lt;br /&gt;&lt;br /&gt;json all&lt;br /&gt;web mvc setup&lt;br /&gt;web mvc all --package ~.web&lt;/div&gt;&lt;br /&gt;oder&lt;br /&gt;&lt;br /&gt;b) man importiert die Befehle als Roo-Skript (speichern als &quot;log.roo&quot;) mit Hilfe des folgenden Befehls:&lt;br /&gt;&lt;br /&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;roo&amp;gt; script --file log.roo --lineNumbers true&lt;/div&gt;&lt;br /&gt;Anschließend kann die Anwendung über die folgenden Maven Befehle gebaut und gestartet werden:&lt;br /&gt;&lt;br /&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;ahe:(git)photooapp[master]/$ mvn clean package&lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;(...) &lt;/div&gt;&lt;div style=&quot;background-color: #cccccc; font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;ahe:(git)photooapp[master]/$ mvn jetty:run&lt;/div&gt;&lt;br /&gt;Durch letzteren Befehl wird die Anwendung in einem &lt;a href=&quot;http://www.eclipse.org/jetty/about.php&quot;&gt;Jetty ApplicationServer&lt;/a&gt; gestartet, wodurch sie unter &lt;a href=&quot;http://localhost:8080/photooapp&quot;&gt;http://localhost:8080/photooapp&lt;/a&gt; verfügbar sein sollte.&lt;br /&gt;&lt;br /&gt;Die komplette Anwendung ist bei github verfügbar unter &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Weiterführende Links&lt;/span&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Photooapp Quellcode bei github: &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt;&lt;/li&gt;&lt;li&gt;SpringRoo Webseite: &lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;www.springsource.org/roo&lt;/a&gt;&lt;/li&gt;&lt;li&gt;SpringRoo Downloads bei Github: &lt;a href=&quot;https://github.com/SpringSource/spring-roo/archives/master&quot;&gt;https://github.com/SpringSource/spring-roo/archives/master&lt;/a&gt;&lt;/li&gt;&lt;li&gt;Apache Maven downloads: &lt;a href=&quot;http://maven.apache.org/download.html&quot;&gt;http://maven.apache.org/download.html&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Weitere Artikel der Reihe&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/starting-photooapp-springroo-tutorial.html&quot;&gt;Starting PhotooApp - A SpringRoo tutorial application&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/springroo-entity-klassen-und-jpa.html&quot;&gt;SpringRoo: Entity-Klassen und JPA-Repositories mit SpringRoo erstellen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/10/springroo-howto-translate-java.html&quot;&gt;SpringRoo: Howto translate Java exceptions to user-friendly error messages (English)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;SpringRoo: Spring JS/ Dojo durch jQuery ersetzen&lt;/li&gt;&lt;li&gt;SpringRoo: Standard-Auswahllisten in Textfelder mit dynamischen Vorschlagswerten umbauen&lt;/li&gt;&lt;li&gt;SpringRoo: Excel-Download für alle Listen-Seiten mit minimalem Aufwand &lt;/li&gt;&lt;li&gt;SpringRoo: Dynamische Finder mit Hilfe der JPA Criteria API&lt;/li&gt;&lt;li&gt;SpringRoo: Standardwebseiten auf smartphone-kompatibles HTML5 aktualisieren&lt;/li&gt;&lt;/ul&gt;
 
 
 </content>
@@ -2114,7 +1995,7 @@ Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mi
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/</id>
 <title>Starting PhotooApp - A SpringRoo tutorial application</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-09-23T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/09/23/starting-photooapp-a-springroo-tutorial-application/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2122,76 +2003,25 @@ Ist die Software installiert und der MySQL-Datenbankserver gestartet, können mi
 <category term="github"></category>
 <category term="open source"></category>
 <summary>
-
 Ich hatte bereits im Februar angekündigt, dass ich hier ein paar Artikel über SpringRoo schreiben würde, und nutze nun das Erscheinen des neuen Meilensteins um damit zu beginnen.Die IdeeVor ein paar Tagen ist endlich SpringRoo 1.2.0.M1 erschienen, welches der erste sog. Milestone der nächsten Version von SpringRoo ist. Das Besondere hieran ist die Unterstützung des Repository- oder auch DAO-Models, welches im Gegensatz zu dem sog. ActiveRecord-Model steht. Bisher verwendete SpringRoo zwingend das ActiveRecord-Model. Dank dieser Neuerung kann SpringRoo nun endlich in Kombination mit Spring Data JPA genutzt werden, was viele Vorteile und einige neue Möglichkeiten gerade im Bereich der Finder...
 </summary>
 <content type="html">
 
-&lt;p&gt;Ich hatte bereits &lt;a href=&quot;http://goldstifts.blogspot.com/2011/02/umlaute-und-sonderzeichen-in-spring-roo.html&quot;&gt;im Februar angekündigt&lt;/a&gt;, dass ich hier ein paar Artikel über SpringRoo schreiben würde, und nutze nun das Erscheinen des neuen Meilensteins um damit zu beginnen.&lt;br&gt;&lt;br&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Die Idee&lt;/span&gt;&lt;br&gt;&lt;br&gt;Vor ein paar Tagen ist endlich SpringRoo &lt;a href=&quot;https://github.com/SpringSource/spring-roo/tree/1.2.0.M1&quot;&gt;1.2.0.M1&lt;/a&gt; erschienen, welches der erste sog. Milestone der nächsten Version von SpringRoo ist. Das Besondere hieran ist &lt;a href=&quot;http://blog.springsource.com/2011/09/14/new-application-layering-and-persistence-choices-in-spring-roo/&quot;&gt;die Unterstützung des Repository- oder auch DAO-Models&lt;/a&gt;, welches im Gegensatz zu dem sog. ActiveRecord-Model steht. Bisher verwendete &lt;a href=&quot;http://static.springsource.org/spring-roo/reference/html-single/index.html#architecture-dao&quot;&gt;SpringRoo zwingend das ActiveRecord-Model&lt;/a&gt;. Dank dieser Neuerung kann SpringRoo nun endlich in Kombination mit &lt;a href=&quot;https://github.com/SpringSource/spring-data-jpa&quot;&gt;Spring Data JPA&lt;/a&gt; genutzt werden, was viele &lt;a href=&quot;http://blog.springsource.com/2011/02/10/getting-started-with-spring-data-jpa/&quot;&gt;Vorteile und einige neue Möglichkeiten&lt;/a&gt; gerade im Bereich der Finder eröffnet.&lt;br&gt;
+&lt;p&gt;Ich hatte bereits &lt;a href=&quot;http://goldstifts.blogspot.com/2011/02/umlaute-und-sonderzeichen-in-spring-roo.html&quot;&gt;im Februar angekündigt&lt;/a&gt;, dass ich hier ein paar Artikel über SpringRoo schreiben würde, und nutze nun das Erscheinen des neuen Meilensteins um damit zu beginnen.&lt;br /&gt;&lt;br /&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Die Idee&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Vor ein paar Tagen ist endlich SpringRoo &lt;a href=&quot;https://github.com/SpringSource/spring-roo/tree/1.2.0.M1&quot;&gt;1.2.0.M1&lt;/a&gt; erschienen, welches der erste sog. Milestone der nächsten Version von SpringRoo ist. Das Besondere hieran ist &lt;a href=&quot;http://blog.springsource.com/2011/09/14/new-application-layering-and-persistence-choices-in-spring-roo/&quot;&gt;die Unterstützung des Repository- oder auch DAO-Models&lt;/a&gt;, welches im Gegensatz zu dem sog. ActiveRecord-Model steht. Bisher verwendete &lt;a href=&quot;http://static.springsource.org/spring-roo/reference/html-single/index.html#architecture-dao&quot;&gt;SpringRoo zwingend das ActiveRecord-Model&lt;/a&gt;. Dank dieser Neuerung kann SpringRoo nun endlich in Kombination mit &lt;a href=&quot;https://github.com/SpringSource/spring-data-jpa&quot;&gt;Spring Data JPA&lt;/a&gt; genutzt werden, was viele &lt;a href=&quot;http://blog.springsource.com/2011/02/10/getting-started-with-spring-data-jpa/&quot;&gt;Vorteile und einige neue Möglichkeiten&lt;/a&gt; gerade im Bereich der Finder eröffnet.&lt;br /&gt;
 
 
 pass::[more]
 
 
-Mein Ziel ist anhand einer Beispiel-Anwendung/ Demo-App die Möglichkeiten von SpringRoo zu demonstrieren und Workarounds für bekannte Unschönheiten aufzuzeigen.&lt;br&gt;&lt;br&gt;Auf Grund persönlicher Präferenzen wird die Demo-App eine serverbasierte Fotoverwaltung, die sowohl von mobilen Endgeräten als auch von Desktop-PCs genutzt werden kann. Als Feature sollen die mobilen Endgeräte Fotos und Videos an die Anwendung übermitteln können, so dass diese direkt für andere Nutzer verfügbar sind. &lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;span style=&quot;font-size: large;&quot;&gt;Anforderungen&lt;/span&gt;&lt;br&gt;&lt;br&gt;Hier die bisherigen Anforderungen:&lt;br&gt;&lt;/p&gt;&lt;ol&gt;
-&lt;li&gt;Die Anwendung muss Fotos aus einem Dateisystemordner importieren können&lt;/li&gt;
-&lt;li&gt; Die Anwendung muss während des Imports Minibilder/ Thumbnails der Originale erstellen, die eine maximale Kantenlänge von 250px haben&lt;/li&gt;
-&lt;li&gt;Die Anwendung muss während des Imports Vorschaubilder/ Previews der  Originale erstellen, die eine maximale Kantenlänge von 1280px haben&lt;/li&gt;
-&lt;li&gt;Ein Foto hat folgende Eigenschaften &lt;/li&gt;
-&lt;ol&gt;
-&lt;li&gt;Titel&lt;/li&gt;
-&lt;li&gt;Beschreibung&lt;/li&gt;
-&lt;li&gt;Thumbnail-Datei (Fotodatei)&lt;/li&gt;
-&lt;li&gt;Vorschau-Datei (Fotodatei)&lt;/li&gt;
-&lt;li&gt;Original-Datei (Fotodatei)&lt;/li&gt;
-&lt;li&gt;Importdatum&lt;/li&gt;
-&lt;li&gt;Erstellungsdatum&lt;/li&gt;
-&lt;/ol&gt;
-&lt;li&gt;Eine Fotodatei hat folgende Eigenschaften&lt;/li&gt;
-&lt;ol&gt;
-&lt;li&gt; Dateisystemordner&lt;/li&gt;
-&lt;li&gt;dateiname&lt;/li&gt;
-&lt;li&gt;Breite&lt;/li&gt;
-&lt;li&gt;Höhe&lt;/li&gt;
-&lt;/ol&gt;
-&lt;li&gt;Die Anwendung soll die EXIF-Daten eines Fotos anzeigen können&lt;/li&gt;
-&lt;li&gt;Ein Foto muss keinem oder beliebig vielen Stichwörtern zugeordnet werden können&lt;/li&gt;
-&lt;li&gt;Ein Foto muss keiner oder beliebig vielen Personen zugeordnet werden können, die auf dem Photo zu sehen sind &lt;/li&gt;
-&lt;li&gt;Ein Foto muss keinem oder beliebig vielen Events zugeordnet werden können&lt;/li&gt;
-&lt;li&gt;Ein Event hat folgende Eigenschaften&lt;/li&gt;
-&lt;ol&gt;
-&lt;li&gt;Name&lt;/li&gt;
-&lt;li&gt;Von-Datum&lt;/li&gt;
-&lt;li&gt;Bis-Datum&lt;br&gt; &lt;/li&gt;
-&lt;/ol&gt;
-&lt;li&gt;Fotos müssen anhand von folgenden UND-verknüpften Filterkriterien gesucht werden können&lt;/li&gt;
-&lt;ol&gt;
-&lt;li&gt;Stichwörter (Suchfeld mit Vorschlagswerten)&lt;/li&gt;
-&lt;li&gt;Personen (Suchfeld mit Vorschlagswerten)&lt;/li&gt;
-&lt;li&gt;Events (Suchfeld mit Vorschlagswerten)&lt;/li&gt;
-&lt;li&gt; Name des Dateisystemordners&lt;/li&gt;
-&lt;li&gt;Titel des Fotos&lt;/li&gt;
-&lt;li&gt;Erstellungsdatum in gewähltem Zeitraum&lt;/li&gt;
-&lt;/ol&gt;
-&lt;li&gt;Suchergebnislisten müssen eine eindeutige, wiederverwendbare URL haben&lt;/li&gt;
-&lt;li&gt;Die Anwendung sollte einen Präsentations-/ Slideshow-Modus für Suchergebnislisten unterstützen, welcher die Vorschaubilder der Listeneinträge für jeweils 3 Sekunden anzeigt &lt;/li&gt;
-&lt;/ol&gt;&lt;br&gt;&lt;ol&gt;&lt;/ol&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Planung&lt;/span&gt;&lt;br&gt;&lt;br&gt;Diese Anforderungen werde ich in folgende Schritte (und Blog-Posts) aufteilen:&lt;br&gt;&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/springroo-entity-klassen-und-jpa.html&quot;&gt;SpringRoo: Entity-Klassen und JPA-Repositories mit SpringRoo erstellen&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/10/springroo-howto-translate-java.html&quot;&gt;SpringRoo: Howto translate Java exceptions to user-friendly error messages (English)&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;SpringRoo: Spring JS/ Dojo durch jQuery ersetzen&lt;/li&gt;
-&lt;li&gt;SpringRoo: Standard-Auswahllisten in Textfelder mit dynamischen Vorschlagswerten umbauen&lt;/li&gt;
-&lt;li&gt;SpringRoo: Excel-Download für alle Listen-Seiten mit minimalem Aufwand &lt;/li&gt;
-&lt;li&gt;SpringRoo: Dynamische Finder mit Hilfe der JPA Criteria API&lt;/li&gt;
-&lt;li&gt;SpringRoo: Standardwebseiten auf smartphone-kompatibles HTML5 aktualisieren&lt;/li&gt;
-&lt;/ul&gt;&lt;br&gt;Weitere Ideen und Vorschläge können gerne als Kommentar gestellt werden.&lt;br&gt;&lt;br&gt;Die Demo-App ist bei Github unter der Adresse &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt; verfügbar.&lt;br&gt;&lt;br&gt;&lt;b&gt;UPDATE 24.09.2011 23:00h:&lt;/b&gt;&lt;br&gt;- Anforderungen in Deutsch übersetzt&lt;br&gt;- Liste der geplanten Blogposts/ weiteren Schritte erstellt&lt;br&gt;&lt;br&gt;Vielen Dank für Euer Feedback und Euer Interesse.
+Mein Ziel ist anhand einer Beispiel-Anwendung/ Demo-App die Möglichkeiten von SpringRoo zu demonstrieren und Workarounds für bekannte Unschönheiten aufzuzeigen.&lt;br /&gt;&lt;br /&gt;Auf Grund persönlicher Präferenzen wird die Demo-App eine serverbasierte Fotoverwaltung, die sowohl von mobilen Endgeräten als auch von Desktop-PCs genutzt werden kann. Als Feature sollen die mobilen Endgeräte Fotos und Videos an die Anwendung übermitteln können, so dass diese direkt für andere Nutzer verfügbar sind. &lt;br /&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;span style=&quot;font-size: large;&quot;&gt;Anforderungen&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Hier die bisherigen Anforderungen:&lt;br /&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;Die Anwendung muss Fotos aus einem Dateisystemordner importieren können&lt;/li&gt;&lt;li&gt; Die Anwendung muss während des Imports Minibilder/ Thumbnails der Originale erstellen, die eine maximale Kantenlänge von 250px haben&lt;/li&gt;&lt;li&gt;Die Anwendung muss während des Imports Vorschaubilder/ Previews der  Originale erstellen, die eine maximale Kantenlänge von 1280px haben&lt;/li&gt;&lt;li&gt;Ein Foto hat folgende Eigenschaften &lt;/li&gt;&lt;ol&gt;&lt;li&gt;Titel&lt;/li&gt;&lt;li&gt;Beschreibung&lt;/li&gt;&lt;li&gt;Thumbnail-Datei (Fotodatei)&lt;/li&gt;&lt;li&gt;Vorschau-Datei (Fotodatei)&lt;/li&gt;&lt;li&gt;Original-Datei (Fotodatei)&lt;/li&gt;&lt;li&gt;Importdatum&lt;/li&gt;&lt;li&gt;Erstellungsdatum&lt;/li&gt;&lt;/ol&gt;&lt;li&gt;Eine Fotodatei hat folgende Eigenschaften&lt;/li&gt;&lt;ol&gt;&lt;li&gt; Dateisystemordner&lt;/li&gt;&lt;li&gt;dateiname&lt;/li&gt;&lt;li&gt;Breite&lt;/li&gt;&lt;li&gt;Höhe&lt;/li&gt;&lt;/ol&gt;&lt;li&gt;Die Anwendung soll die EXIF-Daten eines Fotos anzeigen können&lt;/li&gt;&lt;li&gt;Ein Foto muss keinem oder beliebig vielen Stichwörtern zugeordnet werden können&lt;/li&gt;&lt;li&gt;Ein Foto muss keiner oder beliebig vielen Personen zugeordnet werden können, die auf dem Photo zu sehen sind &lt;/li&gt;&lt;li&gt;Ein Foto muss keinem oder beliebig vielen Events zugeordnet werden können&lt;/li&gt;&lt;li&gt;Ein Event hat folgende Eigenschaften&lt;/li&gt;&lt;ol&gt;&lt;li&gt;Name&lt;/li&gt;&lt;li&gt;Von-Datum&lt;/li&gt;&lt;li&gt;Bis-Datum&lt;br /&gt; &lt;/li&gt;&lt;/ol&gt;&lt;li&gt;Fotos müssen anhand von folgenden UND-verknüpften Filterkriterien gesucht werden können&lt;/li&gt;&lt;ol&gt;&lt;li&gt;Stichwörter (Suchfeld mit Vorschlagswerten)&lt;/li&gt;&lt;li&gt;Personen (Suchfeld mit Vorschlagswerten)&lt;/li&gt;&lt;li&gt;Events (Suchfeld mit Vorschlagswerten)&lt;/li&gt;&lt;li&gt; Name des Dateisystemordners&lt;/li&gt;&lt;li&gt;Titel des Fotos&lt;/li&gt;&lt;li&gt;Erstellungsdatum in gewähltem Zeitraum&lt;/li&gt;&lt;/ol&gt;&lt;li&gt;Suchergebnislisten müssen eine eindeutige, wiederverwendbare URL haben&lt;/li&gt;&lt;li&gt;Die Anwendung sollte einen Präsentations-/ Slideshow-Modus für Suchergebnislisten unterstützen, welcher die Vorschaubilder der Listeneinträge für jeweils 3 Sekunden anzeigt &lt;/li&gt;&lt;/ol&gt;&lt;br /&gt;&lt;ol&gt;&lt;/ol&gt;&lt;span style=&quot;font-size: large;&quot;&gt;Planung&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;Diese Anforderungen werde ich in folgende Schritte (und Blog-Posts) aufteilen:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/09/springroo-entity-klassen-und-jpa.html&quot;&gt;SpringRoo: Entity-Klassen und JPA-Repositories mit SpringRoo erstellen&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://goldstifts.blogspot.com/2011/10/springroo-howto-translate-java.html&quot;&gt;SpringRoo: Howto translate Java exceptions to user-friendly error messages (English)&lt;/a&gt;&lt;/li&gt;&lt;li&gt;SpringRoo: Spring JS/ Dojo durch jQuery ersetzen&lt;/li&gt;&lt;li&gt;SpringRoo: Standard-Auswahllisten in Textfelder mit dynamischen Vorschlagswerten umbauen&lt;/li&gt;&lt;li&gt;SpringRoo: Excel-Download für alle Listen-Seiten mit minimalem Aufwand &lt;/li&gt;&lt;li&gt;SpringRoo: Dynamische Finder mit Hilfe der JPA Criteria API&lt;/li&gt;&lt;li&gt;SpringRoo: Standardwebseiten auf smartphone-kompatibles HTML5 aktualisieren&lt;/li&gt;&lt;/ul&gt;&lt;br /&gt;Weitere Ideen und Vorschläge können gerne als Kommentar gestellt werden.&lt;br /&gt;&lt;br /&gt;Die Demo-App ist bei Github unter der Adresse &lt;a href=&quot;https://github.com/aheusingfeld/photooapp&quot;&gt;https://github.com/aheusingfeld/photooapp&lt;/a&gt; verfügbar.&lt;br /&gt;&lt;br /&gt;&lt;b&gt;UPDATE 24.09.2011 23:00h:&lt;/b&gt;&lt;br /&gt;- Anforderungen in Deutsch übersetzt&lt;br /&gt;- Liste der geplanten Blogposts/ weiteren Schritte erstellt&lt;br /&gt;&lt;br /&gt;Vielen Dank für Euer Feedback und Euer Interesse.
 
 &lt;h2&gt;Comments&lt;/h2&gt;
 &lt;div class=&quot;comments&quot;&gt;
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;Anonymous&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-Ich finde das Beispiel supergut,&lt;br&gt;&lt;br&gt;meine Frage wäre jetzt eher: Wie müssen die Eingabemasken angepasst werden, damit die Photo-Upload Möglichkeit per Web realisiert werden kann.? Wie sieht es mit User-Authentifizierung aus (Stichwort: Spring Security) ?&lt;/div&gt;
+Ich finde das Beispiel supergut,&lt;br /&gt;&lt;br /&gt;meine Frage wäre jetzt eher: Wie müssen die Eingabemasken angepasst werden, damit die Photo-Upload Möglichkeit per Web realisiert werden kann.? Wie sieht es mit User-Authentifizierung aus (Stichwort: Spring Security) ?&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2200,7 +2030,7 @@ Ich finde das Beispiel supergut,&lt;br&gt;&lt;br&gt;meine Frage wäre jetzt eher
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/</id>
 <title>Praxistipps zu ftplicity</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-06-05T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/05/praxistipps-zu-ftplicity/" rel="alternate" type="text/html" />
 <category term="linux"></category>
@@ -2209,8 +2039,6 @@ Ich finde das Beispiel supergut,&lt;br&gt;&lt;br&gt;meine Frage wäre jetzt eher
 <category term="duplicity"></category>
 <category term="ftplicity"></category>
 <summary>
-
-
 Ich nutze seit geraumer Zeit "ftplicity" für das Backup meiner Server auf einen FTP-Backupserver. In diversen Artikeln u.a. bei heise.de ("Hinter Schloss und Siegel") wird genau beschrieben, wie man so ein Backup auch verschlüsselt für einen nicht vertrauenswürdigen Backupserver einrichtet.
 
 
@@ -2222,16 +2050,13 @@ Mein Backup wird durch die folgenden crontab-Einträge gesteuert:# run the (incr
 <content type="html">
 
 &lt;p&gt;
-Ich nutze seit geraumer Zeit &quot;ftplicity&quot; für das Backup meiner Server auf einen FTP-Backupserver. In diversen &lt;a href=&quot;http://www.howtoforge.de/howto/erstellen-von-verschlusselten-ftp-backups-mit-duplicity-und-ftplicity-auf-debian-etch/&quot; target=&quot;_blank&quot;&gt;Artikeln&lt;/a&gt; u.a. bei heise.de (&lt;a href=&quot;http://www.heise.de/security/artikel/Hinter-Schloss-und-Siegel-270834.html&quot; taret=&quot;_blank&quot;&gt;&quot;Hinter Schloss und Siegel&quot;&lt;/a&gt;) wird genau beschrieben, wie man so ein Backup auch verschlüsselt für einen nicht vertrauenswürdigen Backupserver einrichtet.&lt;br&gt;
+Ich nutze seit geraumer Zeit &quot;ftplicity&quot; für das Backup meiner Server auf einen FTP-Backupserver. In diversen &lt;a href=&quot;http://www.howtoforge.de/howto/erstellen-von-verschlusselten-ftp-backups-mit-duplicity-und-ftplicity-auf-debian-etch/&quot; target=&quot;_blank&quot;&gt;Artikeln&lt;/a&gt; u.a. bei heise.de (&lt;a href=&quot;http://www.heise.de/security/artikel/Hinter-Schloss-und-Siegel-270834.html&quot; taret=&quot;_blank&quot;&gt;&quot;Hinter Schloss und Siegel&quot;&lt;/a&gt;) wird genau beschrieben, wie man so ein Backup auch verschlüsselt für einen nicht vertrauenswürdigen Backupserver einrichtet.&lt;br /&gt;
 
 
 pass::[more]
 
 
-Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br&gt;&lt;/p&gt;&lt;pre&gt;# run the (incremental) backup each night at 05:11h&lt;br&gt;11 5 * * 1-6 /usr/local/bin/ftplicity backup &amp;amp;&amp;gt; /var/log/ftplicity_incremental.log&lt;br&gt;25 5 * * 1-6 /root/bin/checkBackupSize.sh | mail -s &quot;ftplicity backup status&quot; MY@MAIL.de&lt;br&gt;# do a full backup every sunday &amp;amp; delete old backups&lt;br&gt;45 3 * * 0 /usr/local/bin/ftplicity full &amp;amp;&amp;gt; /var/log/ftplicity_full.log&lt;br&gt;35 4 * * 0 /usr/local/bin/ftplicity purge --force &amp;amp;&amp;gt;&amp;gt; /var/log/ftplicity_full.log&lt;br&gt;25 5 * * 0 mail -s &quot;ftplicity_full.log&quot; MY@MAIL.de &amp;lt; /var/log/ftplicity_full.log&lt;br&gt;&lt;/pre&gt;Über die Zeit habe ich aber gemerkt, dass eine Punkte nicht beschrieben sind.  &lt;br&gt;&lt;h3&gt;Wie kann ich mir den belegten Backupspeicher ansehen?&lt;/h3&gt;Um den Hintergrund dieser Frage besser einschätzen zu können, muss man wissen, dass &lt;br&gt;&lt;ol style=&quot;margin-left: 1em;&quot;&gt;
-&lt;li&gt;die meisten Backupserver eine Quota für die Benutzer einrichten&lt;/li&gt;
-&lt;li&gt;zum Löschen einer Datei via FTP der gleiche Platz auf dem Server/ der Quota frei sein muss, wie die Datei bereits belegt&lt;/li&gt;
-&lt;/ol&gt;Vor diesem Hintergrund bedeutet dies, dass man eine 10MB große Datei nicht löschen kann, wenn in der Quota nur noch 9MB frei sind! Aus diesem Grund kann es passieren, dass man obsolete Backups nach erfolgreichem Fullbackup nicht mehr löschen kann, wenn nicht genauso viel Speicher in der Quota frei ist, wie gelöscht werden soll.  Zur Anzeige des belegten Speichers auf dem entfernten FTP-Server verwende ich als Workaround folgendes Perl-Skript: &lt;br&gt;&lt;pre&gt;#!/bin/sh &lt;br&gt;# Location: /root/bin/checkBackupSize.sh&lt;br&gt;# Prints the size of all files on the remote FTP server to STDOUT&lt;br&gt;&lt;br&gt;ftp -n u30754.your-backup.de &amp;lt;&amp;lt;EOT  | perl -ne '$_=~/u30754   u30754   (\d+) /; $cnt=$cnt+$1; print $cnt.&quot;\n&quot;' | tail -n 1 | perl -ne 'print &quot;Current size of backup is &quot; . $_/1024/1024 . &quot; MB\n&quot;'&lt;br&gt;user u30754 A0Lr7NEIvEeFxMDw&lt;br&gt;dir &lt;br&gt;quit &lt;br&gt;EOT&lt;br&gt;&lt;/pre&gt;&lt;br&gt;&lt;h3&gt;Wie funktioniert der Parameter &quot;HOECHSTALTER&quot;?&lt;/h3&gt;Dieser Parameter soll eigentlich das Alter der ältesten Datei markieren. Bei einem Aufruf von &quot;ftplicity purge&quot; wird dementsprechend versucht alle Dateien zu löschen, die älter als 7 Tage sind. Full-Backups können allerdings nur gelöscht werden, wenn es keine inkrementellen Backups mehr gibt, die von ihnen abhängen. &lt;br&gt;&lt;br&gt;Stellt man in der &quot;~/.ftplicity/conf&quot; das &quot;HOECHSTALTER=7D&quot;, ruft aber nur alle 14 Tage ein &quot;ftplicity full&quot; auf, so werden auf dem Backup-Server die Dateien der inkrementellen Backups der letzten 14 Tage nicht löschbar sein!&lt;br&gt;&lt;br&gt;Dies sollte vor allem in Zusammenhang mit o.g. Tipp bzgl. &quot;belegter Backupspeicher&quot; beachtet werden.
+Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br /&gt;&lt;/p&gt;&lt;pre&gt;# run the (incremental) backup each night at 05:11h&lt;br /&gt;11 5 * * 1-6 /usr/local/bin/ftplicity backup &amp;amp;&amp;gt; /var/log/ftplicity_incremental.log&lt;br /&gt;25 5 * * 1-6 /root/bin/checkBackupSize.sh | mail -s &quot;ftplicity backup status&quot; MY@MAIL.de&lt;br /&gt;# do a full backup every sunday &amp;amp; delete old backups&lt;br /&gt;45 3 * * 0 /usr/local/bin/ftplicity full &amp;amp;&amp;gt; /var/log/ftplicity_full.log&lt;br /&gt;35 4 * * 0 /usr/local/bin/ftplicity purge --force &amp;amp;&amp;gt;&amp;gt; /var/log/ftplicity_full.log&lt;br /&gt;25 5 * * 0 mail -s &quot;ftplicity_full.log&quot; MY@MAIL.de &amp;lt; /var/log/ftplicity_full.log&lt;br /&gt;&lt;/pre&gt;Über die Zeit habe ich aber gemerkt, dass eine Punkte nicht beschrieben sind.  &lt;br /&gt;&lt;h3&gt;Wie kann ich mir den belegten Backupspeicher ansehen?&lt;/h3&gt;Um den Hintergrund dieser Frage besser einschätzen zu können, muss man wissen, dass &lt;br /&gt;&lt;ol style=&quot;margin-left: 1em;&quot;&gt;&lt;li&gt;die meisten Backupserver eine Quota für die Benutzer einrichten&lt;/li&gt;&lt;li&gt;zum Löschen einer Datei via FTP der gleiche Platz auf dem Server/ der Quota frei sein muss, wie die Datei bereits belegt&lt;/li&gt;&lt;/ol&gt;Vor diesem Hintergrund bedeutet dies, dass man eine 10MB große Datei nicht löschen kann, wenn in der Quota nur noch 9MB frei sind! Aus diesem Grund kann es passieren, dass man obsolete Backups nach erfolgreichem Fullbackup nicht mehr löschen kann, wenn nicht genauso viel Speicher in der Quota frei ist, wie gelöscht werden soll.  Zur Anzeige des belegten Speichers auf dem entfernten FTP-Server verwende ich als Workaround folgendes Perl-Skript: &lt;br /&gt;&lt;pre&gt;#!/bin/sh &lt;br /&gt;# Location: /root/bin/checkBackupSize.sh&lt;br /&gt;# Prints the size of all files on the remote FTP server to STDOUT&lt;br /&gt;&lt;br /&gt;ftp -n u30754.your-backup.de &amp;lt;&amp;lt;EOT  | perl -ne '$_=~/u30754   u30754   (\d+) /; $cnt=$cnt+$1; print $cnt.&quot;\n&quot;' | tail -n 1 | perl -ne 'print &quot;Current size of backup is &quot; . $_/1024/1024 . &quot; MB\n&quot;'&lt;br /&gt;user u30754 A0Lr7NEIvEeFxMDw&lt;br /&gt;dir &lt;br /&gt;quit &lt;br /&gt;EOT&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;&lt;h3&gt;Wie funktioniert der Parameter &quot;HOECHSTALTER&quot;?&lt;/h3&gt;Dieser Parameter soll eigentlich das Alter der ältesten Datei markieren. Bei einem Aufruf von &quot;ftplicity purge&quot; wird dementsprechend versucht alle Dateien zu löschen, die älter als 7 Tage sind. Full-Backups können allerdings nur gelöscht werden, wenn es keine inkrementellen Backups mehr gibt, die von ihnen abhängen. &lt;br /&gt;&lt;br /&gt;Stellt man in der &quot;~/.ftplicity/conf&quot; das &quot;HOECHSTALTER=7D&quot;, ruft aber nur alle 14 Tage ein &quot;ftplicity full&quot; auf, so werden auf dem Backup-Server die Dateien der inkrementellen Backups der letzten 14 Tage nicht löschbar sein!&lt;br /&gt;&lt;br /&gt;Dies sollte vor allem in Zusammenhang mit o.g. Tipp bzgl. &quot;belegter Backupspeicher&quot; beachtet werden.
 
 
 </content>
@@ -2239,7 +2064,7 @@ Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br&gt;&lt;/
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/</id>
 <title>How to Set Default Comment Security Level in Atlassian JIRA</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-06-03T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/06/03/how-to-set-default-comment-security-level-in-atlassian-jira/" rel="alternate" type="text/html" />
 <category term="jira"></category>
@@ -2248,8 +2073,6 @@ Mein Backup wird durch die folgenden crontab-Einträge gesteuert:&lt;br&gt;&lt;/
 <category term="comments"></category>
 <category term="workaround"></category>
 <summary>
-
-
 Atlassian JIRA in my humble opinion one of the greatest issue tracking systems around. Nevertheless there are still many missing features, one of them may be "setting the default comment security level".There is a nice little confluence wiki page which describes some kind of dirty hack to solve or at least work around this problem. The URL to that page is: http://confluence.atlassian.com/display/JIRA/How+to+Set+Default+Comment+Security+Level
 
 
@@ -2261,13 +2084,13 @@ Unfortunately the workaround works only for JIRA 4.1 and lower as Atlassian comp
 <content type="html">
 
 &lt;p&gt;
-Atlassian JIRA in my humble opinion one of the greatest issue tracking systems around. Nevertheless there are still many missing features, one of them may be &quot;setting the default comment security level&quot;.&lt;br&gt;&lt;br&gt;There is a nice little confluence wiki page which describes some kind of dirty hack to solve or at least work around this problem. The URL to that page is: &lt;a href=&quot;http://confluence.atlassian.com/display/JIRA/How+to+Set+Default+Comment+Security+Level&quot;&gt;http://confluence.atlassian.com/display/JIRA/How+to+Set+Default+Comment+Security+Level&lt;/a&gt;&lt;br&gt;&lt;br&gt;
+Atlassian JIRA in my humble opinion one of the greatest issue tracking systems around. Nevertheless there are still many missing features, one of them may be &quot;setting the default comment security level&quot;.&lt;br /&gt;&lt;br /&gt;There is a nice little confluence wiki page which describes some kind of dirty hack to solve or at least work around this problem. The URL to that page is: &lt;a href=&quot;http://confluence.atlassian.com/display/JIRA/How+to+Set+Default+Comment+Security+Level&quot;&gt;http://confluence.atlassian.com/display/JIRA/How+to+Set+Default+Comment+Security+Level&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;
 
 
 pass::[more]
 
 
-Unfortunately the workaround works only for JIRA 4.1 and lower as Atlassian completely rewrote there UI for version 4.2 onwards. Therefore the &amp;lt;select&amp;gt;-element for the &quot;comment security level&quot; is hidden and the user gets to see a HTML dropdown which is much more beautiful and nicer to work with. But it breaks the above mentioned hack as the HTML dropdown doesn't really care about the state of the &amp;lt;select&amp;gt;-element, as it holds the state inside of its own &quot;model&quot;.&lt;br&gt;There is already a JIRA issue describing the problem: &lt;a href=&quot;https://jira.atlassian.com/browse/JRA-23365&quot;&gt;JRA-23365&lt;/a&gt;&lt;br&gt;&lt;br&gt;I couldn't solve the problem completely as I have absolutely no knowledge about the inner workings of &quot;AJS&quot;, Atlassians Javascript Library, but I somehow could extend the above mentioned workaround.&lt;br&gt;&lt;br&gt;Here's the code I put into my &quot;announcement banner&quot; field:&lt;br&gt;&lt;/p&gt;&lt;pre&gt;&amp;lt;script language=&quot;JavaScript&quot;&amp;gt;&lt;br&gt;    &amp;lt;!--&lt;br&gt;    jQuery.noConflict();&lt;br&gt;    var defaultRoleName = 'role:10030'&lt;br&gt;    window.onload = function() {&lt;br&gt;        var commentLevelSelect = document.getElementById(&quot;commentLevel&quot;);&lt;br&gt;        if (commentLevelSelect) {&lt;br&gt;            for (var i = 1; i &amp;lt; commentLevelSelect.options.length; i++) {&lt;br&gt;                if (commentLevelSelect.options[i].value == defaultRoleName) {&lt;br&gt;                    commentLevelSelect.options[i].selected;&lt;br&gt;                    commentLevelSelect.value = defaultRoleName;&lt;br&gt;                    jQuery(&quot;a.drop span.icon&quot;).removeClass(&quot;icon-unlocked&quot;).addClass(&quot;icon-locked&quot;);&lt;br&gt;&lt;br&gt;                    var htmlEscapedLabel = AJS.$(&quot;&amp;lt;div/&amp;gt;&quot;).text(commentLevelSelect.options[i].text).html();&lt;br&gt;                    jQuery(&quot;span.current-level&quot;).html(AJS.format(AJS.params.securityLevelViewableRestrictedTo, htmlEscapedLabel))&lt;br&gt;&lt;br&gt;                    break;&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;        }&lt;br&gt;    }&lt;br&gt;    //--&amp;gt;&lt;br&gt;&amp;lt;/script&amp;gt;&lt;br&gt;&amp;lt;style&amp;gt;&lt;br&gt;   .alertHeader{display:none;}&lt;br&gt;&amp;lt;/style&amp;gt;&lt;br&gt;&lt;/pre&gt;Any comments and suggestions on this are very much appreciated!&lt;br&gt;&lt;br&gt;Update 2012-02-02: I updated the code and tested it with JIRA 4.3.4&lt;br&gt;
+Unfortunately the workaround works only for JIRA 4.1 and lower as Atlassian completely rewrote there UI for version 4.2 onwards. Therefore the &amp;lt;select&amp;gt;-element for the &quot;comment security level&quot; is hidden and the user gets to see a HTML dropdown which is much more beautiful and nicer to work with. But it breaks the above mentioned hack as the HTML dropdown doesn't really care about the state of the &amp;lt;select&amp;gt;-element, as it holds the state inside of its own &quot;model&quot;.&lt;br /&gt;There is already a JIRA issue describing the problem: &lt;a href=&quot;https://jira.atlassian.com/browse/JRA-23365&quot;&gt;JRA-23365&lt;/a&gt;&lt;br /&gt;&lt;br /&gt;I couldn't solve the problem completely as I have absolutely no knowledge about the inner workings of &quot;AJS&quot;, Atlassians Javascript Library, but I somehow could extend the above mentioned workaround.&lt;br /&gt;&lt;br /&gt;Here's the code I put into my &quot;announcement banner&quot; field:&lt;br /&gt;&lt;/p&gt;&lt;pre&gt;&amp;lt;script language=&quot;JavaScript&quot;&amp;gt;&lt;br /&gt;    &amp;lt;!--&lt;br /&gt;    jQuery.noConflict();&lt;br /&gt;    var defaultRoleName = 'role:10030'&lt;br /&gt;    window.onload = function() {&lt;br /&gt;        var commentLevelSelect = document.getElementById(&quot;commentLevel&quot;);&lt;br /&gt;        if (commentLevelSelect) {&lt;br /&gt;            for (var i = 1; i &amp;lt; commentLevelSelect.options.length; i++) {&lt;br /&gt;                if (commentLevelSelect.options[i].value == defaultRoleName) {&lt;br /&gt;                    commentLevelSelect.options[i].selected;&lt;br /&gt;                    commentLevelSelect.value = defaultRoleName;&lt;br /&gt;                    jQuery(&quot;a.drop span.icon&quot;).removeClass(&quot;icon-unlocked&quot;).addClass(&quot;icon-locked&quot;);&lt;br /&gt;&lt;br /&gt;                    var htmlEscapedLabel = AJS.$(&quot;&amp;lt;div/&amp;gt;&quot;).text(commentLevelSelect.options[i].text).html();&lt;br /&gt;                    jQuery(&quot;span.current-level&quot;).html(AJS.format(AJS.params.securityLevelViewableRestrictedTo, htmlEscapedLabel))&lt;br /&gt;&lt;br /&gt;                    break;&lt;br /&gt;                }&lt;br /&gt;            }&lt;br /&gt;        }&lt;br /&gt;    }&lt;br /&gt;    //--&amp;gt;&lt;br /&gt;&amp;lt;/script&amp;gt;&lt;br /&gt;&amp;lt;style&amp;gt;&lt;br /&gt;   .alertHeader{display:none;}&lt;br /&gt;&amp;lt;/style&amp;gt;&lt;br /&gt;&lt;/pre&gt;Any comments and suggestions on this are very much appreciated!&lt;br /&gt;&lt;br /&gt;Update 2012-02-02: I updated the code and tested it with JIRA 4.3.4&lt;br /&gt;
 &lt;script src=&quot;https://gist.github.com/1723281.js&quot;&gt; &lt;/script&gt;
 
 &lt;h2&gt;Comments&lt;/h2&gt;
@@ -2275,33 +2098,32 @@ Unfortunately the workaround works only for JIRA 4.1 and lower as Atlassian comp
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;goldstift&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-Hi Aleksander,&lt;br&gt;&lt;br&gt;we're using the script exactly this way. All you have to do is set the &quot;defaultRoleName&quot; variable. If there is no entry with this value, jQuery doesn't change the selected item.&lt;br&gt;&lt;br&gt;Cheers&lt;br&gt;Alex&lt;/div&gt;
+Hi Aleksander,&lt;br /&gt;&lt;br /&gt;we're using the script exactly this way. All you have to do is set the &quot;defaultRoleName&quot; variable. If there is no entry with this value, jQuery doesn't change the selected item.&lt;br /&gt;&lt;br /&gt;Cheers&lt;br /&gt;Alex&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;Aleksander&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-Thanks a lot for an extremely helpful work around.&lt;br&gt;Is it possible to make the script detect if the security level is not available, and then back off (don't do a selection)&lt;br&gt;&lt;br&gt;We are using this to set default security level for comments to employees only (hidden for customers), but when a customer logs in he/she does not have access to this security role. Causing the drop down selection to look a bit weird.&lt;br&gt;&lt;br&gt;Running Jira 5.0.6 btw.&lt;br&gt;&lt;br&gt;Cheers&lt;br&gt;Aleksander&lt;br&gt;
-&lt;/div&gt;
+Thanks a lot for an extremely helpful work around.&lt;br /&gt;Is it possible to make the script detect if the security level is not available, and then back off (don't do a selection)&lt;br /&gt;&lt;br /&gt;We are using this to set default security level for comments to employees only (hidden for customers), but when a customer logs in he/she does not have access to this security role. Causing the drop down selection to look a bit weird.&lt;br /&gt;&lt;br /&gt;Running Jira 5.0.6 btw.&lt;br /&gt;&lt;br /&gt;Cheers&lt;br /&gt;Aleksander&lt;br /&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;goldstift&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-Hi Jared,&lt;br&gt;&lt;br&gt;thanks for your idea on this one. I updated the code to also work in the in-HTML popup dialogs. Unfortunately the HTML-dropdown list still doesn't recognize the change and shows the wrong entry as &quot;active&quot;.&lt;br&gt;&lt;br&gt;Cheers&lt;br&gt;Alex&lt;/div&gt;
+Hi Jared,&lt;br /&gt;&lt;br /&gt;thanks for your idea on this one. I updated the code to also work in the in-HTML popup dialogs. Unfortunately the HTML-dropdown list still doesn't recognize the change and shows the wrong entry as &quot;active&quot;.&lt;br /&gt;&lt;br /&gt;Cheers&lt;br /&gt;Alex&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;JMTyler&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-Thanks a lot for this!  I agree that this is one of the more important features that JIRA is currently missing.&lt;br&gt;&lt;br&gt;I did have to do a tad of debugging to get this to work... for some reason the window.onload event wasn't firing properly, so instead of setting the above function as the onload handler, I set it into the jQuery() method (which achieves the same result, but is wrapped for all that lovely jQuery abstraction).&lt;br&gt;&lt;br&gt;So I basically ended up doing the following:&lt;br&gt;&lt;br&gt;var defaultRoleName = 'role:10030'&lt;br&gt;jQuery(function() {&lt;br&gt;    var commentLevelSelect = document.getElementById(&quot;commentLevel&quot;);&lt;br&gt;    ....&lt;br&gt;});&lt;br&gt;&lt;br&gt;Cheers!&lt;br&gt;Jared&lt;/div&gt;
+Thanks a lot for this!  I agree that this is one of the more important features that JIRA is currently missing.&lt;br /&gt;&lt;br /&gt;I did have to do a tad of debugging to get this to work... for some reason the window.onload event wasn't firing properly, so instead of setting the above function as the onload handler, I set it into the jQuery() method (which achieves the same result, but is wrapped for all that lovely jQuery abstraction).&lt;br /&gt;&lt;br /&gt;So I basically ended up doing the following:&lt;br /&gt;&lt;br /&gt;var defaultRoleName = 'role:10030'&lt;br /&gt;jQuery(function() {&lt;br /&gt;    var commentLevelSelect = document.getElementById(&quot;commentLevel&quot;);&lt;br /&gt;    ....&lt;br /&gt;});&lt;br /&gt;&lt;br /&gt;Cheers!&lt;br /&gt;Jared&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;goldstift&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-Sorry for taking so long to get back to you. I know this issue but unfortunately haven't had time to get rid of it, yet.&lt;br&gt;&lt;br&gt;The problem occurs with the &quot;modal dialogs&quot; as the form content is loaded via ajax requests. Therefore the form is not on the page when my jQuery-function is executed. The solution would be to attach a listener to the callback and re-execute the function whenever a form is loaded via ajax.&lt;br&gt;&lt;br&gt;Nevertheless you should definitely vote for the issue over at Atlassian.&lt;/div&gt;
+Sorry for taking so long to get back to you. I know this issue but unfortunately haven't had time to get rid of it, yet.&lt;br /&gt;&lt;br /&gt;The problem occurs with the &quot;modal dialogs&quot; as the form content is loaded via ajax requests. Therefore the form is not on the page when my jQuery-function is executed. The solution would be to attach a listener to the callback and re-execute the function whenever a form is loaded via ajax.&lt;br /&gt;&lt;br /&gt;Nevertheless you should definitely vote for the issue over at Atlassian.&lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;glideobot&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br&gt;But when attaching a file, the comment reverts back to original value. Can you help?&lt;/div&gt;
+Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br /&gt;But when attaching a file, the comment reverts back to original value. Can you help?&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2310,7 +2132,7 @@ Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br&gt;But when att
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/</id>
 <title>Broken special chars in Spring Roo?</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-02-13T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/13/broken-special-chars-in-spring-roo/" rel="alternate" type="text/html" />
 <category term="java"></category>
@@ -2319,8 +2141,6 @@ Thank you. Works fine when commenting in Jira v4.2.4-b591.&lt;br&gt;But when att
 <category term="special chars"></category>
 <category term="servletfilter"></category>
 <summary>
-
-
 This is the first post in an upcoming series of posts on Spring Roo (see footer for details an Roo).Problem: Special chars and Umlauts are not correctly displayed in my Roo-Application[german version]There are often questions and support requests on the above named topic in Spring Roo-Forum. Mostly questioners write that german "Umlauts" like ä, ö, ü and ß or other special chars in cyrillic are not correctly display or saved to the database. With the following post I'd like to review the most common sources of the problem and come up with solutions.
 
 
@@ -2332,51 +2152,13 @@ Encoding of the HTML/ JSP pageRoo generated JSPs...
 <content type="html">
 
 &lt;p&gt;
-This is the first post in an upcoming series of posts on Spring Roo (see footer for details an Roo).&lt;br&gt;&lt;br&gt;&lt;/p&gt;&lt;h2&gt;Problem: Special chars and Umlauts are not correctly displayed in my Roo-Application&lt;/h2&gt;[&lt;a href=&quot;http://goldstifts.blogspot.com/2011/02/umlaute-und-sonderzeichen-in-spring-roo.html&quot;&gt;german version&lt;/a&gt;]&lt;br&gt;There are often questions and support requests on the above named topic in &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;Spring Roo-Forum&lt;/a&gt;. Mostly questioners write that german &quot;Umlauts&quot; like ä, ö, ü and ß or other special chars in cyrillic are not correctly display or saved to the database. With the following post I'd like to review the most common sources of the problem and come up with solutions.&lt;br&gt;&lt;br&gt;
+This is the first post in an upcoming series of posts on Spring Roo (see footer for details an Roo).&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;h2&gt;Problem: Special chars and Umlauts are not correctly displayed in my Roo-Application&lt;/h2&gt;[&lt;a href=&quot;http://goldstifts.blogspot.com/2011/02/umlaute-und-sonderzeichen-in-spring-roo.html&quot;&gt;german version&lt;/a&gt;]&lt;br /&gt;There are often questions and support requests on the above named topic in &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;Spring Roo-Forum&lt;/a&gt;. Mostly questioners write that german &quot;Umlauts&quot; like ä, ö, ü and ß or other special chars in cyrillic are not correctly display or saved to the database. With the following post I'd like to review the most common sources of the problem and come up with solutions.&lt;br /&gt;&lt;br /&gt;
 
 
 pass::[more]
 
 
-&lt;h3&gt;Encoding of the HTML/ JSP page&lt;/h3&gt;Roo generated JSPs are always delivered with UTF-8 encoding. In case you write your additional JSPs by hand, you should assure these pages are also delivered to the browser in UTF-8 encoding so the form data will be correctly send on submit.&lt;br&gt;This can be achieved by specifying the following line of code at the beginning of each JSP:&lt;br&gt;&lt;pre&gt;&amp;lt;jsp:directive.page contenttype=&quot;text/html;charset=UTF-8&quot;&lt;br&gt;   pageencoding=&quot;UTF-8&quot;/&amp;gt;&lt;br&gt;&lt;/pre&gt;&lt;br&gt;To show you an example where to exactly put this, the &quot;default.jspx&quot;, which serves a frame for all other JSP pages via Apache Tiles, contains the following lines to preserve UTF-8 encoding in the resulting HTML:&lt;br&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;html xmlns:jsp=&quot;http://java.sun.com/JSP/Page&quot; xmlns:c=&quot;http://java.sun.com/jsp/jstl/core&quot; xmlns:tiles=&quot;http://tiles.apache.org/tags-tiles&quot; xmlns:spring=&quot;http://www.springframework.org/tags&quot; xmlns:util=&quot;urn:jsptagdir:/WEB-INF/tags/util&quot; &amp;gt;  &lt;br&gt; &lt;br&gt; &amp;lt;jsp:output doctype-root-element=&quot;HTML&quot; doctype-system=&quot;about:legacy-compat&quot; /&amp;gt;&lt;br&gt; &lt;br&gt; &amp;lt;jsp:directive.page contentType=&quot;text/html;charset=UTF-8&quot; /&amp;gt;  &lt;br&gt;  &lt;br&gt; &amp;lt;head&amp;gt;&lt;br&gt;  &amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&amp;gt;&lt;br&gt;&lt;br&gt;&amp;lt;!-- ... --&amp;gt;&lt;br&gt;&lt;/pre&gt;&lt;br&gt;To check whether your page is delivered in UTF-8 encoding, open it in your browser and have a look at menu &quot;View &amp;gt; Character Encoding&quot;.&lt;br&gt;&lt;br&gt;&lt;h3&gt;CharacterEncodingFilter in web.xml file&lt;/h3&gt;This is the most common point of failure. We're talking about the order in which the &lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;&amp;lt;filter-mapping&amp;gt;&lt;/span&gt;-Tags occur in your &quot;&lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;src/main/webapp/WEB-INF/web.xml&lt;/span&gt;&quot;. These tags define in which order the filters are executed on each HTTP-Request.&lt;br&gt;&lt;b&gt;Roo generates the correct order since Version 1.1.1! &lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;Previous versions are still buggy&lt;/a&gt;.&lt;/b&gt; &lt;br&gt;&lt;br&gt;The correct order looks like the following:&lt;br&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;CharacterEncodingFilter&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;Spring OpenEntityManagerInViewFilter&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;HttpMethodFilter&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;springSecurityFilterChain&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&lt;/pre&gt;&lt;br&gt;In case you want to change the order it is important to understand at least a minimum of the inner workings of these filters:&lt;br&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/CharacterEncodingFilter.html&quot;&gt;CharacterEncodingFilter&lt;/a&gt; - Sets the encoding on the HTTP-Request in case the Browser didn't send the encoding of the HMTL-page/ form&lt;/li&gt;
-&lt;li&gt; &lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html&quot;&gt;OpenEntityManagerInViewFilter&lt;/a&gt; - only for Hibernate, sets the EntityManager to a ThreadLocal (see &lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;discussion on&lt;/a&gt; &lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;Pros and Cons&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/HiddenHttpMethodFilter.html&quot;&gt;HttpMethodFilter&lt;/a&gt; - Necessary to really perform e.g. HTTP PUT or HTTP DELETE requests!&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html&quot;&gt;springSecurityFilterChain&lt;/a&gt; - has to be run AFTER HttpMethodFilter in case you check HTTP-Method in Spring Security&lt;/li&gt;
-&lt;li&gt;... other filters&lt;/li&gt;
-&lt;/ul&gt;To avoid problems with the encoding of your special chars, &quot;CharacterEncodingFilter&quot; has to be run before any other filter has worked on the request data!&lt;br&gt;&lt;b&gt;For this reason the general advice is: the &amp;lt;filter-mapping&amp;gt; for &lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;CharacterEncodingFilter has to be at the first position in your &quot;web.xml&quot;&lt;/a&gt; (&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;See ROO-1698 for an explanation&lt;/a&gt; - the charset CANNOT be set to the request after the InputStream has been read)!&lt;/b&gt; &lt;br&gt;&lt;br&gt;&lt;h3&gt;Database connection&lt;/h3&gt;The last point is to assure that your application communicates with the database via unicode with a default encoding of UTF-8.&lt;br&gt;&lt;br&gt;As Roo generates the correct connection string for MySQL since &quot;the early days&quot; there haven't been many bugs with this lately.&lt;br&gt;The connection string can be configured in &quot;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;src/main/resources/META-INF/spring/database.properties&lt;/span&gt;&lt;/span&gt;&quot; and looks like the following for MySQL:&lt;br&gt;&lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;database.url=jdbc:mysql://[YOUR_DB_SERVER]:3306/[YOUR_DB_NAME]?autoReconnect=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;h3&gt;Conclusion&lt;/h3&gt;Since version 1.1.1 Spring Roo provides a (by now) bug free support for special chars and umlauts, which as been tested with various languages worldwide.&lt;br&gt;&lt;br&gt;If you have any questions on Spring Roo or the topic named above you can find competent assistance in the Roo-Forum. &lt;br&gt;&lt;br&gt;&lt;h3&gt;References/ Links used in the text&lt;/h3&gt;&lt;ul style=&quot;font-family: inherit;&quot;&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO&quot;&gt;ROO-JIRA issues&lt;/a&gt;&lt;/li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://jira.springsource.org/browse/ROO-89&quot;&gt;https://jira.springsource.org/browse/ROO-89&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1030&quot;&gt;https://jira.springsource.org/browse/ROO-1030&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1585&quot;&gt;https://jira.springsource.org/browse/ROO-1585&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1684&quot;&gt;https://jira.springsource.org/browse/ROO-1684&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;https://jira.springsource.org/browse/ROO-1698&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;https://jira.springsource.org/browse/ROO-1731&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;li&gt;Threads in &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;ROO-Forum&lt;/a&gt;
-&lt;/li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=101926&quot;&gt;http://forum.springsource.org/showthread.php?t=101926&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;http://forum.springsource.org/showthread.php?t=97672&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;li&gt;Other&lt;/li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&lt;/a&gt;&lt;br&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/ul&gt;&lt;br&gt;&lt;blockquote&gt;
-&lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;Spring Roo&lt;/a&gt; is a Code-Generation-Tool for Software development in Java. It is a lightweight developer tool that makes it fast and easy to deliver instant results. Best of all, you code 100% in Java and get to reuse all your existing Java knowledge, skills and experience.&lt;br&gt;&lt;br&gt;There are already many Add-Ons available to customize Roo to your special needs. In case you don't find an Add-On that fits your needs, you can easily create your own Add-On in just a few steps.&lt;br&gt;&lt;br&gt;
-&lt;/blockquote&gt;  &lt;p&gt;&lt;script type=&quot;text/javascript&quot;&gt;var dzone_url = 'http://goldstifts.blogspot.com/2011/02/broken-special-chars-in-spring-roo.html';&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;var dzone_style = '2';&lt;/script&gt;&lt;script language=&quot;javascript&quot; src=&quot;http://widgets.dzone.com/links/widgets/zoneit.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
+&lt;h3&gt;Encoding of the HTML/ JSP page&lt;/h3&gt;Roo generated JSPs are always delivered with UTF-8 encoding. In case you write your additional JSPs by hand, you should assure these pages are also delivered to the browser in UTF-8 encoding so the form data will be correctly send on submit.&lt;br /&gt;This can be achieved by specifying the following line of code at the beginning of each JSP:&lt;br /&gt;&lt;pre&gt;&amp;lt;jsp:directive.page contenttype=&quot;text/html;charset=UTF-8&quot;&lt;br /&gt;   pageencoding=&quot;UTF-8&quot;/&amp;gt;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;To show you an example where to exactly put this, the &quot;default.jspx&quot;, which serves a frame for all other JSP pages via Apache Tiles, contains the following lines to preserve UTF-8 encoding in the resulting HTML:&lt;br /&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;html xmlns:jsp=&quot;http://java.sun.com/JSP/Page&quot; xmlns:c=&quot;http://java.sun.com/jsp/jstl/core&quot; xmlns:tiles=&quot;http://tiles.apache.org/tags-tiles&quot; xmlns:spring=&quot;http://www.springframework.org/tags&quot; xmlns:util=&quot;urn:jsptagdir:/WEB-INF/tags/util&quot; &amp;gt;  &lt;br /&gt; &lt;br /&gt; &amp;lt;jsp:output doctype-root-element=&quot;HTML&quot; doctype-system=&quot;about:legacy-compat&quot; /&amp;gt;&lt;br /&gt; &lt;br /&gt; &amp;lt;jsp:directive.page contentType=&quot;text/html;charset=UTF-8&quot; /&amp;gt;  &lt;br /&gt;  &lt;br /&gt; &amp;lt;head&amp;gt;&lt;br /&gt;  &amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- ... --&amp;gt;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;To check whether your page is delivered in UTF-8 encoding, open it in your browser and have a look at menu &quot;View &amp;gt; Character Encoding&quot;.&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;CharacterEncodingFilter in web.xml file&lt;/h3&gt;This is the most common point of failure. We're talking about the order in which the &lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;&amp;lt;filter-mapping&amp;gt;&lt;/span&gt;-Tags occur in your &quot;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;src/main/webapp/WEB-INF/web.xml&lt;/span&gt;&quot;. These tags define in which order the filters are executed on each HTTP-Request.&lt;br /&gt;&lt;b&gt;Roo generates the correct order since Version 1.1.1! &lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;Previous versions are still buggy&lt;/a&gt;.&lt;/b&gt; &lt;br /&gt;&lt;br /&gt;The correct order looks like the following:&lt;br /&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;CharacterEncodingFilter&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;Spring OpenEntityManagerInViewFilter&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;HttpMethodFilter&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;springSecurityFilterChain&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;In case you want to change the order it is important to understand at least a minimum of the inner workings of these filters:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/CharacterEncodingFilter.html&quot;&gt;CharacterEncodingFilter&lt;/a&gt; - Sets the encoding on the HTTP-Request in case the Browser didn't send the encoding of the HMTL-page/ form&lt;/li&gt;&lt;li&gt; &lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html&quot;&gt;OpenEntityManagerInViewFilter&lt;/a&gt; - only for Hibernate, sets the EntityManager to a ThreadLocal (see &lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;discussion on&lt;/a&gt; &lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;Pros and Cons&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/HiddenHttpMethodFilter.html&quot;&gt;HttpMethodFilter&lt;/a&gt; - Necessary to really perform e.g. HTTP PUT or HTTP DELETE requests!&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html&quot;&gt;springSecurityFilterChain&lt;/a&gt; - has to be run AFTER HttpMethodFilter in case you check HTTP-Method in Spring Security&lt;/li&gt;&lt;li&gt;... other filters&lt;/li&gt;&lt;/ul&gt;To avoid problems with the encoding of your special chars, &quot;CharacterEncodingFilter&quot; has to be run before any other filter has worked on the request data!&lt;br /&gt;&lt;b&gt;For this reason the general advice is: the &amp;lt;filter-mapping&amp;gt; for &lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;CharacterEncodingFilter has to be at the first position in your &quot;web.xml&quot;&lt;/a&gt; (&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;See ROO-1698 for an explanation&lt;/a&gt; - the charset CANNOT be set to the request after the InputStream has been read)!&lt;/b&gt; &lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Database connection&lt;/h3&gt;The last point is to assure that your application communicates with the database via unicode with a default encoding of UTF-8.&lt;br /&gt;&lt;br /&gt;As Roo generates the correct connection string for MySQL since &quot;the early days&quot; there haven't been many bugs with this lately.&lt;br /&gt;The connection string can be configured in &quot;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;src/main/resources/META-INF/spring/database.properties&lt;/span&gt;&lt;/span&gt;&quot; and looks like the following for MySQL:&lt;br /&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;database.url=jdbc:mysql://[YOUR_DB_SERVER]:3306/[YOUR_DB_NAME]?autoReconnect=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt;Conclusion&lt;/h3&gt;Since version 1.1.1 Spring Roo provides a (by now) bug free support for special chars and umlauts, which as been tested with various languages worldwide.&lt;br /&gt;&lt;br /&gt;If you have any questions on Spring Roo or the topic named above you can find competent assistance in the Roo-Forum. &lt;br /&gt;&lt;br /&gt;&lt;h3&gt;References/ Links used in the text&lt;/h3&gt;&lt;ul style=&quot;font-family: inherit;&quot;&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO&quot;&gt;ROO-JIRA issues&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-89&quot;&gt;https://jira.springsource.org/browse/ROO-89&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1030&quot;&gt;https://jira.springsource.org/browse/ROO-1030&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1585&quot;&gt;https://jira.springsource.org/browse/ROO-1585&lt;/a&gt;  &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1684&quot;&gt;https://jira.springsource.org/browse/ROO-1684&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;https://jira.springsource.org/browse/ROO-1698&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;https://jira.springsource.org/browse/ROO-1731&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Threads in &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;ROO-Forum&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=101926&quot;&gt;http://forum.springsource.org/showthread.php?t=101926&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;http://forum.springsource.org/showthread.php?t=97672&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Other&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;br /&gt;&lt;blockquote&gt;&lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;Spring Roo&lt;/a&gt; is a Code-Generation-Tool for Software development in Java. It is a lightweight developer tool that makes it fast and easy to deliver instant results. Best of all, you code 100% in Java and get to reuse all your existing Java knowledge, skills and experience.&lt;br /&gt;&lt;br /&gt;There are already many Add-Ons available to customize Roo to your special needs. In case you don't find an Add-On that fits your needs, you can easily create your own Add-On in just a few steps.&lt;br /&gt;&lt;br /&gt;&lt;/blockquote&gt;  &lt;p&gt;&lt;script type=&quot;text/javascript&quot;&gt;var dzone_url = 'http://goldstifts.blogspot.com/2011/02/broken-special-chars-in-spring-roo.html';&lt;/script&gt;&lt;script type=&quot;text/javascript&quot;&gt;var dzone_style = '2';&lt;/script&gt;&lt;script language=&quot;javascript&quot; src=&quot;http://widgets.dzone.com/links/widgets/zoneit.js&quot;&gt;&lt;/script&gt;  &lt;/p&gt;
 
 
 </content>
@@ -2384,66 +2166,23 @@ pass::[more]
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/</id>
 <title>Umlaute und Sonderzeichen in Spring Roo?</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-02-10T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/02/10/umlaute-und-sonderzeichen-in-spring-roo/" rel="alternate" type="text/html" />
 <summary>
-
-
 Dies ist der erste in einer Reihe von Blog-Posts über Spring Roo (Erläuterung siehe unten).[english version] Problem: Sonderzeichen und Umlaute werden in meiner Roo-Anwendung nicht korrekt angezeigtIm Spring Roo-Forum gibt es öfter Anfragen, die o.g. Problem beschreiben, dass deutsche Umlaute wie ä, ö, ü und ß nicht korrekt gespeichert oder "kaputt" übertragen werden. Im Folgenden möchte ich kurz die häufigsten Fehlerquellen und Lösungen aufzeigen. Zeichensatz der HTML-/ JSP-SeiteDurch Roo generierte JSPs werden immer im Zeichensatz UTF-8 ausgeliefert. Schreibt man eigene JSPs bspw. mit Formularen, sollte diese HTML bzw. JSP-Seite als Zeichensatz ebenfalls UTF-8 verwenden. Dies erreicht man in dem am...
 </summary>
 <content type="html">
 
 &lt;p&gt;
-Dies ist der erste in einer Reihe von Blog-Posts über Spring Roo (Erläuterung siehe unten).&lt;br&gt;[&lt;a href=&quot;http://goldstifts.blogspot.com/2011/02/broken-special-chars-in-spring-roo.html&quot;&gt;english version&lt;/a&gt;]&lt;br&gt;&lt;/p&gt;&lt;h2&gt; Problem: Sonderzeichen und Umlaute werden in meiner Roo-Anwendung nicht korrekt angezeigt&lt;/h2&gt;&lt;br&gt;Im &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;Spring Roo-Forum&lt;/a&gt; gibt es öfter Anfragen, die o.g. Problem beschreiben, dass deutsche Umlaute wie ä, ö, ü und ß nicht korrekt gespeichert oder &quot;kaputt&quot; übertragen werden. Im Folgenden möchte ich kurz die häufigsten Fehlerquellen und Lösungen aufzeigen.&lt;br&gt;&lt;h3&gt; Zeichensatz der HTML-/ JSP-Seite&lt;/h3&gt;Durch Roo generierte JSPs werden immer im Zeichensatz UTF-8 ausgeliefert. Schreibt man eigene JSPs bspw. mit Formularen, sollte diese HTML bzw. JSP-Seite als Zeichensatz ebenfalls UTF-8 verwenden. Dies erreicht man in dem am Anfang der JSP die folgende Zeile eingefügt wird:&lt;br&gt;&lt;pre&gt;&amp;lt;jsp:directive.page contenttype=&quot;text/html;charset=UTF-8&quot;&lt;br&gt;   pageencoding=&quot;UTF-8&quot;/&amp;gt;&lt;br&gt;&lt;/pre&gt;&lt;br&gt;Am Anfang der &quot;default.jspx&quot;, die über Apache Tiles als &quot;Rahmen&quot; für alle anderen JSP-Seiten gilt, sind z.B. folgende Angaben zum Encoding/ Zeichensatz enthalten:&lt;br&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;html xmlns:jsp=&quot;http://java.sun.com/JSP/Page&quot; xmlns:c=&quot;http://java.sun.com/jsp/jstl/core&quot; xmlns:tiles=&quot;http://tiles.apache.org/tags-tiles&quot; xmlns:spring=&quot;http://www.springframework.org/tags&quot; xmlns:util=&quot;urn:jsptagdir:/WEB-INF/tags/util&quot; &amp;gt;  &lt;br&gt; &lt;br&gt; &amp;lt;jsp:output doctype-root-element=&quot;HTML&quot; doctype-system=&quot;about:legacy-compat&quot; /&amp;gt;&lt;br&gt; &lt;br&gt; &amp;lt;jsp:directive.page contentType=&quot;text/html;charset=UTF-8&quot; /&amp;gt;  &lt;br&gt;  &lt;br&gt; &amp;lt;head&amp;gt;&lt;br&gt;  &amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&amp;gt;&lt;br&gt;&lt;br&gt;&amp;lt;!-- ... --&amp;gt;&lt;br&gt;&lt;/pre&gt;&lt;br&gt;Ist sichergestellt, dass die Seiten im Zeichensatz &quot;UTF-8&quot; ausgeliefert werden (dies kann im Browser meist im Menüpunkt &quot;Ansicht &amp;gt; Zeichensatz&quot; kontrolliert werden), die Sonderzeichen werden aber trotzdem falsch übertragen, ist dies nicht die Fehlerursache.&lt;br&gt;&lt;br&gt;&lt;h3&gt; CharacterEncodingFilter in der web.xml&lt;/h3&gt;Dieser Punkt ist der häufigste Fehler. Es geht hierbei um die Reihenfolge der &lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;&amp;lt;filter-mapping&amp;gt;&lt;/span&gt;-Tags in der Datei &quot;&lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;web.xml&lt;/span&gt;&quot;. Diese Tags geben an, in welcher Reihenfolge die einzelnen Filter bei einem HTTP-Request durchlaufen werden.&lt;br&gt;&lt;b&gt;Roo generiert leider erst &lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;seit Version 1.1.1 per Default die korrekte Reihenfolge, wie folgt aussieht&lt;/a&gt;: &lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;CharacterEncodingFilter&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;Spring OpenEntityManagerInViewFilter&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;HttpMethodFilter&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&amp;lt;filter-mapping&amp;gt;&lt;br&gt;    &amp;lt;filter-name&amp;gt;springSecurityFilterChain&amp;lt;/filter-name&amp;gt;&lt;br&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br&gt;&lt;/pre&gt;&lt;br&gt;Will man die Reihenfolge der Filter ändern, ist es wichtig, deren Bedeutung zu verstehen:&lt;br&gt;&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/CharacterEncodingFilter.html&quot;&gt;CharacterEncodingFilter&lt;/a&gt; - Setzt den Zeichensatz des Requests, falls der Browser ihn nicht mitsendet&lt;/li&gt;
-&lt;li&gt; &lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html&quot;&gt;OpenEntityManagerInViewFilter&lt;/a&gt; - nur in Verbindung mit Hibernate, setzt EntityManager in ThreadLocal (siehe &lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;Diskussion über&lt;/a&gt; &lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;Vor- und Nachteile&lt;/a&gt;)&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/HiddenHttpMethodFilter.html&quot;&gt;HttpMethodFilter&lt;/a&gt; - Notwendig um bspw. PUT oder DELETE abbilden zu können&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html&quot;&gt;springSecurityFilterChain&lt;/a&gt; - muss nach HttpMethodFilter kommen, wenn auf HTTP-Method eingeschränkt wird&lt;/li&gt;
-&lt;li&gt;... ggf. weitere Filter&lt;/li&gt;
-&lt;/ul&gt;Damit Fehler in der Behandlung von Texten mit Sonderzeichen ausgeschlossen werden, sollte der &quot;CharacterEncodingFilter&quot; durchlaufen worden sein, bevor die Requestdaten in irgendeiner Form weiterverarbeitet werden.&lt;br&gt;&lt;b&gt;Aus diesem Grund lautet die Empfehlung: das &amp;lt;filter-mapping&amp;gt; für den &lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;CharacterEncodingFilter muss in der &quot;web.xml&quot; an erster Stelle stehen&lt;/a&gt; (&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;Erklärung siehe ROO-1698&lt;/a&gt;)!&lt;/b&gt; &lt;br&gt;&lt;h3&gt; Datenbankverbindung&lt;/h3&gt;Zu guter Letzt sollte sichergestellt werden, dass auch die Kommunikation mit der Datenbank über Unicode bzw. mit dem Standardzeichensatz UTF-8 geführt wird.&lt;br&gt;&lt;br&gt;Kommt als Datenbank bspw. MySQL zum Einsatz, generiert Roo automatisch die Unicode-Unterstützung über folgende Konfiguration in der Datei &quot;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;src/main/resources/META-INF/spring/database.properties&lt;/span&gt;&lt;/span&gt;&quot;:&lt;br&gt;&lt;span style='font-family: &quot;Courier New&quot;,Courier,monospace;'&gt;database.url=jdbc:mysql://[YOUR_DB_SERVER]:3306/[YOUR_DB_NAME]?autoReconnect=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;h3&gt; Fazit&lt;/h3&gt;Seit Version 1.1.1 verfügt Spring Roo über eine (bisher) fehlerfreie Unterstützung für Sonderzeichen, die bereits in diversen Sprachen getestet wurde.&lt;br&gt;Bei Fragen und Problemen findet man im Roo-Forum auf jeden Fall kompetente Hilfe. &lt;br&gt;&lt;br&gt;&lt;h3&gt; Im Text verwendete, weiterführende Links&lt;/h3&gt;&lt;ul style=&quot;font-family: inherit;&quot;&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO&quot;&gt;ROO-JIRA issues&lt;/a&gt;&lt;/li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://jira.springsource.org/browse/ROO-89&quot;&gt;https://jira.springsource.org/browse/ROO-89&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1030&quot;&gt;https://jira.springsource.org/browse/ROO-1030&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1585&quot;&gt;https://jira.springsource.org/browse/ROO-1585&lt;/a&gt;  &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1684&quot;&gt;https://jira.springsource.org/browse/ROO-1684&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;https://jira.springsource.org/browse/ROO-1698&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;https://jira.springsource.org/browse/ROO-1731&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;li&gt;Threads im &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;ROO-Forum&lt;/a&gt;
-&lt;/li&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=101926&quot;&gt;http://forum.springsource.org/showthread.php?t=101926&lt;/a&gt; &lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;http://forum.springsource.org/showthread.php?t=97672&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;li&gt;Sonstige&lt;/li&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;
-&lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&lt;/a&gt;&lt;br&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/ul&gt;&lt;br&gt;&lt;blockquote&gt;
-&lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;Spring Roo&lt;/a&gt; ist ein Code-Generierungs-Werkzeug für die Softwareentwicklung, welches Entwickler in die Lage versetzt schnell und unkompliziert vorzeigbare Ergebnisse bspw. in Form von benutzbaren Prototypen zu liefern. Im Gegensatz zu anderen Werkzeugen, Frameworks und Tools entwickelt man mit Spring Roo zu 100% in Java.&lt;br&gt;&lt;br&gt;Für die Anpassung oder Erweiterung von Roo bspw. durch eigene Add-Ons kann auf vorhandenes Java-Wissen und -Erfahrung aufgebaut werden. Unterstützt durch die geringen Einstiegshürden und die hohe Modularisierung, kann so jedes Projekt leicht an die ganz speziellen, individuellen Bedürfnisse angepasst und einmal geschriebene Komponenten oder Add-Ons wiederverwendet werden.&lt;br&gt;&lt;br&gt;
-&lt;/blockquote&gt;Update 12.02.2011 23:50h:&lt;br&gt;&lt;ul&gt;
-&lt;li&gt;Frage eingearbeitet: &quot;Setzt Roo diese Einstellungen automatisch oder muss man diese selbst anpassen?&quot; - siehe Fazit&lt;/li&gt;
-&lt;li&gt;verschiedene Verbesserungsvorschläge eingearbeitet und Tippfehler korrigiert&lt;/li&gt;
-&lt;/ul&gt;
+Dies ist der erste in einer Reihe von Blog-Posts über Spring Roo (Erläuterung siehe unten).&lt;br /&gt;[&lt;a href=&quot;http://goldstifts.blogspot.com/2011/02/broken-special-chars-in-spring-roo.html&quot;&gt;english version&lt;/a&gt;]&lt;br /&gt;&lt;/p&gt;&lt;h2&gt; Problem: Sonderzeichen und Umlaute werden in meiner Roo-Anwendung nicht korrekt angezeigt&lt;/h2&gt;&lt;br /&gt;Im &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;Spring Roo-Forum&lt;/a&gt; gibt es öfter Anfragen, die o.g. Problem beschreiben, dass deutsche Umlaute wie ä, ö, ü und ß nicht korrekt gespeichert oder &quot;kaputt&quot; übertragen werden. Im Folgenden möchte ich kurz die häufigsten Fehlerquellen und Lösungen aufzeigen.&lt;br /&gt;&lt;h3&gt; Zeichensatz der HTML-/ JSP-Seite&lt;/h3&gt;Durch Roo generierte JSPs werden immer im Zeichensatz UTF-8 ausgeliefert. Schreibt man eigene JSPs bspw. mit Formularen, sollte diese HTML bzw. JSP-Seite als Zeichensatz ebenfalls UTF-8 verwenden. Dies erreicht man in dem am Anfang der JSP die folgende Zeile eingefügt wird:&lt;br /&gt;&lt;pre&gt;&amp;lt;jsp:directive.page contenttype=&quot;text/html;charset=UTF-8&quot;&lt;br /&gt;   pageencoding=&quot;UTF-8&quot;/&amp;gt;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;Am Anfang der &quot;default.jspx&quot;, die über Apache Tiles als &quot;Rahmen&quot; für alle anderen JSP-Seiten gilt, sind z.B. folgende Angaben zum Encoding/ Zeichensatz enthalten:&lt;br /&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;html xmlns:jsp=&quot;http://java.sun.com/JSP/Page&quot; xmlns:c=&quot;http://java.sun.com/jsp/jstl/core&quot; xmlns:tiles=&quot;http://tiles.apache.org/tags-tiles&quot; xmlns:spring=&quot;http://www.springframework.org/tags&quot; xmlns:util=&quot;urn:jsptagdir:/WEB-INF/tags/util&quot; &amp;gt;  &lt;br /&gt; &lt;br /&gt; &amp;lt;jsp:output doctype-root-element=&quot;HTML&quot; doctype-system=&quot;about:legacy-compat&quot; /&amp;gt;&lt;br /&gt; &lt;br /&gt; &amp;lt;jsp:directive.page contentType=&quot;text/html;charset=UTF-8&quot; /&amp;gt;  &lt;br /&gt;  &lt;br /&gt; &amp;lt;head&amp;gt;&lt;br /&gt;  &amp;lt;meta http-equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=UTF-8&quot; /&amp;gt;&lt;br /&gt;&lt;br /&gt;&amp;lt;!-- ... --&amp;gt;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;Ist sichergestellt, dass die Seiten im Zeichensatz &quot;UTF-8&quot; ausgeliefert werden (dies kann im Browser meist im Menüpunkt &quot;Ansicht &amp;gt; Zeichensatz&quot; kontrolliert werden), die Sonderzeichen werden aber trotzdem falsch übertragen, ist dies nicht die Fehlerursache.&lt;br /&gt;&lt;br /&gt;&lt;h3&gt; CharacterEncodingFilter in der web.xml&lt;/h3&gt;Dieser Punkt ist der häufigste Fehler. Es geht hierbei um die Reihenfolge der &lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;&amp;lt;filter-mapping&amp;gt;&lt;/span&gt;-Tags in der Datei &quot;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;web.xml&lt;/span&gt;&quot;. Diese Tags geben an, in welcher Reihenfolge die einzelnen Filter bei einem HTTP-Request durchlaufen werden.&lt;br /&gt;&lt;b&gt;Roo generiert leider erst &lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;seit Version 1.1.1 per Default die korrekte Reihenfolge, wie folgt aussieht&lt;/a&gt;: &lt;/b&gt;&lt;br /&gt;&lt;br /&gt;&lt;pre class=&quot;alt2&quot; dir=&quot;ltr&quot; style=&quot;border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;&quot;&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;CharacterEncodingFilter&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;Spring OpenEntityManagerInViewFilter&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;HttpMethodFilter&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&amp;lt;filter-mapping&amp;gt;&lt;br /&gt;    &amp;lt;filter-name&amp;gt;springSecurityFilterChain&amp;lt;/filter-name&amp;gt;&lt;br /&gt;    &amp;lt;url-pattern&amp;gt;/*&amp;lt;/url-pattern&amp;gt;&lt;br /&gt;&amp;lt;/filter-mapping&amp;gt;&lt;br /&gt;&lt;/pre&gt;&lt;br /&gt;Will man die Reihenfolge der Filter ändern, ist es wichtig, deren Bedeutung zu verstehen:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/CharacterEncodingFilter.html&quot;&gt;CharacterEncodingFilter&lt;/a&gt; - Setzt den Zeichensatz des Requests, falls der Browser ihn nicht mitsendet&lt;/li&gt;&lt;li&gt; &lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html&quot;&gt;OpenEntityManagerInViewFilter&lt;/a&gt; - nur in Verbindung mit Hibernate, setzt EntityManager in ThreadLocal (siehe &lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;Diskussion über&lt;/a&gt; &lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;Vor- und Nachteile&lt;/a&gt;)&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/HiddenHttpMethodFilter.html&quot;&gt;HttpMethodFilter&lt;/a&gt; - Notwendig um bspw. PUT oder DELETE abbilden zu können&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html&quot;&gt;springSecurityFilterChain&lt;/a&gt; - muss nach HttpMethodFilter kommen, wenn auf HTTP-Method eingeschränkt wird&lt;/li&gt;&lt;li&gt;... ggf. weitere Filter&lt;/li&gt;&lt;/ul&gt;Damit Fehler in der Behandlung von Texten mit Sonderzeichen ausgeschlossen werden, sollte der &quot;CharacterEncodingFilter&quot; durchlaufen worden sein, bevor die Requestdaten in irgendeiner Form weiterverarbeitet werden.&lt;br /&gt;&lt;b&gt;Aus diesem Grund lautet die Empfehlung: das &amp;lt;filter-mapping&amp;gt; für den &lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;CharacterEncodingFilter muss in der &quot;web.xml&quot; an erster Stelle stehen&lt;/a&gt; (&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;Erklärung siehe ROO-1698&lt;/a&gt;)!&lt;/b&gt; &lt;br /&gt;&lt;h3&gt; Datenbankverbindung&lt;/h3&gt;Zu guter Letzt sollte sichergestellt werden, dass auch die Kommunikation mit der Datenbank über Unicode bzw. mit dem Standardzeichensatz UTF-8 geführt wird.&lt;br /&gt;&lt;br /&gt;Kommt als Datenbank bspw. MySQL zum Einsatz, generiert Roo automatisch die Unicode-Unterstützung über folgende Konfiguration in der Datei &quot;&lt;span style=&quot;font-size: x-small;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;src/main/resources/META-INF/spring/database.properties&lt;/span&gt;&lt;/span&gt;&quot;:&lt;br /&gt;&lt;span style=&quot;font-family: &amp;quot;Courier New&amp;quot;,Courier,monospace;&quot;&gt;database.url=jdbc:mysql://[YOUR_DB_SERVER]:3306/[YOUR_DB_NAME]?autoReconnect=true&amp;amp;useUnicode=true&amp;amp;characterEncoding=UTF-8&lt;/span&gt;&lt;br /&gt;&lt;br /&gt;&lt;h3&gt; Fazit&lt;/h3&gt;Seit Version 1.1.1 verfügt Spring Roo über eine (bisher) fehlerfreie Unterstützung für Sonderzeichen, die bereits in diversen Sprachen getestet wurde.&lt;br /&gt;Bei Fragen und Problemen findet man im Roo-Forum auf jeden Fall kompetente Hilfe. &lt;br /&gt;&lt;br /&gt;&lt;h3&gt; Im Text verwendete, weiterführende Links&lt;/h3&gt;&lt;ul style=&quot;font-family: inherit;&quot;&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO&quot;&gt;ROO-JIRA issues&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-89&quot;&gt;https://jira.springsource.org/browse/ROO-89&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1030&quot;&gt;https://jira.springsource.org/browse/ROO-1030&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1585&quot;&gt;https://jira.springsource.org/browse/ROO-1585&lt;/a&gt;  &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1684&quot;&gt;https://jira.springsource.org/browse/ROO-1684&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1698&quot;&gt;https://jira.springsource.org/browse/ROO-1698&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;https://jira.springsource.org/browse/ROO-1731&quot;&gt;https://jira.springsource.org/browse/ROO-1731&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Threads im &lt;a href=&quot;http://forum.springsource.org/forumdisplay.php?f=67&quot;&gt;ROO-Forum&lt;/a&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=101926&quot;&gt;http://forum.springsource.org/showthread.php?t=101926&lt;/a&gt; &lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://forum.springsource.org/showthread.php?t=97672&quot;&gt;http://forum.springsource.org/showthread.php?t=97672&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;Sonstige&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;a href=&quot;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&quot;&gt;http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href=&quot;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&quot;&gt;http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter&lt;/a&gt;&lt;br /&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;br /&gt;&lt;blockquote&gt;&lt;a href=&quot;http://www.springsource.org/roo&quot;&gt;Spring Roo&lt;/a&gt; ist ein Code-Generierungs-Werkzeug für die Softwareentwicklung, welches Entwickler in die Lage versetzt schnell und unkompliziert vorzeigbare Ergebnisse bspw. in Form von benutzbaren Prototypen zu liefern. Im Gegensatz zu anderen Werkzeugen, Frameworks und Tools entwickelt man mit Spring Roo zu 100% in Java.&lt;br /&gt;&lt;br /&gt;Für die Anpassung oder Erweiterung von Roo bspw. durch eigene Add-Ons kann auf vorhandenes Java-Wissen und -Erfahrung aufgebaut werden. Unterstützt durch die geringen Einstiegshürden und die hohe Modularisierung, kann so jedes Projekt leicht an die ganz speziellen, individuellen Bedürfnisse angepasst und einmal geschriebene Komponenten oder Add-Ons wiederverwendet werden.&lt;br /&gt;&lt;br /&gt;&lt;/blockquote&gt;Update 12.02.2011 23:50h:&lt;br /&gt;&lt;ul&gt;&lt;li&gt;Frage eingearbeitet: &quot;Setzt Roo diese Einstellungen automatisch oder muss man diese selbst anpassen?&quot; - siehe Fazit&lt;/li&gt;&lt;li&gt;verschiedene Verbesserungsvorschläge eingearbeitet und Tippfehler korrigiert&lt;/li&gt;&lt;/ul&gt;
 
 &lt;h2&gt;Comments&lt;/h2&gt;
 &lt;div class=&quot;comments&quot;&gt;
 &lt;div class=&quot;comment&quot;&gt;
 &lt;div class=&quot;author&quot;&gt;Anonymous&lt;/div&gt;
 &lt;div class=&quot;content&quot;&gt;
-super, hat mir sehr geholfen.&lt;br&gt;GRüsse Stefan&lt;/div&gt;
+super, hat mir sehr geholfen.&lt;br /&gt;GRüsse Stefan&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 
@@ -2452,11 +2191,10 @@ super, hat mir sehr geholfen.&lt;br&gt;GRüsse Stefan&lt;/div&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/</id>
 <title>Probleme beim Login ins Elster ePortal mit Mac OS X</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2011-01-19T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2011/01/19/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/" rel="alternate" type="text/html" />
 <summary>
-
 Ich hatte bis vor Kurzem einige Probleme, mich im Elster ePortal anzumelden. Im Folgenden will ich kurz den Fehler und die für mich funktionierende Lösung zeigen.
 FEHLERBESCHREIBUNG
 Wenn man auf der Startseite im linken Bereich den Punkt "Login &gt; Software-Zertifikat" wählt und dann auf "Login" klickt, wird das Java Applet geladen und der grüne, sich drehende Kreis angezeigt. Es erscheint kein Popup, die Java-Konsole oder ähnliches!Wirft man während dieser Wartezeit einen Blick in die sog. Fehlerkonsole des Browsers, so findet man die folgende Fehlermeldung:
@@ -2470,30 +2208,26 @@ Ich vermutete zunächst, dass hier...
 </summary>
 <content type="html">
 
-&lt;p&gt;Ich hatte bis vor Kurzem einige Probleme, mich im Elster ePortal anzumelden. Im Folgenden will ich kurz den Fehler und die für mich funktionierende Lösung zeigen.&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;Ich hatte bis vor Kurzem einige Probleme, mich im Elster ePortal anzumelden. Im Folgenden will ich kurz den Fehler und die für mich funktionierende Lösung zeigen.&lt;br /&gt;&lt;/p&gt;
 &lt;h3&gt;FEHLERBESCHREIBUNG&lt;/h3&gt;
-&lt;p&gt;Wenn man auf der &lt;a href=&quot;https://www.elsteronline.de/eportal/&quot;&gt;Startseite&lt;/a&gt; im linken Bereich den Punkt &quot;Login &amp;gt; Software-Zertifikat&quot; wählt und dann auf &quot;Login&quot; klickt, wird das Java Applet geladen und der grüne, sich drehende Kreis angezeigt. Es erscheint kein Popup, die Java-Konsole oder ähnliches!&lt;br&gt;Wirft man während dieser Wartezeit einen Blick in die sog. Fehlerkonsole des Browsers, so findet man die folgende Fehlermeldung:
+&lt;p&gt;Wenn man auf der &lt;a href=&quot;https://www.elsteronline.de/eportal/&quot;&gt;Startseite&lt;/a&gt; im linken Bereich den Punkt &quot;Login &amp;gt; Software-Zertifikat&quot; wählt und dann auf &quot;Login&quot; klickt, wird das Java Applet geladen und der grüne, sich drehende Kreis angezeigt. Es erscheint kein Popup, die Java-Konsole oder ähnliches!&lt;br /&gt;Wirft man während dieser Wartezeit einen Blick in die sog. Fehlerkonsole des Browsers, so findet man die folgende Fehlermeldung:
 &lt;/p&gt;&lt;pre&gt;
 Failed to load resource: https://www.elsteronline.de/eportal/
 de.elster.portal.applet.ElsterAppletAnalyze.class the server 
 responded with a status of 404 (Not Found)&lt;/pre&gt;
 
-&lt;p&gt;Ich vermutete zunächst, dass hier ein Problem mit der Codebase des Applets vorliegt. Die Kollegen verwenden interessanter Weise das veraltete &amp;lt;object&amp;gt;-Tag, anstatt das wesentlich angenehmere JavaScript (&lt;a href=&quot;view-source:http://www.java.com/js/deployJava.js&quot;&gt;deployJava.js&lt;/a&gt;)* von Oracle/ Sun  zu verwenden.&lt;br&gt;&lt;br&gt;* Es gibt eine überarbeitete Version des &lt;a href=&quot;http://jira.atlassian.com/includes/deployJava.js&quot;&gt;JavaScript von Atlassian&lt;/a&gt;, die auch unter Opera läuft!&lt;br&gt;&lt;br&gt;SYSTEMUMGEBUNG&lt;br&gt;Betriebssystem: Mac OS X 10.6.5&lt;br&gt;Java: 1.6.0_22&lt;br&gt;Browser: Safari 5.0.3 (6533.19.4)&lt;br&gt;Browser2: Firefox 4.0b7&lt;br&gt;&lt;br&gt;RANDBEMERKUNG&lt;br&gt;Nach einer gewissen Zeit kommt anscheinend ein Timeout woraufhin eine neue Seite geöffnet und folgende Fehlermeldungen angezeigt werden:&lt;/p&gt;
+&lt;p&gt;Ich vermutete zunächst, dass hier ein Problem mit der Codebase des Applets vorliegt. Die Kollegen verwenden interessanter Weise das veraltete &amp;lt;object&amp;gt;-Tag, anstatt das wesentlich angenehmere JavaScript (&lt;a href=&quot;view-source:http://www.java.com/js/deployJava.js&quot;&gt;deployJava.js&lt;/a&gt;)* von Oracle/ Sun  zu verwenden.&lt;br /&gt;&lt;br /&gt;* Es gibt eine überarbeitete Version des &lt;a href=&quot;http://jira.atlassian.com/includes/deployJava.js&quot;&gt;JavaScript von Atlassian&lt;/a&gt;, die auch unter Opera läuft!&lt;br /&gt;&lt;br /&gt;SYSTEMUMGEBUNG&lt;br /&gt;Betriebssystem: Mac OS X 10.6.5&lt;br /&gt;Java: 1.6.0_22&lt;br /&gt;Browser: Safari 5.0.3 (6533.19.4)&lt;br /&gt;Browser2: Firefox 4.0b7&lt;br /&gt;&lt;br /&gt;RANDBEMERKUNG&lt;br /&gt;Nach einer gewissen Zeit kommt anscheinend ein Timeout woraufhin eine neue Seite geöffnet und folgende Fehlermeldungen angezeigt werden:&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;h3&gt;Konfigurations-Assistent&lt;/h3&gt;
 &lt;p&gt;Die Überprüfung der Konfiguration Ihres Computers wurde soeben durchgeführt.&lt;/p&gt;
-&lt;h3&gt;Fehlende Voraussetzung&lt;/h3&gt;
-&lt;br&gt;
+&lt;h3&gt;Fehlende Voraussetzung&lt;/h3&gt;&lt;br /&gt;
 &lt;h4&gt;Java Sicherheitseinstellungen&lt;/h4&gt;
 &lt;p&gt;Ihr System erfüllt nicht die grundlegenden Voraussetzungen zur Nutzung des ElsterOnline-Portals. Voraussetzung für die Nutzung von ElsterOnline ist die Einstellung AllPermissions in den Java-Sicherheitseinstellungen für signierte Applets.&lt;/p&gt;
 &lt;h4&gt;Kein kompatibles Java-Plugin installiert&lt;/h4&gt;
-&lt;p&gt;Ihr System erfüllt nicht die grundlegenden Voraussetzungen zur Nutzung des ElsterOnline-Portals. Wir empfehlen Ihnen, falls ElsterOnline dies für Ihr Betriebssystem unterstützt (siehe Anforderungen), das aktuelle Java Runtime Environment (JRE) zu installieren. Zum Download der neuesten Version der Java-Software rufen Sie bitte die Java-Homepage (http://www.java.com/de/) auf. Diese Seiten enthalten detaillierte Anweisungen zum Download und zur Installation der Java-Software (JRE).&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;/p&gt;
-&lt;h4&gt;Warnhinweis Nicht erkanntes Betriebssystem&lt;/h4&gt;
-&lt;br&gt;Ihr Betriebssystem wurde nicht erkannt und wird möglicherweise von ElsterOnline nicht unterstützt. Eine Liste der von ElsterOnline unterstützten Betriebssysteme finden Sie unter Anforderungen. Die problemlose Nutzung von ElsterOnline kann mit Ihrem Betriebssystem möglich sein, selbst wenn es nicht in der Anforderungsliste aufgeführt ist. Dies wird jedoch nicht garantiert. Falls ein Problem auftritt, kann Sie die Hotline nur dann bei der Behebung unterstützen, falls Ihr Betriebssystem in der Anforderungsliste enthalten ist.&lt;/blockquote&gt;&lt;br&gt;&lt;br&gt;Randbemerkung:&lt;br&gt;Auf dem System war die aktuellste Java Version (siehe Versionsangabe oben) installiert  und in den &lt;a href=&quot;https://www.elsteronline.de/eportal/Anforderungen.tax&quot;&gt;Anforderungen für Elster&lt;/a&gt; ist Mac OS X 10.6.5 mit JRE6+Safari5 als unterstützte Umgebung freigegeben.&lt;br&gt;&lt;br&gt;
+&lt;p&gt;Ihr System erfüllt nicht die grundlegenden Voraussetzungen zur Nutzung des ElsterOnline-Portals. Wir empfehlen Ihnen, falls ElsterOnline dies für Ihr Betriebssystem unterstützt (siehe Anforderungen), das aktuelle Java Runtime Environment (JRE) zu installieren. Zum Download der neuesten Version der Java-Software rufen Sie bitte die Java-Homepage (http://www.java.com/de/) auf. Diese Seiten enthalten detaillierte Anweisungen zum Download und zur Installation der Java-Software (JRE).&lt;br /&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;&lt;h4&gt;Warnhinweis Nicht erkanntes Betriebssystem&lt;/h4&gt;&lt;br /&gt;Ihr Betriebssystem wurde nicht erkannt und wird möglicherweise von ElsterOnline nicht unterstützt. Eine Liste der von ElsterOnline unterstützten Betriebssysteme finden Sie unter Anforderungen. Die problemlose Nutzung von ElsterOnline kann mit Ihrem Betriebssystem möglich sein, selbst wenn es nicht in der Anforderungsliste aufgeführt ist. Dies wird jedoch nicht garantiert. Falls ein Problem auftritt, kann Sie die Hotline nur dann bei der Behebung unterstützen, falls Ihr Betriebssystem in der Anforderungsliste enthalten ist.&lt;/blockquote&gt;&lt;br /&gt;&lt;br /&gt;Randbemerkung:&lt;br /&gt;Auf dem System war die aktuellste Java Version (siehe Versionsangabe oben) installiert  und in den &lt;a href=&quot;https://www.elsteronline.de/eportal/Anforderungen.tax&quot;&gt;Anforderungen für Elster&lt;/a&gt; ist Mac OS X 10.6.5 mit JRE6+Safari5 als unterstützte Umgebung freigegeben.&lt;br /&gt;&lt;br /&gt;
 
 &lt;h3&gt;Lösung: Neuinstallation&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Java for Mac OS X 10.6 Update 3 herunterladen (&lt;a href=&quot;http://support.apple.com/kb/DL972&quot;&gt;http://support.apple.com/kb/DL972&lt;/a&gt;)&lt;/li&gt;
+&lt;ul&gt;&lt;li&gt;Java for Mac OS X 10.6 Update 3 herunterladen (&lt;a href=&quot;http://support.apple.com/kb/DL972&quot;&gt;http://support.apple.com/kb/DL972&lt;/a&gt;)&lt;/li&gt;
 &lt;li&gt;alle Anwendungen, die Java verwenden (z.B. auch Safari und Firefox) beenden&lt;/li&gt;
 &lt;li&gt;das Java-Update installieren&lt;/li&gt;
 &lt;li&gt;Safari neustarten und auf &lt;a href=&quot;https://www.elsteronline.de/eportal/&quot;&gt;https://www.elsteronline.de/eportal/&lt;/a&gt; leiten&lt;/li&gt;
@@ -2504,18 +2238,16 @@ responded with a status of 404 (Not Found)&lt;/pre&gt;
 <entry>
 <id>http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/</id>
 <title>...letztlich doch hier</title>
-<updated>2016-12-27T17:07:54+01:00</updated>
+<updated>2016-12-27T17:15:52+01:00</updated>
 <published>2009-04-22T00:00:00+00:00</published>
 <link href="http://aheusingfeld.github.io/posts/2009/04/22/-letztlich-doch-hier/" rel="alternate" type="text/html" />
 <summary>
-
-
 ...eigentlich wollte ich mein Blog unbedingt auf meinem eigenen Server haben und hätte mir vor ein paar Wochen jemand gesagt, dass ich mal einem Dienst von Google freiwillig einige meiner Daten anvertrauen würde, hätte ich denjenigen wahrscheinlich für verrückt erklärt.Naja, letztlich war der Reiz "blogger.com" mal auszuprobieren und die mangelnde Zeit mal eben ein eigenes Blog zu schreiben ausschlaggebend dafür, dass ich hiermit nun doch mein Blog bei Blogger.com eröffne.Welcome everybody but please don't stare even though all walls are out of glass these days... "...and you'll find out why 1984 won't be like 1984" (http://www.youtube.com/watch?v=OYecfV3ubP8) - klar, aber vielleicht...
 </summary>
 <content type="html">
 
 &lt;p&gt;
-...eigentlich wollte ich mein Blog unbedingt auf meinem eigenen Server haben und hätte mir vor ein paar Wochen jemand gesagt, dass ich mal einem Dienst von Google freiwillig einige meiner Daten anvertrauen würde, hätte ich denjenigen wahrscheinlich für verrückt erklärt.&lt;br&gt;&lt;br&gt;Naja, letztlich war der Reiz &quot;blogger.com&quot; mal auszuprobieren und die mangelnde Zeit mal eben ein eigenes Blog zu schreiben ausschlaggebend dafür, dass ich hiermit nun doch mein Blog bei Blogger.com eröffne.&lt;br&gt;&lt;br&gt;Welcome everybody but please don't stare even though all walls are out of glass these days... &quot;...and you'll find out why 1984 won't be like 1984&quot; (&lt;a href=&quot;http://www.youtube.com/watch?v=OYecfV3ubP8&quot;&gt;http://www.youtube.com/watch?v=OYecfV3ubP8&lt;/a&gt;) - klar, aber vielleicht 25 Jahre später!?&lt;br&gt;&lt;br&gt;In diesem Sinne, vergesst nicht, das Internet vergisst nichts!&lt;br&gt;&lt;br&gt;Gruß&lt;br&gt;Alex
+...eigentlich wollte ich mein Blog unbedingt auf meinem eigenen Server haben und hätte mir vor ein paar Wochen jemand gesagt, dass ich mal einem Dienst von Google freiwillig einige meiner Daten anvertrauen würde, hätte ich denjenigen wahrscheinlich für verrückt erklärt.&lt;br /&gt;&lt;br /&gt;Naja, letztlich war der Reiz &quot;blogger.com&quot; mal auszuprobieren und die mangelnde Zeit mal eben ein eigenes Blog zu schreiben ausschlaggebend dafür, dass ich hiermit nun doch mein Blog bei Blogger.com eröffne.&lt;br /&gt;&lt;br /&gt;Welcome everybody but please don't stare even though all walls are out of glass these days... &quot;...and you'll find out why 1984 won't be like 1984&quot; (&lt;a href=&quot;http://www.youtube.com/watch?v=OYecfV3ubP8&quot;&gt;http://www.youtube.com/watch?v=OYecfV3ubP8&lt;/a&gt;) - klar, aber vielleicht 25 Jahre später!?&lt;br /&gt;&lt;br /&gt;In diesem Sinne, vergesst nicht, das Internet vergisst nichts!&lt;br /&gt;&lt;br /&gt;Gruß&lt;br /&gt;Alex
 &lt;/p&gt;
 
 </content>
