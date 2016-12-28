@@ -55,3 +55,5 @@ It took a while but worked pretty well. So in the end I'd like to thank John Ori
 Now I'm on to fix the remaining issues: *Currently I'm facing a situation where all requests with `index.php` are returned with a HTTP302 redirect without `index.php` - which of course fails* (e.g. `/cloud/index.php/login` is redirected to `/cloud/login`). NOTE: I'm running owncloud behind nginx with a contextroot other than `/owncloud` - as if I was asking for trouble, right? I'll update this blog, in case I stumble upon something.
 
 If you find anything to comment, optimize or fix about this, please leave me a github issue. Always think "If I have this issue, someone else might sooner or later have it, too" - and you can help that someone. Thanks a lot!
+
+UPDATE: For those who want to follow along, I opened a Github issue under https://github.com/owncloud/core/issues/26869 and provided a pull-request for the remaining necessary changes here https://github.com/owncloud/core/pull/26882
