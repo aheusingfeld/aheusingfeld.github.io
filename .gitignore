@@ -1,12 +1,9 @@
-.awestruct
 .bundle
 .sass-cache
 .rbx
 _tmp
-_posts
 _site
 Gemfile.lock
 TODO
 .DS_Store
 *.iml
-*.sublime*

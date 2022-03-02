@@ -1,0 +1,15 @@
+= Personal Reset
+Alexander Heusingfeld
+:awestruct-tags: [java, MicroServices, asciidoc, dayone]
+
+Lately I noticed a growing dissatisfaction with my daily workflow. And this was not only because my last blog post has been almost a year ago. No, it's related to a noticable drop in productivity. I figured this was due to my curiosity dragging me onto way more interesting topics than either my time frame or my toolset could master. Unfortunately trying to keep up-to-date on those topics created loads of distractions which almost resulted in an inability to focus on a single task for a longer amount of time
+
+Lucky me, I'm surrounded by a bunch of awesome people whom I could talk to about this and my pending decisions.
+
+=== So, what does it mean? 
+
+1. First of all I'll try to get over that http://sethgodin.typepad.com/seths_blog/2011/09/talkers-block.html["writer's block"] and write small posts like this one about things on my mind. 
+2. Second of all I will have to reduce the quantity of my output on Twitter and skip some of my projects to achieve a level of quality that is finally satisfactory for me personally. 
+3. Regarding the toolset I decided to give http://dayoneapp.com/[DayOne] another try. It's a journal/ diary app that supports MarkDown (yes, I'd favor Asciidoc), syncs via iCloud, reminds me of stuff and has a few other nice features. The only downsides are it's Apple-only and it doesn't support WebDAV-sync which would allow automatic publishing to my blog.
+
+That's it for my plans. My next post will hopefully be quite soon as I'm currently preparing my https://www.innoq.com/en/talks/2014/10/micro-services-on-the-jvm-javaone/[JavaOne talk (CON4952)] with my dear colleague, https://twitter.com/eigenbrodtm[Martin Eigenbrodt], which touches some interesting aspects of #MicroServices and distributed systems. Let's see how it will work out.

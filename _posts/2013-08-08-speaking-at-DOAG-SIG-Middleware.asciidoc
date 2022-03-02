@@ -1,0 +1,11 @@
+= Speaking at DOAG SIG Middleware 2013
+Alexander Heusingfeld
+date: 2013-08-08
+:revdate: 2013-08-08 20:47:32 +0200
+:awestruct-tags: [talk, eai, doag, oracle, java, glassfish]
+
+
+I have been invited by the http://www.doag.org/[DOAG] to give a talk on "Enterprise Integration with GlassFish" at their http://www.doag.org/termine/termine.php?tid=450909[SIG Middleware event].
+
+This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of the German Oracle customers using Oracle middleware products. The event will feature a number of great talks around http://glassfish.java.net/[GlassFish 4.0].
+
