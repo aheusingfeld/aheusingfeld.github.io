@@ -1,5 +1,6 @@
 .bundle
 .sass-cache
+.jekyll-cache
 .rbx
 _tmp
 _site

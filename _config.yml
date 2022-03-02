@@ -1,4 +1,9 @@
-theme: jekyll-theme-minimal
+theme: minima
 title: goldstift's blog
 author: Alexander Heusingfeld
 description: goldstift's 2 cent on technology and software development
+plugins: 
+- jekyll-paginate
+- jekyll-asciidoc
+paginate: 3
+paginate_path: "/page:num/"

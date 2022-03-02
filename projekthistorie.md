@@ -1,7 +1,9 @@
 ---
-layout: base
-title: previous projects
+layout: page
+hidden: true
+title: "Projekthistorie"
 ---
+
 
 ## Projekthistorie
 
