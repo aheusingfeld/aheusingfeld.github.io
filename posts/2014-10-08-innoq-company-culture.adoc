@@ -1,8 +1,0 @@
-= Article on company culture at innoQ
-Alexander Heusingfeld
-:awestruct-tags: [culture, innoq, external, writing]
-
-I just wanted to hint my German speaking readers to an article I wrote about the company culture at innoQ. 
-The article is on our company website and I'd really appreciate your feedback e.g. on writing style or content.
-
-https://www.innoq.com/de/articles/2014/10/ein-jahr-nach-dem-kulturschock/

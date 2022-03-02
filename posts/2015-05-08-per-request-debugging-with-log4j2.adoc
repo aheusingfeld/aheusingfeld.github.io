@@ -1,5 +1,0 @@
-= Per request debugging with Log4j 2 filters
-Alexander Heusingfeld
-:awestruct-tags: [java, log4j, innoq]
-
-I wrote a post on the innoQ blog about https://www.innoq.com/en/blog/per-request-debugging-with-log4j2/["Per request debugging with Log4j 2 filters"].
