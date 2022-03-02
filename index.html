@@ -1,8 +1,7 @@
 ---
-layout: default
-title: Home
+layout: home
 ---
-<!-- This loops through the paginated posts -->
+<!-- This loops through the paginated posts --
 {% for post in paginator.posts %}
 <div class="post-header" style="margin-bottom:4em">
     <header class="post-header">
@@ -14,8 +13,8 @@ title: Home
   </div>
 </div>
 {% endfor %}
-
-<!-- Pagination links -->
+-->
+<!-- Pagination links --
 <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">
@@ -33,7 +32,7 @@ title: Home
     <span class="next ">Next</span>
   {% endif %}
 </div>
-
+-->
 <!--
 <h1>Tag Cloud</h1>
 {% assign tags = site.tags | sort %}

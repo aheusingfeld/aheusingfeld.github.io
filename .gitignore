@@ -1,10 +1,5 @@
-.bundle
+_site
 .sass-cache
 .jekyll-cache
-.rbx
-_tmp
-_site
-Gemfile.lock
-TODO
-.DS_Store
-*.iml
+.jekyll-metadata
+vendor

@@ -6,4 +6,5 @@ plugins:
 - jekyll-paginate
 - jekyll-asciidoc
 paginate: 3
-paginate_path: "/page:num/"
+paginate_path: "/page:num/"#   - vendor/gems/
+#   - vendor/ruby/
