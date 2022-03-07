@@ -18,15 +18,66 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "goldstift's blog"
-description: goldstift's 2 cent on technology and software development
+title: "Overthinker's Maze"
+description: My 2 cents on technology, software architecture, and other concerns
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
+name: Alexander Heusingfeld
 twitter_username: aheusingfeld
 github_username:  aheusingfeld
-
+twitter:
+  username: "aheusingfeld"
+author:
+  name: "Alexander Heusingfeld"
+  avatar: "/gfx/alexander-heusingfeld-portrait.png"
+  bio: "Hi, I am Alex." # Note: Markdown is allowed
+  location: "Hilden, Germany"
+  links:
+    - label: "Made Mistakes"
+      icon: "fas fa-fw fa-link"
+      url: "https://mademistakes.com"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/aheusingfeld"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/aheusingfeld"
+    - label: "linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
+      
 # Build settings
 theme: minimal-mistakes-jekyll
+minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+locale: "en-US"
+title_separator: "|"
+repository: "aheusingfeld/aheusingfeld.github.io"
+logo: "/gfx/alexander-heusingfeld-portrait.png"
+date_format: "%Y-%m-%d"
+timezone: "Europe/Berlin"
+search: true
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      show_date: true
+      read_time: true
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+
 plugins:
   - jekyll-feed
   - jekyll-paginate
