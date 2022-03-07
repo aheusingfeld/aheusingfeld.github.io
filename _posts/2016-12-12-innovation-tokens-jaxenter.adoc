@@ -1,8 +1,9 @@
 ---
-layout: post
+layout: single
+classes: wide
 title: "Article on Innovation Tokens at jaxenter"
 date: 2016-12-12 18:17:00 -0000
-tags: innovation business technology article innoq
+categories: innovation business technology article innoq
 author: Alexander Heusingfeld
 ---
 = Article on Innovation Tokens at jaxenter
