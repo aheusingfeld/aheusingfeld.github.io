@@ -1,8 +1,12 @@
-= First Steps with Android
-Alexander Heusingfeld
-date: 2013-09-10
-:revdate: 2013-09-10 20:47:32 +0200
-:awestruct-tags: [java, android, mobile, intellij]
+---
+layout: single
+classes: wide
+author_profile: true
+title: First Steps with Android
+date: 2013-09-10 20:47:32 +0200
+tags: java, android, mobile, intellij
+toc: true
+---
 
 ## The Stumble Stones
 
