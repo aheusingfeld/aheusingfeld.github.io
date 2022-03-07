@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 title: Glassfish 4 on Nexus7
 label: glassfish4-on-Nexus7
 date: 2012-12-13
