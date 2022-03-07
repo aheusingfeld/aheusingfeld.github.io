@@ -1,6 +1,11 @@
-= Migrate Owncloud from PostgreSQL to MySQL
-Alexander Heusingfeld
-:awestruct-tags: [owncloud, mysql, postgresql]
+---
+layout: single
+classes: wide
+title: Migrate Owncloud from PostgreSQL to MySQL
+tags: owncloud, mysql, postgresql
+---
+
+
 
 I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.
 
