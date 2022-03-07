@@ -26,7 +26,7 @@ twitter_username: aheusingfeld
 github_username:  aheusingfeld
 
 # Build settings
-theme: minima
+theme: minimal-mistakes-jekyll
 plugins:
   - jekyll-feed
   - jekyll-paginate
