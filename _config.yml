@@ -55,6 +55,13 @@ author:
     - label: "linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
+main:
+  - title: Home
+    url: /
+  - title: About Me
+    url: /about/
+  - title: Imprint
+    url: /imprint/
 defaults:
   # _posts
   - scope:
