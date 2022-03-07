@@ -74,12 +74,17 @@ defaults:
 defaults:
   # _pages
   - scope:
-      path: "_pages"
+      path: ""
       type: pages
     values:
+      show_date: true
+      read_time: true
       layout: single
       classes: wide
       author_profile: true
+      comments: false
+      share: true
+      related: true
 
 plugins:
   - jekyll-asciidoc
