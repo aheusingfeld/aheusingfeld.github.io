@@ -1,4 +1,5 @@
 ---
+layout: single
 title: "Owncloud Updates between multiple Major Versions"
 date: 2016-12-22 20:23:00 -0000
 categories: software
