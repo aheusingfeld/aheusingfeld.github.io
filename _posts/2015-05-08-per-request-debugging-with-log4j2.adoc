@@ -1,9 +1,127 @@
 ---
+title: Per request debugging with Log4j 2 filters
 layout: single
 classes: wide
+author: Alexander Heusingfeld
+date: 2015-05-08
+excerpt: Customers quite regularly call on me to support them when an application is not behaving as expected. On a development machine there are a lot of ways and utilities to analyse the situation. But troubleshooting the erroneous application behaviour in production environments quite often limits your tool belt to a minimum.
+categories: 
+  - software development
+tags: 
+  - software development
+  - java
+  - logging
+  - debugging
+  - log4j
+  - innoq
+  - article
+  - external
+
 ---
 = Per request debugging with Log4j 2 filters
-Alexander Heusingfeld
-:awestruct-tags: [java, log4j, innoq]
 
 I wrote a post on the innoQ blog about https://www.innoq.com/en/blog/per-request-debugging-with-log4j2/["Per request debugging with Log4j 2 filters"].
+
+---
+The bare minimum that should be available are the application’s log messages, so that’s probably the simplest thing to start with. From what I saw, in most production environments log output is unfortunately reduced to the absolute minimum for the sake of system performance and resource efficiency. In those environments it would be ok to increase the logging for a certain portion of the traffic, e.g. just for one incoming HTTP request, but this seems to be quite complicated. In this post I’d like to show you that it isn’t.
+
+== Logging in Java
+
+In the Java ecosystem we are free to choose from a variety of logging frameworks to help us get the job done. There is the time-honoured Apache Log4J, it’s so-called successor Logback and the SLF4J API which became quite popular. But with this post I’d like to direct your attention to Log4J’s new major version release https://logging.apache.org/log4j/2.0/[Apache Log4j 2]. Apart from greater performance and numerous bugfixes, Log4j 2 also comes with some new and optimised features which we can use to accomplish our task.
+
+== The building blocks
+
+The first thing we need is a place to intercept the HTTP request, extract the appropriate HTTP header and add it to Log4j’s `ThreadContext`. The `ThreadContext` is a "Mapped Diagnostic Context" (MDC) which is also known from other logging frameworks. Below you will find a naive implementation of a `ServletFilter` which does exactly this, assuming that the parameter to enable debugging is a boolean HTTP header like `x-debug-enabled: true`. Of course you can use any other request parameter you like.
+
+[source,java]
+----
+
+package com.innoq.blog.samples;
+
+import org.apache.logging.log4j.ThreadContext;
+
+import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+
+/**
+ * ServletFilter to extract request data and add it to Log4j's ThreadContext.
+ */
+public class RequestDebugFilter implements Filter {
+
+    public static final String DEBUG_HEADER = "x-debug-enabled";
+
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+        try {
+            // NOTE: Parsing for a "Boolean" makes sure that ThreadContext does not contain the random value that someone put into the HTTP header!
+            Boolean debugHeaderEnabled = Boolean.valueOf(((HttpServletRequest)request).getHeader(DEBUG_HEADER));
+            if (debugHeaderEnabled) {
+                ThreadContext.put(DEBUG_HEADER, debugHeaderEnabled.toString());
+            }
+
+            chain.doFilter(request, response);
+        } finally {
+            ThreadContext.remove(DEBUG_HEADER);
+        }
+    }
+
+    /* ... further methods abbreviated... */
+}
+----
+
+Once we got the parameter in our `ThreadContext`, we don’t need any further code changes, but can solely focus on the Log4j 2 configuration. In our Log4j configuration we can now make use of the https://logging.apache.org/log4j/2.0/manual/filters.html#DynamicThresholdFilter[DynamicThresholdFilter] to generally change the log level to TRACE in case the parameter "x-debug-enabled" is set to "true". A simple yet complete `log4j2.xml` file doing this could look like the following:
+
+[source,xml]
+----
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration monitorInterval="30">
+
+    <!-- This filter is used to generally enable TRACE logging if "x-debug-enabled" in the ThreadContext has the value "true" -->
+    <DynamicThresholdFilter key="x-debug-enabled" onMatch="ACCEPT" onMismatch="NEUTRAL">
+        <KeyValuePair key="true" value="TRACE"/>
+    </DynamicThresholdFilter>
+
+    <Appenders>
+        <Console name="CONSOLE" target="SYSTEM_OUT" >
+            <JSONLayout compact="true" charset="utf-8" eventEol="true" properties="true"/>
+        </Console>
+    </Appenders>
+
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="CONSOLE"/>
+        </Root>
+    </Loggers>
+</Configuration>
+----
+
+With this in hand we might even decide that we want to write those special HTTP requests to a different log file. This can be done by adding the following snippet to our `log4j2.xml`:
+
+[source,xml]
+----
+<RollingFile name="DEBUGLOGFILE" fileName="logs/debug.log" filePattern="logs/debug-%d{yyyyMMdd_HH}-%i.log.gz">
+    <Filters>
+      	<ThreadContextMapFilter onMatch="ACCEPT" onMismatch="DENY">
+            <KeyValuePair key="x-debug-enabled" value="true"/>
+        </ThreadContextMapFilter>
+    </Filters>
+    <Policies>
+        <OnStartupTriggeringPolicy />
+        <TimeBasedTriggeringPolicy />
+    </Policies>
+    <PatternLayout charset="UTF-8">
+        <PatternLayout pattern="[[%d{ISO8601}||%X||%-5p||%t||%c{1.}||%m]]%n"/>
+    </PatternLayout>
+</RollingFile>
+----
+
+In this case we are using a https://logging.apache.org/log4j/2.0/manual/filters.html#ThreadContextMapFilter[ThreadContextMapFilter] to ACCEPT log messages only in case the `x-debug-enabled` parameter in the `ThreadContext` map is set to `true`. Otherwise the log message is DENIED meaning not written to this RollingFile appender.
+
+
+== Conclusion
+
+We’ve just shown how to enable `TRACE` logging with Log4j 2 on a per-request basis, but of course this isn’t limited to HTTP requests. Any parameter in the `ThreadContext` can be used as a trigger. Therefore it is possible to debug batch jobs which have a certain flag, WebSocket connections or any other thread-based processing.
+
+The Log4j 2 manual has a lot more information and also explains use cases for new features. I recommend you read through it if you want to gain a deeper understanding. If you happen to read German, you might also be interested in the introductory article on Log4j 2 https://www.innoq.com/de/articles/2015/01/logging-konsolidieren-log4j2/["Logging konsolidieren und Performance gewinnen"] by my colleagues Stefan and Phillip.
