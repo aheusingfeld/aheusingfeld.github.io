@@ -1,11 +1,19 @@
 ---
 layout: single
 title: "Owncloud Updates between multiple Major Versions"
-date: 2016-12-22 20:23:00 -0000
-categories: software
-tags: owncloud ubuntu updates help
-author: Alexander Heusingfeld
+date: 2016-12-22T20:23:00-0100
+categories: 
+  - hosting
+tags: 
+  - owncloud 
+  - nextcloud
+  - ubuntu 
+  - linux
+  - self-hosting
+  - bugfix
+
 ---
+
 = Owncloud Updates between multiple Major Versions
 
 In case you also come into this great situation "I upgraded my Ubuntu to 16.04 LTS and suddenly my owncloud installation is a mess", don't panic. I'm about to share my mess with you so you can pick the perils.

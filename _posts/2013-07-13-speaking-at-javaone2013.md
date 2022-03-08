@@ -1,10 +1,19 @@
 ---
+layout: single
 title: Speaking at JavaOne 2013
-label: speaking-at-javaone2013
-date: 2013-07-13
-layout: post
-:revdate: 2013-07-13 23:00:00 +0200
-tags: [talk, java, javaone, eai, openhab, san francisco]
+date: 2013-07-13T23:00:00+0200
+categories: 
+  - talks
+tags: 
+  - talk
+  - java
+  - eai
+  - oracle
+  - javaone
+  - san francisco
+  - integration
+  - software development
+
 ---
 
 I'm very happy to announce that one of my proposals for [JavaOne 2013](http://www.oracle.com/javaone/) has been accepted. This year's JavaOne takes place

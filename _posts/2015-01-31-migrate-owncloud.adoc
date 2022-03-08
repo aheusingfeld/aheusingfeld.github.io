@@ -1,28 +1,41 @@
 ---
 layout: single
-classes: wide
 title: Migrate Owncloud from PostgreSQL to MySQL
-tags: owncloud, mysql, postgresql
----
+categories: 
+  - hosting
+tags: 
+  - owncloud 
+  - nextcloud
+  - self-hosting
+  - database
+  - migration
+  - bugfix
 
+---
 
 
 I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.
 
 Quite often I noticed the following error in my `owncloud.log` file:
-```
+
+[source]
+----
 {"app":"index","message":"Doctrine\\DBAL\\DBALException: An exception occurred while executing 'SELECT \"fileid\", \"storage\", \"path\", \"parent\", \"name\", \"mimetype\", \"mimepart\", \"size\", \"mtime\",\n\t\t\t\t\t   \"storage_mtime\", \"encrypted\", \"unencrypted_size\", \"etag\", \"permissions\"\n\t\t\t\tFROM \"oc_filecache\" WHERE \"storage\" = ? AND \"path_hash\" = ?':\n\nSQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block","level":4,"time":"2014-11-26T15:28:16+00:00"}
 {"app":"PHP","message":"Cannot modify header information - headers already sent at \/var\/www\/owncloud\/lib\/private\/response.php#83","level":3,"time":"2014-11-26T15:28:16+00:00"}
-```
+----
 
 Later on I found out that it occurred when owncloud tried to scan and index the files in the data folder. The way I got to know this is, I noticed that some of the files I uploaded were not displayed in owncloud but were present on the filesystem. So when I ran
-```
+
+[source,bash]
+----
 sudo -u www-data /usr/bin/php5 /var/www/owncloud/occ files:scan ahe -v
-```
+----
+
 the command also ended in this error message:
 
 
-```
+[source,bash]
+----
 
   [Doctrine\DBAL\DBALException]
   An exception occurred while executing 'SELECT "fileid", "storage", "path", "parent", "name", "mimetype", "mimepart", "size", "mtime",
@@ -92,7 +105,7 @@ Exception trace:
 
 
 files:scan [--all] [user_id1] ... [user_idN]
-```
+----
 
 As this is a PostgreSQL error, I searched the owncloud forums for other people's experience with owncloud + PostgreSQL. Unfortunately it seems that owncloud doesn't play too nicely with PostgreSQL. :(
 
@@ -100,6 +113,7 @@ Looking back I had an owncloud setup with MySQL before and cannot remember havin
 
 This little gem did the trick for me so that after executing the following command, my data had automatically been migrated over to MySQL and the owncloud configuration changed accordingly. As it's been so nice to me I thought, I leave it here for others coming up with the same question:
 
-```
+[source,bash]
+----
 sudo -u www-data /usr/bin/php5 /var/www/owncloud/console.php db:convert-type --all-apps mysql owncloud localhost owncloud
-```
+----

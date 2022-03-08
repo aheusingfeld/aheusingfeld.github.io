@@ -1,9 +1,15 @@
 ---
-layout: post
-title: Getting started with Clojure
-label: getting-started-with-clojure
-:revdate: 2013-08-06 23:15:27 +0200
-tags: [clojure, getting started, intellij, programming, innoq]
+layout: single
+title: "Getting started with Clojure"
+date: 2013-08-06T23:15:27+0200
+categories: 
+  - software development
+tags: 
+  - clojure
+  - software development
+  - intellij
+  - tipps
+
 ---
 
 ### Why Clojure?
@@ -22,7 +28,6 @@ The official clojure.org website has a Getting Started page [http://clojure.org/
 ... and additionally there's the official documentation at [http://clojure.org/documentation](http://clojure.org/documentation) ;-)
 
 
-pass::[more]
 
 
 **Though the official documentation is definitely the most complete, I personally liked this introduction much better. So I recommend you start here:**  [http://clojure-doc.org/articles/tutorials/introduction.html](http://clojure-doc.org/articles/tutorials/introduction.html)

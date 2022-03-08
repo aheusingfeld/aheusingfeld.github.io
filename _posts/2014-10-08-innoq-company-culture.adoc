@@ -1,9 +1,18 @@
-layout: single
-classes: wide
-title: Article on company culture at innoQ
-tags: culture, innoq, external, writing
 ---
-I just wanted to hint my German speaking readers to an article I wrote about the company culture at innoQ. 
-The article is on our company website and I'd really appreciate your feedback e.g. on writing style or content.
+layout: single
+title: "Article on company culture at innoQ"
+tags: culture, innoq, external, writing
+categories: 
+  - organisation
+tags: 
+  - culture 
+  - article 
+  - external
+  - innoq
+  - team management
+
+---
+
+For those of you interested in the impact of a company's culture, I wrote an article about the company culture at innoQ on their blog. The article is on the company website and I'd really appreciate your feedback e.g. on writing style and content.
 
 https://www.innoq.com/de/articles/2014/10/ein-jahr-nach-dem-kulturschock/

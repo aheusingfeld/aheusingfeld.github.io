@@ -1,11 +1,19 @@
 ---
 layout: single
-classes: wide
 title: "Article on Innovation Tokens at jaxenter"
-date: 2016-12-12 18:17:00 -0000
-categories: innovation business technology article innoq
-author: Alexander Heusingfeld
----
-= Article on Innovation Tokens at jaxenter
+date: 2016-12-12T18:17:00-0100
+categories: 
+  - organisation
+tags: 
+  - innovation 
+  - business technology 
+  - article 
+  - writing
+  - external
+  - innoq
+  - organisation
+  - team management
 
-The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik und Technologie-Überflutung" which was published in the German Business Technology magazine, has just been republished on jaxenter.de! You can find it at https://jaxenter.de/innovation-tokens-50334 in German language.
+---
+
+The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik und Technologie-Überflutung" which was published in the German "Business Technology" magazine, has just been republished on jaxenter.de! You can find it at https://jaxenter.de/innovation-tokens-50334 in German language.

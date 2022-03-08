@@ -1,14 +1,23 @@
 ---
-layout: post
+layout: single
 title: Postfix and /etc/hosts
-label: postfix_and_etc_hosts
-date: 2013-06-27
-revdate: 2013-06-27 23:00:00 +0200
-tags: [linux, postfix, kvm]
+date: 2013-06-27T23:00:00+0200
+categories: 
+  - hosting
+tags: 
+  - postfix 
+  - kvm
+  - ubuntu 
+  - linux
+  - self-hosting
+  - bugfix
+
 ---
+
 The following post is actually a note2self as I stumbled over this problem and wanted to create a reminder for myself and others with similar issues.
 
 ### Scenario
+
 "**master**" is the host machine for multiple virtual machines (in my case they are run and managed via "libvirt").
 One of these virtual machines is "**mail-host**" which holds a postfix mailserver. All of the machines are using an externally managed DNS server.
 The virtual machines are only available to the outside world via NAT. They don't have public IP addresses and therefore aren't known to the external DNS server.
@@ -17,9 +26,6 @@ The last point is actually the reason for this post:
 
 **How do I configure postfix to forward mails for "example.org" to another server if DNS states that localhost is "example.org"?**
 
-
-
-pass::[more]
 
 
 ### The Requirement 
