@@ -18,20 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "Overthinker's Maze"
-description: My 2 cents on technology, software architecture, and other concerns
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-name: Alexander Heusingfeld
-twitter_username: aheusingfeld
-github_username:  aheusingfeld
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 
-# Build settings
-remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
-locale: "en-US"
+locale: "en"
+title: "Overthinker's Maze"
 title_separator: "|"
+name: Alexander Heusingfeld
+description: My 2 cents on technology, software architecture, and other concerns
+url: "https://aheusingfeld.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+imageurl: /gfx
 repository: "aheusingfeld/aheusingfeld.github.io"
+
 date_format: "%Y-%m-%d"
 timezone: "Europe/Berlin"
 search: true
@@ -39,6 +38,10 @@ twitter:
   username: "aheusingfeld"
 author:
   name: "Alexander Heusingfeld"
+  email: alex@heusingfeld.de
+  uri: https://heusingfeld.de
+  github: aheusingfeld
+  xing: alexander.heusingfeld
   avatar: "/gfx/alexander-heusingfeld-portrait.png"
   bio: "Hi, I am Alex." # Note: Markdown is allowed
   location: "Hilden, Germany"
@@ -177,16 +180,9 @@ defaults:
       classes: wide
       author_profile: true
       read_time: true
-      comments: true
+      comments: false
       share: true
       related: true
-  # _pages
-  - scope:
-      path: "_pages"
-      type: pages
-    values:
-      layout: single
-      author_profile: true
 
 category_archive:
   type: liquid
