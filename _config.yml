@@ -27,7 +27,7 @@ twitter_username: aheusingfeld
 github_username:  aheusingfeld
 
 # Build settings
-theme: minimal-mistakes-jekyll
+remote_theme: mmistakes/minimal-mistakes
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 locale: "en-US"
 title_separator: "|"
@@ -60,6 +60,9 @@ footer:
     - label: "About me"
       icon: "fas fa-fw fa-info"
       url: "/about/"
+    - title: Imprint & Privacy
+      icon: "fas fa-fw fa-private"
+      url: /imprint/      
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/aheusingfeld"
@@ -69,29 +72,17 @@ footer:
     - label: "linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
-defaults:
-  # _posts
-  - scope:
-      path: "_posts"
-      type: posts
-    values:
-      show_date: true
-      read_time: true
-      layout: single
-      classes: wide
-      author_profile: true
-      read_time: true
-      comments: true
-      share: true
-      related: true
-
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/aheusingfeld"
+      
 # Plugins (previously gems:)
 plugins:
   - jekyll-asciidoc
-  - jekyll-feed
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
+  - jekyll-feed
   - jekyll-include-cache
 
 # mimic GitHub Pages with --safe
@@ -116,6 +107,7 @@ asciidoctor:
 
 paginate: 5
 paginate_path: "/page:num/"
+permalink: /:categories/:title/
 
 # Reading Files
 include:
@@ -173,22 +165,33 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
   
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+defaults:
+  # _posts
+  - scope:
+      path: "_posts"
+      type: posts
+    values:
+      show_date: true
+      read_time: true
+      layout: single
+      classes: wide
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: "_pages"
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
