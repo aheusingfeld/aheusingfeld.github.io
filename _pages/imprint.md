@@ -3,17 +3,22 @@ title: Impressum und Datenschutz
 permalink: /imprint/
 layout: single
 date: 2022-03-08
+share: false
+
 ---
 
 The following text has to be included in sites provided from Germany by German citicens, due to local data privacy laws. Therefore the following text is only in German language.
 
 ---
 
-# Anbieter und Verantwortliche Person
+# Anbieter und Verantwortliche Person nach § 6 Abs.2 MDStV
+
 Alexander Heusingfeld, Hoffeldstr. 83, D-40721 Hilden
 
 ## Kontakt
-Telefon: +49 151 423 07 591
+Telefon: +49   151
+ 42
+  3 07 591  
 e-Mail: alex_at_heusingfeld.de 
 
 # Datenschutzerklärung
