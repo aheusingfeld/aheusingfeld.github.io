@@ -44,19 +44,10 @@ author:
   uri: https://heusingfeld.de
   twitter: aheusingfeld
   github: aheusingfeld
-  linkedin: https://www.linkedin.com/in/alexander-heusingfeld-82008962/
-  xing: alexander.heusingfeld
-  instagram: aheusingfeld
+  linkedin: alexander-heusingfeld-82008962
   avatar: "/gfx/alexander-heusingfeld-portrait.png"
   bio: "Hi, I am Alex." # Note: Markdown is allowed
   location: "Hilden, Germany"
-  links:
-    - label: "linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/aheusingfeld"
 
       
 # Plugins (previously gems:)
