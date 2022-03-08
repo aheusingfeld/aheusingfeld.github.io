@@ -42,44 +42,22 @@ author:
   name: "Alexander Heusingfeld"
   email: alex@heusingfeld.de
   uri: https://heusingfeld.de
+  twitter: aheusingfeld
   github: aheusingfeld
+  linkedin: https://www.linkedin.com/in/alexander-heusingfeld-82008962/
   xing: alexander.heusingfeld
+  instagram: aheusingfeld
   avatar: "/gfx/alexander-heusingfeld-portrait.png"
   bio: "Hi, I am Alex." # Note: Markdown is allowed
   location: "Hilden, Germany"
   links:
-    - label: "About me"
-      icon: "fas fa-fw fa-info"
-      url: "/about/"
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/aheusingfeld"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/aheusingfeld"
-    - label: "linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
-footer:
-  links:
-    - label: "About me"
-      icon: "fas fa-fw fa-info"
-      url: "/about/"
-    - title: Imprint & Privacy
-      icon: "fas fa-fw fa-lock"
-      url: /imprint/      
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://twitter.com/aheusingfeld"
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/aheusingfeld"
     - label: "linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/aheusingfeld"
+
       
 # Plugins (previously gems:)
 plugins:
