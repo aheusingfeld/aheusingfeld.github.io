@@ -18,17 +18,19 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-theme: "mmistakes/minimal-mistakes@4.24.0"
-
+# remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+theme: minimal-mistakes-jekyll
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
 locale: "en"
-title: "Overthinker's Maze"
+title: "Overthinker's Thoughts"
 title_separator: "|"
 name: Alexander Heusingfeld
 description: My 2 cents on technology, software architecture, and other concerns
 url: "https://aheusingfeld.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 imageurl: /gfx
+breadcrumbs: false
 repository: "aheusingfeld/aheusingfeld.github.io"
 
 date_format: "%Y-%m-%d"
@@ -64,7 +66,7 @@ footer:
       icon: "fas fa-fw fa-info"
       url: "/about/"
     - title: Imprint & Privacy
-      icon: "fas fa-fw fa-private"
+      icon: "fas fa-fw fa-lock"
       url: /imprint/      
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
