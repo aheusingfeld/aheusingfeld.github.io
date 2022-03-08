@@ -55,13 +55,20 @@ author:
     - label: "linkedin"
       icon: "fab fa-fw fa-linkedin"
       url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
-main:
-  - title: Home
-    url: /
-  - title: About Me
-    url: /about/
-  - title: Imprint
-    url: /imprint/
+footer:
+  links:
+    - label: "About me"
+      icon: "fas fa-fw fa-info"
+      url: "/about/"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter-square"
+      url: "https://twitter.com/aheusingfeld"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/aheusingfeld"
+    - label: "linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/alexander-heusingfeld-82008962/"
 defaults:
   # _posts
   - scope:
