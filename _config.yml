@@ -30,7 +30,7 @@ description: My 2cts on software architecture, digitalisation, and other concern
 url: "https://aheusingfeld.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 imageurl: /gfx
-teaser: /assets/images/sonnenuntergang.png
+teaser: /assets/images/sonnenuntergang.jpg
 breadcrumbs: false
 repository: "aheusingfeld/aheusingfeld.github.io"
 
