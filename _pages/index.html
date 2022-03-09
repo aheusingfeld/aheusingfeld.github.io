@@ -1,10 +1,20 @@
 ---
 title: "Overthinker's Thoughts"
-layout: splash
+layout: home
 permalink: /
 author_profile: true
 share: true
 related: true
 ---
 
-Willkommen
+Hey there!
+
+
+<h2>Posts</h2>
+          <ul>
+          {% for post in site.posts %}
+            <li class="masthead__menu-item">
+              <a href="{{ post.url }}" {% if post.description %}title="{{ post.description }}"{% endif %}>{{ post.title }}</a>
+            </li>
+          {% endfor %}
+          </ul>
