@@ -50,7 +50,8 @@ author:
   bio: "Hi, I am Alex." # Note: Markdown is allowed
   location: "Hilden, Germany"
   links:
-    - title: "Talks @ Speakerdeck"
+    - label: "Talks @ Speakerdeck"
+      icon: "fab fa-fw fa-speakerdeck"
       url: https://speakerdeck.com/u/aheusingfeld
 
       
