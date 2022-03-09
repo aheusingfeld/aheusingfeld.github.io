@@ -1,10 +1,18 @@
 ---
-layout: post
+layout: single
 title: Enhancements for Mac OS X Finder.app
-label: enhancements-for-osx-finder
-date: 2012-11-26
-revdate: 2012-11-26 23:00:00 +0200
-tags: [os x, apple, finder, tips, applescript]
+date: 2012-11-26T23:00:00+0200
+categories: 
+  - productivity
+tags: 
+  - apple
+  - macos
+  - tips
+  - finder
+  - applescript
+  - software development
+  - productivity
+
 ---
 
 Today I'd like to share three AppleScripts with you which really enhanced my general usage of the Finder.app in Mac OS X. If you are not a Mac OS X user, you can stop reading here.
@@ -16,9 +24,6 @@ In general Finder.app lacks some features I really wanted to have, among these w
 * open the selected folder/ file's folder in TextWrangler
 
 Fortunately OS X comes along with a good editor for AppleScripts (not to mention Automator) which can be used to enhance the operating system's abilities.
-
-
-pass::[more]
 
 
 ### Copy the POSIX path

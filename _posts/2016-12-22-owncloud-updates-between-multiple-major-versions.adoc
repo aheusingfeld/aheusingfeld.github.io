@@ -1,6 +1,6 @@
 ---
 layout: single
-title: "Owncloud Updates between multiple Major Versions"
+title: "Owncloud 8 upgrade to 10: how to skip Major Versions"
 date: 2016-12-22T20:23:00-0100
 categories: 
   - hosting
@@ -14,18 +14,21 @@ tags:
 
 ---
 
-= Owncloud Updates between multiple Major Versions
+== The Problem
 
 In case you also come into this great situation "I upgraded my Ubuntu to 16.04 LTS and suddenly my owncloud installation is a mess", don't panic. I'm about to share my mess with you so you can pick the perils.
 
 It all started with Ubuntu 14.04LTS an innocent `do-release-upgrade` ... which didn't want to be aborted - twice. So it convinced to "yes, ok, let's do it now...". After the normal upgrade process and a reboot my system was back and working fine - I thought, until I noticed mails from my monitoring system, that the owncloud webUI wasn't available.
 
-Double checking confirmed "yes, the webUI is not available". And even after the hard part of fixing the nginx configuration - yes, I'm running owncloud behind nginx - and manually installing php7.0-fpm - did I mention Ubuntu 16.04 replaced php5 with php7 EXCEPT FOR THE FPM PART?! -, all websites worked, but Owncloud wouldn't! 
+== Initial analysis
+
+A quick check confirmed "yes, the webUI is not available". And even after the hard part of fixing the nginx configuration - yes, I'm running owncloud behind nginx - and manually installing php7.0-fpm - did I mention Ubuntu 16.04 replaced php5 with php7 EXCEPT FOR THE FPM PART?! -, all websites worked, but Owncloud wouldn't! 
 Taking a very close look into nginx error.log and I suddenly noticed that the index.php was missing from /var/www/owncloud! In fact, it seems during the Ubuntu Upgrade process for an unreproducible reason *all .php files in /var/www/owncloud got deleted*! But hey, no worries, let's `apt-get install --reinstall`! I double checked that my sources list was correctly pointing to owncloud stable for Ubuntu 16.04 (see https://download.owncloud.org/download/repositories/stable/owncloud/) and `apt-get` installed owncloud 9.1.3 on my machine without mentioning any problems. 
 
-Unfortunately my monitoring system was still unhappy. "Ah, of course, the 'manual upgrade' process", I thought, and ran `sudo -u www-data /var/www/owncloud/occ upgrade` only to get this wonderful output
+Unfortunately my monitoring system was still unhappy. "Ah, of course, the 'manual upgrade' process", I thought, and ran `sudo -u www-data /var/www/owncloud/occ upgrade` only to get this wonderful output:
 
-```
+[source,bash]
+----
 ownCloud or one of the apps require upgrade - only a limited number of commands are available
 You may use your browser or the occ upgrade command to do the upgrade
 Set log level to debug
@@ -33,21 +36,27 @@ Exception: Updates between multiple major versions and downgrades are unsupporte
 Update failed
 Maintenance mode is kept active
 Reset log level
-```
-Opening the webUI had the same error message for me but additionally included a link to the immensely helpful https://central.owncloud.org/t/updates-between-multiple-major-versions-are-unsupported/815 which pointed out, that I had indeed skipped the 9.0 version!
+----
+
+When I opened the webUI, it showed the same error message. But additionally it included a link to the immensely helpful https://central.owncloud.org/t/updates-between-multiple-major-versions-are-unsupported/815 which pointed out that I had indeed jumped from Owncloud 8 directly to Owncloud 10 - I skipped the 9.0 version!
+
+== 
+Ok, let's cut this short: It occurred to me that the owncloud team has no (documented) support for such a situation - at least I don't consider https://doc.owncloud.org/server/9.0/admin_manual/maintenance/package_upgrade.html#upgrading-across-skipped-releases helpful at all! I assume your next step was also to downgrade owncloud to the next minor version of your current release and by trying this, you jumped into the next fun situation: the `owncloud-server` package has a dependency on PHP5! IF SOMEONE CAN TELL ME WHY THIS IS CONSIDERED REASONABLE, I'M REALLY CURIOUS?
 
 
-Ok, let's cut this short: It occurred to me that the owncloud team has no (documented) support for such a situation - at least I don't consider https://doc.owncloud.org/server/9.0/admin_manual/maintenance/package_upgrade.html#upgrading-across-skipped-releases helpful at all! I assume your next step was also to downgrade owncloud to the next minor version of your current release and by trying this, you jumped into the next fun situation that the `owncloud-server` package has a dependency on PHP5. IF SOMEONE CAN TELL ME WHY THIS IS CONSIDERED REASONABLE, I'M REALLY CURIOUS?
+== Searching the web for others with the same problem
 
 Anyway after reading through  http://askubuntu.com/questions/762221/ubuntu-16-04-upgrade-killed-owncloud-and-many-other-things-but-right-now-i-n I finally came to this post  http://askubuntu.com/questions/767158/ubuntu-16-04-cannot-install-owncloud-server which has a very interesting hint: The `owncloud-files` package has almost no depencies, is thus easy to downgrade and includes the updater! WOOHOO, JACKPOT!
 
 So, I started by modifying my `/etc/apt/sources.list.d/owncloud.list` to Ubuntu 8.2
-```
-sh -c "echo 'deb http://download.owncloud.org/download/repositories/8.2/Ubuntu_16.10/ /' > /etc/apt/sources.list.d/owncloud.list"
-```
+
+    sh -c "echo 'deb http://download.owncloud.org/download/repositories/8.2/Ubuntu_16.10/ /' > /etc/apt/sources.list.d/owncloud.list"
+
 and then forcing the downgrade and step-by-step upgrade by running
 
-```
+[source,bash]
+----
+
 $ sudo apt-get update && sudo apt-get install owncloud-files=8.2.9-1.1
 (...)
 $ sudo -u www-data /var/www/owncloud/occ upgrade
@@ -62,12 +71,16 @@ $ sudo apt-get update && sudo apt-get upgrade
 (...)
 $ sudo -u www-data /var/www/owncloud/occ upgrade
 (...)
-```
+----
 
 It took a while but worked pretty well. So in the end I'd like to thank John Orion for sharing his idea about `owncloud-files` and the owncloud team for providing this option - even though you don't mention it on the pages where people are seeking for help. I hope this is helpful for others, struggling with upgrades.
+
+== Summary and remaining issues
 
 Now I'm on to fix the remaining issues: *Currently I'm facing a situation where all requests with `index.php` are returned with a HTTP302 redirect without `index.php` - which of course fails* (e.g. `/cloud/index.php/login` is redirected to `/cloud/login`). NOTE: I'm running owncloud behind nginx with a contextroot other than `/owncloud` - as if I was asking for trouble, right? I'll update this blog, in case I stumble upon something.
 
 If you find anything to comment, optimize or fix about this, please leave me a github issue. Always think "If I have this issue, someone else might sooner or later have it, too" - and you can help that someone. Thanks a lot!
 
-UPDATE: For those who want to follow along, I opened a Github issue under https://github.com/owncloud/core/issues/26869 and provided a pull-request for the remaining necessary changes here https://github.com/owncloud/core/pull/26882
+=== UPDATE
+For those who want to follow along, I opened a Github issue under https://github.com/owncloud/core/issues/26869 and provided a pull-request for the remaining necessary changes here https://github.com/owncloud/core/pull/26882
+

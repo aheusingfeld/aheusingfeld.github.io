@@ -1,19 +1,23 @@
 ---
-layout: post
+layout: single
 title: Mac OS X setup tips & tricks
-label: osx-setup-tips+tricks
-date: 2013-03-20
-revdate: 2013-03-20 23:00:00 +0200
-tags: [os x, apple, setup, apps, tips]
+date: 2013-03-20T23:00:00+0200
+categories: 
+  - productivity
+tags: 
+  - apple
+  - macos
+  - tips
+  - apps
+  - software development
+  - productivity
+
 ---
 
 This post is kind of a reminder for myself when re-setting up my MacBook on which tools and applications I found to be useful for daily business. Feel free to comment, make suggestions or even send in pull-requests if you have different recommendations. :)
 
 
 ### Applications
-
-pass::[more]
-
 
 #### System
 
@@ -46,9 +50,7 @@ pass::[more]
  * Further more -> [http://www.quicklookplugins.com/](http://www.quicklookplugins.com/)
 * Quicktime Codecs
  * Flip4Mac [http://www.telestream.net/flip4mac/overview.htm](http://www.telestream.net/flip4mac/overview.htm)
- * WMA and WMV codec for Quicktime
  * XVid [http://www.xvid.org/Software.83.0.html](http://www.xvid.org/Software.83.0.html)
- * DivX
  * MPEG2 -> Apple-QuickTimeMPEG2-Codec (unsupported since OS X Lion)
  
 #### General

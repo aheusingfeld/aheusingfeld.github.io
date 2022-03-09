@@ -1,18 +1,23 @@
 ---
-layout: post
+layout: single
 title: Ubuntu and Java on Nexus7
-label: ubuntu+java-on-Nexus7
-date: 2012-11-30
-revdate: 2012-11-30 23:00:00 +0200
-tags: [java, ubuntu, nexus7, embedded, linux, android]
+date: 2012-11-30T23:00:00+0200
+categories: 
+  - software development
+tags: 
+  - software development
+  - java
+  - glassfish
+  - ubuntu
+  - linux
+  - android
+  - debugging
+
 ---
 
 In this blog post I describe how to setup [Ubuntu Linux](http://www.ubuntu.org/) and [Oracle Java](http://java.oracle.net/) on my [newly acquired Google Nexus7 device](https://play.google.com/store/devices/details?id=nexus_7_16gb). This shall be the foundation to checkout the things you can do with [JavaFX](http://www.oracle.com/technetwork/java/javafx/overview/index.html) on a Tablet computer.
 
 My environment is a Macbook Pro (MBP) running on OS X 10.8 (Mountain Lion). The Nexus 7 (in my case the 16gb version) is attached to the MBP via its USB cable.
-
-
-pass::[more]
 
 
 ### Download images for your Nexus

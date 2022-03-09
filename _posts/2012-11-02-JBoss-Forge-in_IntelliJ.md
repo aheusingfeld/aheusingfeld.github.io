@@ -1,19 +1,23 @@
 ---
-layout: post
+layout: single
 title: JBoss Forge in IntelliJ IDEA
-label: jboss-forge-in-intellij
-date: 2012-11-03
-revdate: 2012-11-03 23:00:00 +0200
-tags: [java, jboss, forge, bash, intellij, tool, java ee]
+date: 2012-11-03T23:00:00+0200
+categories: 
+  - software development
+tags: 
+  - java
+  - macos
+  - intellij
+  - jboss forge
+  - bash
+  - open source
+  - organisation
+
 ---
 
 At this year's JavaOne I attended a [talk](https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=10659) by Marius Bogoevici ([@mariusbogoevici](http://twitter.com/mariusbogoevici)) and was once again pointed at the JBoss Forge project. Last time I took a look at Forge it was still called Seam Forge which was about a year ago. It seriously matured since then.
 
 [JBoss Forge](http://forge.jboss.org/) is a shell for rapid-application development at a command-line level. It supports developers setting up Java applications by reducing the need to write boilerplate code. In case you ever have to start a project from scratch you should really take a glance at JBoss Forge as it makes life easier!
-
-
-pass::[more]
-
 
 ### Daily usage
 As I'm using Forge on a regular basis, I often see myself switching between the IDE and the command line which seems quite inefficient. There is a neat integration for Eclipse but unfortunately there isn't any integration into IDEs like Netbeans or my favourite IntelliJ IDEA.

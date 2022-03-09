@@ -1,20 +1,25 @@
 ---
-layout: post
+layout: single
 title: SpringRoo - Howto translate Java exceptions to user-friendly error messages
-label: springroo-user-friendly-exceptions
-date: 2011-10-24
-revdate: 2011-10-24 23:00:00 +0200
-tags: [java, spring, roo, aspectj, exceptions, tips]
+date: 2011-10-24T23:00:00+0200
+categories: 
+  - software development
+tags: 
+  - software development
+  - java
+  - spring
+  - spring roo
+  - aspectj
+  - tips
+  - photooapp
+  - open source
+
 ---
 
 <h3>Introduction</h3>
 <p>This blog post belongs to a tutorial series on <a href="http://www.springsource.org/roo/why">SpringRoo</a> 1.2.0 which uses the sample application "<a href="https://github.com/aheusingfeld/photooapp/">photooapp</a>" to provide practical examples.<br />Within this blog post I will try to explain how you can configure your SpringRoo application to translate well-known exceptions to user-friendly error messages.<br />By default SpringRoo's exception handling is very basic meaning the technical exception message is directly presented to the user. Our aim is to provide the user with human-readable error messages he (most probably) can understand and react upon.  <br /></p>
 <h3>Basics: Translations in Spring MVC</h3>
 <p>First of all we need to make ourselves familiar with the translation process in Spring MVC. To translate any given String to the currently set browser locale, Spring MVC uses so called "message codes". These codes are defined in property files which are located in "src/main/webapp/WEB-INF/i18n/application.properties". For each supported locale there will be a separate application.properties file, e.g. application_de.properties for german translations of the message codes. The "application.properties" file must always be used as the fallback reference.<br /></p>
-
-
-
-pass::[more]
 
 
 <h3>Adding a sample Translation</h3>
