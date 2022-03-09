@@ -1,7 +1,7 @@
 main:
-  - title: Posts
+  - title: Blog
     url: /posts
+  - title: Talks
+    url: /categories/#talks
   - title: About Me
     url: /about
-  - title: Imprint & Privacy
-    url: /imprint
