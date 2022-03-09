@@ -44,11 +44,13 @@ author:
   uri: https://heusingfeld.de
   twitter: aheusingfeld
   github: aheusingfeld
-  speakerdeck: aheusingfeld
   linkedin: alexander-heusingfeld-82008962
   avatar: "/gfx/alexander-heusingfeld-portrait.png"
   bio: "Hi, I am Alex." # Note: Markdown is allowed
   location: "Hilden, Germany"
+  links:
+    - title: "Talks @ Speakerdeck"
+      url: https://speakerdeck.com/u/aheusingfeld
 
       
 # Plugins (previously gems:)
