@@ -40,7 +40,8 @@ Reset log level
 
 When I opened the webUI, it showed the same error message. But additionally it included a link to the immensely helpful https://central.owncloud.org/t/updates-between-multiple-major-versions-are-unsupported/815 which pointed out that I had indeed jumped from Owncloud 8 directly to Owncloud 10 - I skipped the 9.0 version!
 
-== 
+== Implicit dependency
+
 Ok, let's cut this short: It occurred to me that the owncloud team has no (documented) support for such a situation - at least I don't consider https://doc.owncloud.org/server/9.0/admin_manual/maintenance/package_upgrade.html#upgrading-across-skipped-releases helpful at all! I assume your next step was also to downgrade owncloud to the next minor version of your current release and by trying this, you jumped into the next fun situation: the `owncloud-server` package has a dependency on PHP5! IF SOMEONE CAN TELL ME WHY THIS IS CONSIDERED REASONABLE, I'M REALLY CURIOUS?
 
 
