@@ -26,10 +26,11 @@ locale: "en"
 title: "Overthinker's Thoughts"
 title_separator: "|"
 name: Alexander Heusingfeld
-description: My 2 cents on technology, software architecture, and other concerns
+description: My 2cts on software architecture, digitalisation, and other concerns
 url: "https://aheusingfeld.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 imageurl: /gfx
+teaser: /assets/images/sonnenuntergang.png
 breadcrumbs: false
 repository: "aheusingfeld/aheusingfeld.github.io"
 
