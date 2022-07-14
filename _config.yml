@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 # remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-theme: minimal-mistakes-jekyll
+theme: jekyll-theme-so-simple
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 locale: "en"
