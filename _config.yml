@@ -20,7 +20,7 @@
 
 # remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 theme: jekyll-theme-so-simple
-minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+skin: "/assets/css/skins/default.css"
 
 locale: "en"
 title: "Overthinker's Thoughts"
@@ -53,7 +53,8 @@ author:
     - label: "Talks @ Speakerdeck"
       icon: "fab fa-fw fa-speakerdeck"
       url: https://speakerdeck.com/u/aheusingfeld
-
+feed:
+  path: feed.xml
       
 # Plugins (previously gems:)
 plugins:
@@ -152,7 +153,7 @@ defaults:
     values:
       show_date: true
       read_time: true
-      layout: single
+      layout: post
       classes: wide
       author_profile: true
       read_time: true
