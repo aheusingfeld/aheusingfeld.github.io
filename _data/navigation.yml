@@ -1,6 +1,8 @@
 - title: Blog
-  url: /posts
+  url: /posts/
 - title: Talks
   url: /categories/talks
+- title: Tags
+  url: /tags/
 - title: About Me
-  url: /about
+  url: /about/
