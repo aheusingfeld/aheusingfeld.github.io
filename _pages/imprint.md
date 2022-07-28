@@ -1,7 +1,7 @@
 ---
 title: Impressum und Datenschutz
 permalink: /imprint/
-layout: single
+layout: page
 date: 2022-03-08
 share: false
 
