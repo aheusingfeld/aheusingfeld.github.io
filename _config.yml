@@ -21,7 +21,11 @@
 # remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 theme: jekyll-theme-so-simple
 skin: "/assets/css/skins/default.css"
-
+google_fonts:
+  - name: "Source Sans Pro"
+    weights: "400,400i,700,700i"
+  - name: "Lora"
+    weights: "400,400i,700,700i"
 locale: "en"
 title: "Overthinker's Thoughts"
 title_separator: "|"
@@ -35,7 +39,7 @@ repository: "aheusingfeld/aheusingfeld.github.io"
 
 date_format: "%Y-%m-%d"
 timezone: "Europe/Berlin"
-search: true
+search: false
 author:
   name: "Alexander Heusingfeld"
   email: alex@heusingfeld.de
