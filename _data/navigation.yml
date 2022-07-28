@@ -1,7 +1,6 @@
-main:
-  - title: Blog
-    url: /posts
-  - title: Talks
-    url: /categories/talks
-  - title: About Me
-    url: /about
+- title: Blog
+  url: /posts
+- title: Talks
+  url: /categories/talks
+- title: About Me
+  url: /about
