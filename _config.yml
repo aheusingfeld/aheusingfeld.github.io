@@ -31,14 +31,11 @@ url: "https://aheusingfeld.github.io" # the base hostname & protocol for your si
 baseurl: "" # the subpath of your site, e.g. /blog
 imageurl: /gfx
 teaser: /assets/images/sonnenuntergang.jpg
-breadcrumbs: false
 repository: "aheusingfeld/aheusingfeld.github.io"
 
 date_format: "%Y-%m-%d"
 timezone: "Europe/Berlin"
 search: true
-twitter:
-  username: "aheusingfeld"
 author:
   name: "Alexander Heusingfeld"
   email: alex@heusingfeld.de
@@ -46,11 +43,11 @@ author:
   twitter: aheusingfeld
   github: aheusingfeld
   linkedin: alexander-heusingfeld-82008962
-  avatar: "/gfx/alexander-heusingfeld-portrait.png"
-  bio: "Hi, I am Alex." # Note: Markdown is allowed
+  picture: "/gfx/alexander-heusingfeld-portrait.png"
+  bio: "...thinking about it... ;)" # Note: Markdown is allowed
   location: "Hilden, Germany"
   links:
-    - label: "Talks @ Speakerdeck"
+    - title: "Talks @ Speakerdeck"
       icon: "fab fa-fw fa-speakerdeck"
       url: https://speakerdeck.com/u/aheusingfeld
 feed:
