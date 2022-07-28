@@ -165,3 +165,10 @@ tag_archive:
   type: liquid
   path: /tags/
 
+footer_links:
+  - title: Feed
+    url: atom.xml
+    icon: fas fa-rss-square
+  - title: Imprint & Privacy
+    url: /imprint
+    icon: fas fa-imprint
