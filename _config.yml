@@ -33,6 +33,7 @@ name: Alexander Heusingfeld
 description: My 2cts on software architecture, digitalisation, and other concerns
 url: "https://aheusingfeld.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
+logo: "/assets/images/goldstift-logo.png"
 imageurl: /gfx
 teaser: /assets/images/sonnenuntergang.jpg
 repository: "aheusingfeld/aheusingfeld.github.io"
