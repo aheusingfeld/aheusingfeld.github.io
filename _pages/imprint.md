@@ -11,18 +11,26 @@ The following text has to be included in sites provided from Germany by German c
 
 ---
 
+# Präambel
+
+Mit der folgenden Datenschutzerklärung möchten wir Sie darüber aufklären, welche Arten Ihrer personenbezogenen Daten (nachfolgend auch kurz als "Daten“ bezeichnet) wir zu welchen Zwecken und in welchem Umfang verarbeiten. Die Datenschutzerklärung gilt für alle von uns durchgeführten Verarbeitungen personenbezogener Daten, sowohl im Rahmen der Erbringung unserer Leistungen als auch insbesondere auf unseren Webseiten.
+
+Die verwendeten Begriffe sind nicht geschlechtsspezifisch.
+
+Stand: 9. September 2023
+
 # Anbieter und Verantwortliche Person nach § 6 Abs.2 MDStV
 
 Alexander Heusingfeld, Hoffeldstr. 83, D-40721 Hilden
 
 ## Kontakt
-Telefon: +49   151
- 42
-  3 07 591  
-e-Mail: alex_at_heusingfeld.de 
+
+e-Mail: blog _at_ heusingfeld _punkt_ de 
 
 # Datenschutzerklärung
+
 ## Geltungsbereich
+
 Diese Datenschutzerklärung klärt Nutzer über die Art, den Umfang und Zwecke der Erhebung und Verwendung personenbezogener Daten durch den vorstehend genannten Anbieter Alexander Heusingfeld auf dieser Website (im folgenden "Angebot") auf.
 
 Die rechtlichen Grundlagen des Datenschutzes finden sich in der Datenschutzgrundverordnung (DSGVO), dem Bundesdatenschutzgesetz (BDSG) und dem Telemediengesetz (TMG).
@@ -41,10 +49,10 @@ Der Anbieter behält sich jedoch vor, die Protokolldaten nachträglich zu überp
 Bei der Kontaktaufnahme mit dem Anbieter (zum Beispiel per Kontaktformular oder E-Mail) werden die Angaben des Nutzers zwecks Bearbeitung der Anfrage sowie für den Fall, dass Anschlussfragen entstehen, gespeichert.
 
 ## Kommentare und Beiträge
-Diese Site enthält keine Kommentarfunktion, Nutzer können daher keine Beiträge hinterlassen.
+Diese Site enthält keine Kommentarfunktion, Nutzer können daher keine Beiträge hinterlassen. Wenn Sie Kommentare hinterlassen möchten, schreiben Sie mir oder nutzen Sie die Funktion bei LinkedIn. Herzlichen Dank.
 
 ## Analyse, Tracking und Cookies
-Dieses Angebot benutzt KEINE Tracking Werkzeuge (wie beispielsweise Google-Analytics), und verwendet keine Cookies.
+Dieses Angebot benutzt KEINE Tracking Werkzeuge (wie beispielsweise Google-Analytics) und verwendet keine Cookies.
 
 ## Haftung für Links
 Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.
@@ -55,7 +63,7 @@ Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unt
 
 Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
 
-## Datenschutzerklärung für die Nutzung von Twitter
+## Datenschutzerklärung für die Nutzung von Twitter/X
 Auf unseren Seiten wird auf Funktionen des Dienstes Twitter weitergeleitet. Diese Funktionen werden angeboten durch die Twitter Inc., 1355 Market Street, Suite 900, San Francisco, CA 94103, USA. Durch das Benutzen von Twitter werden die von Ihnen besuchten Webseiten mit Ihrem Twitter-Account verknüpft und anderen Nutzern bekannt gegeben. Dabei werden auch Daten an Twitter übertragen. Wir weisen darauf hin, dass wir als Anbieter der Seiten keine Kenntnis vom Inhalt der übermittelten Daten sowie deren Nutzung durch Twitter erhalten. Weitere Informationen hierzu finden Sie in der Datenschutzerklärung von Twitter unter http://twitter.com/privacy.
 
 Ihre Datenschutzeinstellungen bei Twitter können Sie in den Konto-Einstellungen unter http://twitter.com/account/settings ändern.
