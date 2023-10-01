@@ -49,14 +49,6 @@ author:
   linkedin: alexander-heusingfeld-82008962
 #  picture: "/gfx/alex-blog.jpg"
 #  bio: "...thinking about it... ;)" # Note: Markdown is allowed
-  location: "Hilden, Germany"
-  links:
-    - title: "Talks @ Speakerdeck"
-      icon: "fab fa-fw fa-slideshare"
-      url: https://speakerdeck.com/u/aheusingfeld
-    - title: "Mastodon"
-      icon: fas fa-user-circle-o
-      url: https://mstdn.social/@aheusingfeld
 feed:
   path: feed.xml
       
@@ -156,9 +148,8 @@ defaults:
       type: posts
     values:
       show_date: true
-      read_time: true
-      layout: post
-      classes: wide
+      layout: single
+#      classes: wide
       author_profile: true
       read_time: true
       comments: false
@@ -179,3 +170,9 @@ footer_links:
   - title: Imprint & Privacy
     url: /imprint
     icon: fas fa-legal
+  - label: "Talks @ Speakerdeck"
+    icon: "fab fa-fw fa-slideshare"
+    url: https://speakerdeck.com/u/aheusingfeld
+  - label: "Mastodon"
+    icon: fas fa-user-circle-o
+    url: https://mstdn.social/@aheusingfeld
