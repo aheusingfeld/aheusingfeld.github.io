@@ -30,7 +30,7 @@ locale: "en"
 title: "Overthinker's Thoughts"
 title_separator: "|"
 name: Alexander Heusingfeld
-description: My 2cts on software architecture, digitalisation, and other concerns
+description: My 2cts on software architecture, digital transformation, and other concerns
 url: "https://aheusingfeld.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
 logo: "/assets/images/goldstift-logo.png"
@@ -45,10 +45,10 @@ author:
   name: "Alexander Heusingfeld"
   email: alex@heusingfeld.de
   uri: https://heusingfeld.de
-  twitter: aheusingfeld
+  mastodon: @aheusingfeld@mstdn.social
   github: aheusingfeld
   linkedin: alexander-heusingfeld-82008962
-  picture: "/gfx/alexander-heusingfeld-portrait.png"
+  picture: "/gfx/alex-blog.jpg"
   bio: "...thinking about it... ;)" # Note: Markdown is allowed
   location: "Hilden, Germany"
   links:
@@ -172,7 +172,7 @@ tag_archive:
 
 footer_links:
   - title: Feed
-    url: atom.xml
+    url: feed.xml
     icon: fas fa-rss-square
   - title: Imprint & Privacy
     url: /imprint
