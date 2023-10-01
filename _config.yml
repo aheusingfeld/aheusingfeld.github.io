@@ -45,7 +45,6 @@ author:
   name: "Alexander Heusingfeld"
   email: alex@heusingfeld.de
   uri: https://heusingfeld.de
-  mastodon: @aheusingfeld@mstdn.social
   github: aheusingfeld
   linkedin: alexander-heusingfeld-82008962
   picture: "/gfx/alex-blog.jpg"
@@ -55,6 +54,8 @@ author:
     - title: "Talks @ Speakerdeck"
       icon: "fab fa-fw fa-speakerdeck"
       url: https://speakerdeck.com/u/aheusingfeld
+    - title: "Mastodon"
+      url: https://mstdn.social/@aheusingfeld
 feed:
   path: feed.xml
       
