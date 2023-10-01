@@ -33,7 +33,7 @@ name: Alexander Heusingfeld
 description: My 2cts on software architecture, digital transformation, and other concerns
 url: "https://aheusingfeld.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 baseurl: "" # the subpath of your site, e.g. /blog
-logo: "/assets/images/goldstift-logo.png"
+logo: "/gfx/alex-blog.jpg"
 imageurl: /gfx
 teaser: /assets/images/sonnenuntergang.jpg
 repository: "aheusingfeld/aheusingfeld.github.io"
@@ -47,14 +47,15 @@ author:
   uri: https://heusingfeld.de
   github: aheusingfeld
   linkedin: alexander-heusingfeld-82008962
-  picture: "/gfx/alex-blog.jpg"
-  bio: "...thinking about it... ;)" # Note: Markdown is allowed
+#  picture: "/gfx/alex-blog.jpg"
+#  bio: "...thinking about it... ;)" # Note: Markdown is allowed
   location: "Hilden, Germany"
   links:
     - title: "Talks @ Speakerdeck"
-      icon: "fab fa-fw fa-speakerdeck"
+      icon: "fab fa-fw fa-slideshare"
       url: https://speakerdeck.com/u/aheusingfeld
     - title: "Mastodon"
+      icon: fas fa-user-circle-o
       url: https://mstdn.social/@aheusingfeld
 feed:
   path: feed.xml
@@ -173,8 +174,8 @@ tag_archive:
 
 footer_links:
   - title: Feed
-    url: feed.xml
+    url: /feed.xml
     icon: fas fa-rss-square
   - title: Imprint & Privacy
     url: /imprint
-    icon: fas fa-imprint
+    icon: fas fa-legal
