@@ -181,10 +181,10 @@ footer_links:
     icon: fas fa-rss-square
   - title: Imprint & Privacy
     url: /imprint
-    icon: fas fa-legal
+    icon: fas fa-info
   - label: "Talks @ Speakerdeck"
     icon: "fab fa-fw fa-slideshare"
     url: https://speakerdeck.com/u/aheusingfeld
   - label: "Mastodon"
-    icon: fas fa-user-circle-o
+    icon: fas fa-user
     url: https://mstdn.social/@aheusingfeld
