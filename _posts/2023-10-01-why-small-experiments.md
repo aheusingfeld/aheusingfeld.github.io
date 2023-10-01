@@ -7,13 +7,9 @@ categories:
 tags: 
   - organizational development
   - systems thinking
-  - business
   - innovation
-  - mindset
   - change management
-  - complexity
-  - lean methodologies
-  
+  - complexity 
 ---
 
 ## What's in it for me as a reader
