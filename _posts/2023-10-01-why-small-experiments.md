@@ -7,7 +7,6 @@ categories:
 tags: 
   - organizational development
   - systems thinking
-  - architecture
   - business
   - innovation
   - mindset
