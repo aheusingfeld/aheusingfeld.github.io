@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>Migrate Owncloud from PostgreSQL to MySQL</title>
+    <meta name="description" content="My 2cts on software architecture, digital transformation, and other concerns">
+    <link rel="canonical" href="https://aheusingfeld.github.io/_posts/2015-01-31-migrate-owncloud/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  migrate-owncloud-from-postgresql-to-mysql">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Migrate Owncloud from PostgreSQL to MySQL
+</h1>
+        
+        
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <div class="paragraph">
+<p>I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.</p>
+</div>
+<div class="paragraph">
+<p>Quite often I noticed the following error in my <code>owncloud.log</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>{"app":"index","message":"Doctrine\\DBAL\\DBALException: An exception occurred while executing 'SELECT \"fileid\", \"storage\", \"path\", \"parent\", \"name\", \"mimetype\", \"mimepart\", \"size\", \"mtime\",\n\t\t\t\t\t   \"storage_mtime\", \"encrypted\", \"unencrypted_size\", \"etag\", \"permissions\"\n\t\t\t\tFROM \"oc_filecache\" WHERE \"storage\" = ? AND \"path_hash\" = ?':\n\nSQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block","level":4,"time":"2014-11-26T15:28:16+00:00"}
+{"app":"PHP","message":"Cannot modify header information - headers already sent at \/var\/www\/owncloud\/lib\/private\/response.php#83","level":3,"time":"2014-11-26T15:28:16+00:00"}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Later on I found out that it occurred when owncloud tried to scan and index the files in the data folder. The way I got to know this is, I noticed that some of the files I uploaded were not displayed in owncloud but were present on the filesystem. So when I ran</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">sudo -u www-data /usr/bin/php5 /var/www/owncloud/occ files:scan ahe -v</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>the command also ended in this error message:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">  [Doctrine\DBAL\DBALException]
+  An exception occurred while executing 'SELECT "fileid", "storage", "path", "parent", "name", "mimetype", "mimepart", "size", "mtime",
+  					   "storage_mtime", "encrypted", "unencrypted_size", "etag", "permissions"
+  				FROM "oc_filecache" WHERE "storage" = ? AND "path_hash" = ?':
+
+  SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+
+
+
+Exception trace:
+ () at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:47
+ Doctrine\DBAL\DBALException::driverExceptionDuringQuery() at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:140
+ Doctrine\DBAL\Statement-&gt;execute() at /var/www/owncloud/lib/private/db/statementwrapper.php:63
+ OC_DB_StatementWrapper-&gt;execute() at /var/www/owncloud/lib/private/db.php:235
+ OC_DB::executeAudited() at /var/www/owncloud/lib/private/files/cache/cache.php:128
+ OC\Files\Cache\Cache-&gt;get() at /var/www/owncloud/lib/private/files/cache/homecache.php:62
+ OC\Files\Cache\HomeCache-&gt;get() at /var/www/owncloud/lib/private/files/cache/cache.php:367
+ OC\Files\Cache\Cache-&gt;remove() at /var/www/owncloud/lib/private/files/cache/scanner.php:163
+ OC\Files\Cache\Scanner-&gt;removeFromCache() at /var/www/owncloud/lib/private/files/cache/scanner.php:272
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:207
+ OC\Files\Cache\Scanner-&gt;scan() at /var/www/owncloud/lib/private/files/utils/scanner.php:125
+ OC\Files\Utils\Scanner-&gt;scan() at /var/www/owncloud/apps/files/command/scan.php:57
+ OCA\Files\Command\Scan-&gt;scanFiles() at /var/www/owncloud/apps/files/command/scan.php:81
+ OCA\Files\Command\Scan-&gt;execute() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Command/Command.php:244
+ Symfony\Component\Console\Command\Command-&gt;run() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:897
+ Symfony\Component\Console\Application-&gt;doRunCommand() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:191
+ Symfony\Component\Console\Application-&gt;doRun() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:121
+ Symfony\Component\Console\Application-&gt;run() at /var/www/owncloud/console.php:43
+ require_once() at /var/www/owncloud/occ:11
+
+
+
+
+
+  [PDOException]
+  SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+
+
+
+Exception trace:
+ () at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:138
+ PDOStatement-&gt;execute() at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:138
+ Doctrine\DBAL\Statement-&gt;execute() at /var/www/owncloud/lib/private/db/statementwrapper.php:63
+ OC_DB_StatementWrapper-&gt;execute() at /var/www/owncloud/lib/private/db.php:235
+ OC_DB::executeAudited() at /var/www/owncloud/lib/private/files/cache/cache.php:128
+ OC\Files\Cache\Cache-&gt;get() at /var/www/owncloud/lib/private/files/cache/homecache.php:62
+ OC\Files\Cache\HomeCache-&gt;get() at /var/www/owncloud/lib/private/files/cache/cache.php:367
+ OC\Files\Cache\Cache-&gt;remove() at /var/www/owncloud/lib/private/files/cache/scanner.php:163
+ OC\Files\Cache\Scanner-&gt;removeFromCache() at /var/www/owncloud/lib/private/files/cache/scanner.php:272
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:207
+ OC\Files\Cache\Scanner-&gt;scan() at /var/www/owncloud/lib/private/files/utils/scanner.php:125
+ OC\Files\Utils\Scanner-&gt;scan() at /var/www/owncloud/apps/files/command/scan.php:57
+ OCA\Files\Command\Scan-&gt;scanFiles() at /var/www/owncloud/apps/files/command/scan.php:81
+ OCA\Files\Command\Scan-&gt;execute() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Command/Command.php:244
+ Symfony\Component\Console\Command\Command-&gt;run() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:897
+ Symfony\Component\Console\Application-&gt;doRunCommand() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:191
+ Symfony\Component\Console\Application-&gt;doRun() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:121
+ Symfony\Component\Console\Application-&gt;run() at /var/www/owncloud/console.php:43
+ require_once() at /var/www/owncloud/occ:11
+
+
+files:scan [--all] [user_id1] ... [user_idN]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As this is a PostgreSQL error, I searched the owncloud forums for other people&#8217;s experience with owncloud + PostgreSQL. Unfortunately it seems that owncloud doesn&#8217;t play too nicely with PostgreSQL. :(</p>
+</div>
+<div class="paragraph">
+<p>Looking back I had an owncloud setup with MySQL before and cannot remember having had any issues with it. So I decided to take the easy way and find out how to migrate my owncloud data from PostgreSQL to MySQL. This was when I stumbled upon this great little command in the owncloud console.php: <code>db:convert-type</code></p>
+</div>
+<div class="paragraph">
+<p>This little gem did the trick for me so that after executing the following command, my data had automatically been migrated over to MySQL and the owncloud configuration changed accordingly. As it&#8217;s been so nice to me I thought, I leave it here for others coming up with the same question:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">sudo -u www-data /usr/bin/php5 /var/www/owncloud/console.php db:convert-type --all-apps mysql owncloud localhost owncloud</code></pre>
+</div>
+</div>
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">hosting</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">owncloud</li><li class="page-taxonomy">nextcloud</li><li class="page-taxonomy">self-hosting</li><li class="page-taxonomy">database</li><li class="page-taxonomy">migration</li><li class="page-taxonomy">bugfix</li>
+  </ul>
+
+
+          
+
+
+        </footer>
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

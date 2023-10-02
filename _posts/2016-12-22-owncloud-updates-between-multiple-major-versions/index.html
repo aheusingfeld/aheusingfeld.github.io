@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>Owncloud 8 upgrade to 10: how to skip Major Versions</title>
+    <meta name="description" content="My 2cts on software architecture, digital transformation, and other concerns">
+    <link rel="canonical" href="https://aheusingfeld.github.io/_posts/2016-12-22-owncloud-updates-between-multiple-major-versions/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  owncloud-8-upgrade-to-10-how-to-skip-major-versions">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Owncloud 8 upgrade to 10: how to skip Major Versions
+</h1>
+        
+        
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <div class="sect1">
+<h2 id="''the_problem">The Problem</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In case you also come into this great situation "I upgraded my Ubuntu to 16.04 LTS and suddenly my owncloud installation is a mess", don&#8217;t panic. I&#8217;m about to share my mess with you so you can pick the perils.</p>
+</div>
+<div class="paragraph">
+<p>It all started with Ubuntu 14.04LTS an innocent <code>do-release-upgrade</code> &#8230;&#8203; which didn&#8217;t want to be aborted - twice. So it convinced to "yes, ok, let&#8217;s do it now&#8230;&#8203;". After the normal upgrade process and a reboot my system was back and working fine - I thought, until I noticed mails from my monitoring system, that the owncloud webUI wasn&#8217;t available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''initial_analysis">Initial analysis</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A quick check confirmed "yes, the webUI is not available". And even after the hard part of fixing the nginx configuration - yes, I&#8217;m running owncloud behind nginx - and manually installing php7.0-fpm - did I mention Ubuntu 16.04 replaced php5 with php7 EXCEPT FOR THE FPM PART?! -, all websites worked, but Owncloud wouldn&#8217;t!
+Taking a very close look into nginx error.log and I suddenly noticed that the index.php was missing from /var/www/owncloud! In fact, it seems during the Ubuntu Upgrade process for an unreproducible reason <strong>all .php files in /var/www/owncloud got deleted</strong>! But hey, no worries, let&#8217;s <code>apt-get install --reinstall</code>! I double checked that my sources list was correctly pointing to owncloud stable for Ubuntu 16.04 (see <a href="https://download.owncloud.org/download/repositories/stable/owncloud/" class="bare">https://download.owncloud.org/download/repositories/stable/owncloud/</a>) and <code>apt-get</code> installed owncloud 9.1.3 on my machine without mentioning any problems.</p>
+</div>
+<div class="paragraph">
+<p>Unfortunately my monitoring system was still unhappy. "Ah, of course, the 'manual upgrade' process", I thought, and ran <code>sudo -u www-data /var/www/owncloud/occ upgrade</code> only to get this wonderful output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">ownCloud or one of the apps require upgrade - only a limited number of commands are available
+You may use your browser or the occ upgrade command to do the upgrade
+Set log level to debug
+Exception: Updates between multiple major versions and downgrades are unsupported.
+Update failed
+Maintenance mode is kept active
+Reset log level</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When I opened the webUI, it showed the same error message. But additionally it included a link to the immensely helpful <a href="https://central.owncloud.org/t/updates-between-multiple-major-versions-are-unsupported/815" class="bare">https://central.owncloud.org/t/updates-between-multiple-major-versions-are-unsupported/815</a> which pointed out that I had indeed jumped from Owncloud 8 directly to Owncloud 10 - I skipped the 9.0 version!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''implicit_dependency">Implicit dependency</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ok, let&#8217;s cut this short: It occurred to me that the owncloud team has no (documented) support for such a situation - at least I don&#8217;t consider <a href="https://doc.owncloud.org/server/9.0/admin_manual/maintenance/package_upgrade.html#upgrading-across-skipped-releases" class="bare">https://doc.owncloud.org/server/9.0/admin_manual/maintenance/package_upgrade.html#upgrading-across-skipped-releases</a> helpful at all! I assume your next step was also to downgrade owncloud to the next minor version of your current release and by trying this, you jumped into the next fun situation: the <code>owncloud-server</code> package has a dependency on PHP5! IF SOMEONE CAN TELL ME WHY THIS IS CONSIDERED REASONABLE, I&#8217;M REALLY CURIOUS?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''searching_the_web_for_others_with_the_same_problem">Searching the web for others with the same problem</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Anyway after reading through  <a href="http://askubuntu.com/questions/762221/ubuntu-16-04-upgrade-killed-owncloud-and-many-other-things-but-right-now-i-n" class="bare">http://askubuntu.com/questions/762221/ubuntu-16-04-upgrade-killed-owncloud-and-many-other-things-but-right-now-i-n</a> I finally came to this post  <a href="http://askubuntu.com/questions/767158/ubuntu-16-04-cannot-install-owncloud-server" class="bare">http://askubuntu.com/questions/767158/ubuntu-16-04-cannot-install-owncloud-server</a> which has a very interesting hint: The <code>owncloud-files</code> package has almost no depencies, is thus easy to downgrade and includes the updater! WOOHOO, JACKPOT!</p>
+</div>
+<div class="paragraph">
+<p>So, I started by modifying my <code>/etc/apt/sources.list.d/owncloud.list</code> to Ubuntu 8.2</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sh -c "echo 'deb http://download.owncloud.org/download/repositories/8.2/Ubuntu_16.10/ /' &gt; /etc/apt/sources.list.d/owncloud.list"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and then forcing the downgrade and step-by-step upgrade by running</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ sudo apt-get update &amp;&amp; sudo apt-get install owncloud-files=8.2.9-1.1
+(...)
+$ sudo -u www-data /var/www/owncloud/occ upgrade
+(...)
+$ sh -c "echo 'deb http://download.owncloud.org/download/repositories/9.0/Ubuntu_16.10/ /' &gt; /etc/apt/sources.list.d/owncloud.list"
+$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
+(...)
+$ sudo -u www-data /var/www/owncloud/occ upgrade
+(...)
+$ sh -c "echo 'deb http://download.owncloud.org/download/repositories/stable/Ubuntu_16.10/ /' &gt; /etc/apt/sources.list.d/owncloud.list"
+$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
+(...)
+$ sudo -u www-data /var/www/owncloud/occ upgrade
+(...)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It took a while but worked pretty well. So in the end I&#8217;d like to thank John Orion for sharing his idea about <code>owncloud-files</code> and the owncloud team for providing this option - even though you don&#8217;t mention it on the pages where people are seeking for help. I hope this is helpful for others, struggling with upgrades.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''summary_and_remaining_issues">Summary and remaining issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now I&#8217;m on to fix the remaining issues: <strong>Currently I&#8217;m facing a situation where all requests with <code>index.php</code> are returned with a HTTP302 redirect without <code>index.php</code> - which of course fails</strong> (e.g. <code>/cloud/index.php/login</code> is redirected to <code>/cloud/login</code>). NOTE: I&#8217;m running owncloud behind nginx with a contextroot other than <code>/owncloud</code> - as if I was asking for trouble, right? I&#8217;ll update this blog, in case I stumble upon something.</p>
+</div>
+<div class="paragraph">
+<p>If you find anything to comment, optimize or fix about this, please leave me a github issue. Always think "If I have this issue, someone else might sooner or later have it, too" - and you can help that someone. Thanks a lot!</p>
+</div>
+<div class="sect2">
+<h3 id="''update">UPDATE</h3>
+<div class="paragraph">
+<p>For those who want to follow along, I opened a Github issue under <a href="https://github.com/owncloud/core/issues/26869" class="bare">https://github.com/owncloud/core/issues/26869</a> and provided a pull-request for the remaining necessary changes here <a href="https://github.com/owncloud/core/pull/26882" class="bare">https://github.com/owncloud/core/pull/26882</a></p>
+</div>
+</div>
+</div>
+</div>
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">hosting</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">owncloud</li><li class="page-taxonomy">nextcloud</li><li class="page-taxonomy">ubuntu</li><li class="page-taxonomy">linux</li><li class="page-taxonomy">self-hosting</li><li class="page-taxonomy">bugfix</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2016-12-22T22:23:00+01:00">2016-12-22</time></p>
+
+
+        </footer>
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

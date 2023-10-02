@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>First Steps with Android</title>
+    <meta name="description" content="My 2cts on software architecture, digital transformation, and other concerns">
+    <link rel="canonical" href="https://aheusingfeld.github.io/_posts/2013-09-10-First-steps-with-android/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  first-steps-with-android">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">First Steps with Android
+</h1>
+        
+        
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <div class="sect1">
+<h2 id="''the_stumble_stones">The Stumble Stones</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Android Team&#8217;s switch from the Eclipse based <a href="https://developer.android.com/tools/help/adt.html">Android Developer Tools</a> to the IntelliJ IDEA based <a href="https://developer.android.com/sdk/installing/studio.html">"Android Studio"</a> at Google I/O is pretty well-known. But what isn&#8217;t too well-known is that they also changed the default android project directory structure as they switched their build system from ant to gradle.</p>
+</div>
+<div class="paragraph">
+<p>Further information on the new structure and the new build system are available here: <a href="http://tools.android.com/tech-docs/new-build-system/user-guide" class="bare">http://tools.android.com/tech-docs/new-build-system/user-guide</a></p>
+</div>
+<div class="paragraph">
+<p>I decided to go with the new Gradle-based structure as I thought it was more future proof. I have to admit that I regret this badly! As I&#8217;m not too familiar with Gradle, yet, I had a pretty bad time trying to understand the customizations brought in by the gradle-android plugin. Additionally most of the information available on the net is specific to Eclipse/ Ant based projects and therefore slightly different for the new structure.</p>
+</div>
+<div class="sect2">
+<h3 id="''environment_setup">Environment Setup</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>download Android SDK</p>
+</li>
+<li>
+<p>extract it to e.g. ~/dev/android-sdk-macosx</p>
+</li>
+<li>
+<p>modify your .bash_profile and add
+<code>export ANDROID_HOME=YOUR_ANDROID_SDK_PATH_HERE</code></p>
+</li>
+<li>
+<p>create local.properties</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="''things_of_great_help_not">Things of great help #not</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>IntelliJ project creation wizard &gt; creates eclipse/ Ant structure</p>
+</li>
+<li>
+<p>Android Studio project creation wizard</p>
+</li>
+<li>
+<p>Pivotal Labs' "AndroidIntelliJStarter" <a href="https://github.com/pivotal/AndroidIntelliJStarter" class="bare">https://github.com/pivotal/AndroidIntelliJStarter</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These utilities turned out to be buggy or outdated and partly messed up the working configuration. <strong>Don&#8217;t use them!</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>What turned out to be really helpful, were <a href="https://github.com/stephanenicolas/Quality-Tools-for-Android">Quality-Tools-for-Android</a> and <a href="http://square.github.io/fest-android/">FEST Android</a> by SQUARE.</strong> You should really have a look at Square&#8217;s <a href="https://github.com/square">repositories at Github</a> as there is a lot of goodness for the new Android world lying around!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. Before you try things out, go RTFM. </strong></p>
+</div>
+<div class="paragraph">
+<p>It might take you two weeks to read <a href="https://developer.android.com/design/index.html" class="bare">https://developer.android.com/design/index.html</a> and  <a href="https://developer.android.com/develop/index.html" class="bare">https://developer.android.com/develop/index.html</a> but don&#8217;t dare to start before this! Except if you like to start-over or rewrite your whole Application. ;)</p>
+</div>
+<div class="paragraph">
+<p><strong>2. Before you use a library, assure that it works with Gradle!</strong></p>
+</div>
+<div class="sect2">
+<h3 id="''questions_and_answers">Questions and Answers</h3>
+<div class="sect3">
+<h4 id="''what_is_the_differences_between_the_px_dip_dp_and_sp_units_in_android">"What is the differences between the px, dip, dp and sp units in Android?"</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+see <a href="http://developer.android.com/guide/topics/resources/more-resources.html#Dimension" class="bare">http://developer.android.com/guide/topics/resources/more-resources.html#Dimension</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dip = Density-independent Pixels</p>
+</li>
+<li>
+<p>sp = Scale-independent Pixels</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+The compiler accepts both "dip" and "dp", though "dp" is more consistent with "sp".
+</blockquote>
+<div class="attribution">
+&#8212; Android Developer Guide
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="''q_idea_tells_me_project_directory_not_specified">Q: IDEA tells me "Project directory not specified"</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+Probably your ".idea/gradle.xml" is messed up. See this bug report: <a href="https://code.google.com/p/android/issues/detail?id=56750" class="bare">https://code.google.com/p/android/issues/detail?id=56750</a> to fix it</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="''q_my_tests_fail_with_junit_version_3_8_or_later_expected">Q: My tests fail with "!!! JUnit version 3.8 or later expected"</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+The reason for this is that the android.jar <strong>contains</strong> a version of JUnit prior to 3.8! You can fix this by opening the "Project structure" settings &gt; your module &gt; Dependencies and putting the "Android Platform" dependency all the way down the list.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="''q_i_need_absolute_positioning_but_absolutelayout_has_been_deprecated">Q: I need absolute positioning but AbsoluteLayout has been deprecated</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+Yes, there is a <a href="http://tbeernot.wordpress.com/2012/12/09/layout-in-javafx-and-android/">great post</a> by <a href="http://twitter.com/tbeernot">@tbeernot</a> describing this pain. But to the rescue there is <a href="http://saynomoo.github.io/mig4android/">miglayout for android</a>!</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="''update_2013_10_04">Update 2013-10-04</h3>
+<div class="paragraph">
+<p><strong>In the meantime there is a <a href="https://developer.android.com/sdk/installing/migrate.html">migration guide</a> and a <a href="https://developer.android.com/sdk/installing/studio-tips.html">Tips &amp; Tricks section</a> available on the Android Developer pages!</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="''update_2013_10_20">Update 2013-10-20</h3>
+<div class="paragraph">
+<p>In the meantime there are a few really awesome videos available on Gradle and Android, that I&#8217;d like to share with you</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.youtube.com/watch?v=ieeD3Dc5OjM">Introduction to Android Studio</a> - Gradleware</p>
+</li>
+<li>
+<p><a href="http://youtu.be/rXww768LUUM">Gradle for Android</a> - <a href="https://twitter.com/hans_d">Hans Dokter</a>, CEO @Gradleware</p>
+</li>
+<li>
+<p><a href="http://youtu.be/EM5edIJUA10">Learnings from building Twitter for Android</a> - <a href="https://twitter.com/jle">Jonathan Le</a>, Lead Dev Twitter for Android @Twitter</p>
+</li>
+<li>
+<p><a href="http://www.youtube.com/watch?v=8qV4QW6ppXE&amp;feature=youtu.be">Five Lessons to Electrify your Gradle plugins</a> - <a href="https://twitter.com/jakeout">Jake Ouellette</a>, <a href="http://try.crashlytics.com/">Crashlytics</a> Team @Twitter</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li><li class="page-taxonomy">java</li><li class="page-taxonomy">android</li><li class="page-taxonomy">mobile</li><li class="page-taxonomy">article</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2013-09-10T20:47:32+02:00">2013-09-10</time></p>
+
+
+        </footer>
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

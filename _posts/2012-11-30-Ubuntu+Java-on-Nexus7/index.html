@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>Ubuntu and Java on Nexus7</title>
+    <meta name="description" content="My 2cts on software architecture, digital transformation, and other concerns">
+    <link rel="canonical" href="https://aheusingfeld.github.io/_posts/2012-11-30-Ubuntu+Java-on-Nexus7/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  ubuntu-and-java-on-nexus7">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Ubuntu and Java on Nexus7
+</h1>
+        
+        
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>In this blog post I describe how to setup <a href="http://www.ubuntu.org/">Ubuntu Linux</a> and <a href="http://java.oracle.net/">Oracle Java</a> on my <a href="https://play.google.com/store/devices/details?id=nexus_7_16gb">newly acquired Google Nexus7 device</a>. This shall be the foundation to checkout the things you can do with <a href="http://www.oracle.com/technetwork/java/javafx/overview/index.html">JavaFX</a> on a Tablet computer.</p>
+
+<p>My environment is a Macbook Pro (MBP) running on OS X 10.8 (Mountain Lion). The Nexus 7 (in my case the 16gb version) is attached to the MBP via its USB cable.</p>
+
+<h3 id="download-images-for-your-nexus">Download images for your Nexus</h3>
+<p>Visit the following URL and download <em>boot.img</em> and <em>rootfs.img</em> appropriate to your device’s hardware setup
+<a href="http://hwe.ubuntu.com/uds-r/nexus7/">http://hwe.ubuntu.com/uds-r/nexus7/</a></p>
+
+<h3 id="download-android-development-tools">Download Android Development Tools</h3>
+<p>To install the Ubuntu image on your Nexus 7 we need the “fastboot” command line utility from the Android Developer Tools. You can either choose to download the Android Developer Tools from the Android website or use a customized download of “fastboot” from github:</p>
+
+<ul>
+  <li>Android Developer Tools (ADT) <a href="http://developer.android.com/sdk/index.html#mac-bundle">http://developer.android.com/sdk/index.html#mac-bundle</a></li>
+  <li>ADT direct download <a href="http://dl.google.com/android/android-sdk_r21-macosx.zip">http://dl.google.com/android/android-sdk_r21-macosx.zip</a></li>
+  <li>Alternative version for Linux and Mac <a href="https://github.com/teamblueridge/adb-fastboot-install">https://github.com/teamblueridge/adb-fastboot-install</a></li>
+</ul>
+
+<h3 id="installation-of-the-ubuntu-image">Installation of the Ubuntu image</h3>
+<p>Now you need to shutdown your Nexus. When it’s shut down connect it via USB to your Mac or PC and bring up the Bootloader (a.k.a. “fastboot”) by holding down the “Vol -“ button and then pressing the power button.
+The <a href="https://wiki.ubuntu.com/Nexus7/Installation">Ubuntu Nexus7 Wiki</a> has a <a href="https://wiki.ubuntu.com/Nexus7/Installation?action=AttachFile&amp;do=get&amp;target=bootloader.png">nice screenshot</a> of the screen that should be visible</p>
+
+<p>Next you need to verify that your Mac (or PC) can access your device via USB and fastboot. Therefore do the following</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ cd /Users/ahe/dev/tools/adt-bundle-mac/
+$ sdk/platform-tools/fastboot devices
+  1234567891234567        fastboot
+</code></pre></div></div>
+
+<p>The ladder line displays the serial number of your device. Be sure to check it’s the correct device by comparing it to the serial on your device’s bootloader screen.</p>
+
+<p>If not already done you need to unlock your device to be able to install another operating system at all (Please note that you might lose your warranty by this action!):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sdk/platform-tools/fastboot oem unlock
+</code></pre></div></div>
+
+<p>You should immediately see a dialog popup on your device asking whether you really want to unlock (<a href="https://wiki.ubuntu.com/Nexus7/Installation?action=AttachFile&amp;do=get&amp;target=unl.jpg">see screenshot from Ubuntu Nexus7 Wiki</a>). Afterwards the unlock process should begin and finish without any error, so you are able to reboot your device into bootloader again:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sdk/platform-tools/fastboot reboot-bootloader
+</code></pre></div></div>
+
+<p>If you now look closely at your device there should be a line saying “LOCK STATE - UNLOCKED”.</p>
+
+<p>Now you can install the images</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sdk/platform-tools/fastboot flash boot UbuntuNexus7/boot.img 
+$ sdk/platform-tools/fastboot flash userdata UbuntuNexus7/rootfs.img 
+$ sdk/platform-tools/fastboot reboot
+</code></pre></div></div>
+
+<p>If you encounter an error like the following
+	sending ‘userdata’ (104285 KB)… FAILED (remote: (Nv3pBadReceiveLength))
+it means that your USB connection timed out. In this case you need plug out and in the USB cable of your Nexus7 and repeat the least entered command.</p>
+
+<p>Your device should then boot into Ubuntu. <em>NOTE:</em> The first boot takes about 2-4 minutes as the bootloader has to prepare the system.</p>
+
+<h3 id="system-stabilization">System stabilization</h3>
+<p>Once booted and logged in we have to open a terminal window by clicking on the Ubuntu Dash icon (upper left corner) and typing “Terminal” into the search field. In case you cannot type because the onboard keyboard doesn’t appear, you can manually trigger it by clicking on the little icon with the 4 squares in the upper menubar and choosing the “Show Onboard” option.</p>
+
+<p>The first step in the Terminal is to update all your system packages:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get update
+$ sudo apt-get upgrade
+</code></pre></div></div>
+
+<h4 id="install-bluetooth-keyboard">Install bluetooth keyboard</h4>
+<p>You can read the details on this step here: <a href="https://wiki.ubuntu.com/Nexus7/UsingTheDevice">https://wiki.ubuntu.com/Nexus7/UsingTheDevice</a></p>
+
+<p>Install the alternative bluetooth daemon</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install bluez-compat
+</code></pre></div></div>
+
+<p>Scan for your bluetooth device</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ hcitool scan
+Scanning ...
+ 20:42:A1:00:66:78       bluetooth keyboard
+</code></pre></div></div>
+
+<p>Connect your device via its ID</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo hidd --connect 20:42:A1:00:66:78
+</code></pre></div></div>
+
+<p>The following link has a longer description on how to add a bluetooth keyboard at system start: <a href="http://askubuntu.com/questions/17504/how-can-i-have-a-bluetooth-keyboard-auto-connect-at-startup">http://askubuntu.com/questions/17504/how-can-i-have-a-bluetooth-keyboard-auto-connect-at-startup
+</a></p>
+
+<h4 id="install-openssh-as-recovery-console">Install OpenSSH as recovery console</h4>
+<p>To be able to interact with the device when the X11-Server crashes (or you chose an unusable Desktop environment - like me I wanted to try “Openbox”) your first step should be the installation of the OpenSSH server.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install openssh-server
+</code></pre></div></div>
+
+<p>Via “ipconfig” you get the ip of your device and can login from a remote machine (username: ubuntu; password: ubuntu).</p>
+
+<h4 id="decrease-memory-consumption">Decrease memory consumption</h4>
+<p>On of the <a href="https://wiki.ubuntu.com/Nexus7/KnownIssues">Known Issues</a> is a quiet large memory consumption of the unity desktop. To compress memory and decrease memory consumption you can install the following</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install zram-config 
+</code></pre></div></div>
+
+<p>Another way would be to install a more lightweight desktop environment like LXDE
+	$ sudo apt-get install lxde</p>
+
+<h3 id="installing-oracle-java">Installing Oracle Java</h3>
+<p>For my installation I used Oracle JDK 7 (1.7.10 Developer Preview available here: <a href="http://jdk7.java.net/fxarmpreview/">http://jdk7.java.net/fxarmpreview/</a>)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo mkdir -p /opt/java
+$ wget http://www.java.net/download/JavaFXarm/jdk-7u10-ea-fx-8_0_0-embedded-linux-arm-sfp.tar.gz
+$ sudo tar xzvf jdk-7u10-ea-fx-8_0_0-embedded-linux-arm-sfp.tar.gz -C /opt/java
+</code></pre></div></div>
+
+<p>Finally we need to add the JAVA_HOME variable to the .bashrc file so it is set for every shell session</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ echo export JAVA_HOME=/opt/java/jdk1.7.0_10 &gt;&gt; ~/.bashrc
+$ echo export PATH=\$JAVA_HOME/bin:\$PATH &gt;&gt; ~/.bashrc
+</code></pre></div></div>
+
+<p>If you now try to start java you should get an error like the following</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/opt/java/jdk1.7.0_10/bin/java: No such file or directory
+</code></pre></div></div>
+
+<p>or if you’re already one step further this one</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>/opt/java/jdk1.7.0_10/bin/java: error while loading shared libraries: libgcc_s.so.1: cannot open shared object file: No such file or directory
+</code></pre></div></div>
+
+<p>I’m totally new to the embedded business so please spare me, but as far as I found out, the above mentioned java version goes well with ARM softfp shared libraries for armhf. So we need to install a special version of libc6 for java on our Nvidia Tegra (<a href="http://www.arm.com/products/processors/cortex-a/cortex-a9.php">ARM Cortex-A9</a>) and also the according “gcc1” version:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo apt-get install libc6-armel libsfgcc1
+</code></pre></div></div>
+
+<p>After this you should be able to run the “java” command successfully:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ /opt/java/jdk1.7.0_10/bin/java -version
+  java version "1.7.0_10-ea"
+  Java(TM) SE Runtime Environment (build 1.7.0_10-ea-b08)
+  Java HotSpot(TM) Client VM (build 23.6-b03, mixed mode)
+</code></pre></div></div>
+
+<h3 id="to-be-continued">To be continued…</h3>
+
+<p>As this post is already rather long, I’ll continue the findings on JavaFX in a follow-up post. In the meantime you can <a href="http://twitter.com/goldstift">follow me on Twitter</a> to stay up to date.</p>
+
+<p>Any comments, optimization requests and suggestions are very warm welcome!</p>
+
+<h3 id="links-of-further-interest">Links of further interest:</h3>
+<ul>
+  <li><a href="https://wiki.ubuntu.com/Nexus7/KnownIssues">Known Issues</a></li>
+  <li><a href="https://bugs.launchpad.net/ubuntu-nexus7">Bugtracker for ubuntu-Nexus7</a></li>
+  <li><a href="https://wiki.ubuntu.com/Multitouch/Ginn">Ubuntu uses Ginn for Multitouch</a></li>
+</ul>
+
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li><li class="page-taxonomy">java</li><li class="page-taxonomy">glassfish</li><li class="page-taxonomy">ubuntu</li><li class="page-taxonomy">linux</li><li class="page-taxonomy">android</li><li class="page-taxonomy">debugging</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2012-11-30T22:00:00+01:00">2012-11-30</time></p>
+
+
+        </footer>
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>Probleme beim Login ins Elster ePortal mit Mac OS X</title>
+    <meta name="description" content="Ich hatte bis vor Kurzem einige Probleme, mich im Elster ePortal anzumelden. Im Folgenden will ich kurz den Fehler und die für mich funktionierende Lösung ze...">
+    <link rel="canonical" href="https://aheusingfeld.github.io/productivity/probleme-beim-login-ins-elster-eportal-mit-mac-os-x/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  probleme-beim-login-ins-elster-eportal-mit-mac-os-x">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Probleme beim Login ins Elster ePortal mit Mac OS X
+</h1>
+        
+        
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2011-01-19T00:00:00+01:00">2011-01-19</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 minute read
+        
+      </span>
+    
+  </p>
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>Ich hatte bis vor Kurzem einige Probleme, mich im Elster ePortal anzumelden. Im Folgenden will ich kurz den Fehler und die für mich funktionierende Lösung zeigen.<br /></p>
+<h3>FEHLERBESCHREIBUNG</h3>
+<p>Wenn man auf der <a href="https://www.elsteronline.de/eportal/">Startseite</a> im linken Bereich den Punkt "Login &gt; Software-Zertifikat" wählt und dann auf "Login" klickt, wird das Java Applet geladen und der grüne, sich drehende Kreis angezeigt. Es erscheint kein Popup, die Java-Konsole oder ähnliches!<br />Wirft man während dieser Wartezeit einen Blick in die sog. Fehlerkonsole des Browsers, so findet man die folgende Fehlermeldung:
+<pre>
+Failed to load resource: https://www.elsteronline.de/eportal/
+de.elster.portal.applet.ElsterAppletAnalyze.class the server&nbsp;
+responded with a status of 404 (Not Found)
+</pre></p>
+
+<p>Ich vermutete zunächst, dass hier ein Problem mit der Codebase des Applets vorliegt. Die Kollegen verwenden interessanter Weise das veraltete &lt;object&gt;-Tag, anstatt das wesentlich angenehmere JavaScript (<a href="view-source:http://www.java.com/js/deployJava.js">deployJava.js</a>)* von Oracle/ Sun  zu verwenden.<br /><br />* Es gibt eine überarbeitete Version des <a href="http://jira.atlassian.com/includes/deployJava.js">JavaScript von Atlassian</a>, die auch unter Opera läuft!<br /><br />SYSTEMUMGEBUNG<br />Betriebssystem: Mac OS X 10.6.5<br />Java: 1.6.0_22<br />Browser: Safari 5.0.3 (6533.19.4)<br />Browser2: Firefox 4.0b7<br /><br />RANDBEMERKUNG<br />Nach einer gewissen Zeit kommt anscheinend ein Timeout woraufhin eine neue Seite geöffnet und folgende Fehlermeldungen angezeigt werden:</p>
+<blockquote>
+<h3>Konfigurations-Assistent</h3>
+<p>Die Überprüfung der Konfiguration Ihres Computers wurde soeben durchgeführt.</p>
+<h3>Fehlende Voraussetzung</h3><br />
+<h4>Java Sicherheitseinstellungen</h4>
+<p>Ihr System erfüllt nicht die grundlegenden Voraussetzungen zur Nutzung des ElsterOnline-Portals. Voraussetzung für die Nutzung von ElsterOnline ist die Einstellung AllPermissions in den Java-Sicherheitseinstellungen für signierte Applets.</p>
+<h4>Kein kompatibles Java-Plugin installiert</h4>
+<p>Ihr System erfüllt nicht die grundlegenden Voraussetzungen zur Nutzung des ElsterOnline-Portals. Wir empfehlen Ihnen, falls ElsterOnline dies für Ihr Betriebssystem unterstützt (siehe Anforderungen), das aktuelle Java Runtime Environment (JRE) zu installieren. Zum Download der neuesten Version der Java-Software rufen Sie bitte die Java-Homepage (http://www.java.com/de/) auf. Diese Seiten enthalten detaillierte Anweisungen zum Download und zur Installation der Java-Software (JRE).<br /><br /><br /><h4>Warnhinweis Nicht erkanntes Betriebssystem</h4><br />Ihr Betriebssystem wurde nicht erkannt und wird möglicherweise von ElsterOnline nicht unterstützt. Eine Liste der von ElsterOnline unterstützten Betriebssysteme finden Sie unter Anforderungen. Die problemlose Nutzung von ElsterOnline kann mit Ihrem Betriebssystem möglich sein, selbst wenn es nicht in der Anforderungsliste aufgeführt ist. Dies wird jedoch nicht garantiert. Falls ein Problem auftritt, kann Sie die Hotline nur dann bei der Behebung unterstützen, falls Ihr Betriebssystem in der Anforderungsliste enthalten ist.</blockquote><br /><br />Randbemerkung:<br />Auf dem System war die aktuellste Java Version (siehe Versionsangabe oben) installiert  und in den <a href="https://www.elsteronline.de/eportal/Anforderungen.tax">Anforderungen für Elster</a> ist Mac OS X 10.6.5 mit JRE6+Safari5 als unterstützte Umgebung freigegeben.<br /><br />
+</p>
+<h3>Lösung: Neuinstallation</h3>
+<ul><li>Java for Mac OS X 10.6 Update 3 herunterladen (<a href="http://support.apple.com/kb/DL972">http://support.apple.com/kb/DL972</a>)</li>
+<li>alle Anwendungen, die Java verwenden (z.B. auch Safari und Firefox) beenden</li>
+<li>das Java-Update installieren</li>
+<li>Safari neustarten und auf <a href="https://www.elsteronline.de/eportal/">https://www.elsteronline.de/eportal/</a> leiten</li>
+</ul>
+
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">productivity</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">apple</li><li class="page-taxonomy">macos</li><li class="page-taxonomy">tips</li><li class="page-taxonomy">elster</li><li class="page-taxonomy">steuern</li><li class="page-taxonomy">productivity</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2011-01-19T00:00:00+01:00">2011-01-19</time></p>
+
+
+        </footer>
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faheusingfeld.github.io%2Fproductivity%2Fprobleme-beim-login-ins-elster-eportal-mit-mac-os-x%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Probleme+beim+Login+ins+Elster+ePortal+mit+Mac+OS+X%20https%3A%2F%2Faheusingfeld.github.io%2Fproductivity%2Fprobleme-beim-login-ins-elster-eportal-mit-mac-os-x%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faheusingfeld.github.io%2Fproductivity%2Fprobleme-beim-login-ins-elster-eportal-mit-mac-os-x%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=Probleme+beim+Login+ins+Elster+ePortal+mit+Mac+OS+X&url=https%3A%2F%2Faheusingfeld.github.io%2Fproductivity%2Fprobleme-beim-login-ins-elster-eportal-mit-mac-os-x%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/letztlich-doch-hier/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> …letztlich doch hier
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/software%20development/umlaute-und-sonderzeichen-in-spring-roo/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Umlaute und Sonderzeichen in Spring Roo?
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

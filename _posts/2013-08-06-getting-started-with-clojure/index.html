@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>Getting started with Clojure</title>
+    <meta name="description" content="My 2cts on software architecture, digital transformation, and other concerns">
+    <link rel="canonical" href="https://aheusingfeld.github.io/_posts/2013-08-06-getting-started-with-clojure/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  getting-started-with-clojure">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Getting started with Clojure
+</h1>
+        
+        
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <h3 id="why-clojure">Why Clojure?</h3>
+
+<p>As I apparently love to use many braces in my blog posts, Clojure is just a natural match! ;)
+Just kidding. I wanted to dig into Clojure for about a year now, but couldn’t find the time. Clojure to me seems like the most interesting member of the functional programming language family.</p>
+
+<h3 id="getting-started">Getting started</h3>
+<p>The official clojure.org website has a Getting Started page <a href="http://clojure.org/getting_started">http://clojure.org/getting_started</a> which sends you to the community-driven Clojure Documentation <a href="http://dev.clojure.org/display/doc">http://dev.clojure.org/display/doc</a> …</p>
+
+<p>… but there is also this one: <a href="http://clojure-doc.org/">http://clojure-doc.org/</a></p>
+
+<p>… and even this one: <a href="http://clojuredocs.org/">http://clojuredocs.org/</a></p>
+
+<p>… and additionally there’s the official documentation at <a href="http://clojure.org/documentation">http://clojure.org/documentation</a> ;-)</p>
+
+<p><strong>Though the official documentation is definitely the most complete, I personally liked this introduction much better. So I recommend you start here:</strong>  <a href="http://clojure-doc.org/articles/tutorials/introduction.html">http://clojure-doc.org/articles/tutorials/introduction.html</a></p>
+
+<p>Another resource that has been really helpful, was the Clojure CheatSheet at <a href="http://clojure.org/cheatsheet">http://clojure.org/cheatsheet</a></p>
+
+<p>After I read the Introduction I wanted to make sure that I - to some degree - internalized the basics, so I started to dig into the <a href="http://clojurekoans.com/">Clojure Koans</a>. “Koan” is derived from <a href="https://en.wikipedia.org/wiki/Koans">Zen training</a>. It is a question which shall provoke a “great doubt” in you to test your progress. Good luck! ;)</p>
+
+<h3 id="setup">Setup</h3>
+
+<h4 id="downloads">Downloads</h4>
+
+<ul>
+  <li>Download the Leiningen script from  <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein">https://raw.github.com/technomancy/leiningen/stable/bin/lein</a></li>
+  <li>place it on your <code class="language-plaintext highlighter-rouge">$PATH</code> e.g. in <code class="language-plaintext highlighter-rouge">/usr/local/bin</code> and make it executable</li>
+  <li>run <code class="language-plaintext highlighter-rouge">lein version</code> on the command line</li>
+</ul>
+
+<p>This will download and install the necessary binary and place them in <code class="language-plaintext highlighter-rouge">~/.lein/self-installs/</code></p>
+
+<h4 id="intellij-idea">IntelliJ IDEA</h4>
+
+<p>My favorite IDE, <a href="http://confluence.jetbrains.net/display/IDEADEV/EAP">IntelliJ IDEA</a>, supports Clojure development with the following plugins</p>
+
+<ul>
+  <li><a href="https://github.com/JetBrains/la-clojure#la-clojure">La Clojure Plugin @Github</a></li>
+  <li><a href="https://github.com/derkork/intellij-leiningen-plugin#the-intellij-leiningen-plugin">Leiningen Plugin @Github</a></li>
+</ul>
+
+<p>Now you have context assistant, inspections and navigation support and can open a Clojure REPL in IDEA. If your project has a <code class="language-plaintext highlighter-rouge">project.clj</code> file, leiningen will read the project configuration from this file, load your dependencies as libraries into IntelliJ and provide you with a list of available build goals.</p>
+
+<p>If you want to run your Clojure code in IDEA, you can simply go like this:</p>
+
+<ul>
+  <li>open a REPL a.k.a. “Clojure Console”</li>
+  <li>you should now see a <code class="language-plaintext highlighter-rouge">user=&gt;</code> prompt</li>
+  <li>
+    <p>next you place the cursor at this prompt and type</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  user=&gt; (load-file "src/myfolder/myclojurecode.clj")
+  user=&gt; (ns myfolder.myclojurecode)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>(NOTE: you’ll have to adjust this according to the <a href="http://clojure-doc.org/articles/tutorials/introduction.html#namespaces">namespace</a> given in your <code class="language-plaintext highlighter-rouge">myclojurecode.clj</code> file)</strong></p>
+
+<p>Now you should see a command prompt like <code class="language-plaintext highlighter-rouge">myfolder.myclojurecode=&gt;</code> which will let you execute any function defined in your <code class="language-plaintext highlighter-rouge">myclojurecode.clj</code> file just like this</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(my-sample-function "a parameter string") 
+</code></pre></div></div>
+
+<h3 id="get-something-done">Get something done</h3>
+
+<p>To test my new skills on a real project, I cloned the <a href="https://github.com/innoq/statuses">innoQ statuses</a> app @Github - a very, very basic open-source Twitter-clone created to play with Clojure - and started working <a href="https://github.com/innoq/statuses/issues/10">on a concrete issue</a>. You can see the result at <a href="https://github.com/innoq/statuses/pull/54">https://github.com/innoq/statuses/pull/54</a>.</p>
+
+<h3 id="things-i-learned">Things I learned</h3>
+
+<ul>
+  <li>Clojure REPL (Read Eval Print Loop) is the command prompt to test your Clojure programs</li>
+  <li>Clojure is a functional programming language. Yes, breaking news, but the point is, if the term “objects” is used in the context of Clojure, it doesn’t refer to objects as in an object oriented mindset! The only occasion where OO objects could be meant, is when you’re talking of Java objects which can easily be used inside your Clojure programs.</li>
+  <li>Clojure is not whitespace sensitive. Commas count as whitespace and can thus be omitted. This might make your code more readable - or totally confuse newbies!</li>
+  <li>if expressions are hard to read, thread them via “-&gt;” (see <a href="http://clojuredocs.org/clojure_core/clojure.core/-%3E">http://clojuredocs.org/clojure_core/clojure.core/-%3E</a>)</li>
+</ul>
+
+<p>Hopefully I will have time to complete the Koans and add to this list soon … :)</p>
+
+<h3 id="further-links">Further Links</h3>
+
+<ul>
+  <li>German Podcast introducing Clojure I can highly recommend <a href="http://www.innoq.com/de/podcast/004-clojure">http://www.innoq.com/de/podcast/004-clojure</a></li>
+  <li>Leiningen - Clojure project automation <a href="http://leiningen.org/">http://leiningen.org/</a></li>
+</ul>
+
+
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">clojure</li><li class="page-taxonomy">software development</li><li class="page-taxonomy">intellij</li><li class="page-taxonomy">tipps</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2013-08-06T23:15:27+02:00">2013-08-06</time></p>
+
+
+        </footer>
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

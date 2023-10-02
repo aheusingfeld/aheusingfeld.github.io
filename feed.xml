@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://aheusingfeld.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://aheusingfeld.github.io/" rel="alternate" type="text/html" /><updated>2023-10-02T11:10:09+02:00</updated><id>https://aheusingfeld.github.io/feed.xml</id><title type="html">Overthinker’s Thoughts</title><subtitle>My 2cts on software architecture, digital transformation, and other concerns</subtitle><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><entry><title type="html">Why Small Experiments can help to overcome Innovator’s Dilemma</title><link href="https://aheusingfeld.github.io/organisation/why-small-experiments/" rel="alternate" type="text/html" title="Why Small Experiments can help to overcome Innovator’s Dilemma" /><published>2023-10-01T12:11:00+02:00</published><updated>2023-10-01T12:11:00+02:00</updated><id>https://aheusingfeld.github.io/organisation/why-small-experiments</id><content type="html" xml:base="https://aheusingfeld.github.io/organisation/why-small-experiments/"><![CDATA[<h2 id="whats-in-it-for-me-as-a-reader">What’s in it for me as a reader</h2>
+
+<p>I’ve been thinking about this topic since my article on Innovation Tokens [1] in 2016. 
+In past articles I often used the term <strong>Small Experiments</strong>. 
+I connect a lot of semantics to that term which is all about enabling innovation in larger organisations which might otherwise struggle with Innovator’s Dilemma. 
+I want to share with you how Small Experiments can be a catalyst for Innovation in any organization.</p>
+
+<h2 id="why-experiments">Why “Experiments”?</h2>
+
+<p>Some might call them “Proof of concept” (POC), yet, I favor experiment for the original meaning of the term:</p>
+
+<blockquote>
+  <p>“A test under controlled conditions that is made to demonstrate a known truth, examine the validity of a hypothesis, or determine the efficacy of something previously untried.”</p>
+  <ul>
+    <li>The American Heritage® Dictionary of the English Language, 5th Edition.</li>
+  </ul>
+</blockquote>
+
+<p>The term „Experiment“ is mostly familiar in the context of scientific research. It means to set up a hypothesis, an assumption and validate whether it’s true or not. The result of an experiment is exactly that - a learning whether a question can be answered TRUE under the tested conditions.</p>
+
+<p>Now, how does such certainty help me, you might ask. I very often read about the VUCA world in which it is very tough to take strategic decisions that have long-term impact due to the uncertainty it bares. Small Experiments address exactly that uncertainty by saying “Okay, what conditions or circumstances are in scope for that experiments. In other words: Which probabilities must be considered so that we have sufficient reliability and can take that decision with certainty?”</p>
+
+<p>And that doesn’t only speed up business decisions but for any risky decision. We validate assumptions and hypothesis by trying them out in practice until we have enough certainty to take the decision. This is an alternative to spending countless hours in meetings just discussing the matter.</p>
+
+<h2 id="okay-and-why-small-experiments">Okay, and why <em>Small</em> experiments?</h2>
+
+<p>To be clear, I’m not saying “STOP DISCUSSIONS!”. It’s about having a discussion to agree on which question, hypothesis, or assumption we must have an answer to. The more precise the question, the smaller we can draw the scope of our Experiment. A small Scope is important for multiple reasons:</p>
+
+<h3 id="less-scope--less-work--less-participants">Less Scope = Less Work = Less Participants</h3>
+
+<p>We probably all experienced discussions with larger groups of people. One comment can spark a new aspect, provoke another comment, a new aspect… and before you notice, we’re discussing a different topic.</p>
+
+<p>With a defined small scope to consider, we can reduce the number of expert people that have to involved to answer the experiment’s question. Having a small team is known to have a lot of positive side effects such as a smaller number of people is easier to coordinate, builds trust faster, agrees quicker, etc. 
+Of course, the neurodiversity of a small group can become an issue. If the participants neglect a perspective that is relevant for the context of the experiment. Yet, that’s something we can already address when building the group.</p>
+
+<h3 id="less-scope--higher-comprehensibility">Less Scope = higher Comprehensibility</h3>
+
+<p>The scope of an Experiment should be small enough, that everyone in the company can immediately understand</p>
+
+<ul>
+  <li>which question shall be answered,</li>
+  <li>what’s the benefit for the company (and maybe for myself)</li>
+  <li>what might be the impact when we get the answer to the question</li>
+</ul>
+
+<h3 id="comprehensibility-reduces-anxiety">Comprehensibility reduces anxiety</h3>
+
+<p>Showing potential impact of an experiment is important because you address the sorrows and concerns of employees who are afraid that change e.g. might cost their jobs. Surely that’s not the case for every single experiment, yet, being transparent about where you’re heading brings clarity and builds trust and again provides you with the chance to get feedback on concerns you’d never truly known existed in people’s minds. Comprehensibility helps to spark such thought processes in people and thus increases the chance for valuable feedback. This feedback might contain relevant variables which haven’t been on the radar of the experiment so far.</p>
+
+<p>The other positive impact of accessibility and comprehensibility are also important because it shortens and simplifies the time it takes to explain the Experiment to people outside the experiment group. This is helpful e.g. when the experiment group realizes they need additional support from a person outside their group.</p>
+
+<h2 id="summary-advantages-of-small-scope">Summary: Advantages of Small Scope</h2>
+
+<ol>
+  <li>Definition takes less time</li>
+  <li>Less distractions</li>
+  <li>Less Variables = Less Cognitive-Load</li>
+  <li>Less potential Unknowns to be considered</li>
+  <li>Easier to comprehend</li>
+  <li>Simpler to plan</li>
+  <li>Less time + Less people = Costs less money</li>
+  <li>Less Money = Less Risk</li>
+  <li>Less Risk = easier to accept the learning that it was a step in the wrong direction</li>
+</ol>
+
+<p>That’s why I call them <strong>Small Experiments</strong>: The risk is small, the potential benefit is high and that’s how I address what I’d call my “life’s learning” from my colleague, Stefan Tilkov. Stefan taught me to always look at the positive potential of an idea and how we could enable that instead of drowning myself in what might all go wrong. 
+If we’re exploring an unknown path to the top of the mountain, it’s only normal we’ll find that “ah, we cannot take this way. Let’s go back and head to the left”. Small experiments support the same <strong>Management of Uncertainties</strong> for organizations that want to take yet unexplored paths to the top. Yes, we need to be able to mitigate risks and failures because this enables us to make a move at all. Fear of failure otherwise brings us to a standstill.</p>
+
+<h2 id="what-next">What next</h2>
+
+<p>There are different steps we could take to move towards establishing small experiments. And certainly there are still things to be looked after e.g. where the limits of scientific methods are and where methods of complexity management can support them. Thanks for taking the time to read this.</p>
+
+<p>[1] https://blog.heusingfeld.de/organisation/innovation-tokens-jaxenter/</p>
+
+<p>PS: I’d like to thank my colleagues who helped me reflect my thinking on the above over the course of time and finally help me put these thoughts into a series of articles: Tim Riemer, Phillipp Tepel, Jessica Paas, Phillip Ghadir, Eberhard Wolf, Julius Ganns, and Stefan Tilkov.</p>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="organisation" /><category term="organizational development" /><category term="systems thinking" /><category term="innovation" /><category term="change management" /><category term="complexity" /><summary type="html"><![CDATA[What’s in it for me as a reader]]></summary></entry><entry><title type="html">Owncloud 8 upgrade to 10: how to skip Major Versions</title><link href="https://aheusingfeld.github.io/hosting/owncloud-updates-between-multiple-major-versions/" rel="alternate" type="text/html" title="Owncloud 8 upgrade to 10: how to skip Major Versions" /><published>2016-12-22T22:23:00+01:00</published><updated>2016-12-22T22:23:00+01:00</updated><id>https://aheusingfeld.github.io/hosting/owncloud-updates-between-multiple-major-versions</id><content type="html" xml:base="https://aheusingfeld.github.io/hosting/owncloud-updates-between-multiple-major-versions/"><![CDATA[<div class="sect1">
+<h2 id="''the_problem">The Problem</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In case you also come into this great situation "I upgraded my Ubuntu to 16.04 LTS and suddenly my owncloud installation is a mess", don&#8217;t panic. I&#8217;m about to share my mess with you so you can pick the perils.</p>
+</div>
+<div class="paragraph">
+<p>It all started with Ubuntu 14.04LTS an innocent <code>do-release-upgrade</code> &#8230;&#8203; which didn&#8217;t want to be aborted - twice. So it convinced to "yes, ok, let&#8217;s do it now&#8230;&#8203;". After the normal upgrade process and a reboot my system was back and working fine - I thought, until I noticed mails from my monitoring system, that the owncloud webUI wasn&#8217;t available.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''initial_analysis">Initial analysis</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A quick check confirmed "yes, the webUI is not available". And even after the hard part of fixing the nginx configuration - yes, I&#8217;m running owncloud behind nginx - and manually installing php7.0-fpm - did I mention Ubuntu 16.04 replaced php5 with php7 EXCEPT FOR THE FPM PART?! -, all websites worked, but Owncloud wouldn&#8217;t!
+Taking a very close look into nginx error.log and I suddenly noticed that the index.php was missing from /var/www/owncloud! In fact, it seems during the Ubuntu Upgrade process for an unreproducible reason <strong>all .php files in /var/www/owncloud got deleted</strong>! But hey, no worries, let&#8217;s <code>apt-get install --reinstall</code>! I double checked that my sources list was correctly pointing to owncloud stable for Ubuntu 16.04 (see <a href="https://download.owncloud.org/download/repositories/stable/owncloud/" class="bare">https://download.owncloud.org/download/repositories/stable/owncloud/</a>) and <code>apt-get</code> installed owncloud 9.1.3 on my machine without mentioning any problems.</p>
+</div>
+<div class="paragraph">
+<p>Unfortunately my monitoring system was still unhappy. "Ah, of course, the 'manual upgrade' process", I thought, and ran <code>sudo -u www-data /var/www/owncloud/occ upgrade</code> only to get this wonderful output:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">ownCloud or one of the apps require upgrade - only a limited number of commands are available
+You may use your browser or the occ upgrade command to do the upgrade
+Set log level to debug
+Exception: Updates between multiple major versions and downgrades are unsupported.
+Update failed
+Maintenance mode is kept active
+Reset log level</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When I opened the webUI, it showed the same error message. But additionally it included a link to the immensely helpful <a href="https://central.owncloud.org/t/updates-between-multiple-major-versions-are-unsupported/815" class="bare">https://central.owncloud.org/t/updates-between-multiple-major-versions-are-unsupported/815</a> which pointed out that I had indeed jumped from Owncloud 8 directly to Owncloud 10 - I skipped the 9.0 version!</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''implicit_dependency">Implicit dependency</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Ok, let&#8217;s cut this short: It occurred to me that the owncloud team has no (documented) support for such a situation - at least I don&#8217;t consider <a href="https://doc.owncloud.org/server/9.0/admin_manual/maintenance/package_upgrade.html#upgrading-across-skipped-releases" class="bare">https://doc.owncloud.org/server/9.0/admin_manual/maintenance/package_upgrade.html#upgrading-across-skipped-releases</a> helpful at all! I assume your next step was also to downgrade owncloud to the next minor version of your current release and by trying this, you jumped into the next fun situation: the <code>owncloud-server</code> package has a dependency on PHP5! IF SOMEONE CAN TELL ME WHY THIS IS CONSIDERED REASONABLE, I&#8217;M REALLY CURIOUS?</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''searching_the_web_for_others_with_the_same_problem">Searching the web for others with the same problem</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Anyway after reading through  <a href="http://askubuntu.com/questions/762221/ubuntu-16-04-upgrade-killed-owncloud-and-many-other-things-but-right-now-i-n" class="bare">http://askubuntu.com/questions/762221/ubuntu-16-04-upgrade-killed-owncloud-and-many-other-things-but-right-now-i-n</a> I finally came to this post  <a href="http://askubuntu.com/questions/767158/ubuntu-16-04-cannot-install-owncloud-server" class="bare">http://askubuntu.com/questions/767158/ubuntu-16-04-cannot-install-owncloud-server</a> which has a very interesting hint: The <code>owncloud-files</code> package has almost no depencies, is thus easy to downgrade and includes the updater! WOOHOO, JACKPOT!</p>
+</div>
+<div class="paragraph">
+<p>So, I started by modifying my <code>/etc/apt/sources.list.d/owncloud.list</code> to Ubuntu 8.2</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>sh -c "echo 'deb http://download.owncloud.org/download/repositories/8.2/Ubuntu_16.10/ /' &gt; /etc/apt/sources.list.d/owncloud.list"</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and then forcing the downgrade and step-by-step upgrade by running</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">$ sudo apt-get update &amp;&amp; sudo apt-get install owncloud-files=8.2.9-1.1
+(...)
+$ sudo -u www-data /var/www/owncloud/occ upgrade
+(...)
+$ sh -c "echo 'deb http://download.owncloud.org/download/repositories/9.0/Ubuntu_16.10/ /' &gt; /etc/apt/sources.list.d/owncloud.list"
+$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
+(...)
+$ sudo -u www-data /var/www/owncloud/occ upgrade
+(...)
+$ sh -c "echo 'deb http://download.owncloud.org/download/repositories/stable/Ubuntu_16.10/ /' &gt; /etc/apt/sources.list.d/owncloud.list"
+$ sudo apt-get update &amp;&amp; sudo apt-get upgrade
+(...)
+$ sudo -u www-data /var/www/owncloud/occ upgrade
+(...)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It took a while but worked pretty well. So in the end I&#8217;d like to thank John Orion for sharing his idea about <code>owncloud-files</code> and the owncloud team for providing this option - even though you don&#8217;t mention it on the pages where people are seeking for help. I hope this is helpful for others, struggling with upgrades.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''summary_and_remaining_issues">Summary and remaining issues</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now I&#8217;m on to fix the remaining issues: <strong>Currently I&#8217;m facing a situation where all requests with <code>index.php</code> are returned with a HTTP302 redirect without <code>index.php</code> - which of course fails</strong> (e.g. <code>/cloud/index.php/login</code> is redirected to <code>/cloud/login</code>). NOTE: I&#8217;m running owncloud behind nginx with a contextroot other than <code>/owncloud</code> - as if I was asking for trouble, right? I&#8217;ll update this blog, in case I stumble upon something.</p>
+</div>
+<div class="paragraph">
+<p>If you find anything to comment, optimize or fix about this, please leave me a github issue. Always think "If I have this issue, someone else might sooner or later have it, too" - and you can help that someone. Thanks a lot!</p>
+</div>
+<div class="sect2">
+<h3 id="''update">UPDATE</h3>
+<div class="paragraph">
+<p>For those who want to follow along, I opened a Github issue under <a href="https://github.com/owncloud/core/issues/26869" class="bare">https://github.com/owncloud/core/issues/26869</a> and provided a pull-request for the remaining necessary changes here <a href="https://github.com/owncloud/core/pull/26882" class="bare">https://github.com/owncloud/core/pull/26882</a></p>
+</div>
+</div>
+</div>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="hosting" /><category term="owncloud" /><category term="nextcloud" /><category term="ubuntu" /><category term="linux" /><category term="self-hosting" /><category term="bugfix" /><summary type="html"><![CDATA[The Problem]]></summary></entry><entry><title type="html">Article on Innovation Tokens at jaxenter</title><link href="https://aheusingfeld.github.io/organisation/innovation-tokens-jaxenter/" rel="alternate" type="text/html" title="Article on Innovation Tokens at jaxenter" /><published>2016-12-12T20:17:00+01:00</published><updated>2016-12-12T20:17:00+01:00</updated><id>https://aheusingfeld.github.io/organisation/innovation-tokens-jaxenter</id><content type="html" xml:base="https://aheusingfeld.github.io/organisation/innovation-tokens-jaxenter/"><![CDATA[<div class="paragraph">
+<p>The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik und Technologie-Überflutung" which was published in the German "Business Technology" magazine, has just been republished on jaxenter.de! You can find it at <a href="https://jaxenter.de/innovation-tokens-50334" class="bare">https://jaxenter.de/innovation-tokens-50334</a> in German language.</p>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="organisation" /><category term="innovation" /><category term="business technology" /><category term="article" /><category term="writing" /><category term="external" /><category term="innoq" /><category term="organisation" /><category term="team management" /><category term="productivity" /><summary type="html"><![CDATA[The article I wrote on "Innovation Tokens: Hilfsmittel bei Informatikerromantik und Technologie-Überflutung" which was published in the German "Business Technology" magazine, has just been republished on jaxenter.de! You can find it at https://jaxenter.de/innovation-tokens-50334 in German language.]]></summary></entry><entry><title type="html">Per request debugging with Log4j 2 filters</title><link href="https://aheusingfeld.github.io/software%20development/per-request-debugging-with-log4j2/" rel="alternate" type="text/html" title="Per request debugging with Log4j 2 filters" /><published>2015-05-08T00:00:00+02:00</published><updated>2015-05-08T00:00:00+02:00</updated><id>https://aheusingfeld.github.io/software%20development/per-request-debugging-with-log4j2</id><content type="html" xml:base="https://aheusingfeld.github.io/software%20development/per-request-debugging-with-log4j2/"><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I wrote a post on the innoQ blog about <a href="https://www.innoq.com/en/blog/per-request-debugging-with-log4j2/">"Per request debugging with Log4j 2 filters"</a>.</p>
+</div>
+<hr>
+<div class="paragraph">
+<p>The bare minimum that should be available are the application’s log messages, so that’s probably the simplest thing to start with. From what I saw, in most production environments log output is unfortunately reduced to the absolute minimum for the sake of system performance and resource efficiency. In those environments it would be ok to increase the logging for a certain portion of the traffic, e.g. just for one incoming HTTP request, but this seems to be quite complicated. In this post I’d like to show you that it isn’t.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''logging_in_java">Logging in Java</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In the Java ecosystem we are free to choose from a variety of logging frameworks to help us get the job done. There is the time-honoured Apache Log4J, it’s so-called successor Logback and the SLF4J API which became quite popular. But with this post I’d like to direct your attention to Log4J’s new major version release <a href="https://logging.apache.org/log4j/2.0/">Apache Log4j 2</a>. Apart from greater performance and numerous bugfixes, Log4j 2 also comes with some new and optimised features which we can use to accomplish our task.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''the_building_blocks">The building blocks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The first thing we need is a place to intercept the HTTP request, extract the appropriate HTTP header and add it to Log4j’s <code>ThreadContext</code>. The <code>ThreadContext</code> is a "Mapped Diagnostic Context" (MDC) which is also known from other logging frameworks. Below you will find a naive implementation of a <code>ServletFilter</code> which does exactly this, assuming that the parameter to enable debugging is a boolean HTTP header like <code>x-debug-enabled: true</code>. Of course you can use any other request parameter you like.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="java">package com.innoq.blog.samples;
+
+import org.apache.logging.log4j.ThreadContext;
+
+import javax.servlet.*;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+
+/**
+ * ServletFilter to extract request data and add it to Log4j's ThreadContext.
+ */
+public class RequestDebugFilter implements Filter {
+
+    public static final String DEBUG_HEADER = "x-debug-enabled";
+
+    @Override
+    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+
+        try {
+            // NOTE: Parsing for a "Boolean" makes sure that ThreadContext does not contain the random value that someone put into the HTTP header!
+            Boolean debugHeaderEnabled = Boolean.valueOf(((HttpServletRequest)request).getHeader(DEBUG_HEADER));
+            if (debugHeaderEnabled) {
+                ThreadContext.put(DEBUG_HEADER, debugHeaderEnabled.toString());
+            }
+
+            chain.doFilter(request, response);
+        } finally {
+            ThreadContext.remove(DEBUG_HEADER);
+        }
+    }
+
+    /* ... further methods abbreviated... */
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once we got the parameter in our <code>ThreadContext</code>, we don’t need any further code changes, but can solely focus on the Log4j 2 configuration. In our Log4j configuration we can now make use of the <a href="https://logging.apache.org/log4j/2.0/manual/filters.html#DynamicThresholdFilter">DynamicThresholdFilter</a> to generally change the log level to TRACE in case the parameter "x-debug-enabled" is set to "true". A simple yet complete <code>log4j2.xml</code> file doing this could look like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Configuration monitorInterval="30"&gt;
+
+    &lt;!-- This filter is used to generally enable TRACE logging if "x-debug-enabled" in the ThreadContext has the value "true" --&gt;
+    &lt;DynamicThresholdFilter key="x-debug-enabled" onMatch="ACCEPT" onMismatch="NEUTRAL"&gt;
+        &lt;KeyValuePair key="true" value="TRACE"/&gt;
+    &lt;/DynamicThresholdFilter&gt;
+
+    &lt;Appenders&gt;
+        &lt;Console name="CONSOLE" target="SYSTEM_OUT" &gt;
+            &lt;JSONLayout compact="true" charset="utf-8" eventEol="true" properties="true"/&gt;
+        &lt;/Console&gt;
+    &lt;/Appenders&gt;
+
+    &lt;Loggers&gt;
+        &lt;Root level="info"&gt;
+            &lt;AppenderRef ref="CONSOLE"/&gt;
+        &lt;/Root&gt;
+    &lt;/Loggers&gt;
+&lt;/Configuration&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With this in hand we might even decide that we want to write those special HTTP requests to a different log file. This can be done by adding the following snippet to our <code>log4j2.xml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="xml">&lt;RollingFile name="DEBUGLOGFILE" fileName="logs/debug.log" filePattern="logs/debug-%d{yyyyMMdd_HH}-%i.log.gz"&gt;
+    &lt;Filters&gt;
+      	&lt;ThreadContextMapFilter onMatch="ACCEPT" onMismatch="DENY"&gt;
+            &lt;KeyValuePair key="x-debug-enabled" value="true"/&gt;
+        &lt;/ThreadContextMapFilter&gt;
+    &lt;/Filters&gt;
+    &lt;Policies&gt;
+        &lt;OnStartupTriggeringPolicy /&gt;
+        &lt;TimeBasedTriggeringPolicy /&gt;
+    &lt;/Policies&gt;
+    &lt;PatternLayout charset="UTF-8"&gt;
+        &lt;PatternLayout pattern="[[%d{ISO8601}||%X||%-5p||%t||%c{1.}||%m]]%n"/&gt;
+    &lt;/PatternLayout&gt;
+&lt;/RollingFile&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case we are using a <a href="https://logging.apache.org/log4j/2.0/manual/filters.html#ThreadContextMapFilter">ThreadContextMapFilter</a> to ACCEPT log messages only in case the <code>x-debug-enabled</code> parameter in the <code>ThreadContext</code> map is set to <code>true</code>. Otherwise the log message is DENIED meaning not written to this RollingFile appender.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We’ve just shown how to enable <code>TRACE</code> logging with Log4j 2 on a per-request basis, but of course this isn’t limited to HTTP requests. Any parameter in the <code>ThreadContext</code> can be used as a trigger. Therefore it is possible to debug batch jobs which have a certain flag, WebSocket connections or any other thread-based processing.</p>
+</div>
+<div class="paragraph">
+<p>The Log4j 2 manual has a lot more information and also explains use cases for new features. I recommend you read through it if you want to gain a deeper understanding. If you happen to read German, you might also be interested in the introductory article on Log4j 2 <a href="https://www.innoq.com/de/articles/2015/01/logging-konsolidieren-log4j2/">"Logging konsolidieren und Performance gewinnen"</a> by my colleagues Stefan and Phillip.</p>
+</div>
+</div>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="software development" /><category term="software development" /><category term="java" /><category term="logging" /><category term="debugging" /><category term="log4j" /><category term="innoq" /><category term="article" /><category term="external" /><summary type="html"><![CDATA[Customers quite regularly call on me to support them when an application is not behaving as expected. On a development machine there are a lot of ways and utilities to analyse the situation. But troubleshooting the erroneous application behaviour in production environments quite often limits your tool belt to a minimum.]]></summary></entry><entry><title type="html">Migrate Owncloud from PostgreSQL to MySQL</title><link href="https://aheusingfeld.github.io/hosting/migrate-owncloud/" rel="alternate" type="text/html" title="Migrate Owncloud from PostgreSQL to MySQL" /><published>2015-01-31T00:00:00+01:00</published><updated>2015-01-31T00:00:00+01:00</updated><id>https://aheusingfeld.github.io/hosting/migrate-owncloud</id><content type="html" xml:base="https://aheusingfeld.github.io/hosting/migrate-owncloud/"><![CDATA[<div class="paragraph">
+<p>I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.</p>
+</div>
+<div class="paragraph">
+<p>Quite often I noticed the following error in my <code>owncloud.log</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code>{"app":"index","message":"Doctrine\\DBAL\\DBALException: An exception occurred while executing 'SELECT \"fileid\", \"storage\", \"path\", \"parent\", \"name\", \"mimetype\", \"mimepart\", \"size\", \"mtime\",\n\t\t\t\t\t   \"storage_mtime\", \"encrypted\", \"unencrypted_size\", \"etag\", \"permissions\"\n\t\t\t\tFROM \"oc_filecache\" WHERE \"storage\" = ? AND \"path_hash\" = ?':\n\nSQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block","level":4,"time":"2014-11-26T15:28:16+00:00"}
+{"app":"PHP","message":"Cannot modify header information - headers already sent at \/var\/www\/owncloud\/lib\/private\/response.php#83","level":3,"time":"2014-11-26T15:28:16+00:00"}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Later on I found out that it occurred when owncloud tried to scan and index the files in the data folder. The way I got to know this is, I noticed that some of the files I uploaded were not displayed in owncloud but were present on the filesystem. So when I ran</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">sudo -u www-data /usr/bin/php5 /var/www/owncloud/occ files:scan ahe -v</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>the command also ended in this error message:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">  [Doctrine\DBAL\DBALException]
+  An exception occurred while executing 'SELECT "fileid", "storage", "path", "parent", "name", "mimetype", "mimepart", "size", "mtime",
+  					   "storage_mtime", "encrypted", "unencrypted_size", "etag", "permissions"
+  				FROM "oc_filecache" WHERE "storage" = ? AND "path_hash" = ?':
+
+  SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+
+
+
+Exception trace:
+ () at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/DBALException.php:47
+ Doctrine\DBAL\DBALException::driverExceptionDuringQuery() at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:140
+ Doctrine\DBAL\Statement-&gt;execute() at /var/www/owncloud/lib/private/db/statementwrapper.php:63
+ OC_DB_StatementWrapper-&gt;execute() at /var/www/owncloud/lib/private/db.php:235
+ OC_DB::executeAudited() at /var/www/owncloud/lib/private/files/cache/cache.php:128
+ OC\Files\Cache\Cache-&gt;get() at /var/www/owncloud/lib/private/files/cache/homecache.php:62
+ OC\Files\Cache\HomeCache-&gt;get() at /var/www/owncloud/lib/private/files/cache/cache.php:367
+ OC\Files\Cache\Cache-&gt;remove() at /var/www/owncloud/lib/private/files/cache/scanner.php:163
+ OC\Files\Cache\Scanner-&gt;removeFromCache() at /var/www/owncloud/lib/private/files/cache/scanner.php:272
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:207
+ OC\Files\Cache\Scanner-&gt;scan() at /var/www/owncloud/lib/private/files/utils/scanner.php:125
+ OC\Files\Utils\Scanner-&gt;scan() at /var/www/owncloud/apps/files/command/scan.php:57
+ OCA\Files\Command\Scan-&gt;scanFiles() at /var/www/owncloud/apps/files/command/scan.php:81
+ OCA\Files\Command\Scan-&gt;execute() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Command/Command.php:244
+ Symfony\Component\Console\Command\Command-&gt;run() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:897
+ Symfony\Component\Console\Application-&gt;doRunCommand() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:191
+ Symfony\Component\Console\Application-&gt;doRun() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:121
+ Symfony\Component\Console\Application-&gt;run() at /var/www/owncloud/console.php:43
+ require_once() at /var/www/owncloud/occ:11
+
+
+
+
+
+  [PDOException]
+  SQLSTATE[25P02]: In failed sql transaction: 7 ERROR:  current transaction is aborted, commands ignored until end of transaction block
+
+
+
+Exception trace:
+ () at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:138
+ PDOStatement-&gt;execute() at /var/www/owncloud/3rdparty/doctrine/dbal/lib/Doctrine/DBAL/Statement.php:138
+ Doctrine\DBAL\Statement-&gt;execute() at /var/www/owncloud/lib/private/db/statementwrapper.php:63
+ OC_DB_StatementWrapper-&gt;execute() at /var/www/owncloud/lib/private/db.php:235
+ OC_DB::executeAudited() at /var/www/owncloud/lib/private/files/cache/cache.php:128
+ OC\Files\Cache\Cache-&gt;get() at /var/www/owncloud/lib/private/files/cache/homecache.php:62
+ OC\Files\Cache\HomeCache-&gt;get() at /var/www/owncloud/lib/private/files/cache/cache.php:367
+ OC\Files\Cache\Cache-&gt;remove() at /var/www/owncloud/lib/private/files/cache/scanner.php:163
+ OC\Files\Cache\Scanner-&gt;removeFromCache() at /var/www/owncloud/lib/private/files/cache/scanner.php:272
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:284
+ OC\Files\Cache\Scanner-&gt;scanChildren() at /var/www/owncloud/lib/private/files/cache/scanner.php:207
+ OC\Files\Cache\Scanner-&gt;scan() at /var/www/owncloud/lib/private/files/utils/scanner.php:125
+ OC\Files\Utils\Scanner-&gt;scan() at /var/www/owncloud/apps/files/command/scan.php:57
+ OCA\Files\Command\Scan-&gt;scanFiles() at /var/www/owncloud/apps/files/command/scan.php:81
+ OCA\Files\Command\Scan-&gt;execute() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Command/Command.php:244
+ Symfony\Component\Console\Command\Command-&gt;run() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:897
+ Symfony\Component\Console\Application-&gt;doRunCommand() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:191
+ Symfony\Component\Console\Application-&gt;doRun() at /var/www/owncloud/3rdparty/symfony/console/Symfony/Component/Console/Application.php:121
+ Symfony\Component\Console\Application-&gt;run() at /var/www/owncloud/console.php:43
+ require_once() at /var/www/owncloud/occ:11
+
+
+files:scan [--all] [user_id1] ... [user_idN]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As this is a PostgreSQL error, I searched the owncloud forums for other people&#8217;s experience with owncloud + PostgreSQL. Unfortunately it seems that owncloud doesn&#8217;t play too nicely with PostgreSQL. :(</p>
+</div>
+<div class="paragraph">
+<p>Looking back I had an owncloud setup with MySQL before and cannot remember having had any issues with it. So I decided to take the easy way and find out how to migrate my owncloud data from PostgreSQL to MySQL. This was when I stumbled upon this great little command in the owncloud console.php: <code>db:convert-type</code></p>
+</div>
+<div class="paragraph">
+<p>This little gem did the trick for me so that after executing the following command, my data had automatically been migrated over to MySQL and the owncloud configuration changed accordingly. As it&#8217;s been so nice to me I thought, I leave it here for others coming up with the same question:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="CodeRay highlight"><code data-lang="bash">sudo -u www-data /usr/bin/php5 /var/www/owncloud/console.php db:convert-type --all-apps mysql owncloud localhost owncloud</code></pre>
+</div>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="hosting" /><category term="owncloud" /><category term="nextcloud" /><category term="self-hosting" /><category term="database" /><category term="migration" /><category term="bugfix" /><summary type="html"><![CDATA[I am running a self-hosted owncloud instance for more than a year now. Back in August I decided to setup a new Ubuntu 14.04 server at home and tried to run owncloud with a PostgreSQL backend - which turned out to be a bad decision.]]></summary></entry><entry><title type="html">Article on company culture at innoQ</title><link href="https://aheusingfeld.github.io/organisation/innoq-company-culture/" rel="alternate" type="text/html" title="Article on company culture at innoQ" /><published>2014-10-08T00:00:00+02:00</published><updated>2014-10-08T00:00:00+02:00</updated><id>https://aheusingfeld.github.io/organisation/innoq-company-culture</id><content type="html" xml:base="https://aheusingfeld.github.io/organisation/innoq-company-culture/"><![CDATA[<div class="paragraph">
+<p>For those of you interested in the impact of a company&#8217;s culture, I wrote an article about the company culture at innoQ on their blog. The article is on the company website and I&#8217;d really appreciate your feedback e.g. on writing style and content.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.innoq.com/de/articles/2014/10/ein-jahr-nach-dem-kulturschock/" class="bare">https://www.innoq.com/de/articles/2014/10/ein-jahr-nach-dem-kulturschock/</a></p>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="organisation" /><category term="culture" /><category term="article" /><category term="external" /><category term="innoq" /><category term="team management" /><summary type="html"><![CDATA[For those of you interested in the impact of a company&#8217;s culture, I wrote an article about the company culture at innoQ on their blog. The article is on the company website and I&#8217;d really appreciate your feedback e.g. on writing style and content.]]></summary></entry><entry><title type="html">Personal Reset</title><link href="https://aheusingfeld.github.io/productivity/personal-reset/" rel="alternate" type="text/html" title="Personal Reset" /><published>2014-09-06T00:00:00+02:00</published><updated>2014-09-06T00:00:00+02:00</updated><id>https://aheusingfeld.github.io/productivity/personal-reset</id><content type="html" xml:base="https://aheusingfeld.github.io/productivity/personal-reset/"><![CDATA[<div class="paragraph">
+<p>Lately I noticed a growing dissatisfaction with my daily workflow. And this was not only because my last blog post has been almost a year ago. No, it&#8217;s related to a noticable drop in productivity. I figured this was due to my curiosity dragging me onto way more interesting topics than either my time frame or my toolset could master. Unfortunately trying to keep up-to-date on those topics created loads of distractions which almost resulted in an inability to focus on a single task for a longer amount of time</p>
+</div>
+<div class="paragraph">
+<p>Lucky me, I&#8217;m surrounded by a bunch of awesome people whom I could talk to about this and my pending decisions.</p>
+</div>
+<div class="sect1">
+<h2 id="''so_what_does_it_mean">So, what does it mean?</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>First of all I&#8217;ll try to get over that <a href="http://sethgodin.typepad.com/seths_blog/2011/09/talkers-block.html">"writer&#8217;s block"</a> and write small posts like this one about things on my mind.</p>
+</li>
+<li>
+<p>Second of all I will have to reduce the quantity of my output on Twitter and skip some of my projects to achieve a level of quality that is finally satisfactory for me personally.</p>
+</li>
+<li>
+<p>Regarding the toolset I decided to give <a href="http://dayoneapp.com/">DayOne</a> another try. It&#8217;s a journal/ diary app that supports MarkDown (yes, I&#8217;d favor Asciidoc), syncs via iCloud, reminds me of stuff and has a few other nice features. The only downsides are it&#8217;s Apple-only and it doesn&#8217;t support WebDAV-sync which would allow automatic publishing to my blog.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it for my plans. My next post will hopefully be quite soon as I&#8217;m currently preparing my <a href="https://www.innoq.com/en/talks/2014/10/micro-services-on-the-jvm-javaone/">JavaOne talk (CON4952)</a> with my dear colleague, <a href="https://twitter.com/eigenbrodtm">Martin Eigenbrodt</a>, which touches some interesting aspects of #MicroServices and distributed systems. Let&#8217;s see how it will work out.</p>
+</div>
+</div>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="productivity" /><category term="software development" /><category term="java" /><category term="asciidoc" /><category term="writing" /><category term="productivity" /><summary type="html"><![CDATA[Lately I noticed a growing dissatisfaction with my daily workflow. And this was not only because my last blog post has been almost a year ago. No, it&#8217;s related to a noticable drop in productivity. I figured this was due to my curiosity dragging me onto way more interesting topics than either my time frame or my toolset could master. Unfortunately trying to keep up-to-date on those topics created loads of distractions which almost resulted in an inability to focus on a single task for a longer amount of time]]></summary></entry><entry><title type="html">First Steps with Android</title><link href="https://aheusingfeld.github.io/software%20development/First-steps-with-android/" rel="alternate" type="text/html" title="First Steps with Android" /><published>2013-09-10T20:47:32+02:00</published><updated>2013-09-10T20:47:32+02:00</updated><id>https://aheusingfeld.github.io/software%20development/First-steps-with-android</id><content type="html" xml:base="https://aheusingfeld.github.io/software%20development/First-steps-with-android/"><![CDATA[<div class="sect1">
+<h2 id="''the_stumble_stones">The Stumble Stones</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Android Team&#8217;s switch from the Eclipse based <a href="https://developer.android.com/tools/help/adt.html">Android Developer Tools</a> to the IntelliJ IDEA based <a href="https://developer.android.com/sdk/installing/studio.html">"Android Studio"</a> at Google I/O is pretty well-known. But what isn&#8217;t too well-known is that they also changed the default android project directory structure as they switched their build system from ant to gradle.</p>
+</div>
+<div class="paragraph">
+<p>Further information on the new structure and the new build system are available here: <a href="http://tools.android.com/tech-docs/new-build-system/user-guide" class="bare">http://tools.android.com/tech-docs/new-build-system/user-guide</a></p>
+</div>
+<div class="paragraph">
+<p>I decided to go with the new Gradle-based structure as I thought it was more future proof. I have to admit that I regret this badly! As I&#8217;m not too familiar with Gradle, yet, I had a pretty bad time trying to understand the customizations brought in by the gradle-android plugin. Additionally most of the information available on the net is specific to Eclipse/ Ant based projects and therefore slightly different for the new structure.</p>
+</div>
+<div class="sect2">
+<h3 id="''environment_setup">Environment Setup</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>download Android SDK</p>
+</li>
+<li>
+<p>extract it to e.g. ~/dev/android-sdk-macosx</p>
+</li>
+<li>
+<p>modify your .bash_profile and add
+<code>export ANDROID_HOME=YOUR_ANDROID_SDK_PATH_HERE</code></p>
+</li>
+<li>
+<p>create local.properties</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="''things_of_great_help_not">Things of great help #not</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>IntelliJ project creation wizard &gt; creates eclipse/ Ant structure</p>
+</li>
+<li>
+<p>Android Studio project creation wizard</p>
+</li>
+<li>
+<p>Pivotal Labs' "AndroidIntelliJStarter" <a href="https://github.com/pivotal/AndroidIntelliJStarter" class="bare">https://github.com/pivotal/AndroidIntelliJStarter</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These utilities turned out to be buggy or outdated and partly messed up the working configuration. <strong>Don&#8217;t use them!</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>What turned out to be really helpful, were <a href="https://github.com/stephanenicolas/Quality-Tools-for-Android">Quality-Tools-for-Android</a> and <a href="http://square.github.io/fest-android/">FEST Android</a> by SQUARE.</strong> You should really have a look at Square&#8217;s <a href="https://github.com/square">repositories at Github</a> as there is a lot of goodness for the new Android world lying around!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="''conclusion">Conclusion</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>1. Before you try things out, go RTFM. </strong></p>
+</div>
+<div class="paragraph">
+<p>It might take you two weeks to read <a href="https://developer.android.com/design/index.html" class="bare">https://developer.android.com/design/index.html</a> and  <a href="https://developer.android.com/develop/index.html" class="bare">https://developer.android.com/develop/index.html</a> but don&#8217;t dare to start before this! Except if you like to start-over or rewrite your whole Application. ;)</p>
+</div>
+<div class="paragraph">
+<p><strong>2. Before you use a library, assure that it works with Gradle!</strong></p>
+</div>
+<div class="sect2">
+<h3 id="''questions_and_answers">Questions and Answers</h3>
+<div class="sect3">
+<h4 id="''what_is_the_differences_between_the_px_dip_dp_and_sp_units_in_android">"What is the differences between the px, dip, dp and sp units in Android?"</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+see <a href="http://developer.android.com/guide/topics/resources/more-resources.html#Dimension" class="bare">http://developer.android.com/guide/topics/resources/more-resources.html#Dimension</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>dip = Density-independent Pixels</p>
+</li>
+<li>
+<p>sp = Scale-independent Pixels</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+The compiler accepts both "dip" and "dp", though "dp" is more consistent with "sp".
+</blockquote>
+<div class="attribution">
+&#8212; Android Developer Guide
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="''q_idea_tells_me_project_directory_not_specified">Q: IDEA tells me "Project directory not specified"</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+Probably your ".idea/gradle.xml" is messed up. See this bug report: <a href="https://code.google.com/p/android/issues/detail?id=56750" class="bare">https://code.google.com/p/android/issues/detail?id=56750</a> to fix it</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="''q_my_tests_fail_with_junit_version_3_8_or_later_expected">Q: My tests fail with "!!! JUnit version 3.8 or later expected"</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+The reason for this is that the android.jar <strong>contains</strong> a version of JUnit prior to 3.8! You can fix this by opening the "Project structure" settings &gt; your module &gt; Dependencies and putting the "Android Platform" dependency all the way down the list.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="''q_i_need_absolute_positioning_but_absolutelayout_has_been_deprecated">Q: I need absolute positioning but AbsoluteLayout has been deprecated</h4>
+<div class="paragraph">
+<p><strong>A:</strong>
+Yes, there is a <a href="http://tbeernot.wordpress.com/2012/12/09/layout-in-javafx-and-android/">great post</a> by <a href="http://twitter.com/tbeernot">@tbeernot</a> describing this pain. But to the rescue there is <a href="http://saynomoo.github.io/mig4android/">miglayout for android</a>!</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="''update_2013_10_04">Update 2013-10-04</h3>
+<div class="paragraph">
+<p><strong>In the meantime there is a <a href="https://developer.android.com/sdk/installing/migrate.html">migration guide</a> and a <a href="https://developer.android.com/sdk/installing/studio-tips.html">Tips &amp; Tricks section</a> available on the Android Developer pages!</strong></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="''update_2013_10_20">Update 2013-10-20</h3>
+<div class="paragraph">
+<p>In the meantime there are a few really awesome videos available on Gradle and Android, that I&#8217;d like to share with you</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.youtube.com/watch?v=ieeD3Dc5OjM">Introduction to Android Studio</a> - Gradleware</p>
+</li>
+<li>
+<p><a href="http://youtu.be/rXww768LUUM">Gradle for Android</a> - <a href="https://twitter.com/hans_d">Hans Dokter</a>, CEO @Gradleware</p>
+</li>
+<li>
+<p><a href="http://youtu.be/EM5edIJUA10">Learnings from building Twitter for Android</a> - <a href="https://twitter.com/jle">Jonathan Le</a>, Lead Dev Twitter for Android @Twitter</p>
+</li>
+<li>
+<p><a href="http://www.youtube.com/watch?v=8qV4QW6ppXE&amp;feature=youtu.be">Five Lessons to Electrify your Gradle plugins</a> - <a href="https://twitter.com/jakeout">Jake Ouellette</a>, <a href="http://try.crashlytics.com/">Crashlytics</a> Team @Twitter</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="software development" /><category term="software development" /><category term="java" /><category term="android" /><category term="mobile" /><category term="article" /><summary type="html"><![CDATA[The Stumble Stones]]></summary></entry><entry><title type="html">DOAG SIG Middleware 2013: Enterprise Integration with GlassFish</title><link href="https://aheusingfeld.github.io/talks/speaking-at-DOAG-SIG-Middleware/" rel="alternate" type="text/html" title="DOAG SIG Middleware 2013: Enterprise Integration with GlassFish" /><published>2013-08-08T20:47:32+02:00</published><updated>2013-08-08T20:47:32+02:00</updated><id>https://aheusingfeld.github.io/talks/speaking-at-DOAG-SIG-Middleware</id><content type="html" xml:base="https://aheusingfeld.github.io/talks/speaking-at-DOAG-SIG-Middleware/"><![CDATA[<div class="paragraph">
+<p>I have been invited by the <a href="http://www.doag.org/">DOAG</a> to give a talk on "Enterprise Integration with GlassFish" at their <a href="http://www.doag.org/termine/termine.php?tid=450909">SIG Middleware event</a>.</p>
+</div>
+<div class="paragraph">
+<p>This event will take place in Duesseldorf on Oct, 8th 2013. It is a meetup of the German Oracle customers using Oracle middleware products. The event will feature a number of great talks around <a href="http://glassfish.java.net/">GlassFish 4.0</a>.</p>
+</div>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="talks" /><category term="talk" /><category term="java" /><category term="eai" /><category term="oracle" /><category term="glassfish" /><category term="application server" /><category term="integration" /><category term="software development" /><summary type="html"><![CDATA[I have been invited by the DOAG to give a talk on "Enterprise Integration with GlassFish" at their SIG Middleware event.]]></summary></entry><entry><title type="html">Getting started with Clojure</title><link href="https://aheusingfeld.github.io/software%20development/getting-started-with-clojure/" rel="alternate" type="text/html" title="Getting started with Clojure" /><published>2013-08-06T23:15:27+02:00</published><updated>2013-08-06T23:15:27+02:00</updated><id>https://aheusingfeld.github.io/software%20development/getting-started-with-clojure</id><content type="html" xml:base="https://aheusingfeld.github.io/software%20development/getting-started-with-clojure/"><![CDATA[<h3 id="why-clojure">Why Clojure?</h3>
+
+<p>As I apparently love to use many braces in my blog posts, Clojure is just a natural match! ;)
+Just kidding. I wanted to dig into Clojure for about a year now, but couldn’t find the time. Clojure to me seems like the most interesting member of the functional programming language family.</p>
+
+<h3 id="getting-started">Getting started</h3>
+<p>The official clojure.org website has a Getting Started page <a href="http://clojure.org/getting_started">http://clojure.org/getting_started</a> which sends you to the community-driven Clojure Documentation <a href="http://dev.clojure.org/display/doc">http://dev.clojure.org/display/doc</a> …</p>
+
+<p>… but there is also this one: <a href="http://clojure-doc.org/">http://clojure-doc.org/</a></p>
+
+<p>… and even this one: <a href="http://clojuredocs.org/">http://clojuredocs.org/</a></p>
+
+<p>… and additionally there’s the official documentation at <a href="http://clojure.org/documentation">http://clojure.org/documentation</a> ;-)</p>
+
+<p><strong>Though the official documentation is definitely the most complete, I personally liked this introduction much better. So I recommend you start here:</strong>  <a href="http://clojure-doc.org/articles/tutorials/introduction.html">http://clojure-doc.org/articles/tutorials/introduction.html</a></p>
+
+<p>Another resource that has been really helpful, was the Clojure CheatSheet at <a href="http://clojure.org/cheatsheet">http://clojure.org/cheatsheet</a></p>
+
+<p>After I read the Introduction I wanted to make sure that I - to some degree - internalized the basics, so I started to dig into the <a href="http://clojurekoans.com/">Clojure Koans</a>. “Koan” is derived from <a href="https://en.wikipedia.org/wiki/Koans">Zen training</a>. It is a question which shall provoke a “great doubt” in you to test your progress. Good luck! ;)</p>
+
+<h3 id="setup">Setup</h3>
+
+<h4 id="downloads">Downloads</h4>
+
+<ul>
+  <li>Download the Leiningen script from  <a href="https://raw.github.com/technomancy/leiningen/stable/bin/lein">https://raw.github.com/technomancy/leiningen/stable/bin/lein</a></li>
+  <li>place it on your <code class="language-plaintext highlighter-rouge">$PATH</code> e.g. in <code class="language-plaintext highlighter-rouge">/usr/local/bin</code> and make it executable</li>
+  <li>run <code class="language-plaintext highlighter-rouge">lein version</code> on the command line</li>
+</ul>
+
+<p>This will download and install the necessary binary and place them in <code class="language-plaintext highlighter-rouge">~/.lein/self-installs/</code></p>
+
+<h4 id="intellij-idea">IntelliJ IDEA</h4>
+
+<p>My favorite IDE, <a href="http://confluence.jetbrains.net/display/IDEADEV/EAP">IntelliJ IDEA</a>, supports Clojure development with the following plugins</p>
+
+<ul>
+  <li><a href="https://github.com/JetBrains/la-clojure#la-clojure">La Clojure Plugin @Github</a></li>
+  <li><a href="https://github.com/derkork/intellij-leiningen-plugin#the-intellij-leiningen-plugin">Leiningen Plugin @Github</a></li>
+</ul>
+
+<p>Now you have context assistant, inspections and navigation support and can open a Clojure REPL in IDEA. If your project has a <code class="language-plaintext highlighter-rouge">project.clj</code> file, leiningen will read the project configuration from this file, load your dependencies as libraries into IntelliJ and provide you with a list of available build goals.</p>
+
+<p>If you want to run your Clojure code in IDEA, you can simply go like this:</p>
+
+<ul>
+  <li>open a REPL a.k.a. “Clojure Console”</li>
+  <li>you should now see a <code class="language-plaintext highlighter-rouge">user=&gt;</code> prompt</li>
+  <li>
+    <p>next you place the cursor at this prompt and type</p>
+
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  user=&gt; (load-file "src/myfolder/myclojurecode.clj")
+  user=&gt; (ns myfolder.myclojurecode)
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<p><strong>(NOTE: you’ll have to adjust this according to the <a href="http://clojure-doc.org/articles/tutorials/introduction.html#namespaces">namespace</a> given in your <code class="language-plaintext highlighter-rouge">myclojurecode.clj</code> file)</strong></p>
+
+<p>Now you should see a command prompt like <code class="language-plaintext highlighter-rouge">myfolder.myclojurecode=&gt;</code> which will let you execute any function defined in your <code class="language-plaintext highlighter-rouge">myclojurecode.clj</code> file just like this</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(my-sample-function "a parameter string") 
+</code></pre></div></div>
+
+<h3 id="get-something-done">Get something done</h3>
+
+<p>To test my new skills on a real project, I cloned the <a href="https://github.com/innoq/statuses">innoQ statuses</a> app @Github - a very, very basic open-source Twitter-clone created to play with Clojure - and started working <a href="https://github.com/innoq/statuses/issues/10">on a concrete issue</a>. You can see the result at <a href="https://github.com/innoq/statuses/pull/54">https://github.com/innoq/statuses/pull/54</a>.</p>
+
+<h3 id="things-i-learned">Things I learned</h3>
+
+<ul>
+  <li>Clojure REPL (Read Eval Print Loop) is the command prompt to test your Clojure programs</li>
+  <li>Clojure is a functional programming language. Yes, breaking news, but the point is, if the term “objects” is used in the context of Clojure, it doesn’t refer to objects as in an object oriented mindset! The only occasion where OO objects could be meant, is when you’re talking of Java objects which can easily be used inside your Clojure programs.</li>
+  <li>Clojure is not whitespace sensitive. Commas count as whitespace and can thus be omitted. This might make your code more readable - or totally confuse newbies!</li>
+  <li>if expressions are hard to read, thread them via “-&gt;” (see <a href="http://clojuredocs.org/clojure_core/clojure.core/-%3E">http://clojuredocs.org/clojure_core/clojure.core/-%3E</a>)</li>
+</ul>
+
+<p>Hopefully I will have time to complete the Koans and add to this list soon … :)</p>
+
+<h3 id="further-links">Further Links</h3>
+
+<ul>
+  <li>German Podcast introducing Clojure I can highly recommend <a href="http://www.innoq.com/de/podcast/004-clojure">http://www.innoq.com/de/podcast/004-clojure</a></li>
+  <li>Leiningen - Clojure project automation <a href="http://leiningen.org/">http://leiningen.org/</a></li>
+</ul>]]></content><author><name>Alexander Heusingfeld</name><email>alex@heusingfeld.de</email><uri>https://heusingfeld.de</uri></author><category term="software development" /><category term="clojure" /><category term="software development" /><category term="intellij" /><category term="tipps" /><summary type="html"><![CDATA[Why Clojure?]]></summary></entry></feed>

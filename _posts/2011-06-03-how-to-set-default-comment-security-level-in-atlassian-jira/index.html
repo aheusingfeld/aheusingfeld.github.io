@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>How to Set Default Comment Security Level in Atlassian JIRA</title>
+    <meta name="description" content="My 2cts on software architecture, digital transformation, and other concerns">
+    <link rel="canonical" href="https://aheusingfeld.github.io/_posts/2011-06-03-how-to-set-default-comment-security-level-in-atlassian-jira/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  how-to-set-default-comment-security-level-in-atlassian-jira">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">How to Set Default Comment Security Level in Atlassian JIRA
+</h1>
+        
+        
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>
+Atlassian JIRA in my humble opinion one of the greatest issue tracking systems around. Nevertheless there are still many missing features, one of them may be "setting the default comment security level".<br /><br />There is a nice little confluence wiki page which describes some kind of dirty hack to solve or at least work around this problem. The URL to that page is: <a href="http://confluence.atlassian.com/display/JIRA/How+to+Set+Default+Comment+Security+Level">http://confluence.atlassian.com/display/JIRA/How+to+Set+Default+Comment+Security+Level</a><br /><br />
+
+
+pass::[more]
+
+
+Unfortunately the workaround works only for JIRA 4.1 and lower as Atlassian completely rewrote there UI for version 4.2 onwards. Therefore the &lt;select&gt;-element for the "comment security level" is hidden and the user gets to see a HTML dropdown which is much more beautiful and nicer to work with. But it breaks the above mentioned hack as the HTML dropdown doesn't really care about the state of the &lt;select&gt;-element, as it holds the state inside of its own "model".<br />There is already a JIRA issue describing the problem: <a href="https://jira.atlassian.com/browse/JRA-23365">JRA-23365</a><br /><br />I couldn't solve the problem completely as I have absolutely no knowledge about the inner workings of "AJS", Atlassians Javascript Library, but I somehow could extend the above mentioned workaround.<br /><br />Here's the code I put into my "announcement banner" field:<br /><pre>&lt;script language="JavaScript"&gt;<br />    &lt;!--<br />    jQuery.noConflict();<br />    var defaultRoleName = 'role:10030'<br />    window.onload = function() {<br />        var commentLevelSelect = document.getElementById("commentLevel");<br />        if (commentLevelSelect) {<br />            for (var i = 1; i &lt; commentLevelSelect.options.length; i++) {<br />                if (commentLevelSelect.options[i].value == defaultRoleName) {<br />                    commentLevelSelect.options[i].selected;<br />                    commentLevelSelect.value = defaultRoleName;<br />                    jQuery("a.drop span.icon").removeClass("icon-unlocked").addClass("icon-locked");<br /><br />                    var htmlEscapedLabel = AJS.$("&lt;div/&gt;").text(commentLevelSelect.options[i].text).html();<br />                    jQuery("span.current-level").html(AJS.format(AJS.params.securityLevelViewableRestrictedTo, htmlEscapedLabel))<br /><br />                    break;<br />                }<br />            }<br />        }<br />    }<br />    //--&gt;<br />&lt;/script&gt;<br />&lt;style&gt;<br />   .alertHeader{display:none;}<br />&lt;/style&gt;<br /></pre>Any comments and suggestions on this are very much appreciated!<br /><br />Update 2012-02-02: I updated the code and tested it with JIRA 4.3.4<br />
+<script src="https://gist.github.com/1723281.js"> </script>
+</p>
+<h2>Comments</h2>
+<div class='comments'>
+<div class='comment'>
+<div class='author'>goldstift</div>
+<div class='content'>
+Hi Aleksander,<br /><br />we&#39;re using the script exactly this way. All you have to do is set the &quot;defaultRoleName&quot; variable. If there is no entry with this value, jQuery doesn&#39;t change the selected item.<br /><br />Cheers<br />Alex</div>
+</div>
+<div class='comment'>
+<div class='author'>Aleksander</div>
+<div class='content'>
+Thanks a lot for an extremely helpful work around.<br />Is it possible to make the script detect if the security level is not available, and then back off (don&#39;t do a selection)<br /><br />We are using this to set default security level for comments to employees only (hidden for customers), but when a customer logs in he/she does not have access to this security role. Causing the drop down selection to look a bit weird.<br /><br />Running Jira 5.0.6 btw.<br /><br />Cheers<br />Aleksander<br /></div>
+</div>
+<div class='comment'>
+<div class='author'>goldstift</div>
+<div class='content'>
+Hi Jared,<br /><br />thanks for your idea on this one. I updated the code to also work in the in-HTML popup dialogs. Unfortunately the HTML-dropdown list still doesn&#39;t recognize the change and shows the wrong entry as &quot;active&quot;.<br /><br />Cheers<br />Alex</div>
+</div>
+<div class='comment'>
+<div class='author'>JMTyler</div>
+<div class='content'>
+Thanks a lot for this!  I agree that this is one of the more important features that JIRA is currently missing.<br /><br />I did have to do a tad of debugging to get this to work... for some reason the window.onload event wasn&#39;t firing properly, so instead of setting the above function as the onload handler, I set it into the jQuery() method (which achieves the same result, but is wrapped for all that lovely jQuery abstraction).<br /><br />So I basically ended up doing the following:<br /><br />var defaultRoleName = &#39;role:10030&#39;<br />jQuery(function() {<br />    var commentLevelSelect = document.getElementById(&quot;commentLevel&quot;);<br />    ....<br />});<br /><br />Cheers!<br />Jared</div>
+</div>
+<div class='comment'>
+<div class='author'>goldstift</div>
+<div class='content'>
+Sorry for taking so long to get back to you. I know this issue but unfortunately haven&#39;t had time to get rid of it, yet.<br /><br />The problem occurs with the &quot;modal dialogs&quot; as the form content is loaded via ajax requests. Therefore the form is not on the page when my jQuery-function is executed. The solution would be to attach a listener to the callback and re-execute the function whenever a form is loaded via ajax.<br /><br />Nevertheless you should definitely vote for the issue over at Atlassian.</div>
+</div>
+<div class='comment'>
+<div class='author'>glideobot</div>
+<div class='content'>
+Thank you. Works fine when commenting in Jira v4.2.4-b591.<br />But when attaching a file, the comment reverts back to original value. Can you help?</div>
+</div>
+</div>
+
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">productivity</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">jira</li><li class="page-taxonomy">atlassian</li><li class="page-taxonomy">settings</li><li class="page-taxonomy">security</li><li class="page-taxonomy">software development</li><li class="page-taxonomy">tips</li><li class="page-taxonomy">organisation</li><li class="page-taxonomy">productivity</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2011-06-03T23:00:00+02:00">2011-06-03</time></p>
+
+
+        </footer>
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

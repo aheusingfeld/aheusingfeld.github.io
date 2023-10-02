@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>JBoss Forge in IntelliJ IDEA</title>
+    <meta name="description" content="At this year’s JavaOne I attended a talk by Marius Bogoevici (@mariusbogoevici) and was once again pointed at the JBoss Forge project. Last time I took a loo...">
+    <link rel="canonical" href="https://aheusingfeld.github.io/software%20development/JBoss-Forge-in_IntelliJ/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  jboss-forge-in-intellij-idea">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">JBoss Forge in IntelliJ IDEA
+</h1>
+        
+        
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2012-11-03T22:00:00+01:00">2012-11-03</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>At this year’s JavaOne I attended a <a href="https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=10659">talk</a> by Marius Bogoevici (<a href="http://twitter.com/mariusbogoevici">@mariusbogoevici</a>) and was once again pointed at the JBoss Forge project. Last time I took a look at Forge it was still called Seam Forge which was about a year ago. It seriously matured since then.</p>
+
+<p><a href="http://forge.jboss.org/">JBoss Forge</a> is a shell for rapid-application development at a command-line level. It supports developers setting up Java applications by reducing the need to write boilerplate code. In case you ever have to start a project from scratch you should really take a glance at JBoss Forge as it makes life easier!</p>
+
+<h3 id="daily-usage">Daily usage</h3>
+<p>As I’m using Forge on a regular basis, I often see myself switching between the IDE and the command line which seems quite inefficient. There is a neat integration for Eclipse but unfortunately there isn’t any integration into IDEs like Netbeans or my favourite IntelliJ IDEA.
+Nevertheless as Forge operates at command-line level it can easily be integrated into any IDE supporting input via a console window.</p>
+
+<p>In IntelliJ IDEA (I’m using the <a href="http://confluence.jetbrains.net/display/IDEADEV/IDEA+12+EAP">IntelliJ IDEA 12 EAP</a>) this is done via an “External Tools” configuration. Therefore open IntelliJ’s “Settings” dialog and navigate to “External Tools”. Then click on the “+”-Button to create a new “External Tool” configuration.</p>
+
+<h3 id="configuration-for-mac-os-x">Configuration for Mac OS X</h3>
+
+<p>On Mac OS X I entered the following:</p>
+<ul>
+  <li>Name: forge</li>
+  <li>group:</li>
+  <li>description: JBoss Forge</li>
+  <li>Program: /bin/bash</li>
+  <li>Parameter: –init-file /Users/USERNAME/.bash_profile -i -c $FORGE_HOME/bin/forge</li>
+  <li>Working Directory: $ProjectFileDir$</li>
+</ul>
+
+<p><img src="/gfx/idea-external-tool-jboss-forge.png" alt="Screenshot of &quot;External Tools&quot; configuration for JBoss Forge" /></p>
+
+<p>My “~/.profile” contains the following lines:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>export FORGE_HOME=/Users/ahe/dev/tools/forge-distribution-1.1.1.Final
+export PATH=/opt/local/bin:/opt/local/sbin:$FORGE_HOME/bin:$PATH
+</code></pre></div></div>
+
+<h3 id="other-operating-systems">Other operating systems</h3>
+
+<p>In case you ain’t working on Mac OS X, you will have to adjust the above mentioned paths accordingly. 
+For Windows users I can recommend the bash packaged with <a href="https://code.google.com/p/msysgit/">Git For Windows</a>.</p>
+
+
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">java</li><li class="page-taxonomy">macos</li><li class="page-taxonomy">intellij</li><li class="page-taxonomy">jboss forge</li><li class="page-taxonomy">bash</li><li class="page-taxonomy">open source</li><li class="page-taxonomy">organisation</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2012-11-03T22:00:00+01:00">2012-11-03</time></p>
+
+
+        </footer>
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2FJBoss-Forge-in_IntelliJ%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=JBoss+Forge+in+IntelliJ+IDEA%20https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2FJBoss-Forge-in_IntelliJ%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2FJBoss-Forge-in_IntelliJ%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=JBoss+Forge+in+IntelliJ+IDEA&url=https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2FJBoss-Forge-in_IntelliJ%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/talks/JavaOne_Session-material-online/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> JavaOne 2012 Session material is now available
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/productivity/Productivity-for-Finder/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Enhancements for Mac OS X Finder.app
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>

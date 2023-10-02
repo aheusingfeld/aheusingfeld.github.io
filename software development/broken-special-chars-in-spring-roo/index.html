@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.2.0
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    <title>Broken special chars in Spring Roo internationalization?</title>
+    <meta name="description" content="This is the first post in an upcoming series of posts on Spring Roo (see footer for details an Roo).Problem: Special chars and Umlauts are not correctly disp...">
+    <link rel="canonical" href="https://aheusingfeld.github.io/software%20development/broken-special-chars-in-spring-roo/">
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/skins/default.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Overthinker&#39;s Thoughts" href="/feed.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--single  broken-special-chars-in-spring-roo-internationalization">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/posts/">Blog</a></li><li><a href="/categories/talks">Talks</a></li><li><a href="/tags/">Tags</a></li><li><a href="/about/">About Me</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+      <a href="/" class="site-logo" rel="home" title="Overthinker's Thoughts">
+        <img src="/gfx/alex-blog.jpg" class="site-logo-img animated fadeInDown" alt="Overthinker's Thoughts">
+      </a>
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/">Overthinker's Thoughts</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">My 2cts on software architecture, digital transformation, and other concerns</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Broken special chars in Spring Roo internationalization?
+</h1>
+        
+        
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2011-02-13T22:00:00+01:00">2011-02-13</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          3 minute read
+        
+      </span>
+    
+  </p>
+
+
+      </header>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p>
+This is the first post in an upcoming series of posts on Spring Roo (see footer for details an Roo).<br /><br /><h2>Problem: Special chars and Umlauts are not correctly displayed in my Roo-Application</h2>[<a href="http://goldstifts.blogspot.com/2011/02/umlaute-und-sonderzeichen-in-spring-roo.html">german version</a>]<br />There are often questions and support requests on the above named topic in <a href="http://forum.springsource.org/forumdisplay.php?f=67">Spring Roo-Forum</a>. Mostly questioners write that german "Umlauts" like ä, ö, ü and ß or other special chars in cyrillic are not correctly display or saved to the database. With the following post I'd like to review the most common sources of the problem and come up with solutions.<br /><br />
+
+
+<h3>Encoding of the HTML/ JSP page</h3>Roo generated JSPs are always delivered with UTF-8 encoding. In case you write your additional JSPs by hand, you should assure these pages are also delivered to the browser in UTF-8 encoding so the form data will be correctly send on submit.<br />This can be achieved by specifying the following line of code at the beginning of each JSP:<br /><pre>&lt;jsp:directive.page contenttype="text/html;charset=UTF-8"<br />   pageencoding="UTF-8"/&gt;<br /></pre><br />To show you an example where to exactly put this, the "default.jspx", which serves a frame for all other JSP pages via Apache Tiles, contains the following lines to preserve UTF-8 encoding in the resulting HTML:<br /><pre class="alt2" dir="ltr" style="border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;">&lt;html xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:tiles="http://tiles.apache.org/tags-tiles" xmlns:spring="http://www.springframework.org/tags" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" &gt;  <br /> <br /> &lt;jsp:output doctype-root-element="HTML" doctype-system="about:legacy-compat" /&gt;<br /> <br /> &lt;jsp:directive.page contentType="text/html;charset=UTF-8" /&gt;  <br />  <br /> &lt;head&gt;<br />  &lt;meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /&gt;<br /><br />&lt;!-- ... --&gt;<br /></pre><br />To check whether your page is delivered in UTF-8 encoding, open it in your browser and have a look at menu "View &gt; Character Encoding".<br /><br /><h3>CharacterEncodingFilter in web.xml file</h3>This is the most common point of failure. We're talking about the order in which the <span style="font-family: &quot;Courier New&quot;,Courier,monospace;">&lt;filter-mapping&gt;</span>-Tags occur in your "<span style="font-family: &quot;Courier New&quot;,Courier,monospace;">src/main/webapp/WEB-INF/web.xml</span>". These tags define in which order the filters are executed on each HTTP-Request.<br /><b>Roo generates the correct order since Version 1.1.1! <a href="https://jira.springsource.org/browse/ROO-1731">Previous versions are still buggy</a>.</b> <br /><br />The correct order looks like the following:<br /><pre class="alt2" dir="ltr" style="border: 1px inset; margin: 0px; overflow: auto; padding: 6px; text-align: left; width: 400px;">&lt;filter-mapping&gt;<br />    &lt;filter-name&gt;CharacterEncodingFilter&lt;/filter-name&gt;<br />    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;<br />&lt;/filter-mapping&gt;<br />&lt;filter-mapping&gt;<br />    &lt;filter-name&gt;Spring OpenEntityManagerInViewFilter&lt;/filter-name&gt;<br />    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;<br />&lt;/filter-mapping&gt;<br />&lt;filter-mapping&gt;<br />    &lt;filter-name&gt;HttpMethodFilter&lt;/filter-name&gt;<br />    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;<br />&lt;/filter-mapping&gt;<br />&lt;filter-mapping&gt;<br />    &lt;filter-name&gt;springSecurityFilterChain&lt;/filter-name&gt;<br />    &lt;url-pattern&gt;/*&lt;/url-pattern&gt;<br />&lt;/filter-mapping&gt;<br /></pre><br />In case you want to change the order it is important to understand at least a minimum of the inner workings of these filters:<br /><ul><li><a href="http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/CharacterEncodingFilter.html">CharacterEncodingFilter</a> - Sets the encoding on the HTTP-Request in case the Browser didn't send the encoding of the HMTL-page/ form</li><li> <a href="http://static.springsource.org/spring/docs/3.0.x/api/org/springframework/orm/jpa/support/OpenEntityManagerInViewFilter.html">OpenEntityManagerInViewFilter</a> - only for Hibernate, sets the EntityManager to a ThreadLocal (see <a href="http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter">discussion on</a> <a href="http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/">Pros and Cons</a>)</li><li><a href="http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/HiddenHttpMethodFilter.html">HttpMethodFilter</a> - Necessary to really perform e.g. HTTP PUT or HTTP DELETE requests!</li><li><a href="http://static.springsource.org/spring/docs/3.0.x/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html">springSecurityFilterChain</a> - has to be run AFTER HttpMethodFilter in case you check HTTP-Method in Spring Security</li><li>... other filters</li></ul>To avoid problems with the encoding of your special chars, "CharacterEncodingFilter" has to be run before any other filter has worked on the request data!<br /><b>For this reason the general advice is: the &lt;filter-mapping&gt; for <a href="http://forum.springsource.org/showthread.php?t=97672">CharacterEncodingFilter has to be at the first position in your "web.xml"</a> (<a href="https://jira.springsource.org/browse/ROO-1698">See ROO-1698 for an explanation</a> - the charset CANNOT be set to the request after the InputStream has been read)!</b> <br /><br /><h3>Database connection</h3>The last point is to assure that your application communicates with the database via unicode with a default encoding of UTF-8.<br /><br />As Roo generates the correct connection string for MySQL since "the early days" there haven't been many bugs with this lately.<br />The connection string can be configured in "<span style="font-size: x-small;"><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">src/main/resources/META-INF/spring/database.properties</span></span>" and looks like the following for MySQL:<br /><span style="font-family: &quot;Courier New&quot;,Courier,monospace;">database.url=jdbc:mysql://[YOUR_DB_SERVER]:3306/[YOUR_DB_NAME]?autoReconnect=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</span><br /><br /><h3>Conclusion</h3>Since version 1.1.1 Spring Roo provides a (by now) bug free support for special chars and umlauts, which as been tested with various languages worldwide.<br /><br />If you have any questions on Spring Roo or the topic named above you can find competent assistance in the Roo-Forum. <br /><br /><h3>References/ Links used in the text</h3><ul style="font-family: inherit;"><li><a href="https://jira.springsource.org/browse/ROO">ROO-JIRA issues</a></li><ul><li><a href="https://jira.springsource.org/browse/ROO-89">https://jira.springsource.org/browse/ROO-89</a> </li><li><a href="https://jira.springsource.org/browse/ROO-1030">https://jira.springsource.org/browse/ROO-1030</a></li><li><a href="https://jira.springsource.org/browse/ROO-1585">https://jira.springsource.org/browse/ROO-1585</a>&nbsp; </li><li><a href="https://jira.springsource.org/browse/ROO-1684">https://jira.springsource.org/browse/ROO-1684</a></li><li><a href="https://jira.springsource.org/browse/ROO-1698">https://jira.springsource.org/browse/ROO-1698</a> </li><li><a href="https://jira.springsource.org/browse/ROO-1731">https://jira.springsource.org/browse/ROO-1731</a></li></ul><li>Threads in <a href="http://forum.springsource.org/forumdisplay.php?f=67">ROO-Forum</a></li><ul><li><a href="http://forum.springsource.org/showthread.php?t=101926">http://forum.springsource.org/showthread.php?t=101926</a>&nbsp;</li><li><a href="http://forum.springsource.org/showthread.php?t=97672">http://forum.springsource.org/showthread.php?t=97672</a></li></ul><li>Other</li><ul><li><a href="http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/">http://heapdump.wordpress.com/2010/04/04/should-i-use-open-session-in-view/</a></li><li><a href="http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter">http://stackoverflow.com/questions/1538222/why-not-to-use-springs-openentitymanagerinviewfilter</a><br /></li></ul></ul><br /><blockquote><a href="http://www.springsource.org/roo">Spring Roo</a> is a Code-Generation-Tool for Software development in Java. It is a lightweight developer tool that makes it fast and easy to deliver instant results. Best of all, you code 100% in Java and get to reuse all your existing Java knowledge, skills and experience.<br /><br />There are already many Add-Ons available to customize Roo to your special needs. In case you don't find an Add-On that fits your needs, you can easily create your own Add-On in just a few steps.<br /><br /></blockquote>  <p><script type="text/javascript">var dzone_url = 'http://goldstifts.blogspot.com/2011/02/broken-special-chars-in-spring-roo.html';</script><script type="text/javascript">var dzone_style = '2';</script><script language="javascript" src="http://widgets.dzone.com/links/widgets/zoneit.js"></script>  </p>
+</p>
+
+        </div>
+
+        <footer class="page__meta">
+          
+          <!-- 
+  <h3 class="page-taxonomies-title">Categories</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li>
+  </ul>
+
+ -->
+          
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy">software development</li><li class="page-taxonomy">java</li><li class="page-taxonomy">spring</li><li class="page-taxonomy">spring roo</li><li class="page-taxonomy">special chars</li><li class="page-taxonomy">tips</li><li class="page-taxonomy">photooapp</li><li class="page-taxonomy">open source</li>
+  </ul>
+
+
+          
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2011-02-13T22:00:00+01:00">2011-02-13</time></p>
+
+
+        </footer>
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2Fbroken-special-chars-in-spring-roo%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Broken+special+chars+in+Spring+Roo+internationalization%3F%20https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2Fbroken-special-chars-in-spring-roo%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2Fbroken-special-chars-in-spring-roo%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=Broken+special+chars+in+Spring+Roo+internationalization%3F&url=https%3A%2F%2Faheusingfeld.github.io%2Fsoftware%2520development%2Fbroken-special-chars-in-spring-roo%2F" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/software%20development/umlaute-und-sonderzeichen-in-spring-roo/">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Umlaute und Sonderzeichen in Spring Roo?
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/productivity/how-to-set-default-comment-security-level-in-atlassian-jira/">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        How to Set Default Comment Security Level in Atlassian JIRA
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="social-icons"><a class="social-icon" href="/feed.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a><a class="social-icon" href="/imprint"><i class="fas fa-info fa-2x" title="Imprint & Privacy"></i></a><a class="social-icon" href="https://speakerdeck.com/u/aheusingfeld"><i class="fab fa-fw fa-slideshare fa-2x" title=""></i></a><a class="social-icon" href="https://mstdn.social/@aheusingfeld"><i class="fas fa-user fa-2x" title=""></i></a></div><div class="copyright">
+    
+      <p>&copy; 2023 Alexander Heusingfeld. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+  </body>
+
+</html>
