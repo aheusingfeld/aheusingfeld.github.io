@@ -17,7 +17,7 @@ jobs:
       run: |
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && gem install bundler && bundler update --system && jekyll build --future"
    # Use GitHub Actions' cache to shorten build times and decrease load on servers
     - uses: actions/cache@v2
       with:
