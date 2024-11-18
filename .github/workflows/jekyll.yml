@@ -12,13 +12,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && gem install bundler && bundler update && jekyll build --future"
-   # Use GitHub Actions' cache to shorten build times and decrease load on servers
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Set Ruby version
+      uses: ruby/setup-ruby@v1
+      with:
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    - name: Setup Pages
+      uses: actions/configure-pages@v5
+    - name: Build
+      uses: actions/jekyll-build-pages@v1
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v3
+    # Use GitHub Actions' cache to shorten build times and decrease load on servers
     - uses: actions/cache@v4
       with:
         path: vendor/bundle
@@ -26,8 +32,18 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-gems-
 
-    # Specify the target branch (optional)
-    - uses:  helaili/jekyll-action@v2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        target_branch: 'gh-pages'
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      # Specify the target branch (optional)
+#    - uses:  helaili/jekyll-action@v2
+#      with:
+#        token: ${{ secrets.GITHUB_TOKEN }}
+#        target_branch: 'gh-pages'
