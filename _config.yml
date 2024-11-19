@@ -19,7 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 # remote_theme: "mmistakes/minimal-mistakes@4.24.0"
-theme: jekyll-theme-so-simple
+remote_theme: "mmistakes/so-simple-theme"
+# theme: jekyll-theme-so-simple
 skin: "/assets/css/skins/default.css"
 google_fonts:
   - name: "Source Sans Pro"
