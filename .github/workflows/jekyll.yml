@@ -5,7 +5,10 @@ on:
     branches: [ develop ]
   pull_request:
     branches: [ develop ]
-
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 jobs:
   build:
 
@@ -22,8 +25,12 @@ jobs:
       uses: actions/configure-pages@v5
     - name: Build
       uses: actions/jekyll-build-pages@v1
+      with:
+        future: false
     - name: Upload artifact
       uses: actions/upload-pages-artifact@v3
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
     # Use GitHub Actions' cache to shorten build times and decrease load on servers
     - uses: actions/cache@v4
       with:
@@ -39,11 +46,12 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+ #    - uses:  helaili/jekyll-action@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          target_branch: 'gh-pages'
+          verbose: true
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
       # Specify the target branch (optional)
-#    - uses:  helaili/jekyll-action@v2
-#      with:
-#        token: ${{ secrets.GITHUB_TOKEN }}
-#        target_branch: 'gh-pages'
