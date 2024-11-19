@@ -21,6 +21,7 @@ jobs:
     - name: Set Ruby version
       uses: ruby/setup-ruby@v1
       with:
+        ruby-version: 3.3.5
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Setup Pages
       uses: actions/configure-pages@v5
