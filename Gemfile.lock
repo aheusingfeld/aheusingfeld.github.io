@@ -124,7 +124,7 @@ GEM
       rouge (>= 1.7, < 4)
       safe_yaml (~> 1.0)
       webrick (>= 1.0)
-    jekyll-archives (2.2.1)
+    jekyll-archives (2.3.0)
       jekyll (>= 3.6, < 5.0)
     jekyll-asciidoc (3.0.1)
       asciidoctor (>= 1.5.0, < 3.0.0)
