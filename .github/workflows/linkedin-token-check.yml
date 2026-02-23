@@ -1,0 +1,98 @@
+name: Check LinkedIn Token Expiry
+
+on:
+  schedule:
+    # Run every Monday at 8:00 UTC
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+jobs:
+  check-token:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+    steps:
+      - name: Introspect LinkedIn token
+        id: check
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
+          LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+        run: |
+          if [ -z "$LINKEDIN_ACCESS_TOKEN" ]; then
+            echo "status=missing" >> $GITHUB_OUTPUT
+            echo "LinkedIn access token secret is not set"
+            exit 0
+          fi
+
+          RESPONSE=$(curl -s -X POST https://www.linkedin.com/oauth/v2/introspectToken \
+            -H "Content-Type: application/x-www-form-urlencoded" \
+            -d "token=$LINKEDIN_ACCESS_TOKEN&client_id=$LINKEDIN_CLIENT_ID&client_secret=$LINKEDIN_CLIENT_SECRET")
+
+          ACTIVE=$(echo "$RESPONSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('active', False))" 2>/dev/null || echo "False")
+          EXPIRES_AT=$(echo "$RESPONSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('expires_at', 0))" 2>/dev/null || echo "0")
+
+          if [ "$ACTIVE" != "True" ]; then
+            echo "status=expired" >> $GITHUB_OUTPUT
+            echo "Token is expired or invalid"
+          else
+            NOW=$(date +%s)
+            REMAINING=$(( EXPIRES_AT - NOW ))
+            DAYS_LEFT=$(( REMAINING / 86400 ))
+            echo "days_left=$DAYS_LEFT" >> $GITHUB_OUTPUT
+            echo "Token valid for $DAYS_LEFT more days"
+
+            if [ "$DAYS_LEFT" -lt 14 ]; then
+              echo "status=expiring_soon" >> $GITHUB_OUTPUT
+            else
+              echo "status=ok" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Create reminder issue
+        if: steps.check.outputs.status == 'expiring_soon' || steps.check.outputs.status == 'expired' || steps.check.outputs.status == 'missing'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATUS: ${{ steps.check.outputs.status }}
+          DAYS_LEFT: ${{ steps.check.outputs.days_left }}
+        run: |
+          # Check if an open issue already exists
+          EXISTING=$(gh issue list --label "linkedin-token" --state open --json number --jq 'length')
+          if [ "$EXISTING" -gt 0 ]; then
+            echo "Reminder issue already exists, skipping"
+            exit 0
+          fi
+
+          if [ "$STATUS" = "expired" ] || [ "$STATUS" = "missing" ]; then
+            TITLE="🔑 LinkedIn access token has expired — renew now"
+            BODY="The LinkedIn access token is expired or missing. The publishing pipeline cannot post to LinkedIn until renewed.
+
+          **To renew:**
+          1. Run: \`python3 /tmp/linkedin_oauth_setup.py <CLIENT_ID> <CLIENT_SECRET>\`
+          2. Copy the access token from the output
+          3. Update the secret: \`gh secret set LINKEDIN_ACCESS_TOKEN\` (paste when prompted)
+
+          This issue will auto-close on the next successful token check."
+          else
+            TITLE="🔑 LinkedIn access token expires in $DAYS_LEFT days — renew soon"
+            BODY="The LinkedIn access token will expire in **$DAYS_LEFT days**. Renew it before it breaks the publishing pipeline.
+
+          **To renew:**
+          1. Run: \`python3 /tmp/linkedin_oauth_setup.py <CLIENT_ID> <CLIENT_SECRET>\`
+          2. Copy the access token from the output
+          3. Update the secret: \`gh secret set LINKEDIN_ACCESS_TOKEN\` (paste when prompted)
+
+          This issue will auto-close on the next successful token check."
+          fi
+
+          gh issue create --title "$TITLE" --body "$BODY" --label "linkedin-token"
+
+      - name: Close stale reminder if token is OK
+        if: steps.check.outputs.status == 'ok'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Close any open linkedin-token issues
+          gh issue list --label "linkedin-token" --state open --json number --jq '.[].number' | while read -r NUM; do
+            gh issue close "$NUM" --comment "✅ LinkedIn token is healthy (valid for ${{ steps.check.outputs.days_left }} more days)."
+          done

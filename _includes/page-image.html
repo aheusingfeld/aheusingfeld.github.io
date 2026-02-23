@@ -1,0 +1,26 @@
+{% if page.image %}
+  {% assign img = page.image %}
+  {% if img.path and img.path != "" %}
+    <figure class="post-hero">
+      <picture>
+        {% assign webp_path = img.path | replace: '.jpg', '.webp' | replace: '.png', '.webp' %}
+        <source srcset="{{ webp_path | relative_url }}" type="image/webp">
+        <img src="{{ img.path | relative_url }}"
+             alt="{{ img.alt | default: page.title | escape }}"
+             loading="eager"
+             width="1200"
+             height="630">
+      </picture>
+      {% if img.caption %}
+        <figcaption>{{ img.caption | markdownify | remove: '<p>' | remove: '</p>' }}</figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+{% elsif page.image_path %}
+  {% comment %} Backwards compatibility with So Simple's image_path format {% endcomment %}
+  <figure class="post-hero">
+    <img src="{{ page.image_path | relative_url }}"
+         alt="{{ page.title | escape }}"
+         loading="eager">
+  </figure>
+{% endif %}
