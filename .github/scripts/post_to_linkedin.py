@@ -1,15 +1,17 @@
 #!/usr/bin/env python3
 """Generate LinkedIn copy via Gemini API and post to LinkedIn.
 
-Authentication: Uses OAuth 2.0 refresh token flow to obtain a fresh access token
-at runtime. This avoids storing short-lived access tokens (60-day TTL) as secrets.
-Instead, store the refresh token (365-day TTL) along with client_id and client_secret.
+Authentication: Uses a stored OAuth access token (60-day TTL).
+Since LinkedIn only provides refresh tokens to Marketing Developer Platform
+partners, we use the access token directly and pair this with a scheduled
+workflow (.github/workflows/linkedin-token-check.yml) that creates a GitHub
+Issue reminder 14 days before expiry.
 
 Required GitHub Secrets:
-  LINKEDIN_CLIENT_ID      - OAuth app Client ID
-  LINKEDIN_CLIENT_SECRET  - OAuth app Client Secret
-  LINKEDIN_REFRESH_TOKEN  - OAuth refresh token (valid 365 days)
-  LINKEDIN_PERSON_URN     - Your LinkedIn member URN (e.g. urn:li:person:xxxxxxx)
+  LINKEDIN_ACCESS_TOKEN   - OAuth access token (valid ~60 days)
+  LINKEDIN_PERSON_URN     - Your LinkedIn member URN (urn:li:person:xxxxxxx)
+  LINKEDIN_CLIENT_ID      - OAuth app Client ID (for token introspection)
+  LINKEDIN_CLIENT_SECRET  - OAuth app Client Secret (for token introspection)
   GOOGLE_API_KEY          - Gemini API key for copy generation
 """
 import os
@@ -38,10 +40,8 @@ def extract_post_content(filepath):
     for line in frontmatter.splitlines():
         if line.strip().startswith("title:"):
             meta["title"] = line.split(":", 1)[1].strip().strip('"').strip("'")
-        elif line.strip().startswith("- ") and "tags" in "\n".join(frontmatter.splitlines()[:frontmatter.splitlines().index(line)]):
-            meta.setdefault("tags", []).append(line.strip().lstrip("- ").strip())
 
-    # Parse tags more robustly
+    # Parse tags robustly
     in_tags = False
     tags = []
     for line in frontmatter.splitlines():
@@ -136,17 +136,14 @@ Return ONLY the LinkedIn post text, nothing else."""
     return None
 
 
-def get_access_token(client_id, client_secret, refresh_token):
-    """Exchange a refresh token for a fresh access token.
+def check_token_validity(access_token, client_id, client_secret):
+    """Introspect the access token to check remaining validity.
 
-    Refresh tokens are valid for 365 days. Each call returns a new access token
-    (60-day TTL) without consuming the refresh token's remaining lifespan.
+    Returns remaining seconds or -1 if check fails (non-fatal).
     """
-    url = "https://www.linkedin.com/oauth/v2/accessToken"
-
+    url = "https://www.linkedin.com/oauth/v2/introspectToken"
     params = urllib.parse.urlencode({
-        "grant_type": "refresh_token",
-        "refresh_token": refresh_token,
+        "token": access_token,
         "client_id": client_id,
         "client_secret": client_secret,
     }).encode("utf-8")
@@ -161,24 +158,24 @@ def get_access_token(client_id, client_secret, refresh_token):
     try:
         with urllib.request.urlopen(req) as resp:
             result = json.loads(resp.read())
-            access_token = result.get("access_token")
-            expires_in = result.get("expires_in")
-            refresh_ttl = result.get("refresh_token_expires_in")
-            print(f"Access token obtained (expires in {expires_in}s)")
-            if refresh_ttl:
-                days_left = refresh_ttl // 86400
-                print(f"Refresh token valid for {days_left} more days")
-                if days_left < 30:
-                    print(f"::warning::LinkedIn refresh token expires in {days_left} days! Re-authorize soon.")
-            return access_token
+            if not result.get("active", False):
+                print("::error::LinkedIn access token is no longer active!")
+                print("Re-authorize: python3 /tmp/linkedin_oauth_setup.py <CLIENT_ID> <CLIENT_SECRET>")
+                return 0
+            expires_at = result.get("expires_at", 0)
+            if expires_at:
+                import time
+                remaining = expires_at - int(time.time())
+                days_left = remaining // 86400
+                print(f"LinkedIn token valid for {days_left} more days")
+                if days_left < 14:
+                    print(f"::warning::LinkedIn access token expires in {days_left} days! Renew soon.")
+                return remaining
     except urllib.error.HTTPError as e:
-        error_body = e.read().decode()
-        print(f"::error::LinkedIn token refresh failed: {e.code} - {error_body}")
-        print("The refresh token may have expired. Re-authorize at:")
-        print("https://www.linkedin.com/oauth/v2/authorization?response_type=code"
-              f"&client_id={client_id}&scope=w_member_social%20openid%20profile"
-              "&redirect_uri=https://localhost:3000/callback")
-        return None
+        # Introspection failure is non-fatal — we still try to post
+        print(f"Token introspection failed ({e.code}), proceeding anyway")
+
+    return -1
 
 
 def post_to_linkedin(text, access_token, person_urn):
@@ -219,6 +216,10 @@ def post_to_linkedin(text, access_token, person_urn):
     except urllib.error.HTTPError as e:
         error_body = e.read().decode()
         print(f"LinkedIn API error: {e.code} - {error_body}")
+        if e.code == 401:
+            print("::error::LinkedIn access token has expired. Renew it:")
+            print("  python3 /tmp/linkedin_oauth_setup.py <CLIENT_ID> <CLIENT_SECRET>")
+            print("  Then: gh secret set LINKEDIN_ACCESS_TOKEN")
         return None
 
 
@@ -233,9 +234,6 @@ def construct_post_url(post_file, site_url):
         slug = basename
 
     # Read categories from frontmatter
-    meta, _ = extract_post_content(post_file)
-    # Simple URL construction — matches permalink: /:categories/:title/
-    # For now, use the slug directly; exact URL depends on category
     with open(post_file, "r", encoding="utf-8") as f:
         content = f.read()
 
@@ -259,10 +257,10 @@ def main():
     post_file = os.environ.get("POST_FILE", "")
     site_url = os.environ.get("SITE_URL", "https://blog.heusingfeld.de")
     api_key = os.environ.get("GOOGLE_API_KEY", "")
+    access_token = os.environ.get("LINKEDIN_ACCESS_TOKEN", "")
+    person_urn = os.environ.get("LINKEDIN_PERSON_URN", "")
     client_id = os.environ.get("LINKEDIN_CLIENT_ID", "")
     client_secret = os.environ.get("LINKEDIN_CLIENT_SECRET", "")
-    refresh_token = os.environ.get("LINKEDIN_REFRESH_TOKEN", "")
-    person_urn = os.environ.get("LINKEDIN_PERSON_URN", "")
 
     if not post_file or not os.path.exists(post_file):
         print("No new post file found, skipping LinkedIn posting")
@@ -296,22 +294,19 @@ def main():
     with open("/tmp/post_url.txt", "w") as f:
         f.write(post_url)
 
-    if client_id and client_secret and refresh_token and person_urn:
-        # Mint a fresh access token from the refresh token
-        access_token = get_access_token(client_id, client_secret, refresh_token)
-        if access_token:
-            post_id = post_to_linkedin(linkedin_text, access_token, person_urn)
-            if post_id:
-                # Save post ID for issue comment
-                with open("/tmp/linkedin_post_id.txt", "w") as f:
-                    f.write(post_id)
-        else:
-            print("::error::Failed to obtain LinkedIn access token. Check refresh token validity.")
-            sys.exit(1)
+    if access_token and person_urn:
+        # Check token validity if credentials available (non-fatal)
+        if client_id and client_secret:
+            check_token_validity(access_token, client_id, client_secret)
+
+        post_id = post_to_linkedin(linkedin_text, access_token, person_urn)
+        if post_id:
+            # Save post ID for issue comment
+            with open("/tmp/linkedin_post_id.txt", "w") as f:
+                f.write(post_id)
     else:
         print("LinkedIn credentials not configured, skipping posting")
-        print("Required secrets: LINKEDIN_CLIENT_ID, LINKEDIN_CLIENT_SECRET, "
-              "LINKEDIN_REFRESH_TOKEN, LINKEDIN_PERSON_URN")
+        print("Required secrets: LINKEDIN_ACCESS_TOKEN, LINKEDIN_PERSON_URN")
 
 
 if __name__ == "__main__":
