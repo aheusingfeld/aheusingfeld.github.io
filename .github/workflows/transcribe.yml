@@ -1,0 +1,118 @@
+name: Transcribe YouTube Video
+
+on:
+  workflow_dispatch:
+    inputs:
+      youtube_url:
+        description: 'YouTube video URL'
+        required: true
+        type: string
+      post_title:
+        description: 'Post title for the transcript'
+        required: true
+        type: string
+      categories:
+        description: 'Post categories (comma-separated)'
+        required: false
+        default: 'talks'
+        type: string
+      tags:
+        description: 'Post tags (comma-separated)'
+        required: false
+        default: 'software architecture, AI'
+        type: string
+
+jobs:
+  transcribe:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: |
+          pip install yt-dlp openai
+          sudo apt-get install -y ffmpeg
+
+      - name: Download audio
+        run: |
+          yt-dlp -x --audio-format mp3 --audio-quality 0 \
+            -o "/tmp/audio.mp3" "${{ inputs.youtube_url }}"
+
+      - name: Extract video ID
+        id: video
+        run: |
+          URL="${{ inputs.youtube_url }}"
+          # Extract video ID from various YouTube URL formats
+          VIDEO_ID=$(echo "$URL" | grep -oP '(?:v=|youtu\.be/)([a-zA-Z0-9_-]{11})' | head -1 | sed 's/v=//;s/youtu.be\///')
+          echo "id=$VIDEO_ID" >> $GITHUB_OUTPUT
+          # Get video duration
+          DURATION=$(yt-dlp --print duration_string "$URL" 2>/dev/null || echo "unknown")
+          echo "duration=$DURATION" >> $GITHUB_OUTPUT
+
+      - name: Transcribe with Whisper API
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python3 .github/scripts/transcribe.py "/tmp/audio.mp3" "${{ inputs.post_title }}"
+
+      - name: Create post file
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          SLUG=$(echo "${{ inputs.post_title }}" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9]/-/g' | sed 's/--*/-/g' | sed 's/^-//;s/-$//')
+          FILENAME="_posts/${DATE}-${SLUG}.md"
+
+          # Build categories YAML
+          CATS=""
+          IFS=',' read -ra CAT_ARRAY <<< "${{ inputs.categories }}"
+          for cat in "${CAT_ARRAY[@]}"; do
+            CATS="${CATS}  - $(echo $cat | xargs)\n"
+          done
+
+          # Build tags YAML
+          TAGS=""
+          IFS=',' read -ra TAG_ARRAY <<< "${{ inputs.tags }}"
+          for tag in "${TAG_ARRAY[@]}"; do
+            TAGS="${TAGS}  - $(echo $tag | xargs)\n"
+          done
+
+          # Create frontmatter
+          cat > "$FILENAME" << FRONTMATTER
+          ---
+          layout: vlog
+          title: "${{ inputs.post_title }}"
+          date: ${DATE}
+          youtube_id: "${{ steps.video.outputs.id }}"
+          duration: "${{ steps.video.outputs.duration }}"
+          categories:
+          $(echo -e "$CATS")tags:
+          $(echo -e "$TAGS")---
+
+          FRONTMATTER
+
+          # Append transcript
+          cat /tmp/transcript.md >> "$FILENAME"
+
+          echo "filename=$FILENAME" >> $GITHUB_ENV
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "Add vlog transcript: ${{ inputs.post_title }}"
+          title: "Vlog transcript: ${{ inputs.post_title }}"
+          body: |
+            Auto-generated transcript from YouTube video.
+
+            **Video:** ${{ inputs.youtube_url }}
+            **Title:** ${{ inputs.post_title }}
+
+            Please review and edit the transcript before merging.
+          branch: transcript/${{ steps.video.outputs.id }}
+          base: main

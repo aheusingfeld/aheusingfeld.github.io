@@ -1,0 +1,44 @@
+// Custom Hero/Header Image Styles
+
+.post-hero {
+  margin: 0 0 2rem;
+  width: 100%;
+
+  picture,
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1200 / 630;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  figcaption {
+    font-size: 0.8rem;
+    color: var(--color-hero-caption);
+    text-align: center;
+    padding: 0.5rem 1.25rem 0;
+    font-style: italic;
+  }
+}
+
+// On wider screens, add slight rounding
+@media (min-width: 720px) {
+  .post-hero {
+    picture,
+    img {
+      border-radius: 8px;
+    }
+  }
+}
+
+// Page image from So Simple theme - override to use our styles
+.page-image {
+  margin-bottom: 1.5rem;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
