@@ -108,7 +108,7 @@ Requirements:
 
 Return ONLY the LinkedIn post text, nothing else."""
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key={api_key}"
 
     payload = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
