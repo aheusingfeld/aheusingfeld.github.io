@@ -73,19 +73,19 @@ def generate_image_with_gemini(title, excerpt, api_key):
                 return base64.b64decode(predictions[0]["bytesBase64Encoded"])
     except urllib.error.HTTPError as e:
         print(f"Gemini API error: {e.code} - {e.read().decode()}")
-        # Fallback: try text-to-image with gemini-2.0-flash
+        # Fallback: try text-to-image with gemini-3-pro-preview
         return generate_with_gemini_flash(title, api_key)
 
     return None
 
 
 def generate_with_gemini_flash(title, api_key):
-    """Fallback: use gemini-2.0-flash-exp for image generation."""
+    """Fallback: use gemini-3-pro-preview for image generation."""
     try:
         import google.generativeai as genai
 
         genai.configure(api_key=api_key)
-        model = genai.GenerativeModel("gemini-2.0-flash-exp")
+        model = genai.GenerativeModel("gemini-3-pro-preview")
 
         prompt = (
             f'Generate an image: minimalist abstract blog header for "{title}". '

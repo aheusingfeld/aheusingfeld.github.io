@@ -92,7 +92,7 @@ def upload_audio_to_gemini(audio_path, api_key):
 
 def transcribe_with_gemini(file_uri, api_key, post_title):
     """Use Gemini to transcribe the audio with timestamps."""
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key={api_key}"
 
     prompt = f"""Transcribe this audio recording in full. This is a vlog/talk titled "{post_title}".
 
