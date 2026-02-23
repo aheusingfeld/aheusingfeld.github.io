@@ -108,7 +108,7 @@ Requirements:
 
 Return ONLY the LinkedIn post text, nothing else."""
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={api_key}"
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key={api_key}"
 
     payload = json.dumps({
         "contents": [{"parts": [{"text": prompt}]}],
@@ -134,6 +134,58 @@ Return ONLY the LinkedIn post text, nothing else."""
                 return parts[0]["text"].strip()
 
     return None
+
+
+def check_already_posted(post_title):
+    """Check if a LinkedIn post was already made for this blog post.
+
+    Looks for an existing GitHub Issue comment containing 'LinkedIn post'
+    on the matching issue. This prevents duplicate LinkedIn posts on
+    re-runs, retries, or workflow_dispatch.
+    """
+    gh_token = os.environ.get("GH_TOKEN", os.environ.get("GITHUB_TOKEN", ""))
+    repo = os.environ.get("GITHUB_REPOSITORY", "")
+
+    if not gh_token or not repo:
+        return False  # Can't check, proceed cautiously
+
+    # Search for matching open issue
+    search_title = post_title.replace('"', '\\"')
+    url = f"https://api.github.com/search/issues?q=repo:{repo}+is:issue+%22{urllib.parse.quote(search_title)}%22"
+
+    req = urllib.request.Request(
+        url,
+        headers={
+            "Authorization": f"Bearer {gh_token}",
+            "Accept": "application/vnd.github+json",
+        },
+    )
+
+    try:
+        with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read())
+            for issue in data.get("items", []):
+                # Check comments on this issue for LinkedIn post link
+                comments_url = issue.get("comments_url", "")
+                if not comments_url:
+                    continue
+                req2 = urllib.request.Request(
+                    comments_url,
+                    headers={
+                        "Authorization": f"Bearer {gh_token}",
+                        "Accept": "application/vnd.github+json",
+                    },
+                )
+                with urllib.request.urlopen(req2) as resp2:
+                    comments = json.loads(resp2.read())
+                    for comment in comments:
+                        if "linkedin.com" in comment.get("body", "").lower():
+                            print(f"LinkedIn post already exists for '{post_title}' — skipping")
+                            return True
+    except Exception as e:
+        print(f"Deduplication check failed ({e}), proceeding")
+
+    return False
 
 
 def check_token_validity(access_token, client_id, client_secret):
@@ -273,6 +325,10 @@ def main():
 
     print(f"Generating LinkedIn copy for: {title}")
     print(f"Post URL: {post_url}")
+
+    # Deduplication: skip if LinkedIn was already posted for this article
+    if check_already_posted(title):
+        sys.exit(0)
 
     if not api_key:
         print("GOOGLE_API_KEY not set, using fallback LinkedIn copy")

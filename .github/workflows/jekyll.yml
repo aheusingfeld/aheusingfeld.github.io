@@ -32,16 +32,39 @@ jobs:
       - name: Detect new posts
         id: detect
         run: |
-          # Find newly added posts in this commit
-          NEW_POST=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- '_posts/' | head -1)
-          if [ -n "$NEW_POST" ]; then
-            echo "new_post=$NEW_POST" >> $GITHUB_OUTPUT
-            # Extract title from frontmatter
-            TITLE=$(grep -m1 '^title:' "$NEW_POST" | sed 's/^title: *"*//;s/"*$//')
-            echo "post_title=$TITLE" >> $GITHUB_OUTPUT
-            SLUG=$(basename "$NEW_POST" .md | sed 's/^[0-9-]*//')
-            echo "post_slug=$SLUG" >> $GITHUB_OUTPUT
+          # Only detect genuinely new posts:
+          # 1. File must be newly Added in _posts/ (not modified)
+          # 2. File's date prefix must be today or yesterday (catches timezone edge cases)
+          # 3. Skip workflow_dispatch re-runs (no new commit = no diff)
+
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "Manual dispatch — skipping new post detection"
+            exit 0
           fi
+
+          NEW_POST=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- '_posts/' | head -1)
+
+          if [ -z "$NEW_POST" ]; then
+            echo "No new posts in this commit"
+            exit 0
+          fi
+
+          # Verify the post date is recent (today or yesterday)
+          FILE_DATE=$(basename "$NEW_POST" | grep -oP '^\d{4}-\d{2}-\d{2}')
+          TODAY=$(date -u +%Y-%m-%d)
+          YESTERDAY=$(date -u -d "yesterday" +%Y-%m-%d 2>/dev/null || date -u -v-1d +%Y-%m-%d)
+
+          if [ "$FILE_DATE" != "$TODAY" ] && [ "$FILE_DATE" != "$YESTERDAY" ]; then
+            echo "Post date $FILE_DATE is not recent — skipping LinkedIn (likely a bulk import or old file)"
+            exit 0
+          fi
+
+          echo "new_post=$NEW_POST" >> $GITHUB_OUTPUT
+          TITLE=$(grep -m1 '^title:' "$NEW_POST" | sed 's/^title: *"*//;s/"*$//')
+          echo "post_title=$TITLE" >> $GITHUB_OUTPUT
+          SLUG=$(basename "$NEW_POST" .md | sed 's/^[0-9-]*//')
+          echo "post_slug=$SLUG" >> $GITHUB_OUTPUT
+          echo "Detected new post: $NEW_POST (date: $FILE_DATE)"
 
       - name: Check for missing header images
         id: check
@@ -130,6 +153,8 @@ jobs:
           LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
           LINKEDIN_CLIENT_ID: ${{ secrets.LINKEDIN_CLIENT_ID }}
           LINKEDIN_CLIENT_SECRET: ${{ secrets.LINKEDIN_CLIENT_SECRET }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
           POST_FILE: ${{ needs.process-images.outputs.new_post }}
           SITE_URL: "https://blog.heusingfeld.de"
         run: python3 .github/scripts/post_to_linkedin.py
