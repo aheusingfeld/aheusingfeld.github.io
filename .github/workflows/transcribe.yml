@@ -39,7 +39,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install yt-dlp openai
+          pip install yt-dlp
           sudo apt-get install -y ffmpeg
 
       - name: Download audio
@@ -58,9 +58,9 @@ jobs:
           DURATION=$(yt-dlp --print duration_string "$URL" 2>/dev/null || echo "unknown")
           echo "duration=$DURATION" >> $GITHUB_OUTPUT
 
-      - name: Transcribe with Whisper API
+      - name: Transcribe with Gemini API
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: python3 .github/scripts/transcribe.py "/tmp/audio.mp3" "${{ inputs.post_title }}"
 
       - name: Create post file
@@ -115,4 +115,4 @@ jobs:
 
             Please review and edit the transcript before merging.
           branch: transcript/${{ steps.video.outputs.id }}
-          base: main
+          base: develop
