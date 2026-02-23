@@ -1,0 +1,45 @@
+// Custom Code Blocks - Mobile-optimized with horizontal scroll
+
+.page-content {
+  // Code blocks
+  pre {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    background: var(--color-code-bg);
+    color: var(--color-code-text);
+    border: 1px solid var(--color-border);
+    margin-bottom: 1.5rem;
+
+    code {
+      padding: 0;
+      background: none;
+      border: none;
+      border-radius: 0;
+      font-size: inherit;
+      color: inherit;
+    }
+  }
+
+  // Inline code
+  code {
+    font-size: 0.9em;
+    padding: 0.15em 0.4em;
+    border-radius: 3px;
+    background: var(--color-code-bg);
+    color: var(--color-code-text);
+  }
+
+  // Keyboard shortcut styling
+  kbd {
+    font-size: 0.85em;
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 1px 0 var(--color-border);
+    background: var(--color-code-bg);
+  }
+}

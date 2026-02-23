@@ -1,0 +1,66 @@
+---
+layout: default
+---
+
+<div id="main" role="main" class="main-content" aria-label="Content">
+
+  <article class="page h-entry vlog-post" itemscope itemtype="https://schema.org/VideoObject">
+
+    {% if page.youtube_id %}
+    <div class="video-container">
+      <div class="lite-youtube" data-videoid="{{ page.youtube_id }}" style="background-image: url('https://i.ytimg.com/vi/{{ page.youtube_id }}/hqdefault.jpg');">
+        <a href="https://youtube.com/watch?v={{ page.youtube_id }}" class="lty-playbtn" title="Play: {{ page.title | escape }}">
+          <span class="lyt-visually-hidden">Play: {{ page.title | escape }}</span>
+        </a>
+      </div>
+      <meta itemprop="embedUrl" content="https://www.youtube.com/embed/{{ page.youtube_id }}">
+    </div>
+    {% endif %}
+
+    {% include page-image.html %}
+    <div class="page-wrapper">
+      <header class="page-header">
+        {% assign title = page.title | markdownify | strip_html %}
+        <h1 id="page-title" class="page-title p-name" itemprop="name">{{ title }}</h1>
+        {% include page__meta.html %}
+        {% if page.duration %}
+          <span class="vlog-duration">Video: {{ page.duration }}</span>
+        {% endif %}
+      </header>
+
+      <div class="page-content">
+        {% if page.chapters %}
+        <nav class="transcript-chapters" aria-label="Video chapters">
+          <h2>Chapters</h2>
+          <ol>
+            {% for chapter in page.chapters %}
+            <li>
+              <a href="#chapter-{{ forloop.index }}">
+                <time>{{ chapter.time }}</time> {{ chapter.title }}
+              </a>
+            </li>
+            {% endfor %}
+          </ol>
+        </nav>
+        {% endif %}
+
+        <div class="e-content transcript">
+          {{ content }}
+        </div>
+
+        <footer class="page__meta">
+          {% if site.data.ui-text[site.locale].meta_label %}
+            <h4 class="page__meta-title">{{ site.data.ui-text[site.locale].meta_label }}</h4>
+          {% endif %}
+          {% include page-tags.html %}
+          {% include page__date.html %}
+        </footer>
+        {% if page.share %}
+          {% include social-share.html %}
+        {% endif %}
+
+        {% include page-pagination.html %}
+      </div>
+    </div>
+  </article>
+</main>

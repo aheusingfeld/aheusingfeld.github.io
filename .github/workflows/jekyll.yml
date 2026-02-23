@@ -1,57 +1,101 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
 on:
-  # Runs on pushes targeting the default branch
   push:
-    branches: ["develop"]
-
-  # Allows you to run this workflow manually from the Actions tab
+    branches: ["main"]
   workflow_dispatch:
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
+  issues: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # Build job
+  # Process images: generate fallback headers + WebP variants
+  process-images:
+    runs-on: ubuntu-latest
+    outputs:
+      new_post: ${{ steps.detect.outputs.new_post }}
+      post_title: ${{ steps.detect.outputs.post_title }}
+      post_slug: ${{ steps.detect.outputs.post_slug }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect new posts
+        id: detect
+        run: |
+          # Find newly added posts in this commit
+          NEW_POST=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- '_posts/' | head -1)
+          if [ -n "$NEW_POST" ]; then
+            echo "new_post=$NEW_POST" >> $GITHUB_OUTPUT
+            # Extract title from frontmatter
+            TITLE=$(grep -m1 '^title:' "$NEW_POST" | sed 's/^title: *"*//;s/"*$//')
+            echo "post_title=$TITLE" >> $GITHUB_OUTPUT
+            SLUG=$(basename "$NEW_POST" .md | sed 's/^[0-9-]*//')
+            echo "post_slug=$SLUG" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Check for missing header images
+        id: check
+        if: steps.detect.outputs.new_post != ''
+        run: python3 .github/scripts/check_missing_images.py "${{ steps.detect.outputs.new_post }}"
+
+      - name: Generate fallback image via Gemini API
+        if: steps.check.outputs.needs_image == 'true'
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+        run: python3 .github/scripts/generate_header_image.py "${{ steps.detect.outputs.new_post }}"
+
+      - name: Generate WebP variants
+        run: |
+          sudo apt-get install -y -qq webp
+          shopt -s nullglob
+          for img in assets/images/posts/*.jpg assets/images/posts/*.png; do
+            webp="${img%.*}.webp"
+            [ -f "$webp" ] || cwebp -q 80 "$img" -o "$webp"
+          done
+
+      - name: Commit generated images
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/images/posts/ _posts/
+          git diff --staged --quiet || (git commit -m "Auto-generate images for new post" && git push)
+
+  # Build Jekyll site
   build:
+    needs: process-images
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: main
       - name: Set Ruby version
         uses: ruby/setup-ruby@v1
         with:
           ruby-version: 3.3.5
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          bundler-cache: true
+          cache-version: 0
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
-  # Deployment job
+  # Deploy to GitHub Pages
   deploy:
     environment:
       name: github-pages
@@ -62,3 +106,40 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # Post to LinkedIn and comment on GitHub Issue
+  post-to-linkedin:
+    needs: [deploy, process-images]
+    runs-on: ubuntu-latest
+    if: needs.process-images.outputs.new_post != ''
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install requests google-generativeai
+
+      - name: Generate LinkedIn copy and post
+        id: linkedin
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_URN: ${{ secrets.LINKEDIN_PERSON_URN }}
+          POST_FILE: ${{ needs.process-images.outputs.new_post }}
+          SITE_URL: "https://blog.heusingfeld.de"
+        run: python3 .github/scripts/post_to_linkedin.py
+
+      - name: Comment on GitHub Issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          POST_TITLE: ${{ needs.process-images.outputs.post_title }}
+          POST_SLUG: ${{ needs.process-images.outputs.post_slug }}
+          SITE_URL: "https://blog.heusingfeld.de"
+        run: python3 .github/scripts/comment_on_issue.py

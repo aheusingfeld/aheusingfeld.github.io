@@ -22,11 +22,7 @@
 remote_theme: "mmistakes/so-simple-theme"
 # theme: jekyll-theme-so-simple
 skin: "/assets/css/skins/default.css"
-google_fonts:
-  - name: "Source Sans Pro"
-    weights: "400,400i,700,700i"
-  - name: "Lora"
-    weights: "400,400i,700,700i"
+# google_fonts removed — self-hosting Lora, using system fonts for body
 locale: "en"
 title: "Overthinker's Thoughts"
 title_separator: "|"
@@ -47,7 +43,7 @@ author:
   email: alex@heusingfeld.de
   uri: https://heusingfeld.de
   github: aheusingfeld
-  linkedin: alexander-heusingfeld-82008962
+  linkedin: alexander-heusingfeld
 #  picture: "/gfx/alex-blog.jpg"
 #  bio: "...thinking about it... ;)" # Note: Markdown is allowed
 feed:
@@ -185,6 +181,9 @@ footer_links:
   - label: "Talks @ Speakerdeck"
     icon: "fab fa-fw fa-slideshare"
     url: https://speakerdeck.com/u/aheusingfeld
+  - label: "LinkedIn"
+    icon: fab fa-linkedin
+    url: https://www.linkedin.com/in/alexander-heusingfeld/
   - label: "Mastodon"
     icon: fas fa-user
     url: https://mstdn.social/@aheusingfeld
