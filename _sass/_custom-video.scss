@@ -8,14 +8,14 @@
 
   lite-youtube {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: #{"16 / 9"};
     border-radius: 8px;
     overflow: hidden;
   }
 
   iframe {
     width: 100%;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: #{"16 / 9"};
     border: none;
     border-radius: 8px;
   }
