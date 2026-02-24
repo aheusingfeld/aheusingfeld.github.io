@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: Collaborator on Sonar IntelliJ Plugin
 date: 2013-04-25T23:00:00+0200
 categories: 
@@ -12,6 +12,7 @@ tags:
   - open source
   - software development
 
+image: collaborator-on-sonar-intellij-plugin.png
 ---
 
 Lately I was granted the "Collaborator" status on the Sonar Plugin for [IntelliJ IDEA](http://www.jetbrains.com/idea/) at Github  ([https://github.com/gshakhn/sonar-intellij-plugin/](https://github.com/gshakhn/sonar-intellij-plugin/)) and I'd like to share with you the benefits of this project.

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Owncloud 8 upgrade to 10: how to skip Major Versions"
 date: 2016-12-22T20:23:00-0100
 categories: 
@@ -12,6 +12,7 @@ tags:
   - self-hosting
   - bugfix
 
+image: owncloud-updates-between-multiple-major-versions.png
 ---
 
 == The Problem

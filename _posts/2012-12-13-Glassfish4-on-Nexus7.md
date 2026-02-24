@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: Glassfish 4 on Nexus7
 date: 2012-12-13T23:00:00+0200
 categories: 
@@ -13,6 +13,7 @@ tags:
   - android
   - debugging
 
+image: Glassfish4-on-Nexus7.png
 ---
 
 As you might have read in [my previous blog post](http://aheusingfeld.github.com/2012/11/30/Ubuntu%2BJava-on-Nexus7.html) I'm currently doing Proof-Of-Concepts on what is possible with Java on a tablet like the [Google Nexus7 device](https://play.google.com/store/devices/details?id=nexus_7_16gb) meaning a Nvidia Tegra chip which itself is an ARMv7 processor.

@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: Mac OS X setup tips & tricks
 date: 2013-03-20T23:00:00+0200
 categories: 
@@ -12,6 +12,7 @@ tags:
   - software development
   - productivity
 
+image: Mac-OS-X-for-java-developers.png
 ---
 
 This post is kind of a reminder for myself when re-setting up my MacBook on which tools and applications I found to be useful for daily business. Feel free to comment, make suggestions or even send in pull-requests if you have different recommendations. :)

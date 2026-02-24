@@ -1,9 +1,122 @@
 ---
-# Only the main Sass file needs front matter (the dashes are enough)
-sitemap: false
 ---
 
-@charset "utf-8";
+// Fonts (same as Lagrange defaults)
+$sans-serif-font-family: "Quattrocento Sans", sans-serif;
+$serif-font-family:      "PT Serif", Georgia, "Times New Roman", serif;
+$code-font-family:       "Source Code Pro", monospace;
 
-@import "so-simple";
-@import "custom";
+// Custom color palette
+// Built on #2c3242 (dark navy slate) + portrait warm brown tones
+$body-color:             #2c3242;  // base: dark navy slate
+$link-color:             #2c3242;  // links match body tone
+$dark-gray-color:        #2c3242;  // headings
+$light-gray-color:       #8a7550;  // warm brown (portrait background)
+$extra-light-gray-color: #d4c5a9;  // warm beige (portrait highlights)
+
+$code-background-color:   #f5f2ec;  // warm off-white
+$pagination-button-color: #d4c5a9;  // warm beige
+
+$container-responsive-width: 768px;
+$elements-responsive-width:  30em;
+
+// Social icon colors
+$icon-transition-time: .5s;
+$envelope-color:       #b49a6a;  // warm gold
+$twitter-color:        #00aced;
+$instagram-color:      #375989;
+$github-color:         #2c3242;  // matches base
+$linkedin-color:       #0073a4;
+$facebook-color:       #3d5b99;
+$pinterest-color:      #bd081c;
+$medium-color:         #00AB6C;
+$codepen-color:        #2c3242;
+$rss-color:            #b49a6a;  // warm gold
+
+@import "-sections-dir";
+
+// YouTube icon (not in Lagrange defaults)
+.fa-youtube {
+  padding: 5px;
+  -webkit-transition: $icon-transition-time;
+  -o-transition: $icon-transition-time;
+  -ms-transition: $icon-transition-time;
+  -moz-transition: $icon-transition-time;
+  transition: $icon-transition-time;
+  &:hover {
+    color: #c4302b;
+  }
+}
+
+// Link hover: warm brown from portrait
+a:hover {
+  color: #6b5a3e;
+}
+
+// Header with portrait on the right
+.header-title {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.header-portrait-link {
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.header-portrait {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid $extra-light-gray-color;
+  transition: border-color 0.3s;
+}
+
+.header-portrait:hover {
+  border-color: $light-gray-color;
+}
+
+// Force .menu to span full width so its internal floats work
+.header-title .menu {
+  flex-basis: 100%;
+  overflow: hidden; // clearfix for floated children
+}
+
+@media (max-width: $elements-responsive-width) {
+  .header-portrait {
+    width: 56px;
+    height: 56px;
+  }
+  .header-portrait-link {
+    margin-left: 1rem;
+  }
+}
+
+// About page portrait
+.about-portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: right;
+  margin: 0 0 1.5rem 1.5rem;
+  border: 3px solid $extra-light-gray-color;
+  shape-outside: circle();
+}
+
+@media (max-width: $elements-responsive-width) {
+  .about-portrait {
+    float: none;
+    display: block;
+    margin: 0 auto 1.5rem auto;
+  }
+}

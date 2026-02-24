@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "jekyll",
+      "runtimeExecutable": "/opt/homebrew/bin/rbenv",
+      "runtimeArgs": ["exec", "bundle", "exec", "jekyll", "serve", "--livereload", "--port", "4000"],
+      "port": 4000
+    }
+  ]
+}

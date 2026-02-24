@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: Postfix and /etc/hosts
 date: 2013-06-27T23:00:00+0200
 categories: 
@@ -12,6 +12,7 @@ tags:
   - self-hosting
   - bugfix
 
+image: postfix-and-etc-hosts.png
 ---
 
 The following post is actually a note2self as I stumbled over this problem and wanted to create a reminder for myself and others with similar issues.

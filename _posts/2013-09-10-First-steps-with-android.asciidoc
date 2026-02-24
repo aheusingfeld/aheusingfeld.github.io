@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: First Steps with Android
 date: 2013-09-10T20:47:32+0200
 toc: true
@@ -12,6 +12,7 @@ tags:
   - mobile
   - article
 
+image: First-steps-with-android.png
 ---
 
 ## The Stumble Stones

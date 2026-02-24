@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Getting started with Clojure"
 date: 2013-08-06T23:15:27+0200
 categories: 
@@ -10,6 +10,7 @@ tags:
   - intellij
   - tipps
 
+image: getting-started-with-clojure.png
 ---
 
 ### Why Clojure?

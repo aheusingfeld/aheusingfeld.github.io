@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Why Small Experiments can help to overcome Innovator's Dilemma"
 date: 2023-10-01T09:11:00-0100
 categories: 
@@ -10,6 +10,7 @@ tags:
   - innovation
   - change management
   - complexity 
+image: why-small-experiments.png
 ---
 
 ## What's in it for me as a reader

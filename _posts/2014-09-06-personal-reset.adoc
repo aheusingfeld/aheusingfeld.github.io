@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: Personal Reset
 categories: 
   - productivity
@@ -10,6 +10,7 @@ tags:
   - writing
   - productivity
 
+image: personal-reset.png
 ---
 Lately I noticed a growing dissatisfaction with my daily workflow. And this was not only because my last blog post has been almost a year ago. No, it's related to a noticable drop in productivity. I figured this was due to my curiosity dragging me onto way more interesting topics than either my time frame or my toolset could master. Unfortunately trying to keep up-to-date on those topics created loads of distractions which almost resulted in an inability to focus on a single task for a longer amount of time
 

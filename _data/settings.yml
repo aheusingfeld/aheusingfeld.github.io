@@ -1,0 +1,27 @@
+# Lagrange theme settings
+
+disqus:
+  comments: false
+
+# Navigation menu
+menu:
+  - {name: 'Blog', url: 'writing.html'}
+  - {name: 'Talks', url: 'talks.html'}
+  - {name: 'About', url: 'about.html'}
+  - {name: 'Imprint', url: 'imprint.html'}
+
+# Social icons (Font Awesome 4.7 icon names)
+social:
+  - {icon: 'github', link: 'https://github.com/aheusingfeld'}
+  - {icon: 'linkedin', link: 'https://www.linkedin.com/in/alexander-heusingfeld/'}
+  - {icon: 'youtube', link: 'https://www.youtube.com/aheusingfeld'}
+  - {icon: 'rss-square', link: '/feed.xml'}
+
+# UI text
+pagination:
+  next_page: 'Newer'
+  previous_page: 'Older'
+
+sharing_button_prompt: 'Feel free to share!'
+related_posts: 'You may also enjoy:'
+post_date_prefix: 'Written on'
