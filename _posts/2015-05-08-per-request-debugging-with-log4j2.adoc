@@ -1,6 +1,6 @@
 ---
 title: Per request debugging with Log4j 2 filters
-layout: single
+layout: post
 date: 2015-05-08
 excerpt: Customers quite regularly call on me to support them when an application is not behaving as expected. On a development machine there are a lot of ways and utilities to analyse the situation. But troubleshooting the erroneous application behaviour in production environments quite often limits your tool belt to a minimum.
 categories: 
@@ -15,6 +15,7 @@ tags:
   - article
   - external
 
+image: per-request-debugging-with-log4j2.png
 ---
 = Per request debugging with Log4j 2 filters
 

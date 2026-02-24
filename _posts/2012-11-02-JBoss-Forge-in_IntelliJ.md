@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: JBoss Forge in IntelliJ IDEA
 date: 2012-11-03T23:00:00+0200
 categories: 
@@ -13,6 +13,7 @@ tags:
   - open source
   - organisation
 
+image: JBoss-Forge-in_IntelliJ.png
 ---
 
 At this year's JavaOne I attended a [talk](https://oracleus.activeevents.com/connect/sessionDetail.ww?SESSION_ID=10659) by Marius Bogoevici ([@mariusbogoevici](http://twitter.com/mariusbogoevici)) and was once again pointed at the JBoss Forge project. Last time I took a look at Forge it was still called Seam Forge which was about a year ago. It seriously matured since then.

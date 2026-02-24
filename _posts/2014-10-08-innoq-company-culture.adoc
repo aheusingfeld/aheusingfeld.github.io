@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: "Article on company culture at innoQ"
 tags: culture, innoq, external, writing
 categories: 
@@ -11,6 +11,7 @@ tags:
   - innoq
   - team management
 
+image: innoq-company-culture.png
 ---
 
 For those of you interested in the impact of a company's culture, I wrote an article about the company culture at innoQ on their blog. The article is on the company website and I'd really appreciate your feedback e.g. on writing style and content.

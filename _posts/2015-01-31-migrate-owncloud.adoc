@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: Migrate Owncloud from PostgreSQL to MySQL
 categories: 
   - hosting
@@ -11,6 +11,7 @@ tags:
   - migration
   - bugfix
 
+image: migrate-owncloud.png
 ---
 
 

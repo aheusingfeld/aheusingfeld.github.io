@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: Enhancements for Mac OS X Finder.app
 date: 2012-11-26T23:00:00+0200
 categories: 
@@ -13,6 +13,7 @@ tags:
   - software development
   - productivity
 
+image: Productivity-for-Finder.png
 ---
 
 Today I'd like to share three AppleScripts with you which really enhanced my general usage of the Finder.app in Mac OS X. If you are not a Mac OS X user, you can stop reading here.

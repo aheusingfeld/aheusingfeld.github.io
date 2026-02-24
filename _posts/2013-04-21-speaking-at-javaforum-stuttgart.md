@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title: I'm speaking at Java Forum Stuttgart 2013
 date: 2013-04-21T23:00:00+0200
 categories: 
@@ -13,6 +13,7 @@ tags:
   - integration
   - software development
 
+image: speaking-at-javaforum-stuttgart.png
 ---
 
 I have been invited to talk at [Java Forum Stuttgart](http://www.java-forum-stuttgart.de/de/Konferenz.html) on July 4th 2013. Java Forum is a single day event fully packed with good talks on various topics.

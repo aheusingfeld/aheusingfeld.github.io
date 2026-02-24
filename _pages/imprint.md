@@ -1,9 +1,8 @@
 ---
 title: Impressum und Datenschutz
-permalink: /imprint/
+permalink: /imprint.html
 layout: page
 date: 2022-03-08
-share: false
 
 ---
 

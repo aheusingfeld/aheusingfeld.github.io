@@ -1,7 +1,13 @@
 ---
 title: "Posts by Category"
-layout: categories
 permalink: /categories/
-author_profile: true
-entries_layout: grid
+layout: page
 ---
+
+{% for category in site.categories %}
+## {{ category[0] | capitalize }}
+
+{% for post in category[1] %}
+- [{{ post.title }}]({{ post.url | relative_url }}) ({{ post.date | date: "%Y-%m-%d" }})
+{% endfor %}
+{% endfor %}
