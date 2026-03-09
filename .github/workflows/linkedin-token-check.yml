@@ -12,6 +12,9 @@ jobs:
     permissions:
       issues: write
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Introspect LinkedIn token
         id: check
         env:
