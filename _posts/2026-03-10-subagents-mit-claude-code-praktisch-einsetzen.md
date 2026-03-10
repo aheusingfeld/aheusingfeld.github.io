@@ -10,7 +10,7 @@ tags:
   - claudecode
   - ki
   - tipps 
-image: 2026-03-10-subagents-mit-claude-code-praktisch-einsetzen.png
+image: subagents-mit-claude-code-praktisch-einsetzen.png
 ---
 
 In den letzten Wochen habe ich einige Muster in meiner Arbeit erkannt, die ich als Referenz für mich selbst notieren möchte, damit ich verstehen kann, wie sie sich im Laufe der Zeit entwickeln. Dennoch werde ich sie hier teilen, da ich gerne Ihr Feedback erhalten und dies gemeinsam weiterentwickeln möchte. Lassen Sie uns eintauchen:
