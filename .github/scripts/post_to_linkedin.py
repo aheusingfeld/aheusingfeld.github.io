@@ -86,31 +86,61 @@ def generate_linkedin_copy(title, body, tags, api_key):
     # Get first 500 words of the new post
     post_excerpt = " ".join(body.split()[:500])
 
-    prompt = f"""Schreibe einen LinkedIn teaser post fuer meinen neuen blog post.
+    prompt = f"""Du bist ein LinkedIn-Content-Experte für den DACH-Markt.
 
-Hier ist mein linkeding profile als Referenz und fuer deine Kontextrecherche: https://www.linkedin.com/in/alexander-heusingfeld/.
+AUTOR: Alexander Heusingfeld
+Nische: Software-Architektur, Platform Strategy, Agentic Engineering
+Zielgruppe: Software-Architekten, Platform Engineers, Tech-Leads im DACH-Raum
+Profil-URL: https://www.linkedin.com/in/alexander-heusingfeld/.
 
-## Blog Post Inhalt
+BLOG-POST-INPUT:
+- Titel: {title}
+- Extrakt des Artikels: {post_excerpt}
 
-{post_excerpt}
+AUFGABE: Schreibe einen LinkedIn-Teaser auf Deutsch, der Lust macht, 
+den Artikel zu lesen — ohne seinen Inhalt vorwegzunehmen. Betone Überraschendste Erkenntnis oder kontraintuitivsten Punkt.
 
-## Immitiere meinen Schreibstil
+TEASER-LOGIK (strikt einhalten):
+- Der Post erklärt das Problem oder die Spannung, NICHT die Lösung.
+- Die Antwort steht im Artikel — der Post macht neugierig darauf.
+- Wer den Post gelesen hat, soll denken: "Das will ich wissen."
 
-Hier sind ein paar Beispiele meines Schreibstils:
+PFLICHTSTRUKTUR:
+1. Hook (Zeile 1–2): Problem, provokante These oder überraschende Beobachtung.
+   Spannung aufbauen — nicht auflösen.
+2. Kontext (2–4 Zeilen): Warum ist das relevant? Was steht auf dem Spiel?
+   Noch keine Antwort.
+3. Brücke (1–2 Zeilen): Ankündigung, dass der Artikel die Antwort liefert —
+   ohne zu verraten was. z.B. "Ich habe dazu einen Ansatz entwickelt." 
+   oder "Im Artikel zeige ich, wie ich das Problem gelöst habe."
+4. CTA (1 Zeile): Konkrete Einladung zur Diskussion, KEIN Link (der folgt im Kommentar).
+   Bezug zum Thema, eigener Standpunkt erkennbar.
+5. Link-Hinweis (separat, nicht im Post): 
+   Formuliere einen ersten Kommentar mit dem Artikel-Link.
+6. Hashtags: 3–4 aus #SoftwareArchitektur #AgenticEngineering 
+   #PlatformEngineering #FutureTech #iSAQB #CloudNative
 
-{examples_text}
+REGELN:
+- Max. 3 Zeilen pro Absatz
+- Aktive Verben, kurze Sätze (max. 20 Wörter)
+- Keine Spoiler — Kernlösung bleibt im Artikel
+- Kein "Ich habe einen neuen Blogpost geschrieben" als Einstieg
+- Englische Fachbegriffe (Agentic Engineering, Context Window etc.) nicht übersetzen
 
-## MUST HAVE Anforderungen:
-- Beginne mit einer provozierenden Frage oder Feststellung, die die Aufmerksamkeit der Leser weckt
-- Verrate so wenig vom Inhalt wie moeglich, wecke die Neugier auf den Artikel
-- Nutze weniger als 100 Worte
-- Bleibe nachdenklich und authentisch, das ist kein Sales Pitch!
-- Immitiere Alexanders reflektierten, systems-thinking Tonfall
-- Write in German
-- Schreibe einen klaren Aufruf den Artikel zu lesen
-- Beende den Post mit einer Frage an die Leser, die sie in den Kommentaren beantworten sollen 
+VERBOTENE CTAs: "Was denkt ihr?", "Agree?", "Habt ihr das auch bemerkt?",
+Doppelfragen ohne eigenen Standpunkt
 
-Return ONLY the LinkedIn post text, nothing else."""
+VERBOTENE WÖRTER: "leidenschaftlich", "ganzheitlich", "Synergien", 
+"Gamechanger", "Mehrwert stiften", "excited to share"
+
+AUSGABE:
+1. Teaser-Text (direkt verwendbar)
+2. Erster Kommentar mit Link-Platzierung: 
+   "🔗 Vollständiger Artikel: [URL einfügen]"
+3. Hook-Typ (aus den 10 Varianten)
+4. Zeichenzahl
+5. Ein-Satz-Check: Wird die Kernlösung verraten? (Ja = überarbeiten / Nein = ok)
+"""
 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-3-pro-preview:generateContent?key={api_key}"
 
@@ -118,7 +148,7 @@ Return ONLY the LinkedIn post text, nothing else."""
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.7,
-            "maxOutputTokens": 500,
+            "maxOutputTokens": 1500,
         },
     }).encode("utf-8")
 
@@ -234,7 +264,7 @@ def check_token_validity(access_token, client_id, client_secret):
     return -1
 
 
-def post_to_linkedin(text, access_token, person_urn):
+def post_to_linkedin(text, access_token, person_urn, comment_text):
     """Post to LinkedIn using the Posts API."""
     url = "https://api.linkedin.com/v2/ugcPosts"
 
@@ -339,11 +369,10 @@ def main():
         linkedin_text = f'I just published a new article: "{title}"\n\nRead it here: {post_url}'
     else:
         linkedin_text = generate_linkedin_copy(title, body, tags, api_key)
-        if linkedin_text and post_url not in linkedin_text:
-            linkedin_text += f"\n\nRead the full article: {post_url}"
+        comment_text = f"\n\nRead the full article: {post_url}"
 
     if not linkedin_text:
-        linkedin_text = f'I just published a new article: "{title}"\n\nRead it here: {post_url}'
+        linkedin_text = f'I just published a new blog post: "{title}"\n\nRead it here: {post_url}'
 
     print(f"\nLinkedIn copy:\n{linkedin_text}\n")
 
@@ -359,7 +388,7 @@ def main():
         if client_id and client_secret:
             check_token_validity(access_token, client_id, client_secret)
 
-        post_id = post_to_linkedin(linkedin_text, access_token, person_urn)
+        post_id = post_to_linkedin(linkedin_text, access_token, person_urn, comment_text)
         if post_id:
             # Save post ID for issue comment
             with open("/tmp/linkedin_post_id.txt", "w") as f:
