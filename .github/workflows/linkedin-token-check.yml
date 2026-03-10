@@ -36,6 +36,7 @@ jobs:
           BODY=$(echo "$RESPONSE" | sed '$d')
           echo "HTTP status: $HTTP_CODE"
           echo "Response keys: $(echo "$BODY" | python3 -c "import sys,json; print(list(json.load(sys.stdin).keys()))" 2>/dev/null || echo "NOT VALID JSON: $BODY")"
+          echo "Error details: $(echo "$BODY" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('error',''), d.get('error_description',''))" 2>/dev/null || echo "n/a")"
 
           ACTIVE=$(echo "$BODY" | python3 -c "import sys,json; print(json.load(sys.stdin).get('active', False))" 2>/dev/null || echo "False")
           EXPIRES_AT=$(echo "$BODY" | python3 -c "import sys,json; print(json.load(sys.stdin).get('expires_at', 0))" 2>/dev/null || echo "0")
