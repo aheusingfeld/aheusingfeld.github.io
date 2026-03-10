@@ -28,12 +28,18 @@ jobs:
             exit 0
           fi
 
-          RESPONSE=$(curl -s -X POST https://www.linkedin.com/oauth/v2/introspectToken \
+          RESPONSE=$(curl -s -w "\n%{http_code}" -X POST https://www.linkedin.com/oauth/v2/introspectToken \
             -H "Content-Type: application/x-www-form-urlencoded" \
             -d "token=$LINKEDIN_ACCESS_TOKEN&client_id=$LINKEDIN_CLIENT_ID&client_secret=$LINKEDIN_CLIENT_SECRET")
 
-          ACTIVE=$(echo "$RESPONSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('active', False))" 2>/dev/null || echo "False")
-          EXPIRES_AT=$(echo "$RESPONSE" | python3 -c "import sys,json; print(json.load(sys.stdin).get('expires_at', 0))" 2>/dev/null || echo "0")
+          HTTP_CODE=$(echo "$RESPONSE" | tail -1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "HTTP status: $HTTP_CODE"
+          echo "Response keys: $(echo "$BODY" | python3 -c "import sys,json; print(list(json.load(sys.stdin).keys()))" 2>/dev/null || echo "NOT VALID JSON: $BODY")"
+
+          ACTIVE=$(echo "$BODY" | python3 -c "import sys,json; print(json.load(sys.stdin).get('active', False))" 2>/dev/null || echo "False")
+          EXPIRES_AT=$(echo "$BODY" | python3 -c "import sys,json; print(json.load(sys.stdin).get('expires_at', 0))" 2>/dev/null || echo "0")
+          echo "Active: $ACTIVE, Expires at: $EXPIRES_AT"
 
           if [ "$ACTIVE" != "True" ]; then
             echo "status=expired" >> $GITHUB_OUTPUT
