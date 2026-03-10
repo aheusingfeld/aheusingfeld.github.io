@@ -77,7 +77,7 @@ def get_style_examples():
 
 
 def generate_linkedin_copy(title, body, tags, api_key):
-    """Use Gemini to generate engaging LinkedIn copy."""
+    """Use Gemini to generate engaging LinkedIn teaser."""
     style_examples = get_style_examples()
     examples_text = "\n\n---\n\n".join(
         f"Example {i+1}:\n{ex}" for i, ex in enumerate(style_examples)
@@ -86,25 +86,29 @@ def generate_linkedin_copy(title, body, tags, api_key):
     # Get first 500 words of the new post
     post_excerpt = " ".join(body.split()[:500])
 
-    prompt = f"""You are writing a LinkedIn post for Alexander Heusingfeld, Head of Platforms & Lifecycle at Vorwerk HOME. He writes about technology, software architecture, organizational development, and how AI changes the way we work.
+    prompt = f"""Schreibe einen LinkedIn teaser post fuer meinen neuen blog post.
 
-Here are examples of his writing style:
+Hier ist mein linkeding profile als Referenz und fuer deine Kontextrecherche: https://www.linkedin.com/in/alexander-heusingfeld/.
+
+## Blog Post Inhalt
+
+{post_excerpt}
+
+## Immitiere meinen Schreibstil
+
+Hier sind ein paar Beispiele meines Schreibstils:
 
 {examples_text}
 
-Now write a LinkedIn post for his new blog article titled: "{title}"
-
-The article content:
-{post_excerpt}
-
-Requirements:
-- Open with a provocative question or bold observation that makes people stop scrolling
-- Keep it under 200 words
-- Be thoughtful and authentic, not salesy
-- End with a clear call to read the full article
-- Add 3-5 relevant hashtags at the end
-- Match Alexander's reflective, systems-thinking tone
-- Write in English
+## MUST HAVE Anforderungen:
+- Beginne mit einer provozierenden Frage oder Feststellung, die die Aufmerksamkeit der Leser weckt
+- Verrate so wenig vom Inhalt wie moeglich, wecke die Neugier auf den Artikel
+- Nutze weniger als 100 Worte
+- Bleibe nachdenklich und authentisch, das ist kein Sales Pitch!
+- Immitiere Alexanders reflektierten, systems-thinking Tonfall
+- Write in German
+- Schreibe einen klaren Aufruf den Artikel zu lesen
+- Beende den Post mit einer Frage an die Leser, die sie in den Kommentaren beantworten sollen 
 
 Return ONLY the LinkedIn post text, nothing else."""
 
