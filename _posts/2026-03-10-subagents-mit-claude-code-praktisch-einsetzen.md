@@ -30,11 +30,16 @@ Du musst die Subagenten nicht manuell im Detail verwalten. Sie agieren als Orche
 
 Du würdest Claude Code eine Eingabeaufforderung wie diese geben:
 
-> „Ich muss [Feature X] erstellen. Bevor wir Code schreiben, brauchen wir einen sauberen, makellosen Implementierungsplan. Verunreinigen Sie diese Hauptsitzung nicht mit rohen Recherchen. Erzeugen Sie stattdessen drei isolierte Subagenten, um Kontext zu sammeln:
-> 
-> 1. **Agent 1 (Confluence):** Erstelle einen Agenten, der in Confluence nach dem Dokument „Auth Architecture API” sucht und die Endpunktspezifikationen zusammenfasst.
+> „Ich möchte [Feature X] in dem Repository erstellen, in dem du dich gerade befindest. Diese Feature soll folgende Funktion erfüllen [Feature Beschreibung].
+>
+> Bevor du Code schreiben kannst, brauchen wir einen sauberen Implementierungsplan für den du noch Informationen aus verschiedenen Quellen zusammentragen musst. WICHTIG: Verunreinige nicht diese Hauptsession mit diesen Recherchen, sondern erzeuge stattdessen isolierte Subagenten, um den Kontext zu sammeln und nur die relevanten Informationen in diese Hauptsession zurückzugeben:
+>
+> Folgende Datenquellen wollen wir einbeziehen
+> 1. **Agent 1 (Confluence):** Erstelle einen Agenten, der in Confluence die Dokumentation zur „Auth Architecture API” sucht und die Endpunktspezifikationen zusammenfasst.
 > 2. **Agent 2 (CLI/Repo):** Erstelle einen Agenten, der `grep-` und AST-Tools auf dem lokalen Repo ausführt, um alle aktuellen Implementierungen des `AuthModule` zu finden.
-> 3. **Agent 3 (Web Research):** Erstelle einen Agenten, der die neuesten Best Practices für „OAuth2-Token-Rotation in Next.js” recherchiert.
+> 3. **Agent 3 (Web Research):** Erstelle einen Agenten, der die aktuellen Best Practices für „OAuth2-Token-Rotation in Next.js” recherchiert.
+> 4. **Agent 3 (Repository Analysis):** Erstelle einen Agenten, der das aktuelle Repository nach ähnlichen Implementierungen durchsucht und sich eine Übersicht verschafft, wo welche Teile der Implementierung platziert und welche existierenden Artefakte (Spezifikation, Code, Tests, etc.) angepasst werden müssen.
+> 5. Halte in jedem Fall die Design Principles und Constraints aus deiner ARCHITECTURE.md ein.
 > 
 > Warte, bis alle drei fertig sind. Nimm dann ihre zusammengefassten Zusammenfassungen, synthetisiere sie und schreiben sie eine saubere `IMPLEMENTATION_PLAN.md`. Zeige mir nur die endgültige Markdown-Datei.”
 > 
@@ -51,5 +56,6 @@ Im Hintergrund verwendet Claude Code das Tool `sessions_spawn`.
 
 Die übergeordnete Sitzung (Ihr Hauptfenster von Claude Code) erhält drei saubere, prägnante Textblöcke. Sie sieht niemals die unübersichtlichen `Grep-Fehler` oder den 10-seitigen Confluence-Sidebar-HTML-Code. Sie verwendet diese sauberen Zusammenfassungen, um den Implementierungsplan zu entwerfen.
 
-
 Hast du gute Erfahrungen gesammelt wie du den Context deines Orchestrators sauber halten kannst? Teil sie gern mit mir auf Linkedin oder als Github Issue.
+
+Im nächsten Post werde ich über Erfahrungen bei der Qualitäts-Sicherung durch Skills und Subagents eingehen.
