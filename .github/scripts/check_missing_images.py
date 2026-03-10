@@ -19,7 +19,7 @@ def has_image(frontmatter):
     """Check if frontmatter contains a non-empty image path."""
     for line in frontmatter.splitlines():
         stripped = line.strip()
-        if stripped.startswith("path:"):
+        if stripped.startswith("image:"):
             value = stripped.split(":", 1)[1].strip().strip('"').strip("'")
             if value:
                 return True
