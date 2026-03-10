@@ -10,7 +10,7 @@ tags:
   - claudecode
   - ki
   - tipps 
-image: subagents-mit-claude-code-praktisch-einsetzen.png
+image: 2026-03-10-subagents-mit-claude-code-praktisch-einsetzen.png
 ---
 
 # Subagents mit Claude Code praktisch einsetzen um den Kontext sauber zu halten
