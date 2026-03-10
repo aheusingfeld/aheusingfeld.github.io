@@ -264,7 +264,7 @@ def check_token_validity(access_token, client_id, client_secret):
     return -1
 
 
-def post_to_linkedin(text, access_token, person_urn, comment_text):
+def post_to_linkedin(text, access_token, person_urn):
     """Post to LinkedIn using the Posts API."""
     url = "https://api.linkedin.com/v2/ugcPosts"
 
@@ -299,6 +299,43 @@ def post_to_linkedin(text, access_token, person_urn, comment_text):
             post_id = result.get("id", "")
             print(f"LinkedIn post created: {post_id}")
             return post_id
+    except urllib.error.HTTPError as e:
+        error_body = e.read().decode()
+        print(f"LinkedIn API error: {e.code} - {error_body}")
+        if e.code == 401:
+            print("::error::LinkedIn access token has expired. Renew it:")
+            print("  python3 /tmp/linkedin_oauth_setup.py <CLIENT_ID> <CLIENT_SECRET>")
+            print("  Then: gh secret set LINKEDIN_ACCESS_TOKEN")
+        return None
+
+def comment_on_linkedin_post(text, post_id, access_token, person_urn):
+    """Post to LinkedIn using the Posts API."""
+    url = "https://api.linkedin.com/v2/socialActions/{post_id}/comments"
+
+    payload = json.dumps({
+        "actor": person_urn,
+        "message": {
+            "text": text
+            },
+    }).encode("utf-8")
+
+    req = urllib.request.Request(
+        url,
+        data=payload,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {access_token}",
+            "X-Restli-Protocol-Version": "2.0.0",
+        },
+        method="POST",
+    )
+
+    try:
+        with urllib.request.urlopen(req) as resp:
+            result = json.loads(resp.read())
+            comment_id = result.get("id", "")
+            print(f"LinkedIn comment created: {comment_id}")
+            return comment_id
     except urllib.error.HTTPError as e:
         error_body = e.read().decode()
         print(f"LinkedIn API error: {e.code} - {error_body}")
@@ -388,11 +425,12 @@ def main():
         if client_id and client_secret:
             check_token_validity(access_token, client_id, client_secret)
 
-        post_id = post_to_linkedin(linkedin_text, access_token, person_urn, comment_text)
+        post_id = post_to_linkedin(linkedin_text, access_token, person_urn)
         if post_id:
             # Save post ID for issue comment
             with open("/tmp/linkedin_post_id.txt", "w") as f:
                 f.write(post_id)
+            comment_on_linkedin_post(comment_text, post_id, access_token, person_urn)
     else:
         print("LinkedIn credentials not configured, skipping posting")
         print("Required secrets: LINKEDIN_ACCESS_TOKEN, LINKEDIN_PERSON_URN")
